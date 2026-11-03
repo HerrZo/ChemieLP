@@ -1,0 +1,857 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>Protonenübergänge: Säuren, Basen, pH und Titration | Chemie 10</title>
+<meta name="description" content="Interaktiver Lernpfad zu sauren und basischen Lösungen, pH-Wert, Brønsted-Konzept, Acidität, Neutralisation und Titration für Chemie 10 am SG.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@700&family=Spectral:ital,wght@0,400;0,500;1,400&family=Libre+Franklin:wght@500&display=swap" rel="stylesheet">
+<style>
+/* Hallmark · shape: app screen · genre: editorial · theme: Newsprint (deal 3/3, seed interaktive-chemie-lernwebsite-fuer-die-9539·9648ff15·2026-11-02·r0) · job: learn · scope: app
+ * hero: none (app screen) · nav: masthead + station sidebar · footer: colophon · imagery: none, own SVG diagrams · signature: five subject instruments
+ * axes: light/slab-serif/warm · posture: restrained · contrast: pass · fold: pass · v2.0.0 */
+html { overflow-x: clip; }
+body { overflow-x: clip; }
+</style>
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body data-page="lb4">
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<header class="masthead">
+  <div class="masthead__inner">
+    <a class="brand" href="index.html" aria-label="Zur Übersicht Chemie 10"><span>Chemie 10</span><span class="brand__tag">SG</span></a>
+    <p class="issue"><span class="issue__num">04</span> Protonenübergänge, pH, Titration</p>
+    <div class="masthead__actions">
+      <span class="progress-inline" data-progress-inline aria-live="polite">0 von 10</span>
+      <a class="quiet-link" href="index.html">Übersicht</a>
+      <button class="menu-btn btn btn--quiet btn--small" type="button" data-menu aria-expanded="false" aria-controls="sidebar">Stationen</button>
+    </div>
+  </div>
+</header>
+<div class="app">
+  <aside class="sidebar" id="sidebar" aria-label="Stationen">
+    <div class="sidebar__head">
+      <p class="sidebar__kicker">Lernbereich 04</p>
+      <h2 class="sidebar__title">Protonenübergänge</h2>
+      <p class="sidebar__deck">Säuren, Basen, pH und Titration.</p>
+      <div class="progress">
+        <div class="progress__line"><span>Dein Lernstand</span><strong data-progress-text>0 / 10</strong></div>
+        <div class="progress__track"><i data-progress-bar style="--p:0"></i></div>
+      </div>
+    </div>
+    <nav class="station-nav">
+      <a href="#start" data-station-link="start"><span class="station-nav__num">00</span><span>Überblick</span><span class="station-nav__check" aria-hidden="true">✓</span></a>
+      <a href="#ph" data-station-link="ph"><span class="station-nav__num">01</span><span>pH und Indikatoren</span><span class="station-nav__check" aria-hidden="true">✓</span></a>
+      <a href="#proton" data-station-link="proton"><span class="station-nav__num">02</span><span>Brønsted</span><span class="station-nav__check" aria-hidden="true">✓</span></a>
+      <a href="#strength" data-station-link="strength"><span class="station-nav__num">03</span><span>Säurestärke</span><span class="station-nav__check" aria-hidden="true">✓</span></a>
+      <a href="#concentration" data-station-link="concentration"><span class="station-nav__num">04</span><span>Konzentration</span><span class="station-nav__check" aria-hidden="true">✓</span></a>
+      <a href="#titration" data-station-link="titration"><span class="station-nav__num">05</span><span>Titration</span><span class="station-nav__check" aria-hidden="true">✓</span></a>
+      <a href="#check" data-station-link="check"><span class="station-nav__num">06</span><span>Kompetenzcheck</span><span class="station-nav__check" aria-hidden="true">✓</span></a>
+      <a href="#glossar" data-station-link="glossar"><span class="station-nav__num">07</span><span>Glossar</span><span class="station-nav__check" aria-hidden="true">✓</span></a>
+    </nav>
+    <div class="sidebar__foot">
+      <a href="index.html">Alle Lernbereiche</a>
+      <button class="quiet-link" type="button" data-reset-open>Lernstand zurücksetzen</button>
+      <p>LehrplanPLUS<br>Chemie 10, SG</p>
+    </div>
+  </aside>
+
+  <main class="main" id="main">
+    <section class="station is-active" id="start" data-station="start" data-title="Überblick" aria-labelledby="start-title">
+      <header class="station__head">
+        <h1 id="start-title"><span class="station__num">04</span> Protonenübergänge: Von sauer bis basisch.</h1>
+        <p class="lead">Warum Zitronensaft sauer ist, Seife basisch wirkt und eine Titration eine unbekannte Konzentration verrät.</p>
+      </header>
+              <a class="btn start-cta" href="#ph" data-go="ph" data-start-cta aria-label="Erste Station öffnen: pH und Indikatoren">Erste Station öffnen</a>
+      <div class="protocol">
+        <div class="protocol__main">
+          <h2>Das nimmst du mit</h2>
+          <ol class="competencies">
+            <li><span class="cnum">01</span><span>Du unterscheidest saure, neutrale und basische Lösungen mit Indikatoren und verwendest die pH-Skala.</span></li>
+            <li><span class="cnum">02</span><span>Du erörterst die Bedeutung saurer und basischer Lösungen in Alltag, Technik und biologischen Systemen und die Folgen von pH-Änderungen.</span></li>
+            <li><span class="cnum">03</span><span>Du charakterisierst saure und basische Lösungen auf der Teilchenebene durch Oxonium- und Hydroxid-Ionen.</span></li>
+            <li><span class="cnum">04</span><span>Du beschreibst Säuren und Basen mit dem Brønsted-Konzept und verwendest die Begriffe für Teilchen und Lösungen richtig.</span></li>
+            <li><span class="cnum">05</span><span>Du stellst Protonenübergänge in Reaktionsgleichungen dar.</span></li>
+            <li><span class="cnum">06</span><span>Du erkennst die strukturellen Voraussetzungen für Säuren und Basen und leitest die Reversibilität von Protonenübergängen ab.</span></li>
+            <li><span class="cnum">07</span><span>Du vergleichst die Acidität von Alkoholen und Carbonsäuren und begründest sie.</span></li>
+            <li><span class="cnum">08</span><span>Du führst Berechnungen durch, um Lösungen definierter Stoffmengenkonzentration herzustellen.</span></li>
+            <li><span class="cnum">09</span><span>Du beschreibst die Neutralisation auf der Teilchenebene und erklärst damit Antazida und die Entsorgung saurer oder basischer Lösungen.</span></li>
+            <li><span class="cnum">10</span><span>Du führst einfache Titrationen durch, um Konzentrationen saurer oder basischer Lösungen zu bestimmen.</span></li>
+          </ol>
+          <p><small>Die Liste folgt den Kompetenzerwartungen von LehrplanPLUS Chemie 10 für das sprachliche Gymnasium.</small></p>
+        </div>
+        <aside class="protocol__margin">
+          <div class="note">
+            <p class="note__title">So arbeitest du</p>
+            <ol>
+              <li>Lies die Station und probiere das Modell aus.</li>
+              <li>Beantworte den Prüfpunkt. Du bekommst sofort Rückmeldung.</li>
+              <li>Schließe die Station ab und arbeite am Ende den Kompetenzcheck.</li>
+            </ol>
+          </div>
+          <div class="note">
+            <p class="note__title">Leitfrage</p>
+            <p>Warum hat eine 0,1 mol/L Salzsäure den pH-Wert 1, eine 0,1 mol/L Natronlauge aber den pH-Wert 13?</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="station" id="ph" data-station="ph" data-title="pH und Indikatoren" aria-labelledby="ph-title">
+      <header class="station__head">
+        <h2 id="ph-title"><span class="station__num">01</span> Wie sauer ist das?</h2>
+        <p class="lead">Indikatoren machen den Charakter einer Lösung sichtbar. Der pH-Wert beschreibt die Oxoniumionen-Konzentration.</p>
+      </header>
+      <div class="protocol">
+        <div class="protocol__main">
+          <figure class="tool" data-tool="ph" data-tool-data="ph">
+            <div class="tool__head">
+              <p class="tool__title">pH-Labor</p>
+              <p class="tool__hint">Wähle Säure oder Base und verändere die Konzentration.</p>
+            </div>
+            <div class="tool__controls" data-tool-controls></div>
+            <div class="tool__stage" data-tool-stage><p class="tool__fallback">Das pH-Labor lädt mit JavaScript. Die pH-Skala und die Indikatoren stehen in der Tabelle.</p></div>
+            <div class="tool__readout" data-tool-readout></div>
+            <figcaption class="tool__caption">Modell für starke Säuren und Basen. Der Farbstreifen zeigt die ungefähre Universalindikator-Farbe.</figcaption>
+          </figure>
+          <p>Saure Lösungen enthalten mehr Oxonium-Ionen als Hydroxid-Ionen, basische Lösungen mehr Hydroxid-Ionen. Bei 25 °C gilt c(H₃O⁺) × c(OH⁻) = 10⁻¹⁴. Der pH-Wert ist der negative dekadische Logarithmus der Oxoniumionen-Konzentration: pH = -lg c(H₃O⁺). Ein pH-Sprung um eine Einheit bedeutet den zehnfachen Unterschied der Konzentration.</p>
+          <table class="data-table">
+            <caption>Wichtige Indikatoren und ihre Färbung</caption>
+            <thead><tr><th>Indikator</th><th>sauer</th><th>neutral</th><th>basisch</th></tr></thead>
+            <tbody>
+              <tr><td>Lackmus</td><td>rot</td><td>violett</td><td>blau</td></tr>
+              <tr><td>Bromthymolblau</td><td>gelb</td><td>grün</td><td>blau</td></tr>
+              <tr><td>Phenolphthalein</td><td>farblos</td><td>farblos</td><td>pink</td></tr>
+            </tbody>
+          </table>
+          <details class="deep">
+            <summary>Mehr im Detail: Warum die pH-Skala logarithmisch ist</summary>
+            <p>Die Konzentration der Oxonium-Ionen kann sich über viele Zehnerpotenzen erstrecken. Statt 0,0000001 mol/L schreibt man pH 7. Ein pH-Wert von 3 bedeutet c(H₃O⁺) = 10⁻³ mol/L. Zwei Lösungen mit pH 3 und pH 5 unterscheiden sich um den Faktor 100 in der Oxoniumionen-Konzentration.</p>
+          </details>
+          <section class="checkpoint" aria-labelledby="ph-check">
+            <h3 id="ph-check">Prüfpunkt</h3>
+            <div class="quiz" data-quiz="ph"><noscript><p class="tool__fallback">Die Prüfpunkt-Aufgaben brauchen JavaScript.</p></noscript></div>
+          </section>
+          <script type="application/json" data-quiz-data="ph">
+          {
+            "questions": [
+              {
+                "id": "q1",
+                "type": "mc",
+                "level": "I",
+                "competency": "K1",
+                "prompt": "Welche Farbe hat Phenolphthalein in einer stark basischen Lösung?",
+                "options": ["farblos", "rot", "pink", "blau"],
+                "correct": 2,
+                "explain": "Phenolphthalein ist in saurer und neutraler Lösung farblos. Ab etwa pH 8,2 schlägt es nach Pink um."
+              },
+              {
+                "id": "q2",
+                "type": "input",
+                "level": "II",
+                "competency": "K1",
+                "prompt": "Welchen pH-Wert hat eine Lösung mit c(H₃O⁺) = 0,01 mol/L?",
+                "accept": ["2", "zwei", "2,0"],
+                "model": "2",
+                "placeholder": "pH-Wert eingeben",
+                "explain": "pH = -lg(0,01) = 2. Die Konzentration 10⁻² mol/L entspricht pH 2."
+              }
+            ]
+          }
+          </script>
+          <div class="station__footer">
+            <span class="status" data-station-status></span>
+            <div class="station__footer-actions">
+              <button class="btn js-only" type="button" data-complete="ph">Station abschließen</button>
+              <a class="quiet-link" href="#proton" data-go="proton" aria-label="Weiter zur Station Brønsted">Weiter</a>
+            </div>
+          </div>
+        </div>
+        <aside class="protocol__margin">
+          <div class="note">
+            <p class="note__title">Merke</p>
+            <p>Je größer die Oxoniumionen-Konzentration, desto kleiner der pH-Wert. Ein Schritt auf der pH-Skala ist ein Faktor 10.</p>
+          </div>
+          <div class="note">
+            <p class="note__title">Fachsprache</p>
+            <dl>
+              <dt>Indikator</dt><dd>Stoff, der seine Farbe in Abhängigkeit vom pH-Wert ändert.</dd>
+              <dt>Oxonium-Ion</dt><dd>H₃O⁺; entsteht, wenn ein Proton auf Wasser übertragen wird.</dd>
+              <dt>Hydroxid-Ion</dt><dd>OH⁻; entsteht bei der Reaktion einer Base mit Wasser.</dd>
+            </dl>
+          </div>
+          <div class="note">
+            <p class="note__title">Typischer Fehler</p>
+            <p>pH 7 ist nur bei 25 °C neutral. Die pH-Skala ist logarithmisch, nicht linear.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="station" id="proton" data-station="proton" data-title="Brønsted" aria-labelledby="proton-title">
+      <header class="station__head">
+        <h2 id="proton-title"><span class="station__num">02</span> Was ist eine Säure?</h2>
+        <p class="lead">Nach Brønsted ist eine Säure ein Protonendonator, eine Base ein Protonenakzeptor. Beide treten als Paar auf.</p>
+      </header>
+      <div class="protocol">
+        <div class="protocol__main">
+          <div class="equation">HCl + H₂O ⇌ H₃O⁺ + Cl⁻</div>
+          <figure class="diagram-figure">
+            <svg class="diagram" viewBox="0 0 820 280" role="img" aria-label="Protonenübergang von Chlorwasserstoff auf Wasser: aus HCl und H2O entstehen Chlorid und Oxonium">
+              <text x="170" y="26" text-anchor="middle" class="label-muted">vorher</text>
+              <text x="630" y="26" text-anchor="middle" class="label-muted">nachher</text>
+              <circle cx="80" cy="110" r="22" class="paper-fill ink-stroke" stroke-width="1.4"/>
+              <text x="80" y="116" text-anchor="middle" class="ink-text" font-size="16">H</text>
+              <line x1="102" y1="110" x2="138" y2="110" class="rule-strong"/>
+              <circle cx="160" cy="110" r="24" class="paper-fill ink-stroke" stroke-width="1.4"/>
+              <text x="160" y="116" text-anchor="middle" class="ink-text" font-size="16">Cl</text>
+              <circle cx="260" cy="110" r="24" class="paper-fill ink-stroke" stroke-width="1.4"/>
+              <text x="260" y="116" text-anchor="middle" class="ink-text" font-size="16">O</text>
+              <circle cx="220" cy="62" r="19" class="paper-fill ink-stroke" stroke-width="1.4"/>
+              <text x="220" y="68" text-anchor="middle" class="ink-text" font-size="15">H</text>
+              <circle cx="300" cy="62" r="19" class="paper-fill ink-stroke" stroke-width="1.4"/>
+              <text x="300" y="68" text-anchor="middle" class="ink-text" font-size="15">H</text>
+              <line x1="246" y1="94" x2="228" y2="76" class="rule-strong"/>
+              <line x1="274" y1="94" x2="292" y2="76" class="rule-strong"/>
+              <text x="80" y="150" text-anchor="middle" class="label-muted" font-size="12">Proton</text>
+              <path d="M 360 110 L 430 110" class="accent" stroke-width="2"/>
+              <polygon points="430,103 444,110 430,117" class="accent-fill"/>
+              <text x="400" y="92" text-anchor="middle" class="accent-text" font-size="15">H⁺</text>
+              <circle cx="540" cy="110" r="24" class="paper-fill ink-stroke" stroke-width="1.4"/>
+              <text x="540" y="116" text-anchor="middle" class="ink-text" font-size="16">Cl</text>
+              <text x="570" y="92" text-anchor="middle" class="accent-text" font-size="17">-</text>
+              <circle cx="660" cy="110" r="24" class="paper-fill ink-stroke" stroke-width="1.4"/>
+              <text x="660" y="116" text-anchor="middle" class="ink-text" font-size="16">O</text>
+              <circle cx="620" cy="62" r="19" class="paper-fill ink-stroke" stroke-width="1.4"/>
+              <text x="620" y="68" text-anchor="middle" class="ink-text" font-size="15">H</text>
+              <circle cx="700" cy="62" r="19" class="paper-fill ink-stroke" stroke-width="1.4"/>
+              <text x="700" y="68" text-anchor="middle" class="ink-text" font-size="15">H</text>
+              <circle cx="660" cy="160" r="19" class="paper-fill ink-stroke" stroke-width="1.4"/>
+              <text x="660" y="166" text-anchor="middle" class="ink-text" font-size="15">H</text>
+              <line x1="646" y1="94" x2="628" y2="76" class="rule-strong"/>
+              <line x1="674" y1="94" x2="692" y2="76" class="rule-strong"/>
+              <line x1="660" y1="134" x2="660" y2="141" class="rule-strong"/>
+              <text x="690" y="115" text-anchor="middle" class="accent-text" font-size="17">+</text>
+              <text x="410" y="250" text-anchor="middle" class="label-muted">Das Proton wandert von HCl auf Wasser.</text>
+            </svg>
+            <figcaption>Das Proton der HCl-Bindung wird auf ein freies Elektronenpaar des Wassers übertragen. Aus HCl wird Cl⁻, aus Wasser H₃O⁺.</figcaption>
+          </figure>
+          <p>Chlorwasserstoff gibt ein Proton an Wasser ab. HCl ist die Säure, Wasser ist die Base. Es entstehen das Oxonium-Ion H₃O⁺ und das Chlorid-Ion Cl⁻. Cl⁻ ist die konjugierte Base von HCl; H₃O⁺ ist die konjugierte Säure von H₂O.</p>
+          <p>Wasser kann sowohl als Säure als auch als Base reagieren. Ein solches Teilchen heißt Ampholyt. Auch Hydrogencarbonat ist amphiphil im Sinne des Protonenübergangs: Es kann ein Proton aufnehmen oder abgeben.</p>
+          <table class="data-table">
+            <caption>Konjugierte Säure-Base-Paare</caption>
+            <thead><tr><th>Säure</th><th>konjugierte Base</th></tr></thead>
+            <tbody>
+              <tr><td>HCl</td><td>Cl⁻</td></tr>
+              <tr><td>H₃O⁺</td><td>H₂O</td></tr>
+              <tr><td>NH₄⁺</td><td>NH₃</td></tr>
+              <tr><td>CH₃COOH</td><td>CH₃COO⁻</td></tr>
+              <tr><td>HCO₃⁻</td><td>CO₃²⁻</td></tr>
+            </tbody>
+          </table>
+          <p>Der Gleichgewichtspfeil zeigt: Der Protonenübergang ist umkehrbar. Je nach Acidität der beteiligten Teilchen liegt das Gleichgewicht stärker auf der einen oder anderen Seite. Bei HCl liegt es weit rechts, bei Essigsäure nur teilweise rechts.</p>
+          <section class="checkpoint" aria-labelledby="proton-check">
+            <h3 id="proton-check">Prüfpunkt</h3>
+            <div class="quiz" data-quiz="proton"><noscript><p class="tool__fallback">Die Prüfpunkt-Aufgaben brauchen JavaScript.</p></noscript></div>
+          </section>
+          <script type="application/json" data-quiz-data="proton">
+          {
+            "questions": [
+              {
+                "id": "q1",
+                "type": "mc",
+                "level": "II",
+                "competency": "K4",
+                "prompt": "Welche Rolle spielt Wasser in der Reaktion HCl + H₂O ⇌ H₃O⁺ + Cl⁻?",
+                "options": ["Es ist die Base und nimmt ein Proton auf.", "Es ist die Säure und gibt ein Proton ab.", "Es ist ein Katalysator und wird nicht verändert.", "Es ist ein Salz."],
+                "correct": 0,
+                "explain": "Wasser nimmt das Proton von HCl auf und wird zu H₃O⁺. Wasser ist hier die Base, HCl die Säure."
+              },
+              {
+                "id": "q2",
+                "type": "input",
+                "level": "I",
+                "competency": "K3",
+                "prompt": "Wie heißt das Teilchen H₃O⁺?",
+                "accept": ["oxoniumion", "oxonium-ion", "oxonium", "hydroniumion", "hydronium-ion"],
+                "model": "Oxoniumion",
+                "placeholder": "Name eingeben",
+                "explain": "H₃O⁺ heißt Oxoniumion. Es entsteht, wenn ein Proton auf ein Wasser-Molekül übertragen wird."
+              }
+            ]
+          }
+          </script>
+          <div class="station__footer">
+            <span class="status" data-station-status></span>
+            <div class="station__footer-actions">
+              <button class="btn js-only" type="button" data-complete="proton">Station abschließen</button>
+              <a class="quiet-link" href="#strength" data-go="strength" aria-label="Weiter zur Station Säurestärke">Weiter</a>
+            </div>
+          </div>
+        </div>
+        <aside class="protocol__margin">
+          <div class="note">
+            <p class="note__title">Merke</p>
+            <p>Säure und Base treten als Paar auf. Nach der Abgabe eines Protons bleibt die konjugierte Base zurück.</p>
+          </div>
+          <div class="note">
+            <p class="note__title">Fachsprache</p>
+            <dl>
+              <dt>Protonendonator</dt><dd>Teilchen, das ein Proton abgibt; Brønsted-Säure.</dd>
+              <dt>Protonenakzeptor</dt><dd>Teilchen, das ein Proton aufnimmt; Brønsted-Base.</dd>
+              <dt>Ampholyt</dt><dd>Teilchen, das sowohl als Säure als auch als Base reagieren kann.</dd>
+              <dt>konjugiertes Paar</dt><dd>Säure und Base, die sich um ein Proton unterscheiden.</dd>
+            </dl>
+          </div>
+          <div class="note">
+            <p class="note__title">Typischer Fehler</p>
+            <p>Säure ist hier ein Teilchen, nicht die Lösung. Die Lösung heißt sauer; das Teilchen ist die Säure.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="station" id="strength" data-station="strength" data-title="Säurestärke" aria-labelledby="strength-title">
+      <header class="station__head">
+        <h2 id="strength-title"><span class="station__num">03</span> Warum ist Essigsäure stärker als Ethanol?</h2>
+        <p class="lead">Die Säurestärke hängt davon ab, wie gut die konjugierte Base die negative Ladung stabilisiert.</p>
+      </header>
+      <div class="protocol">
+        <div class="protocol__main">
+          <p>Ethanol und Essigsäure besitzen beide eine OH-Gruppe. Trotzdem ist Essigsäure deutlich stärker sauer. Der Grund liegt in der konjugierten Base: Das Acetat-Ion CH₃COO⁻ kann die negative Ladung über zwei Sauerstoffatome verteilen. Diese Mesomerie stabilisiert das Ion. Beim Ethanol bleibt die Ladung am einzelnen Sauerstoffatom.</p>
+          <div class="figure-grid">
+            <figure>
+              <span class="fig-name">Acetat, Grenzstruktur 1</span>
+              <svg class="diagram" viewBox="0 0 300 130" role="img" aria-label="Acetat-Ion mit Doppelbindung zum linken Sauerstoff und negativer Ladung am rechten Sauerstoff">
+                <text x="20" y="70" class="ink-text" font-size="20">CH₃</text>
+                <line x1="85" y1="64" x2="135" y2="64" class="rule-strong" stroke-width="2"/>
+                <text x="145" y="70" class="ink-text" font-size="20">C</text>
+                <line x1="165" y1="56" x2="205" y2="36" class="rule-strong" stroke-width="2"/>
+                <line x1="169" y1="62" x2="209" y2="42" class="rule-strong" stroke-width="2"/>
+                <text x="214" y="42" class="ink-text" font-size="20">O</text>
+                <line x1="165" y1="72" x2="215" y2="92" class="rule-strong" stroke-width="2"/>
+                <text x="220" y="98" class="ink-text" font-size="20">O⁻</text>
+              </svg>
+              <figcaption>Die Doppelbindung liegt zum oberen Sauerstoff.</figcaption>
+            </figure>
+            <figure>
+              <span class="fig-name">Acetat, Grenzstruktur 2</span>
+              <svg class="diagram" viewBox="0 0 300 130" role="img" aria-label="Acetat-Ion mit negativer Ladung am linken Sauerstoff und Doppelbindung zum rechten Sauerstoff">
+                <text x="20" y="70" class="ink-text" font-size="20">CH₃</text>
+                <line x1="85" y1="64" x2="135" y2="64" class="rule-strong" stroke-width="2"/>
+                <text x="145" y="70" class="ink-text" font-size="20">C</text>
+                <line x1="165" y1="56" x2="215" y2="36" class="rule-strong" stroke-width="2"/>
+                <text x="220" y="42" class="ink-text" font-size="20">O⁻</text>
+                <line x1="165" y1="72" x2="205" y2="92" class="rule-strong" stroke-width="2"/>
+                <line x1="169" y1="66" x2="209" y2="86" class="rule-strong" stroke-width="2"/>
+                <text x="214" y="98" class="ink-text" font-size="20">O</text>
+              </svg>
+              <figcaption>Die Doppelbindung liegt zum unteren Sauerstoff.</figcaption>
+            </figure>
+          </div>
+          <p><strong>Mesomerie kurz erklärt:</strong> Mesomerie bedeutet, dass für dasselbe Teilchen mehrere gültige Valenzstrichformeln gezeichnet werden können, die sich nur in der Lage der π-Elektronen und der Ladung unterscheiden. Die tatsächliche Struktur ist kein Wechsel zwischen diesen Formen, sondern ein einziger Zustand, in dem die Elektronen über die beteiligten Atome verteilt sind. Beim Acetat liegt die negative Ladung deshalb nicht an einem einzelnen Sauerstoffatom, sondern gleichmäßig über beide.</p>
+          <table class="data-table">
+            <caption>Säurestärke, pKa-Werte bei 25 °C (gerundet)</caption>
+            <thead><tr><th>Säure</th><th>pKa</th><th>Stärke</th></tr></thead>
+            <tbody>
+              <tr><td>HCl</td><td>-6</td><td>sehr stark</td></tr>
+              <tr><td>H₃O⁺</td><td>-1,7</td><td>stark</td></tr>
+              <tr><td>CH₃COOH</td><td>4,75</td><td>schwach</td></tr>
+              <tr><td>H₂O</td><td>15,7</td><td>sehr schwach</td></tr>
+              <tr><td>Ethanol</td><td>16</td><td>sehr schwach</td></tr>
+            </tbody>
+          </table>
+          <p>Ein kleiner pKa-Wert bedeutet eine stärkere Säure. Essigsäure ist also stärker als Wasser und Ethanol, aber viel schwächer als Salzsäure. Die Mesomerie des Acetats ist der entscheidende Unterschied.</p>
+          <section class="checkpoint" aria-labelledby="strength-check">
+            <h3 id="strength-check">Prüfpunkt</h3>
+            <div class="quiz" data-quiz="strength"><noscript><p class="tool__fallback">Die Prüfpunkt-Aufgaben brauchen JavaScript.</p></noscript></div>
+          </section>
+          <script type="application/json" data-quiz-data="strength">
+          {
+            "questions": [
+              {
+                "id": "q1",
+                "type": "mc",
+                "level": "II",
+                "competency": "K7",
+                "prompt": "Warum ist Ethansäure stärker sauer als Ethanol?",
+                "options": [
+                  "Das Acetat-Ion ist durch Mesomerie über zwei Sauerstoffatome stabilisiert.",
+                  "Ethanol besitzt keine OH-Gruppe.",
+                  "Ethansäure ist ein stärkeres Lösemittel.",
+                  "Ethanol bildet keine Wasserstoffbrücken."
+                ],
+                "correct": 0,
+                "explain": "Die negative Ladung des Acetats ist über zwei Sauerstoffatome delokalisiert. Diese Stabilisierung erleichtert die Abgabe des Protons."
+              },
+              {
+                "id": "q2",
+                "type": "mc",
+                "level": "II",
+                "competency": "K7",
+                "prompt": "Welche Aussage zur Acidität ist richtig?",
+                "options": [
+                  "Je stabiler die konjugierte Base, desto stärker ist die Säure.",
+                  "Je mehr Wasserstoffatome ein Molekül hat, desto stärker ist es sauer.",
+                  "Säurestärke hat nichts mit der Bindungspolarität zu tun.",
+                  "Ethanol ist stärker sauer als Ethansäure."
+                ],
+                "correct": 0,
+                "explain": "Die Stabilität der konjugierten Base entscheidet mit über die Lage des Gleichgewichts. Mesomerie und Bindungspolarität sind wichtige Faktoren."
+              }
+            ]
+          }
+          </script>
+          <div class="station__footer">
+            <span class="status" data-station-status></span>
+            <div class="station__footer-actions">
+              <button class="btn js-only" type="button" data-complete="strength">Station abschließen</button>
+              <a class="quiet-link" href="#concentration" data-go="concentration" aria-label="Weiter zur Station Konzentration">Weiter</a>
+            </div>
+          </div>
+        </div>
+        <aside class="protocol__margin">
+          <div class="note">
+            <p class="note__title">Merke</p>
+            <p>Je stabiler die konjugierte Base, desto stärker die Säure. Ein kleiner pKa-Wert bedeutet eine stärkere Säure.</p>
+          </div>
+          <div class="note">
+            <p class="note__title">Fachsprache</p>
+            <dl>
+              <dt>Acidität</dt><dd>Bereitschaft eines Teilchens, ein Proton abzugeben.</dd>
+              <dt>konjugierte Base</dt><dd>Teilchen, das nach der Protonenabgabe zurückbleibt.</dd>
+              <dt>pKa</dt><dd>Negativer dekadischer Logarithmus der Säurekonstante; kleiner Wert, stärkere Säure.</dd>
+            </dl>
+          </div>
+          <div class="note">
+            <p class="note__title">Typischer Fehler</p>
+            <p>Die Anzahl der Wasserstoffatome sagt nichts über die Säurestärke. Entscheidend ist, wie leicht ein Proton abgegeben wird.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="station" id="concentration" data-station="concentration" data-title="Konzentration" aria-labelledby="concentration-title">
+      <header class="station__head">
+        <h2 id="concentration-title"><span class="station__num">04</span> Wie rechnet man mit Konzentrationen?</h2>
+        <p class="lead">Stoffmenge, Volumen und Konzentration hängen über n = c × V zusammen. Beim Verdünnen bleibt die Stoffmenge konstant.</p>
+      </header>
+      <div class="protocol">
+        <div class="protocol__main">
+          <figure class="tool" data-tool="concentration" data-tool-data="concentration">
+            <div class="tool__head">
+              <p class="tool__title">Konzentrations-Rechner</p>
+              <p class="tool__hint">Wähle einen Rechenweg, ändere die Werte und berechne.</p>
+            </div>
+            <div class="tool__controls" data-tool-controls></div>
+            <div class="tool__stage" data-tool-stage><p class="tool__fallback">Der Rechner lädt mit JavaScript. Die Formeln stehen im Text.</p></div>
+            <div class="tool__readout" data-tool-readout></div>
+            <figcaption class="tool__caption">Volumen in Millilitern, Konzentration in mol/L. Die Stoffmenge n wird in mol angegeben.</figcaption>
+          </figure>
+          <p>Die Stoffmengenkonzentration c gibt an, wie viel Stoff in einem Volumen gelöst ist: c = n / V. Die Stoffmenge n ist die Menge in Mol, das Volumen V wird in Litern eingesetzt. Bei einer Verdünnung bleibt die Stoffmenge gleich; deshalb gilt c₁ × V₁ = c₂ × V₂. Für starke Säuren und Basen lässt sich daraus der pH-Wert abschätzen.</p>
+          <details class="deep">
+            <summary>Mehr im Detail: Von der Masse zur Konzentration</summary>
+            <p>Wenn eine Masse m gegeben ist, berechnest du die Stoffmenge über n = m / M. M ist die molare Masse in g/mol. Anschließend teilst du durch das Volumen in Litern. Beispiel: 4 g NaOH (M = 40 g/mol) in 1 L Lösung ergeben n = 0,1 mol und c = 0,1 mol/L.</p>
+          </details>
+          <section class="checkpoint" aria-labelledby="concentration-check">
+            <h3 id="concentration-check">Prüfpunkt</h3>
+            <div class="quiz" data-quiz="concentration"><noscript><p class="tool__fallback">Die Prüfpunkt-Aufgaben brauchen JavaScript.</p></noscript></div>
+          </section>
+          <script type="application/json" data-quiz-data="concentration">
+          {
+            "questions": [
+              {
+                "id": "q1",
+                "type": "input",
+                "level": "II",
+                "competency": "K8",
+                "prompt": "Welche Stoffmenge enthält 250 mL einer 0,2 mol/L Lösung?",
+                "accept": ["0,05", "0.05", "5e-2", "0,05 mol", "0.05 mol"],
+                "model": "0,05 mol",
+                "placeholder": "Stoffmenge in mol",
+                "explain": "n = c × V = 0,2 mol/L × 0,25 L = 0,05 mol."
+              },
+              {
+                "id": "q2",
+                "type": "input",
+                "level": "III",
+                "competency": "K8",
+                "prompt": "Auf welches Volumen musst du 20 mL einer 0,5 mol/L Lösung verdünnen, um 0,1 mol/L zu erhalten?",
+                "accept": ["100", "100 ml", "100ml", "0,1 l", "0.1 l", "0,1 liter"],
+                "model": "100 mL",
+                "placeholder": "Volumen in mL",
+                "explain": "c₁ × V₁ = c₂ × V₂: 0,5 × 20 = 0,1 × V₂. V₂ = 100 mL."
+              }
+            ]
+          }
+          </script>
+          <div class="station__footer">
+            <span class="status" data-station-status></span>
+            <div class="station__footer-actions">
+              <button class="btn js-only" type="button" data-complete="concentration">Station abschließen</button>
+              <a class="quiet-link" href="#titration" data-go="titration" aria-label="Weiter zur Station Titration">Weiter</a>
+            </div>
+          </div>
+        </div>
+        <aside class="protocol__margin">
+          <div class="note">
+            <p class="note__title">Merke</p>
+            <p>n = c × V. Beim Verdünnen bleibt n konstant; c₁ × V₁ = c₂ × V₂.</p>
+          </div>
+          <div class="note">
+            <p class="note__title">Fachsprache</p>
+            <dl>
+              <dt>Stoffmengenkonzentration</dt><dd>c = n / V; Einheit mol/L.</dd>
+              <dt>Verdünnung</dt><dd>Zugabe von Lösemittel; die Stoffmenge bleibt gleich, das Volumen steigt.</dd>
+              <dt>Molare Masse</dt><dd>Masse eines Mols eines Stoffes; Einheit g/mol.</dd>
+            </dl>
+          </div>
+          <div class="note">
+            <p class="note__title">Typischer Fehler</p>
+            <p>Volumen in Millilitern immer in Liter umrechnen, bevor du es in die Formel einsetzt.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="station" id="titration" data-station="titration" data-title="Titration" aria-labelledby="titration-title">
+      <header class="station__head">
+        <h2 id="titration-title"><span class="station__num">05</span> Wie bestimmt man eine Konzentration?</h2>
+        <p class="lead">Bei einer Titration wird eine Lösung bekannter Konzentration bis zum Äquivalenzpunkt zugegeben.</p>
+      </header>
+      <div class="protocol">
+        <div class="protocol__main">
+          <figure class="tool" data-tool="titration" data-tool-data="titration">
+            <div class="tool__head">
+              <p class="tool__title">Titrationsstand</p>
+              <p class="tool__hint">Gib Maßlösung zu und beobachte pH-Wert und Indikatorfarbe.</p>
+            </div>
+            <div class="tool__controls" data-tool-controls></div>
+            <div class="tool__stage" data-tool-stage><p class="tool__fallback">Der Titrationsstand lädt mit JavaScript. Der Ablauf steht im Text.</p></div>
+            <div class="tool__readout" data-tool-readout></div>
+            <figcaption class="tool__caption">Modell mit 20 mL Salzsäure (0,1 mol/L) und Natronlauge (0,1 mol/L). Phenolphthalein schlägt im Basischen um.</figcaption>
+          </figure>
+          <p>Bei der Neutralisation reagieren Oxonium- und Hydroxid-Ionen zu Wasser: H₃O⁺ + OH⁻ → 2 H₂O. Die entstehende Lösung enthält das Salz aus dem Kation der Base und dem Anion der Säure. Bei einer Titration wird so lange Maßlösung zugegeben, bis der Indikator dauerhaft umschlägt. Am Äquivalenzpunkt sind die Stoffmengen im Verhältnis der Koeffizienten gleich.</p>
+          <table class="data-table">
+            <caption>Neutralisationen und ihre Salze</caption>
+            <thead><tr><th>Säure + Base</th><th>Salz + Wasser</th></tr></thead>
+            <tbody>
+              <tr><td>HCl + NaOH</td><td>NaCl + H₂O</td></tr>
+              <tr><td>H₂SO₄ + 2 NaOH</td><td>Na₂SO₄ + 2 H₂O</td></tr>
+              <tr><td>H₃PO₄ + 3 NaOH</td><td>Na₃PO₄ + 3 H₂O</td></tr>
+            </tbody>
+          </table>
+          <p>Antazida neutralisieren überschüssige Magensäure. Saure und basische Abwässer müssen vor dem Einleiten neutralisiert werden. Bei der Titration sind saubere Geräte, eine gut sichtbare Farbänderung und das Ablesen am Meniskus wichtig. Fehlerquellen sind Luftblasen in der Bürette, eine ungenaue Endpunktbestimmung und nicht ausreichendes Umschwenken.</p>
+          <section class="checkpoint" aria-labelledby="titration-check">
+            <h3 id="titration-check">Prüfpunkt</h3>
+            <div class="quiz" data-quiz="titration"><noscript><p class="tool__fallback">Die Prüfpunkt-Aufgaben brauchen JavaScript.</p></noscript></div>
+          </section>
+          <script type="application/json" data-quiz-data="titration">
+          {
+            "questions": [
+              {
+                "id": "q1",
+                "type": "mc",
+                "level": "II",
+                "competency": "K10",
+                "prompt": "Was gilt am Äquivalenzpunkt einer Titration von HCl mit NaOH?",
+                "options": ["n(HCl) = n(NaOH)", "c(HCl) = c(NaOH)", "pH = 0", "Es ist noch keine Base zugegeben."],
+                "correct": 0,
+                "explain": "Bei der 1:1-Reaktion von HCl und NaOH sind am Äquivalenzpunkt die Stoffmengen gleich. Die Konzentrationen müssen nicht gleich sein, wenn die Volumina unterschiedlich sind."
+              },
+              {
+                "id": "q2",
+                "type": "input",
+                "level": "III",
+                "competency": "K10",
+                "prompt": "20 mL Salzsäure werden mit 15 mL Natronlauge (c = 0,1 mol/L) neutralisiert. Wie groß ist c(HCl)?",
+                "accept": ["0,075", "0.075", "0,075 mol/l", "0.075 mol/l"],
+                "model": "0,075 mol/L",
+                "placeholder": "Konzentration in mol/L",
+                "explain": "n(NaOH) = 0,1 mol/L × 0,015 L = 0,0015 mol. Bei 1:1 gilt n(HCl) = 0,0015 mol. c(HCl) = 0,0015 mol / 0,020 L = 0,075 mol/L."
+              }
+            ]
+          }
+          </script>
+          <div class="station__footer">
+            <span class="status" data-station-status></span>
+            <div class="station__footer-actions">
+              <button class="btn js-only" type="button" data-complete="titration">Station abschließen</button>
+              <a class="quiet-link" href="#check" data-go="check" aria-label="Weiter zum Kompetenzcheck">Weiter</a>
+            </div>
+          </div>
+        </div>
+        <aside class="protocol__margin">
+          <div class="note">
+            <p class="note__title">Merke</p>
+            <p>Am Äquivalenzpunkt sind die Stoffmengen im Verhältnis der Koeffizienten gleich. Daraus berechnest du die unbekannte Konzentration.</p>
+          </div>
+          <div class="note">
+            <p class="note__title">Fachsprache</p>
+            <dl>
+              <dt>Maßlösung</dt><dd>Lösung mit bekannter Konzentration, die aus der Bürette zugegeben wird.</dd>
+              <dt>Äquivalenzpunkt</dt><dd>Punkt, an dem die Stoffmengen der reagierenden Teilchen im Verhältnis der Koeffizienten stehen.</dd>
+              <dt>Neutralisation</dt><dd>Reaktion von Oxonium- und Hydroxid-Ionen zu Wasser.</dd>
+            </dl>
+          </div>
+          <div class="note">
+            <p class="note__title">Typischer Fehler</p>
+            <p>Der Äquivalenzpunkt ist nicht automatisch pH 7, wenn schwache Säuren oder Basen beteiligt sind.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="station" id="check" data-station="check" data-title="Kompetenzcheck" aria-labelledby="check-title">
+      <header class="station__head">
+        <h2 id="check-title"><span class="station__num">06</span> Kompetenzcheck</h2>
+        <p class="lead">Zwölf Aufgaben zu den zehn Kompetenzen. Werte am Ende aus und lies die Rückmeldungen zu den offenen Aufgaben.</p>
+      </header>
+      <div class="check-banner">
+        <div>
+          <p class="check-banner__score" data-check-score>0 / 12</p>
+          <p class="check-banner__text" data-check-text>Beantworte alle Aufgaben und werte dann aus. Jede Aufgabe zählt einen Punkt.</p>
+        </div>
+        <p class="check-banner__text">Der Bestwert bleibt gespeichert. Du kannst die Aufgaben zurücksetzen und erneut bearbeiten.</p>
+      </div>
+      <div class="competency-results" data-check-bars aria-label="Ergebnisse nach Kompetenz"></div>
+      <div class="quiz" data-quiz="check"><noscript><p class="tool__fallback">Der Kompetenzcheck braucht JavaScript. Die Lerninhalte bleiben lesbar.</p></noscript></div>
+      <div class="check-result" data-check-result hidden></div>
+      <script type="application/json" data-quiz-data="check">
+      {
+        "final": true,
+        "competencies": [
+          { "id": "K1", "label": "K1: Indikatoren und pH-Skala" },
+          { "id": "K2", "label": "K2: Bedeutung in Alltag und Biologie" },
+          { "id": "K3", "label": "K3: Oxonium und Hydroxid" },
+          { "id": "K4", "label": "K4: Brønsted-Konzept" },
+          { "id": "K5", "label": "K5: Protonenübergänge in Gleichungen" },
+          { "id": "K6", "label": "K6: Reversibilität" },
+          { "id": "K7", "label": "K7: Acidität von Alkoholen und Carbonsäuren" },
+          { "id": "K8", "label": "K8: Konzentrationsberechnungen" },
+          { "id": "K9", "label": "K9: Neutralisation" },
+          { "id": "K10", "label": "K10: Titration" }
+        ],
+        "questions": [
+          {
+            "id": "c1",
+            "type": "mc",
+            "level": "I",
+            "competency": "K1",
+            "prompt": "Welche Farbe hat Phenolphthalein in einer sauren Lösung?",
+            "options": ["farblos", "rot", "pink", "blau"],
+            "correct": 0,
+            "explain": "Phenolphthalein ist in saurer und neutraler Lösung farblos. Erst im Basischen wird es pink."
+          },
+          {
+            "id": "c2",
+            "type": "input",
+            "level": "I",
+            "competency": "K1",
+            "prompt": "Welchen pH-Wert hat eine Lösung mit c(H₃O⁺) = 0,001 mol/L?",
+            "accept": ["3", "drei", "3,0"],
+            "model": "3",
+            "placeholder": "pH-Wert eingeben",
+            "explain": "pH = -lg(0,001) = 3."
+          },
+          {
+            "id": "c3",
+            "type": "mc",
+            "level": "II",
+            "competency": "K2",
+            "prompt": "Warum ist der pH-Wert des Blutes wichtig?",
+            "options": [
+              "Enzyme und Zellfunktionen brauchen einen engen pH-Bereich.",
+              "Blut muss immer pH 0 haben.",
+              "Der pH-Wert hat keinen Einfluss auf den Körper.",
+              "Blut ist eine starke Base."
+            ],
+            "correct": 0,
+            "explain": "Viele Enzyme arbeiten nur in einem schmalen pH-Bereich. Deshalb wird der Blut-pH über Puffersysteme stabil gehalten."
+          },
+          {
+            "id": "c4",
+            "type": "mc",
+            "level": "II",
+            "competency": "K2",
+            "prompt": "Wie wirken Antazida?",
+            "options": [
+              "Sie neutralisieren überschüssige Magensäure.",
+              "Sie erhöhen die Magensäureproduktion.",
+              "Sie sind immer stark basisch und dürfen nicht eingenommen werden.",
+              "Sie ersetzen die Magenschleimhaut."
+            ],
+            "correct": 0,
+            "explain": "Antazida enthalten meist Carbonate oder Hydroxide, die mit der Magensäure reagieren und den pH-Wert anheben."
+          },
+          {
+            "id": "c5",
+            "type": "mc",
+            "level": "I",
+            "competency": "K3",
+            "prompt": "Welche Aussage beschreibt eine saure Lösung auf der Teilchenebene?",
+            "options": ["c(H₃O⁺) > c(OH⁻)", "c(H₃O⁺) = c(OH⁻)", "c(H₃O⁺) < c(OH⁻)", "Es sind keine Ionen enthalten."],
+            "correct": 0,
+            "explain": "In einer sauren Lösung ist die Konzentration der Oxonium-Ionen größer als die der Hydroxid-Ionen."
+          },
+          {
+            "id": "c6",
+            "type": "mc",
+            "level": "I",
+            "competency": "K4",
+            "prompt": "Was ist eine Base nach Brønsted?",
+            "options": ["Ein Protonenakzeptor", "Ein Protonendonator", "Immer ein Hydroxid-Ion", "Immer ein Salz"],
+            "correct": 0,
+            "explain": "Nach Brønsted ist eine Base ein Teilchen, das ein Proton aufnehmen kann. Hydroxid-Ionen sind nur ein Beispiel."
+          },
+          {
+            "id": "c7",
+            "type": "mc",
+            "level": "II",
+            "competency": "K5",
+            "prompt": "Welche Gleichung beschreibt die Reaktion von Ammoniak mit Wasser?",
+            "options": [
+              "NH₃ + H₂O ⇌ NH₄⁺ + OH⁻",
+              "NH₃ + HCl → NH₄Cl",
+              "NH₃ + O₂ → NO + H₂O",
+              "NH₃ + H₂O → NH₂⁻ + H₃O⁺"
+            ],
+            "correct": 0,
+            "explain": "Ammoniak nimmt ein Proton von Wasser auf. Es entstehen Ammonium und Hydroxid; die Lösung ist basisch."
+          },
+          {
+            "id": "c8",
+            "type": "mc",
+            "level": "II",
+            "competency": "K6",
+            "prompt": "Was bedeutet der Gleichgewichtspfeil bei einem Protonenübergang?",
+            "options": [
+              "Hin- und Rückreaktion laufen gleichzeitig ab; es stellt sich ein Gleichgewicht ein.",
+              "Die Reaktion läuft nur in eine Richtung ab.",
+              "Es findet keine Reaktion statt.",
+              "Es entsteht immer ein Salz."
+            ],
+            "correct": 0,
+            "explain": "Der Doppelpfeil zeigt die Reversibilität. Je nach Acidität der Teilchen liegt das Gleichgewicht auf einer Seite."
+          },
+          {
+            "id": "c9",
+            "type": "mc",
+            "level": "II",
+            "competency": "K7",
+            "prompt": "Warum ist Ethansäure stärker sauer als Ethanol?",
+            "options": [
+              "Das Acetat-Ion ist durch Mesomerie stabilisiert.",
+              "Ethanol hat keine OH-Gruppe.",
+              "Ethansäure ist ein stärkeres Lösemittel.",
+              "Ethanol bildet keine Wasserstoffbrücken."
+            ],
+            "correct": 0,
+            "explain": "Die negative Ladung des Acetats ist über zwei Sauerstoffatome delokalisiert. Diese Stabilisierung macht die Säure stärker."
+          },
+          {
+            "id": "c10",
+            "type": "input",
+            "level": "III",
+            "competency": "K8",
+            "prompt": "Wie viel Milliliter einer 0,5 mol/L Lösung brauchst du für 100 mL einer 0,1 mol/L Lösung?",
+            "accept": ["20", "20 ml", "20ml", "0,02 l", "0.02 l"],
+            "model": "20 mL",
+            "placeholder": "Volumen in mL",
+            "explain": "c₁ × V₁ = c₂ × V₂: 0,5 × V₁ = 0,1 × 100. V₁ = 20 mL."
+          },
+          {
+            "id": "c11",
+            "type": "mc",
+            "level": "I",
+            "competency": "K9",
+            "prompt": "Welche Produkte entstehen bei der Neutralisation von HCl mit NaOH?",
+            "options": ["NaCl und H₂O", "NaH und Cl₂", "NaOH und HCl", "H₂ und O₂"],
+            "correct": 0,
+            "explain": "Die Oxonium-Ionen der Säure und die Hydroxid-Ionen der Base bilden Wasser. Die übrigen Ionen bilden das Salz Natriumchlorid."
+          },
+          {
+            "id": "c12",
+            "type": "input",
+            "level": "III",
+            "competency": "K10",
+            "prompt": "25 mL Salzsäure werden mit 20 mL Natronlauge (c = 0,1 mol/L) neutralisiert. Wie groß ist c(HCl)?",
+            "accept": ["0,08", "0.08", "0,08 mol/l", "0.08 mol/l"],
+            "model": "0,08 mol/L",
+            "placeholder": "Konzentration in mol/L",
+            "explain": "n(NaOH) = 0,1 × 0,020 = 0,002 mol. Bei 1:1 ist n(HCl) = 0,002 mol. c(HCl) = 0,002 / 0,025 = 0,08 mol/L."
+          }
+        ]
+      }
+      </script>
+    </section>
+
+    <section class="station" id="glossar" data-station="glossar" data-title="Glossar" aria-labelledby="glossar-title">
+      <header class="station__head">
+        <h2 id="glossar-title"><span class="station__num">07</span> Glossar</h2>
+        <p class="lead">Die zentralen Begriffe des Lernbereichs in kurzer Form. Suche nach einem Wort oder einem Teil davon.</p>
+      </header>
+      <div class="glossary-search">
+        <label class="visually-hidden" for="glossarySearch">Glossarbegriff suchen</label>
+        <input id="glossarySearch" type="search" placeholder="Begriff suchen, zum Beispiel Oxonium, Ampholyt, Äquivalenzpunkt" data-glossary-search autocomplete="off">
+        <span data-glossary-count>0</span>
+      </div>
+      <dl class="glossary" data-glossary>
+        <div class="term"><dt>Saure Lösung</dt><dd>Lösung mit c(H₃O⁺) > c(OH⁻); pH < 7.</dd></div>
+        <div class="term"><dt>Basische Lösung</dt><dd>Lösung mit c(OH⁻) > c(H₃O⁺); pH > 7.</dd></div>
+        <div class="term"><dt>Neutrale Lösung</dt><dd>Lösung mit c(H₃O⁺) = c(OH⁻); bei 25 °C pH 7.</dd></div>
+        <div class="term"><dt>Indikator</dt><dd>Stoff, der seine Farbe in Abhängigkeit vom pH-Wert ändert.</dd></div>
+        <div class="term"><dt>Oxonium-Ion</dt><dd>H₃O⁺; entsteht bei der Protonenaufnahme durch Wasser.</dd></div>
+        <div class="term"><dt>Hydroxid-Ion</dt><dd>OH⁻; entsteht bei der Reaktion einer Base mit Wasser.</dd></div>
+        <div class="term"><dt>Brønsted-Säure</dt><dd>Protonendonator.</dd></div>
+        <div class="term"><dt>Brønsted-Base</dt><dd>Protonenakzeptor.</dd></div>
+        <div class="term"><dt>Ampholyt</dt><dd>Teilchen, das sowohl als Säure als auch als Base reagieren kann, zum Beispiel Wasser.</dd></div>
+        <div class="term"><dt>konjugiertes Paar</dt><dd>Säure und Base, die sich um ein Proton unterscheiden.</dd></div>
+        <div class="term"><dt>Acidität</dt><dd>Bereitschaft eines Teilchens, ein Proton abzugeben.</dd></div>
+        <div class="term"><dt>pKa-Wert</dt><dd>Negativer dekadischer Logarithmus der Säurekonstante; kleiner Wert, stärkere Säure.</dd></div>
+        <div class="term"><dt>Neutralisation</dt><dd>Reaktion von Oxonium- und Hydroxid-Ionen zu Wasser.</dd></div>
+        <div class="term"><dt>Äquivalenzpunkt</dt><dd>Punkt einer Titration, an dem die Stoffmengen im Verhältnis der Koeffizienten stehen.</dd></div>
+        <div class="term"><dt>Titration</dt><dd>Verfahren zur Bestimmung einer unbekannten Konzentration mit einer Maßlösung.</dd></div>
+      </dl>
+      <p class="glossary-empty" data-glossary-empty hidden>Kein Begriff gefunden. Versuche einen anderen Suchbegriff.</p>
+      <div class="station__footer">
+        <span class="status" data-station-status></span>
+        <div class="station__footer-actions">
+          <a class="quiet-link" href="#check" data-go="check">Zum Kompetenzcheck</a>
+          <a class="quiet-link" href="index.html">Alle Lernbereiche</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<footer class="colophon">
+  <div class="colophon__inner">
+    <p><strong>Chemie 10</strong>. Lernwebsite nach LehrplanPLUS. Alle Grafiken sind selbst gezeichnet; es werden keine Schulbuchabbildungen übernommen.</p>
+    <p><a href="https://www.lehrplanplus.bayern.de/fachlehrplan/gymnasium/10/chemie/ch" target="_blank" rel="noopener">LehrplanPLUS Chemie 10</a>. Stand November 2026.</p>
+  </div>
+</footer>
+
+<dialog class="dialog" id="resetDialog" aria-labelledby="reset-title">
+  <h2 id="reset-title">Lernstand zurücksetzen?</h2>
+  <p>Alle lokalen Ergebnisse dieser Seite werden gelöscht. Die Lerninhalte bleiben erhalten.</p>
+  <div class="dialog__actions">
+    <button class="btn btn--quiet" type="button" data-reset-cancel>Abbrechen</button>
+    <button class="btn" type="button" data-reset-confirm>Ja, zurücksetzen</button>
+  </div>
+</dialog>
+
+<script type="application/json" data-tool-data="ph">{}</script>
+<script type="application/json" data-tool-data="concentration">{}</script>
+<script type="application/json" data-tool-data="titration">
+{ "cAnalyte": 0.1, "vAnalyte": 20, "cTitrant": 0.1 }
+</script>
+<script src="assets/tools.js" defer></script>
+<script src="assets/app.js" defer></script>
+</body>
+</html>

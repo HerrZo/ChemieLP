@@ -1,0 +1,888 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>Ester und Zucker: Nukleophil und Elektrophil | Chemie 10</title>
+<meta name="description" content="Interaktiver Lernpfad zu Zuckern, Estern, Esterkondensation, Hydrolyse, Fetten und Alltagsprodukten für Chemie 10 am SG.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@700&family=Spectral:ital,wght@0,400;0,500;1,400&family=Libre+Franklin:wght@500&display=swap" rel="stylesheet">
+<style>
+/* Hallmark · shape: app screen · genre: editorial · theme: Newsprint (deal 3/3, seed interaktive-chemie-lernwebsite-fuer-die-9539·9648ff15·2026-11-02·r0) · job: learn · scope: app
+ * hero: none (app screen) · nav: masthead + station sidebar · footer: colophon · imagery: none, own SVG diagrams · signature: five subject instruments
+ * axes: light/slab-serif/warm · posture: restrained · contrast: pass · fold: pass · v2.0.0 */
+html { overflow-x: clip; }
+body { overflow-x: clip; }
+</style>
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body data-page="lb6">
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<header class="masthead">
+  <div class="masthead__inner">
+    <a class="brand" href="index.html" aria-label="Zur Übersicht Chemie 10"><span>Chemie 10</span><span class="brand__tag">SG</span></a>
+    <p class="issue"><span class="issue__num">06</span> Zucker, Ester, Fette, Mechanismen</p>
+    <div class="masthead__actions">
+      <span class="progress-inline" data-progress-inline aria-live="polite">0 von 5</span>
+      <a class="quiet-link" href="index.html">Übersicht</a>
+      <button class="menu-btn btn btn--quiet btn--small" type="button" data-menu aria-expanded="false" aria-controls="sidebar">Stationen</button>
+    </div>
+  </div>
+</header>
+<div class="app">
+  <aside class="sidebar" id="sidebar" aria-label="Stationen">
+    <div class="sidebar__head">
+      <p class="sidebar__kicker">Lernbereich 06</p>
+      <h2 class="sidebar__title">Ester und Zucker</h2>
+      <p class="sidebar__deck">Nukleophil und Elektrophil.</p>
+      <div class="progress">
+        <div class="progress__line"><span>Dein Lernstand</span><strong data-progress-text>0 / 5</strong></div>
+        <div class="progress__track"><i data-progress-bar style="--p:0"></i></div>
+      </div>
+    </div>
+    <nav class="station-nav">
+      <a href="#start" data-station-link="start"><span class="station-nav__num">00</span><span>Überblick</span><span class="station-nav__check" aria-hidden="true">✓</span></a>
+      <a href="#sugars" data-station-link="sugars"><span class="station-nav__num">01</span><span>Zucker</span><span class="station-nav__check" aria-hidden="true">✓</span></a>
+      <a href="#ester" data-station-link="ester"><span class="station-nav__num">02</span><span>Ester</span><span class="station-nav__check" aria-hidden="true">✓</span></a>
+      <a href="#hydrolysis" data-station-link="hydrolysis"><span class="station-nav__num">03</span><span>Hydrolyse und Fette</span><span class="station-nav__check" aria-hidden="true">✓</span></a>
+      <a href="#mechanism" data-station-link="mechanism"><span class="station-nav__num">04</span><span>Mechanismus</span><span class="station-nav__check" aria-hidden="true">✓</span></a>
+      <a href="#products" data-station-link="products"><span class="station-nav__num">05</span><span>Alltag und Technik</span><span class="station-nav__check" aria-hidden="true">✓</span></a>
+      <a href="#check" data-station-link="check"><span class="station-nav__num">06</span><span>Kompetenzcheck</span><span class="station-nav__check" aria-hidden="true">✓</span></a>
+      <a href="#glossar" data-station-link="glossar"><span class="station-nav__num">07</span><span>Glossar</span><span class="station-nav__check" aria-hidden="true">✓</span></a>
+    </nav>
+    <div class="sidebar__foot">
+      <a href="index.html">Alle Lernbereiche</a>
+      <button class="quiet-link" type="button" data-reset-open>Lernstand zurücksetzen</button>
+      <p>LehrplanPLUS<br>Chemie 10, SG</p>
+    </div>
+  </aside>
+
+  <main class="main" id="main">
+    <section class="station is-active" id="start" data-station="start" data-title="Überblick" aria-labelledby="start-title">
+      <header class="station__head">
+        <h1 id="start-title"><span class="station__num">06</span> Ester und Zucker: Nukleophil und Elektrophil.</h1>
+        <p class="lead">Warum Bananen riechen, Fette Seifen sind und Zucker nicht gleich Zucker ist.</p>
+      </header>
+              <a class="btn start-cta" href="#sugars" data-go="sugars" data-start-cta aria-label="Erste Station öffnen: Zucker">Erste Station öffnen</a>
+      <div class="protocol">
+        <div class="protocol__main">
+          <h2>Das nimmst du mit</h2>
+          <ol class="competencies">
+            <li><span class="cnum">01</span><span>Du beschreibst die Verwendung wichtiger Zucker im Alltag und bewertest ihre Bedeutung für die Ernährung.</span></li>
+            <li><span class="cnum">02</span><span>Du vergleichst ausgewählte Zucker anhand ihres molekularen Baus und begründest damit ihr chemisches Reaktionsverhalten.</span></li>
+            <li><span class="cnum">03</span><span>Du leitest aus experimentellen Beobachtungen die Bildung von Estern aus Alkoholen und Carbonsäuren ab und begründest die Stoffeigenschaften mit zwischenmolekularen Wechselwirkungen.</span></li>
+            <li><span class="cnum">04</span><span>Du wendest das Prinzip der Reversibilität chemischer Reaktionen auf Ester an, um Alltagsbeobachtungen zu erklären.</span></li>
+            <li><span class="cnum">05</span><span>Du erkennst den Einsatz von Estern in Alltagsprodukten und in der Technik und identifizierst Fette über die Estergruppe.</span></li>
+          </ol>
+          <p><small>Die Liste folgt den Kompetenzerwartungen von LehrplanPLUS Chemie 10 für das sprachliche Gymnasium.</small></p>
+        </div>
+        <aside class="protocol__margin">
+          <div class="note">
+            <p class="note__title">So arbeitest du</p>
+            <ol>
+              <li>Lies die Station und probiere das Modell aus.</li>
+              <li>Beantworte den Prüfpunkt. Du bekommst sofort Rückmeldung.</li>
+              <li>Schließe die Station ab und arbeite am Ende den Kompetenzcheck.</li>
+            </ol>
+          </div>
+          <div class="note">
+            <p class="note__title">Leitfrage</p>
+            <p>Warum riecht eine reife Banane nach einem anderen Stoff als eine unreife, und warum wird Ranziges seifig?</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="station" id="sugars" data-station="sugars" data-title="Zucker" aria-labelledby="sugars-title">
+      <header class="station__head">
+        <h2 id="sugars-title"><span class="station__num">01</span> Was sind Zucker?</h2>
+        <p class="lead">Monosaccharide sind Polyhydroxyaldehyde oder Polyhydroxyketone. Sie können offenkettig oder als Ring vorliegen.</p>
+      </header>
+      <div class="protocol">
+        <div class="protocol__main">
+          <p>Glucose und Fructose sind Monosaccharide mit sechs Kohlenstoffatomen. Glucose besitzt eine Aldehydgruppe, Fructose eine Ketogruppe; beide tragen mehrere Hydroxygruppen. In wässriger Lösung schließen sie meist zu Ringen: Glucose bildet einen Sechsring, Fructose einen Fünfring. Der Ringschluss ist eine intramolekulare nucleophile Addition.</p>
+          <div class="figure-grid">
+            <figure>
+              <span class="fig-name">Offenkettige Form (Fischer)</span>
+              <svg class="diagram" viewBox="0 0 300 300" role="img" aria-label="Fischer-Projektion von Glucose mit sechs Kohlenstoffatomen, Aldehydgruppe und Hydroxygruppen">
+                <text x="150" y="22" text-anchor="middle" class="label-strong" font-size="15">CHO</text>
+                <line x1="150" y1="28" x2="150" y2="250" class="rule-strong"/>
+                <text x="125" y="28" text-anchor="end" class="label-muted" font-size="11">1</text>
+                <line x1="150" y1="70" x2="190" y2="70" class="rule-strong"/>
+                <text x="198" y="74" class="label-strong" font-size="13">OH</text>
+                <text x="125" y="74" text-anchor="end" class="label-muted" font-size="11">2</text>
+                <line x1="150" y1="110" x2="110" y2="110" class="rule-strong"/>
+                <text x="102" y="114" text-anchor="end" class="label-strong" font-size="13">OH</text>
+                <text x="125" y="114" text-anchor="end" class="label-muted" font-size="11">3</text>
+                <line x1="150" y1="150" x2="190" y2="150" class="rule-strong"/>
+                <text x="198" y="154" class="label-strong" font-size="13">OH</text>
+                <text x="125" y="154" text-anchor="end" class="label-muted" font-size="11">4</text>
+                <line x1="150" y1="190" x2="190" y2="190" class="rule-strong"/>
+                <text x="198" y="194" class="label-strong" font-size="13">OH</text>
+                <text x="125" y="194" text-anchor="end" class="label-muted" font-size="11">5</text>
+                <text x="150" y="275" text-anchor="middle" class="label-strong" font-size="15">CH₂OH</text>
+                <text x="125" y="275" text-anchor="end" class="label-muted" font-size="11">6</text>
+              </svg>
+              <figcaption>Die offenkettige Form zeigt die Aldehydgruppe am C1 und die Hydroxygruppen an C2 bis C5.</figcaption>
+            </figure>
+            <figure>
+              <span class="fig-name">Ringform (Haworth, vereinfacht)</span>
+              <svg class="diagram" viewBox="0 0 300 300" role="img" aria-label="Vereinfachte Haworth-Projektion von beta-D-Glucose mit Sechsring und Hydroxygruppen">
+                <polygon points="150,75 220,75 260,125 220,175 150,175 110,125" class="paper-fill" stroke="var(--color-rule-2)" stroke-width="1.4"/>
+                <text x="230" y="70" text-anchor="middle" class="label-strong" font-size="15">O</text>
+                <text x="275" y="130" text-anchor="middle" class="label-muted" font-size="11">1</text>
+                <text x="235" y="200" text-anchor="middle" class="label-muted" font-size="11">2</text>
+                <text x="150" y="200" text-anchor="middle" class="label-muted" font-size="11">3</text>
+                <text x="95" y="150" text-anchor="middle" class="label-muted" font-size="11">4</text>
+                <text x="135" y="70" text-anchor="middle" class="label-muted" font-size="11">5</text>
+                <line x1="150" y1="75" x2="130" y2="40" class="rule-strong"/>
+                <text x="60" y="32" text-anchor="middle" class="label-strong" font-size="13">CH₂OH</text>
+                <line x1="260" y1="125" x2="285" y2="105" class="rule-strong"/>
+                <text x="292" y="100" text-anchor="middle" class="label-strong" font-size="13">OH</text>
+                <line x1="220" y1="175" x2="220" y2="205" class="rule-strong"/>
+                <text x="220" y="220" text-anchor="middle" class="label-strong" font-size="13">OH</text>
+                <line x1="150" y1="175" x2="150" y2="205" class="rule-strong"/>
+                <text x="150" y="220" text-anchor="middle" class="label-strong" font-size="13">OH</text>
+                <line x1="110" y1="125" x2="80" y2="105" class="rule-strong"/>
+                <text x="60" y="100" text-anchor="middle" class="label-strong" font-size="13">OH</text>
+                <text x="150" y="270" text-anchor="middle" class="label-muted" font-size="12">β-D-Glucose</text>
+              </svg>
+              <figcaption>Die Ringform entsteht durch intramolekulare Addition. α- und β-Glucose unterscheiden sich in der Stellung der OH-Gruppe an C1.</figcaption>
+            </figure>
+          </div>
+          <p><small>Die Haworth-Darstellung ist vereinfacht. In wässriger Lösung stehen offenkettige Form und Ringform im Gleichgewicht.</small></p>
+          <p>Saccharose ist ein Disaccharid aus Glucose und Fructose, verbunden über eine glycosidische Bindung. Stärke und Cellulose sind Polysaccharide aus vielen Glucosebausteinen. Stärke dient als Energiespeicher, Cellulose als Strukturstoff in Pflanzen.</p>
+          <table class="data-table">
+            <caption>Wichtige Zucker im Überblick</caption>
+            <thead><tr><th>Zucker</th><th>Bausteine</th><th>Funktionelle Gruppen</th><th>Vorkommen</th></tr></thead>
+            <tbody>
+              <tr><td>Glucose</td><td>Monosaccharid</td><td>Aldehyd, mehrere OH</td><td>Traubenzucker, Obst, Honig</td></tr>
+              <tr><td>Fructose</td><td>Monosaccharid</td><td>Keton, mehrere OH</td><td>Fruchtzucker, Obst, Honig</td></tr>
+              <tr><td>Saccharose</td><td>Glucose + Fructose</td><td>glycosidische Bindung</td><td>Haushaltszucker</td></tr>
+              <tr><td>Stärke</td><td>viele Glucosebausteine</td><td>glycosidische Bindungen</td><td>Kartoffeln, Getreide</td></tr>
+              <tr><td>Cellulose</td><td>viele Glucosebausteine</td><td>glycosidische Bindungen</td><td>Pflanzenfasern, Holz</td></tr>
+            </tbody>
+          </table>
+          <p>Zucker liefern Energie, sind aber kein Ersatz für eine vollständige Ernährung. Häufig verzehrte zuckerreiche Lebensmittel liefern viele Kalorien bei wenigen Ballaststoffen und Mikronährstoffen. Die Weltgesundheitsorganisation empfiehlt, den Anteil freier Zucker zu begrenzen. Das ist eine Ernährungsempfehlung, keine chemische Eigenschaft der Zucker.</p>
+          <details class="deep">
+            <summary>Mehr im Detail: Warum Saccharose nicht reduzierend wirkt</summary>
+            <p>In der Saccharose sind die anomeren Kohlenstoffatome von Glucose und Fructose über die glycosidische Bindung verbunden. Dadurch liegt kein freies Halbacetal vor, das sich in eine offenkettige Form mit Aldehydgruppe umwandeln könnte. Saccharose reagiert deshalb nicht mit Fehling-Lösung. Glucose und Fructose können das, weil sie ein freies Halbacetal beziehungsweise Halbketal besitzen.</p>
+          </details>
+          <section class="checkpoint" aria-labelledby="sugars-check">
+            <h3 id="sugars-check">Prüfpunkt</h3>
+            <div class="quiz" data-quiz="sugars"><noscript><p class="tool__fallback">Die Prüfpunkt-Aufgaben brauchen JavaScript.</p></noscript></div>
+          </section>
+          <script type="application/json" data-quiz-data="sugars">
+          {
+            "questions": [
+              {
+                "id": "q1",
+                "type": "mc",
+                "level": "I",
+                "competency": "K2",
+                "prompt": "Welcher Zucker besitzt eine Ketogruppe?",
+                "options": ["Glucose", "Fructose", "Saccharose", "Stärke"],
+                "correct": 1,
+                "explain": "Fructose ist ein Ketohexose. Glucose ist ein Aldohexose; Saccharose und Stärke sind aus mehreren Bausteinen aufgebaut."
+              },
+              {
+                "id": "q2",
+                "type": "mc",
+                "level": "I",
+                "competency": "K2",
+                "prompt": "Aus welchen Monosacchariden besteht Saccharose?",
+                "options": ["Glucose und Glucose", "Glucose und Fructose", "Fructose und Fructose", "Glucose und Galactose"],
+                "correct": 1,
+                "explain": "Saccharose ist ein Disaccharid aus einem Glucose- und einem Fructosebaustein, verbunden über eine glycosidische Bindung."
+              }
+            ]
+          }
+          </script>
+          <div class="station__footer">
+            <span class="status" data-station-status></span>
+            <div class="station__footer-actions">
+              <button class="btn js-only" type="button" data-complete="sugars">Station abschließen</button>
+              <a class="quiet-link" href="#ester" data-go="ester" aria-label="Weiter zur Station Ester">Weiter</a>
+            </div>
+          </div>
+        </div>
+        <aside class="protocol__margin">
+          <div class="note">
+            <p class="note__title">Merke</p>
+            <p>Monosaccharide: ein Baustein. Disaccharide: zwei Bausteine. Polysaccharide: viele Bausteine, verbunden über glycosidische Bindungen.</p>
+          </div>
+          <div class="note">
+            <p class="note__title">Fachsprache</p>
+            <dl>
+              <dt>Monosaccharid</dt><dd>Einfachzucker; nicht weiter in Zuckerbausteine spaltbar.</dd>
+              <dt>glycosidische Bindung</dt><dd>Acetalartige Bindung zwischen zwei Zuckerbausteinen.</dd>
+              <dt>Halbacetal</dt><dd>Struktur aus Aldehyd und Alkohol am selben Kohlenstoffatom; ermöglicht den Ringschluss.</dd>
+            </dl>
+          </div>
+          <div class="note">
+            <p class="note__title">Typischer Fehler</p>
+            <p>„Zucker“ ist eine Stoffklasse, nicht nur Saccharose. Glucose, Fructose und Stärke sind unterschiedliche Kohlenhydrate.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="station" id="ester" data-station="ester" data-title="Ester" aria-labelledby="ester-title">
+      <header class="station__head">
+        <h2 id="ester-title"><span class="station__num">02</span> Wie entsteht ein Ester?</h2>
+        <p class="lead">Carbonsäure und Alkohol reagieren unter Wasserabspaltung zu einem Ester. Die Reaktion ist umkehrbar.</p>
+      </header>
+      <div class="protocol">
+        <div class="protocol__main">
+          <figure class="tool" data-tool="ester" data-tool-data="ester">
+            <div class="tool__head">
+              <p class="tool__title">Ester-Synthesizer</p>
+              <p class="tool__hint">Wähle ein Beispiel. Die Gleichung zeigt Säure, Alkohol, Ester und Wasser.</p>
+            </div>
+            <div class="tool__controls" data-tool-controls></div>
+            <div class="tool__stage" data-tool-stage><p class="tool__fallback">Der Ester-Synthesizer lädt mit JavaScript. Die Reaktionsgleichung steht im Text.</p></div>
+            <div class="tool__readout" data-tool-readout></div>
+            <figcaption class="tool__caption">Säure + Alkohol ⇌ Ester + Wasser. Die Reaktion wird durch Oxonium-Ionen katalysiert.</figcaption>
+          </figure>
+          <p>Bei der Veresterung reagiert die Carboxygruppe einer Säure mit der Hydroxygruppe eines Alkohols. Unter Abspaltung von Wasser entsteht ein Ester. Die Reaktion ist eine Kondensation und bleibt umkehrbar; das Gleichgewicht lässt sich durch Entfernen von Wasser oder Ester verschieben. Als Katalysator dienen Oxonium-Ionen.</p>
+          <p>Ester besitzen keine O-H-Gruppe und können keine Wasserstoffbrücken untereinander bilden. Deshalb sieden sie niedriger als vergleichbare Carbonsäuren oder Alkohole und sind oft flüchtig. Viele kurzkettige Ester riechen fruchtig; längerkettige Ester sind häufig lipophil.</p>
+          <details class="deep">
+            <summary>Mehr im Detail: Nomenklatur der Ester</summary>
+            <p>Der Name eines Esters wird aus dem Alkoholrest und dem Säurerest gebildet. Der Alkohol liefert die Vorsilbe (Methyl-, Ethyl-, Propyl-), die Säure die Endung -at. Ethansäure und Ethanol ergeben Ethansäureethylester, kurz Ethylacetat. Die Estergruppe ist -COO-.</p>
+          </details>
+          <section class="checkpoint" aria-labelledby="ester-check">
+            <h3 id="ester-check">Prüfpunkt</h3>
+            <div class="quiz" data-quiz="ester"><noscript><p class="tool__fallback">Die Prüfpunkt-Aufgaben brauchen JavaScript.</p></noscript></div>
+          </section>
+          <script type="application/json" data-quiz-data="ester">
+          {
+            "questions": [
+              {
+                "id": "q1",
+                "type": "mc",
+                "level": "I",
+                "competency": "K3",
+                "prompt": "Welche Produkte entstehen bei der Veresterung von Carbonsäure und Alkohol?",
+                "options": ["Ester und Wasser", "Salz und Wasser", "Aldehyd und Wasserstoff", "Keton und Sauerstoff"],
+                "correct": 0,
+                "explain": "Die Carboxygruppe und die Hydroxygruppe reagieren unter Abspaltung von Wasser. Es entsteht ein Ester."
+              },
+              {
+                "id": "q2",
+                "type": "input",
+                "level": "II",
+                "competency": "K3",
+                "prompt": "Wie heißt der Ester aus Ethansäure und Ethanol?",
+                "accept": ["ethansäureethylester", "ethansaeureethylester", "ethylacetat", "ethyl ethanoat", "essigsäureethylester"],
+                "model": "Ethansäureethylester",
+                "placeholder": "Estername eingeben",
+                "explain": "Ethanol liefert die Ethylgruppe, Ethansäure den Acetatrest. Der Name ist Ethansäureethylester, kurz Ethylacetat."
+              }
+            ]
+          }
+          </script>
+          <div class="station__footer">
+            <span class="status" data-station-status></span>
+            <div class="station__footer-actions">
+              <button class="btn js-only" type="button" data-complete="ester">Station abschließen</button>
+              <a class="quiet-link" href="#hydrolysis" data-go="hydrolysis" aria-label="Weiter zur Station Hydrolyse und Fette">Weiter</a>
+            </div>
+          </div>
+        </div>
+        <aside class="protocol__margin">
+          <div class="note">
+            <p class="note__title">Merke</p>
+            <p>Veresterung: Säure + Alkohol ⇌ Ester + Wasser. Die Reaktion ist eine Gleichgewichtsreaktion.</p>
+          </div>
+          <div class="note">
+            <p class="note__title">Fachsprache</p>
+            <dl>
+              <dt>Estergruppe</dt><dd>-COO-; verbindet den Säure- und den Alkoholrest.</dd>
+              <dt>Kondensation</dt><dd>Verknüpfung zweier Moleküle unter Abspaltung eines kleinen Moleküls, oft Wasser.</dd>
+              <dt>Katalysator</dt><dd>Stoff, der die Reaktion beschleunigt, ohne verbraucht zu werden.</dd>
+            </dl>
+          </div>
+          <div class="note">
+            <p class="note__title">Typischer Fehler</p>
+            <p>Ester sind keine Salze. Sie entstehen aus einer Carbonsäure und einem Alkohol, nicht aus einer Säure und einer Base.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="station" id="hydrolysis" data-station="hydrolysis" data-title="Hydrolyse und Fette" aria-labelledby="hydrolysis-title">
+      <header class="station__head">
+        <h2 id="hydrolysis-title"><span class="station__num">03</span> Warum wird Ranziges seifig?</h2>
+        <p class="lead">Ester können wieder gespalten werden. Im Basischen läuft die Hydrolyse praktisch vollständig ab.</p>
+      </header>
+      <div class="protocol">
+        <div class="protocol__main">
+          <figure class="tool" data-tool="hydrolysis" data-tool-data="hydrolysis">
+            <div class="tool__head">
+              <p class="tool__title">Esterhydrolyse</p>
+              <p class="tool__hint">Wähle einen Ester und die Bedingungen. Die Gleichung zeigt die Produkte.</p>
+            </div>
+            <div class="tool__controls" data-tool-controls></div>
+            <div class="tool__stage" data-tool-stage><p class="tool__fallback">Das Hydrolyse-Modell lädt mit JavaScript. Die Reaktionsgleichungen stehen im Text.</p></div>
+            <div class="tool__readout" data-tool-readout></div>
+            <figcaption class="tool__caption">Sauer: umkehrbar. Basisch: irreversibel, weil das Carboxylat mesomeriestabilisiert ist.</figcaption>
+          </figure>
+          <p>Bei der Hydrolyse wird ein Ester mit Wasser gespalten. Es entstehen die Carbonsäure und der Alkohol. In saurer Lösung ist die Reaktion die Umkehrung der Veresterung und bleibt umkehrbar. In basischer Lösung greift ein Hydroxid-Ion den Ester an; es entsteht ein Carboxylat, das durch Mesomerie stabilisiert ist. Deshalb läuft die baseninduzierte Hydrolyse praktisch vollständig ab.</p>
+          <p>Fette sind Triester aus Glycerin und drei Fettsäuren. Bei der Hydrolyse mit Natronlauge entstehen Glycerin und die Natriumsalze der Fettsäuren, die Seifen. Dieser Prozess heißt Verseifung. Ranzige Fette riechen unangenehm, weil Fettsäuren durch Hydrolyse oder Oxidation freigesetzt werden.</p>
+          <table class="data-table">
+            <caption>Ester und ihre Spaltprodukte</caption>
+            <thead><tr><th>Ester</th><th>Hydrolyseprodukte</th><th>Alltag</th></tr></thead>
+            <tbody>
+              <tr><td>Ethylacetat</td><td>Ethansäure + Ethanol</td><td>Lösemittel, Aromastoff</td></tr>
+              <tr><td>Fett (Triglycerid)</td><td>Glycerin + Fettsäuren</td><td>Nahrungsfett, Seife</td></tr>
+              <tr><td>Acetylsalicylsäure</td><td>Salicylsäure + Ethansäure</td><td>Arzneistoff Aspirin</td></tr>
+            </tbody>
+          </table>
+          <section class="checkpoint" aria-labelledby="hydrolysis-check">
+            <h3 id="hydrolysis-check">Prüfpunkt</h3>
+            <div class="quiz" data-quiz="hydrolysis"><noscript><p class="tool__fallback">Die Prüfpunkt-Aufgaben brauchen JavaScript.</p></noscript></div>
+          </section>
+          <script type="application/json" data-quiz-data="hydrolysis">
+          {
+            "questions": [
+              {
+                "id": "q1",
+                "type": "mc",
+                "level": "II",
+                "competency": "K4",
+                "prompt": "Warum ist die baseninduzierte Esterhydrolyse praktisch irreversibel?",
+                "options": [
+                  "Das entstehende Carboxylat ist durch Mesomerie stabilisiert.",
+                  "Wasser ist in basischer Lösung nicht vorhanden.",
+                  "Der Ester ist ein Salz.",
+                  "Die Reaktion braucht keinen Katalysator."
+                ],
+                "correct": 0,
+                "explain": "Das Carboxylat ist über zwei Sauerstoffatome stabilisiert. Die Rückreaktion zum Ester ist dadurch energetisch ungünstig."
+              },
+              {
+                "id": "q2",
+                "type": "mc",
+                "level": "I",
+                "competency": "K5",
+                "prompt": "Als was sind Fette chemisch einzuordnen?",
+                "options": ["Als Triester aus Glycerin und Fettsäuren", "Als Salze aus Fettsäuren und Wasser", "Als Monosaccharide", "Als Amine"],
+                "correct": 0,
+                "explain": "Fette sind Triglyceride: Glycerin ist mit drei Fettsäuren über Estergruppen verbunden."
+              }
+            ]
+          }
+          </script>
+          <div class="station__footer">
+            <span class="status" data-station-status></span>
+            <div class="station__footer-actions">
+              <button class="btn js-only" type="button" data-complete="hydrolysis">Station abschließen</button>
+              <a class="quiet-link" href="#mechanism" data-go="mechanism" aria-label="Weiter zur Station Mechanismus">Weiter</a>
+            </div>
+          </div>
+        </div>
+        <aside class="protocol__margin">
+          <div class="note">
+            <p class="note__title">Merke</p>
+            <p>Hydrolyse ist die Umkehrung der Veresterung. Im Sauren bleibt sie umkehrbar, im Basischen wird sie durch die Carboxylatbildung irreversibel.</p>
+          </div>
+          <div class="note">
+            <p class="note__title">Fachsprache</p>
+            <dl>
+              <dt>Hydrolyse</dt><dd>Spaltung einer Verbindung durch Reaktion mit Wasser.</dd>
+              <dt>Verseifung</dt><dd>Basische Hydrolyse von Fetten; es entstehen Seifen.</dd>
+              <dt>Triglycerid</dt><dd>Fett aus Glycerin und drei Fettsäuren.</dd>
+            </dl>
+          </div>
+          <div class="note">
+            <p class="note__title">Typischer Fehler</p>
+            <p>Ranzig werden Fette nicht nur durch Hydrolyse, sondern auch durch Oxidation der Fettsäuren. Beides kann nebeneinander ablaufen.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="station" id="mechanism" data-station="mechanism" data-title="Mechanismus" aria-labelledby="mechanism-title">
+      <header class="station__head">
+        <h2 id="mechanism-title"><span class="station__num">04</span> Wie läuft die Esterkondensation ab?</h2>
+        <p class="lead">Das Oxonium-Ion macht das Carbonyl-Kohlenstoffatom elektrophiler. Der Alkohol greift als Nukleophil an.</p>
+      </header>
+      <div class="protocol">
+        <div class="protocol__main">
+          <p>Die Veresterung verläuft in mehreren Schritten. Zuerst protoniert ein Oxonium-Ion den Sauerstoff der Carbonylgruppe. Dadurch entsteht am Kohlenstoffatom eine positive Formalladung; es wird elektrophiler. Der Alkohol greift mit einem freien Elektronenpaar am Sauerstoff als Nukleophil an. Es entsteht ein tetraedrisches Zwischenprodukt. Nach Protonentransfer und Abspaltung von Wasser bildet sich der Ester; das Oxonium-Ion wird regeneriert.</p>
+          <ol class="mechanism">
+            <li><strong>Protonierung.</strong> Das Oxonium-Ion überträgt ein Proton auf den Carbonyl-Sauerstoff. Der Carbonyl-Kohlenstoff wird elektrophiler.</li>
+            <li><strong>Nukleophiler Angriff.</strong> Der Alkohol greift mit dem freien Elektronenpaar am Sauerstoff den Carbonyl-Kohlenstoff an. Es entsteht ein tetraedrisches Zwischenprodukt.</li>
+            <li><strong>Protonentransfer und Wasserabspaltung.</strong> Ein Proton wird verschoben; Wasser wird abgespalten. Die Estergruppe entsteht.</li>
+            <li><strong>Regeneration des Katalysators.</strong> Das Oxonium-Ion wird zurückgebildet. Es kann den nächsten Zyklus starten.</li>
+          </ol>
+          <figure class="diagram-figure">
+            <svg class="diagram" viewBox="0 0 900 360" role="img" aria-label="Vier Schritte der säurekatalysierten Esterkondensation: Protonierung, nukleophiler Angriff, Wasserabspaltung und Regeneration des Katalysators">
+              <rect x="15" y="40" width="195" height="280" class="soft-fill" stroke="var(--color-rule-2)" stroke-width="1.2"/>
+              <rect x="235" y="40" width="195" height="280" class="soft-fill" stroke="var(--color-rule-2)" stroke-width="1.2"/>
+              <rect x="455" y="40" width="195" height="280" class="soft-fill" stroke="var(--color-rule-2)" stroke-width="1.2"/>
+              <rect x="675" y="40" width="210" height="280" class="soft-fill" stroke="var(--color-rule-2)" stroke-width="1.2"/>
+              <text x="112" y="70" text-anchor="middle" class="label-strong" font-size="15">1 Protonierung</text>
+              <text x="332" y="70" text-anchor="middle" class="label-strong" font-size="15">2 Nukleophiler Angriff</text>
+              <text x="552" y="70" text-anchor="middle" class="label-strong" font-size="15">3 Wasserabspaltung</text>
+              <text x="780" y="70" text-anchor="middle" class="label-strong" font-size="15">4 Katalysator zurück</text>
+              <text x="50" y="145" class="ink-text" font-size="15">R-C</text>
+              <text x="100" y="125" class="ink-text" font-size="15">=O</text>
+              <text x="130" y="165" class="ink-text" font-size="15">-OH</text>
+              <text x="160" y="110" class="accent-text" font-size="15">H⁺</text>
+              <line x1="175" y1="112" x2="130" y2="124" class="accent" stroke-width="1.5"/>
+              <text x="112" y="230" text-anchor="middle" class="label-muted" font-size="12">Das Carbonyl-O wird protoniert.</text>
+              <text x="270" y="145" class="ink-text" font-size="15">R-C</text>
+              <text x="320" y="125" class="ink-text" font-size="15">=O</text>
+              <text x="350" y="165" class="ink-text" font-size="15">-OH</text>
+              <text x="270" y="245" class="ink-text" font-size="15">R'-OH</text>
+              <line x1="300" y1="232" x2="300" y2="170" class="accent" stroke-width="1.5"/>
+              <polygon points="295,178 300,166 305,178" class="accent-fill"/>
+              <text x="332" y="280" text-anchor="middle" class="label-muted" font-size="12">Der Alkohol greift als Nukleophil an.</text>
+              <text x="490" y="145" class="ink-text" font-size="15">R-C</text>
+              <text x="540" y="125" class="ink-text" font-size="15">-O</text>
+              <text x="570" y="165" class="ink-text" font-size="15">-OR'</text>
+              <text x="600" y="120" class="accent-text" font-size="15">+ H₂O</text>
+              <text x="552" y="230" text-anchor="middle" class="label-muted" font-size="12">Wasser wird abgespalten; der Ester entsteht.</text>
+              <text x="720" y="145" class="ink-text" font-size="15">R-COO-R'</text>
+              <text x="740" y="190" class="accent-text" font-size="15">+ H⁺</text>
+              <text x="780" y="245" text-anchor="middle" class="label-muted" font-size="12">Das Oxonium-Ion kann erneut katalysieren.</text>
+              <line x1="210" y1="180" x2="230" y2="180" class="rule-strong"/>
+              <line x1="430" y1="180" x2="450" y2="180" class="rule-strong"/>
+              <line x1="650" y1="180" x2="670" y2="180" class="rule-strong"/>
+              <text x="450" y="345" text-anchor="middle" class="label-muted">R = Rest der Carbonsäure, R' = Rest des Alkohols</text>
+            </svg>
+            <figcaption>Die säurekatalysierte Esterkondensation in vier Schritten. Das Oxonium-Ion wird am Ende regeneriert; es wird nicht verbraucht.</figcaption>
+          </figure>
+          <p>Die baseninduzierte Hydrolyse verläuft ähnlich, aber mit einem Hydroxid-Ion als Nukleophil. Das Hydroxid-Ion greift den Ester an; nach dem Zerfall des Zwischenprodukts entsteht ein Carboxylat. Weil das Carboxylat mesomeriestabilisiert ist, läuft die Reaktion praktisch vollständig ab.</p>
+          <p>Weitere Kondensationen folgen demselben Muster: Aminosäuren verknüpfen sich unter Wasserabspaltung zu Peptiden; die Bindung heißt Peptidbindung oder Säureamidbindung. Ein Diol und eine Dicarbonsäure können zu einem Polyester kondensieren. Die Estergruppe bleibt dabei das verbindende Element.</p>
+          <section class="checkpoint" aria-labelledby="mechanism-check">
+            <h3 id="mechanism-check">Prüfpunkt</h3>
+            <div class="quiz" data-quiz="mechanism"><noscript><p class="tool__fallback">Die Prüfpunkt-Aufgaben brauchen JavaScript.</p></noscript></div>
+          </section>
+          <script type="application/json" data-quiz-data="mechanism">
+          {
+            "questions": [
+              {
+                "id": "q1",
+                "type": "mc",
+                "level": "II",
+                "competency": "K3",
+                "prompt": "Welche Rolle spielt das Oxonium-Ion bei der säurekatalysierten Veresterung?",
+                "options": [
+                  "Es protoniert den Carbonyl-Sauerstoff und erhöht die Elektrophilie des Carbonyl-Kohlenstoffs.",
+                  "Es ist das Nukleophil, das den Alkohol angreift.",
+                  "Es wird als Produkt verbraucht.",
+                  "Es spaltet den Ester direkt."
+                ],
+                "correct": 0,
+                "explain": "Die Protonierung macht den Carbonyl-Kohlenstoff elektrophiler. Das Oxonium-Ion wird am Ende regeneriert."
+              },
+              {
+                "id": "q2",
+                "type": "mc",
+                "level": "II",
+                "competency": "K5",
+                "prompt": "Was entsteht bei der Kondensation zweier Aminosäuren?",
+                "options": ["Ein Peptid und Wasser", "Ein Zucker und Wasser", "Ein Fett und Wasser", "Ein Salz und Wasserstoff"],
+                "correct": 0,
+                "explain": "Die Aminogruppe der einen Aminosäure reagiert mit der Carboxygruppe der anderen. Unter Wasserabspaltung entsteht eine Peptidbindung."
+              }
+            ]
+          }
+          </script>
+          <div class="station__footer">
+            <span class="status" data-station-status></span>
+            <div class="station__footer-actions">
+              <button class="btn js-only" type="button" data-complete="mechanism">Station abschließen</button>
+              <a class="quiet-link" href="#products" data-go="products" aria-label="Weiter zur Station Alltag und Technik">Weiter</a>
+            </div>
+          </div>
+        </div>
+        <aside class="protocol__margin">
+          <div class="note">
+            <p class="note__title">Merke</p>
+            <p>Nukleophil: elektronenreich, greift an. Elektrophil: elektronenarm, wird angegriffen. Die Begriffe gehören zusammen.</p>
+          </div>
+          <div class="note">
+            <p class="note__title">Fachsprache</p>
+            <dl>
+              <dt>Nukleophil</dt><dd>Teilchen mit hoher Elektronendichte, das ein Elektronenpaar für eine neue Bindung bereitstellt.</dd>
+              <dt>Elektrophil</dt><dd>Teilchen mit geringer Elektronendichte, das ein Elektronenpaar bindet.</dd>
+              <dt>Peptidbindung</dt><dd>Säureamidbindung zwischen zwei Aminosäuren.</dd>
+              <dt>Polyester</dt><dd>Polymer aus Diolen und Dicarbonsäuren, verbunden über Estergruppen.</dd>
+            </dl>
+          </div>
+          <div class="note">
+            <p class="note__title">Typischer Fehler</p>
+            <p>Der Alkohol ist bei der Veresterung das Nukleophil, nicht die Säure. Die Säure liefert das Elektrophil.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="station" id="products" data-station="products" data-title="Alltag und Technik" aria-labelledby="products-title">
+      <header class="station__head">
+        <h2 id="products-title"><span class="station__num">05</span> Wo stecken Ester im Alltag?</h2>
+        <p class="lead">Ester sind Aromastoffe, Lösemittel, Weichmacher, Arzneistoffe und Bausteine von Fetten und Kunststoffen.</p>
+      </header>
+      <div class="protocol">
+        <div class="protocol__main">
+          <p>Kurzkettige Ester sind flüchtig und riechen oft fruchtig. Ethylacetat riecht nach Nagellackentferner und wird als Lösemittel verwendet. Butylacetat riecht nach Apfel und Birne; Methylbutanoat nach Ananas. Diese Stoffe werden als Aromastoffe in Lebensmitteln und Parfüms eingesetzt. Längerkettige Ester sind weniger flüchtig und dienen als Weichmacher in Kunststoffen.</p>
+          <p>Acetylsalicylsäure ist ein Ester der Salicylsäure und wirkt als Arzneistoff. Fette und Öle sind Triglyceride, also Triester aus Glycerin und Fettsäuren. Biodiesel besteht aus Fettsäuremethylestern, die durch Umesterung von Pflanzenölen mit Methanol entstehen. Polyesterfasern werden aus Diolen und Dicarbonsäuren hergestellt.</p>
+          <table class="data-table">
+            <caption>Ester in Alltag und Technik</caption>
+            <thead><tr><th>Produkt</th><th>Ester</th><th>Verwendung</th></tr></thead>
+            <tbody>
+              <tr><td>Nagellackentferner</td><td>Ethylacetat</td><td>Lösemittel</td></tr>
+              <tr><td>Obstaroma</td><td>Ethylbutanoat, Methylbutanoat</td><td>Aromastoff</td></tr>
+              <tr><td>Aspirin</td><td>Acetylsalicylsäure</td><td>Arzneistoff</td></tr>
+              <tr><td>Pflanzenöl</td><td>Triglycerid</td><td>Nahrungsfett, Rohstoff</td></tr>
+              <tr><td>Biodiesel</td><td>Fettsäuremethylester</td><td>Kraftstoff</td></tr>
+              <tr><td>Polyesterfaser</td><td>Polyester</td><td>Textilien, Verpackungen</td></tr>
+            </tbody>
+          </table>
+          <p>Die Bewertung von Estern in Alltag und Technik hängt vom Einsatz ab. Aromastoffe in geringen Mengen sind ein Genuss; Lösemittel können reizen und müssen sicher entsorgt werden. Biodiesel ist erneuerbar, konkurriert aber mit der Nahrungsmittelproduktion um Anbauflächen. Solche Zielkonflikte lassen sich nicht mit einem einzigen Kriterium lösen.</p>
+          <section class="checkpoint" aria-labelledby="products-check">
+            <h3 id="products-check">Prüfpunkt</h3>
+            <div class="quiz" data-quiz="products"><noscript><p class="tool__fallback">Die Prüfpunkt-Aufgaben brauchen JavaScript.</p></noscript></div>
+          </section>
+          <script type="application/json" data-quiz-data="products">
+          {
+            "questions": [
+              {
+                "id": "q1",
+                "type": "mc",
+                "level": "I",
+                "competency": "K5",
+                "prompt": "Welcher Alltagsstoff ist ein Ester?",
+                "options": ["Acetylsalicylsäure", "Kochsalz", "Ethanol", "Glucose"],
+                "correct": 0,
+                "explain": "Acetylsalicylsäure, der Wirkstoff von Aspirin, ist ein Ester aus Salicylsäure und Essigsäure."
+              },
+              {
+                "id": "q2",
+                "type": "mc",
+                "level": "II",
+                "competency": "K5",
+                "prompt": "Was ist Biodiesel chemisch?",
+                "options": ["Fettsäuremethylester", "Reiner Ethanol", "Ein Monosaccharid", "Natriumchlorid"],
+                "correct": 0,
+                "explain": "Biodiesel entsteht durch Umesterung von Pflanzenölen mit Methanol. Die Produkte sind Fettsäuremethylester."
+              }
+            ]
+          }
+          </script>
+          <div class="station__footer">
+            <span class="status" data-station-status></span>
+            <div class="station__footer-actions">
+              <button class="btn js-only" type="button" data-complete="products">Station abschließen</button>
+              <a class="quiet-link" href="#check" data-go="check" aria-label="Weiter zum Kompetenzcheck">Weiter</a>
+            </div>
+          </div>
+        </div>
+        <aside class="protocol__margin">
+          <div class="note">
+            <p class="note__title">Merke</p>
+            <p>Die Estergruppe -COO- verbindet Säure- und Alkoholreste. Fette, Polyester und viele Arzneistoffe enthalten diese Gruppe.</p>
+          </div>
+          <div class="note">
+            <p class="note__title">Fachsprache</p>
+            <dl>
+              <dt>Umesterung</dt><dd>Reaktion eines Esters mit einem Alkohol unter Austausch des Alkoholrests.</dd>
+              <dt>Triglycerid</dt><dd>Fett aus Glycerin und drei Fettsäuren.</dd>
+              <dt>Weichmacher</dt><dd>Stoff, der Kunststoffe flexibler macht; oft ein Ester.</dd>
+            </dl>
+          </div>
+          <div class="note">
+            <p class="note__title">Typischer Fehler</p>
+            <p>Nicht jeder angenehme Geruch kommt von einem Ester, und nicht jeder Ester riecht angenehm. Der Geruch ist kein sicheres Erkennungsmerkmal.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="station" id="check" data-station="check" data-title="Kompetenzcheck" aria-labelledby="check-title">
+      <header class="station__head">
+        <h2 id="check-title"><span class="station__num">06</span> Kompetenzcheck</h2>
+        <p class="lead">Zehn Aufgaben, zwei pro Kompetenz. Werte am Ende aus und lies die Rückmeldungen zu den offenen Aufgaben.</p>
+      </header>
+      <div class="check-banner">
+        <div>
+          <p class="check-banner__score" data-check-score>0 / 10</p>
+          <p class="check-banner__text" data-check-text>Beantworte alle Aufgaben und werte dann aus. Jede Aufgabe zählt einen Punkt.</p>
+        </div>
+        <p class="check-banner__text">Der Bestwert bleibt gespeichert. Du kannst die Aufgaben zurücksetzen und erneut bearbeiten.</p>
+      </div>
+      <div class="competency-results" data-check-bars aria-label="Ergebnisse nach Kompetenz"></div>
+      <div class="quiz" data-quiz="check"><noscript><p class="tool__fallback">Der Kompetenzcheck braucht JavaScript. Die Lerninhalte bleiben lesbar.</p></noscript></div>
+      <div class="check-result" data-check-result hidden></div>
+      <script type="application/json" data-quiz-data="check">
+      {
+        "final": true,
+        "competencies": [
+          { "id": "K1", "label": "K1: Zucker in Alltag und Ernährung" },
+          { "id": "K2", "label": "K2: Bau und Reaktionsverhalten der Zucker" },
+          { "id": "K3", "label": "K3: Esterbildung und Eigenschaften" },
+          { "id": "K4", "label": "K4: Reversibilität und Hydrolyse" },
+          { "id": "K5", "label": "K5: Ester in Produkten und Fetten" }
+        ],
+        "questions": [
+          {
+            "id": "c1",
+            "type": "mc",
+            "level": "I",
+            "competency": "K1",
+            "prompt": "Welche Rolle spielen Zucker in der Ernährung?",
+            "options": [
+              "Sie liefern Energie; ein hoher Anteil freier Zucker sollte vermieden werden.",
+              "Sie sind immer gesünder als Fette.",
+              "Sie enthalten keine Energie.",
+              "Sie sind für den Körper vollständig unnötig."
+            ],
+            "correct": 0,
+            "explain": "Zucker liefern Energie. Die WHO empfiehlt, den Anteil freier Zucker zu begrenzen. Das bedeutet nicht, dass Zucker giftig ist."
+          },
+          {
+            "id": "c2",
+            "type": "mc",
+            "level": "II",
+            "competency": "K1",
+            "prompt": "Warum ist Saccharose kein reduzierender Zucker?",
+            "options": [
+              "Die anomeren Kohlenstoffatome sind in der glycosidischen Bindung gebunden; ein freies Halbacetal fehlt.",
+              "Saccharose enthält keine OH-Gruppen.",
+              "Saccharose ist ein Monosaccharid.",
+              "Saccharose ist ein Protein."
+            ],
+            "correct": 0,
+            "explain": "In der Saccharose sind die reaktiven anomeren Zentren blockiert. Deshalb kann sie nicht mit Fehling-Lösung reagieren."
+          },
+          {
+            "id": "c3",
+            "type": "mc",
+            "level": "I",
+            "competency": "K2",
+            "prompt": "Welcher Zucker besitzt eine Ketogruppe?",
+            "options": ["Glucose", "Fructose", "Saccharose", "Stärke"],
+            "correct": 1,
+            "explain": "Fructose ist ein Ketohexose. Glucose ist ein Aldohexose."
+          },
+          {
+            "id": "c4",
+            "type": "mc",
+            "level": "II",
+            "competency": "K2",
+            "prompt": "Aus welchen Bausteinen besteht Saccharose?",
+            "options": ["Glucose und Fructose", "Glucose und Glucose", "Fructose und Fructose", "Glycerin und Fettsäure"],
+            "correct": 0,
+            "explain": "Saccharose ist ein Disaccharid aus Glucose und Fructose."
+          },
+          {
+            "id": "c5",
+            "type": "mc",
+            "level": "I",
+            "competency": "K3",
+            "prompt": "Welche Produkte entstehen bei der Veresterung?",
+            "options": ["Ester und Wasser", "Salz und Wasser", "Aldehyd und Wasserstoff", "Keton und Sauerstoff"],
+            "correct": 0,
+            "explain": "Carbonsäure und Alkohol reagieren unter Wasserabspaltung zu einem Ester."
+          },
+          {
+            "id": "c6",
+            "type": "mc",
+            "level": "II",
+            "competency": "K3",
+            "prompt": "Warum sieden Ester niedriger als vergleichbare Carbonsäuren?",
+            "options": [
+              "Ester besitzen keine O-H-Gruppe und bilden keine Wasserstoffbrücken untereinander.",
+              "Ester sind immer Ionen.",
+              "Ester haben keine zwischenmolekularen Wechselwirkungen.",
+              "Ester sind schwerer als Wasser."
+            ],
+            "correct": 0,
+            "explain": "Ohne O-H-Gruppe fehlen starke Wasserstoffbrücken. Es bleiben schwächere Dipol-Dipol- und London-Wechselwirkungen."
+          },
+          {
+            "id": "c7",
+            "type": "mc",
+            "level": "II",
+            "competency": "K4",
+            "prompt": "Warum ist die baseninduzierte Esterhydrolyse praktisch irreversibel?",
+            "options": [
+              "Das Carboxylat ist durch Mesomerie stabilisiert.",
+              "Wasser ist in basischer Lösung nicht vorhanden.",
+              "Der Ester ist ein Salz.",
+              "Die Reaktion braucht keinen Katalysator."
+            ],
+            "correct": 0,
+            "explain": "Die negative Ladung des Carboxylats ist über zwei Sauerstoffatome delokalisiert. Die Rückreaktion ist dadurch ungünstig."
+          },
+          {
+            "id": "c8",
+            "type": "mc",
+            "level": "II",
+            "competency": "K4",
+            "prompt": "Was passiert bei der Hydrolyse eines Esters?",
+            "options": [
+              "Er wird in Carbonsäure und Alkohol gespalten.",
+              "Er wird zu einem Aldehyd reduziert.",
+              "Er wird zu einem Salz oxidiert.",
+              "Er bleibt unverändert."
+            ],
+            "correct": 0,
+            "explain": "Wasser spaltet die Estergruppe. Es entstehen die Carbonsäure und der Alkohol."
+          },
+          {
+            "id": "c9",
+            "type": "mc",
+            "level": "I",
+            "competency": "K5",
+            "prompt": "Als was sind Fette chemisch einzuordnen?",
+            "options": ["Als Triester aus Glycerin und Fettsäuren", "Als Monosaccharide", "Als Amine", "Als Salze aus Fettsäuren und Wasser"],
+            "correct": 0,
+            "explain": "Fette sind Triglyceride: Glycerin ist mit drei Fettsäuren über Estergruppen verbunden."
+          },
+          {
+            "id": "c10",
+            "type": "mc",
+            "level": "II",
+            "competency": "K5",
+            "prompt": "Welcher Alltagsstoff ist ein Ester?",
+            "options": ["Acetylsalicylsäure", "Kochsalz", "Ethanol", "Glucose"],
+            "correct": 0,
+            "explain": "Acetylsalicylsäure ist ein Ester aus Salicylsäure und Essigsäure."
+          }
+        ]
+      }
+      </script>
+    </section>
+
+    <section class="station" id="glossar" data-station="glossar" data-title="Glossar" aria-labelledby="glossar-title">
+      <header class="station__head">
+        <h2 id="glossar-title"><span class="station__num">07</span> Glossar</h2>
+        <p class="lead">Die zentralen Begriffe des Lernbereichs in kurzer Form. Suche nach einem Wort oder einem Teil davon.</p>
+      </header>
+      <div class="glossary-search">
+        <label class="visually-hidden" for="glossarySearch">Glossarbegriff suchen</label>
+        <input id="glossarySearch" type="search" placeholder="Begriff suchen, zum Beispiel Ester, Hydrolyse, Nucleophil" data-glossary-search autocomplete="off">
+        <span data-glossary-count>0</span>
+      </div>
+      <dl class="glossary" data-glossary>
+        <div class="term"><dt>Monosaccharid</dt><dd>Einfachzucker; nicht weiter in Zuckerbausteine spaltbar.</dd></div>
+        <div class="term"><dt>Disaccharid</dt><dd>Zucker aus zwei Monosaccharidbausteinen, zum Beispiel Saccharose.</dd></div>
+        <div class="term"><dt>Polysaccharid</dt><dd>Zucker aus vielen Bausteinen, zum Beispiel Stärke und Cellulose.</dd></div>
+        <div class="term"><dt>glycosidische Bindung</dt><dd>Acetalartige Bindung zwischen zwei Zuckerbausteinen.</dd></div>
+        <div class="term"><dt>Ester</dt><dd>Verbindung aus Carbonsäure und Alkohol unter Wasserabspaltung; Estergruppe -COO-.</dd></div>
+        <div class="term"><dt>Veresterung</dt><dd>Kondensation von Carbonsäure und Alkohol zu einem Ester und Wasser.</dd></div>
+        <div class="term"><dt>Hydrolyse</dt><dd>Spaltung einer Verbindung durch Reaktion mit Wasser.</dd></div>
+        <div class="term"><dt>Verseifung</dt><dd>Basische Hydrolyse von Fetten; es entstehen Seifen.</dd></div>
+        <div class="term"><dt>Triglycerid</dt><dd>Fett aus Glycerin und drei Fettsäuren.</dd></div>
+        <div class="term"><dt>Nukleophil</dt><dd>Teilchen mit hoher Elektronendichte, das ein Elektronenpaar für eine neue Bindung bereitstellt.</dd></div>
+        <div class="term"><dt>Elektrophil</dt><dd>Teilchen mit geringer Elektronendichte, das ein Elektronenpaar bindet.</dd></div>
+        <div class="term"><dt>Peptidbindung</dt><dd>Säureamidbindung zwischen zwei Aminosäuren.</dd></div>
+        <div class="term"><dt>Polyester</dt><dd>Polymer aus Diolen und Dicarbonsäuren, verbunden über Estergruppen.</dd></div>
+        <div class="term"><dt>Umesterung</dt><dd>Reaktion eines Esters mit einem Alkohol unter Austausch des Alkoholrests.</dd></div>
+      </dl>
+      <p class="glossary-empty" data-glossary-empty hidden>Kein Begriff gefunden. Versuche einen anderen Suchbegriff.</p>
+      <div class="station__footer">
+        <span class="status" data-station-status></span>
+        <div class="station__footer-actions">
+          <a class="quiet-link" href="#check" data-go="check">Zum Kompetenzcheck</a>
+          <a class="quiet-link" href="index.html">Alle Lernbereiche</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<footer class="colophon">
+  <div class="colophon__inner">
+    <p><strong>Chemie 10</strong>. Lernwebsite nach LehrplanPLUS. Alle Grafiken sind selbst gezeichnet; es werden keine Schulbuchabbildungen übernommen.</p>
+    <p><a href="https://www.lehrplanplus.bayern.de/fachlehrplan/gymnasium/10/chemie/ch" target="_blank" rel="noopener">LehrplanPLUS Chemie 10</a>. Stand November 2026.</p>
+  </div>
+</footer>
+
+<dialog class="dialog" id="resetDialog" aria-labelledby="reset-title">
+  <h2 id="reset-title">Lernstand zurücksetzen?</h2>
+  <p>Alle lokalen Ergebnisse dieser Seite werden gelöscht. Die Lerninhalte bleiben erhalten.</p>
+  <div class="dialog__actions">
+    <button class="btn btn--quiet" type="button" data-reset-cancel>Abbrechen</button>
+    <button class="btn" type="button" data-reset-confirm>Ja, zurücksetzen</button>
+  </div>
+</dialog>
+
+<script type="application/json" data-tool-data="ester">
+{
+  "examples": [
+    {
+      "id": "ethylacetate", "label": "Ethansäure + Ethanol",
+      "acid": "Ethansäure", "acidFormula": "CH₃COOH", "alcohol": "Ethanol", "alcoholFormula": "C₂H₅OH",
+      "esterFormula": "CH₃COOC₂H₅", "name": "Ethansäureethylester", "odor": "fruchtig, nach Nagellackentferner",
+      "note": "Ethylacetat ist ein wichtiges Lösemittel und ein Aromastoff."
+    },
+    {
+      "id": "butylacetate", "label": "Ethansäure + Butan-1-ol",
+      "acid": "Ethansäure", "acidFormula": "CH₃COOH", "alcohol": "Butan-1-ol", "alcoholFormula": "C₄H₉OH",
+      "esterFormula": "CH₃COOC₄H₉", "name": "Ethansäurebutylester", "odor": "nach Apfel und Birne",
+      "note": "Butylacetat wird als Aromastoff und Lösemittel verwendet."
+    },
+    {
+      "id": "methylbutanoate", "label": "Butansäure + Methanol",
+      "acid": "Butansäure", "acidFormula": "C₃H₇COOH", "alcohol": "Methanol", "alcoholFormula": "CH₃OH",
+      "esterFormula": "C₃H₇COOCH₃", "name": "Butansäuremethylester", "odor": "nach Ananas",
+      "note": "Methylbutanoat ist ein typischer Fruchtaromat."
+    },
+    {
+      "id": "ethylbutanoate", "label": "Butansäure + Ethanol",
+      "acid": "Butansäure", "acidFormula": "C₃H₇COOH", "alcohol": "Ethanol", "alcoholFormula": "C₂H₅OH",
+      "esterFormula": "C₃H₇COOC₂H₅", "name": "Butansäureethylester", "odor": "nach Banane und Ananas",
+      "note": "Ethylbutanoat wird in Aromen und Parfüms eingesetzt."
+    },
+    {
+      "id": "ethylformate", "label": "Methansäure + Ethanol",
+      "acid": "Methansäure", "acidFormula": "HCOOH", "alcohol": "Ethanol", "alcoholFormula": "C₂H₅OH",
+      "esterFormula": "HCOOC₂H₅", "name": "Methansäureethylester", "odor": "rumartig",
+      "note": "Ethylformiat wird als Aromastoff verwendet."
+    },
+    {
+      "id": "pentylacetate", "label": "Ethansäure + Pentan-1-ol",
+      "acid": "Ethansäure", "acidFormula": "CH₃COOH", "alcohol": "Pentan-1-ol", "alcoholFormula": "C₅H₁₁OH",
+      "esterFormula": "CH₃COOC₅H₁₁", "name": "Ethansäurepentylester", "odor": "nach Banane",
+      "note": "Pentylacetat ist ein typischer Bananenaromat."
+    }
+  ]
+}
+</script>
+<script type="application/json" data-tool-data="hydrolysis">
+{
+  "examples": [
+    {
+      "id": "ethylacetate", "label": "Ethylacetat",
+      "acidEquation": "CH₃COOC₂H₅ + H₂O ⇌ CH₃COOH + C₂H₅OH",
+      "acidProducts": "Ethansäure + Ethanol",
+      "acidNote": "In saurer Lösung ist die Hydrolyse die Umkehrung der Veresterung. Das Gleichgewicht bleibt verschiebbar.",
+      "baseEquation": "CH₃COOC₂H₅ + NaOH → CH₃COONa + C₂H₅OH",
+      "baseProducts": "Natriumacetat + Ethanol",
+      "baseNote": "Das Carboxylat ist mesomeriestabilisiert. Die Reaktion läuft praktisch vollständig ab."
+    },
+    {
+      "id": "methylbutanoate", "label": "Methylbutanoat",
+      "acidEquation": "C₃H₇COOCH₃ + H₂O ⇌ C₃H₇COOH + CH₃OH",
+      "acidProducts": "Butansäure + Methanol",
+      "acidNote": "Säurekatalysierte Hydrolyse: Der Ester wird wieder in Säure und Alkohol gespalten.",
+      "baseEquation": "C₃H₇COOCH₃ + NaOH → C₃H₇COONa + CH₃OH",
+      "baseProducts": "Natriumbutanoat + Methanol",
+      "baseNote": "Das Carboxylat bleibt als Salz zurück. Die Rückreaktion ist blockiert."
+    }
+  ]
+}
+</script>
+<script src="assets/tools.js" defer></script>
+<script src="assets/app.js" defer></script>
+</body>
+</html>

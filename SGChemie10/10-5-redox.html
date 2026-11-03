@@ -1,0 +1,930 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>Redoxreaktionen: Elektronen im Fluss | Chemie 10</title>
+<meta name="description" content="Interaktiver Lernpfad zu Oxidationszahlen, Redoxgleichungen, Alkoholoxidation, Nachweisreaktionen, Ethanol und Brennstoffzellen für Chemie 10 am SG.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@700&family=Spectral:ital,wght@0,400;0,500;1,400&family=Libre+Franklin:wght@500&display=swap" rel="stylesheet">
+<style>
+/* Hallmark · shape: app screen · genre: editorial · theme: Newsprint (deal 3/3, seed interaktive-chemie-lernwebsite-fuer-die-9539·9648ff15·2026-11-02·r0) · job: learn · scope: app
+ * hero: none (app screen) · nav: masthead + station sidebar · footer: colophon · imagery: none, own SVG diagrams · signature: five subject instruments
+ * axes: light/slab-serif/warm · posture: restrained · contrast: pass · fold: pass · v2.0.0 */
+html { overflow-x: clip; }
+body { overflow-x: clip; }
+</style>
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body data-page="lb5">
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<header class="masthead">
+  <div class="masthead__inner">
+    <a class="brand" href="index.html" aria-label="Zur Übersicht Chemie 10"><span>Chemie 10</span><span class="brand__tag">SG</span></a>
+    <p class="issue"><span class="issue__num">05</span> Redoxreaktionen, Alkohole, Brennstoffzelle</p>
+    <div class="masthead__actions">
+      <span class="progress-inline" data-progress-inline aria-live="polite">0 von 7</span>
+      <a class="quiet-link" href="index.html">Übersicht</a>
+      <button class="menu-btn btn btn--quiet btn--small" type="button" data-menu aria-expanded="false" aria-controls="sidebar">Stationen</button>
+    </div>
+  </div>
+</header>
+<div class="app">
+  <aside class="sidebar" id="sidebar" aria-label="Stationen">
+    <div class="sidebar__head">
+      <p class="sidebar__kicker">Lernbereich 05</p>
+      <h2 class="sidebar__title">Redoxreaktionen</h2>
+      <p class="sidebar__deck">Elektronen im Fluss.</p>
+      <div class="progress">
+        <div class="progress__line"><span>Dein Lernstand</span><strong data-progress-text>0 / 7</strong></div>
+        <div class="progress__track"><i data-progress-bar style="--p:0"></i></div>
+      </div>
+    </div>
+    <nav class="station-nav">
+      <a href="#start" data-station-link="start"><span class="station-nav__num">00</span><span>Überblick</span><span class="station-nav__check" aria-hidden="true">✓</span></a>
+      <a href="#oxidation" data-station-link="oxidation"><span class="station-nav__num">01</span><span>Oxidationszahlen</span><span class="station-nav__check" aria-hidden="true">✓</span></a>
+      <a href="#redox" data-station-link="redox"><span class="station-nav__num">02</span><span>Redoxgleichungen</span><span class="station-nav__check" aria-hidden="true">✓</span></a>
+      <a href="#acidbase" data-station-link="acidbase"><span class="station-nav__num">03</span><span>Redox oder Säure-Base</span><span class="station-nav__check" aria-hidden="true">✓</span></a>
+      <a href="#alcohol" data-station-link="alcohol"><span class="station-nav__num">04</span><span>Alkohole</span><span class="station-nav__check" aria-hidden="true">✓</span></a>
+      <a href="#ethanol" data-station-link="ethanol"><span class="station-nav__num">05</span><span>Ethanol und Brennstoffzelle</span><span class="station-nav__check" aria-hidden="true">✓</span></a>
+      <a href="#check" data-station-link="check"><span class="station-nav__num">06</span><span>Kompetenzcheck</span><span class="station-nav__check" aria-hidden="true">✓</span></a>
+      <a href="#glossar" data-station-link="glossar"><span class="station-nav__num">07</span><span>Glossar</span><span class="station-nav__check" aria-hidden="true">✓</span></a>
+    </nav>
+    <div class="sidebar__foot">
+      <a href="index.html">Alle Lernbereiche</a>
+      <button class="quiet-link" type="button" data-reset-open>Lernstand zurücksetzen</button>
+      <p>LehrplanPLUS<br>Chemie 10, SG</p>
+    </div>
+  </aside>
+
+  <main class="main" id="main">
+    <section class="station is-active" id="start" data-station="start" data-title="Überblick" aria-labelledby="start-title">
+      <header class="station__head">
+        <h1 id="start-title"><span class="station__num">05</span> Redoxreaktionen: Elektronen im Fluss.</h1>
+        <p class="lead">Wie Oxidationszahlen Redoxreaktionen verraten, warum Alkohole unterschiedlich reagieren und wie eine Brennstoffzelle Strom erzeugt.</p>
+      </header>
+              <a class="btn start-cta" href="#oxidation" data-go="oxidation" data-start-cta aria-label="Erste Station öffnen: Oxidationszahlen">Erste Station öffnen</a>
+      <div class="protocol">
+        <div class="protocol__main">
+          <h2>Das nimmst du mit</h2>
+          <ol class="competencies">
+            <li><span class="cnum">01</span><span>Du ermittelst Oxidationszahlen in anorganischen und organischen Teilchen, um Redoxreaktionen zu identifizieren.</span></li>
+            <li><span class="cnum">02</span><span>Du verwendest die Regeln zum Aufstellen von Redoxteilgleichungen in wässriger Lösung und formulierst Redoxgleichungen.</span></li>
+            <li><span class="cnum">03</span><span>Du grenzt Redoxreaktionen von Säure-Base-Reaktionen ab, zum Beispiel bei unedlen Metallen und Calciumcarbonat mit sauren Lösungen.</span></li>
+            <li><span class="cnum">04</span><span>Du vergleichst die Oxidierbarkeit primärer, sekundärer und tertiärer Alkohole und erklärst die Bildung von Aldehyden, Ketonen und Carbonsäuren.</span></li>
+            <li><span class="cnum">05</span><span>Du führst Nachweisreaktionen durch, um Aldehyde von Ketonen zu unterscheiden.</span></li>
+            <li><span class="cnum">06</span><span>Du beschreibst Schädigungen des Körpers durch Alkohol, Gefährdungen unter Alkoholeinfluss und Ursachen für Abhängigkeit.</span></li>
+            <li><span class="cnum">07</span><span>Du beschreibst die Funktionsweise von Brennstoffzellen und stellst die ablaufenden Reaktionen dar.</span></li>
+          </ol>
+          <p><small>Die Liste folgt den Kompetenzerwartungen von LehrplanPLUS Chemie 10 für das sprachliche Gymnasium.</small></p>
+        </div>
+        <aside class="protocol__margin">
+          <div class="note">
+            <p class="note__title">So arbeitest du</p>
+            <ol>
+              <li>Lies die Station und probiere das Modell aus.</li>
+              <li>Beantworte den Prüfpunkt. Du bekommst sofort Rückmeldung.</li>
+              <li>Schließe die Station ab und arbeite am Ende den Kompetenzcheck.</li>
+            </ol>
+          </div>
+          <div class="note">
+            <p class="note__title">Leitfrage</p>
+            <p>Warum rostet Eisen, während Gold auch nach Jahrhunderten glänzt?</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="station" id="oxidation" data-station="oxidation" data-title="Oxidationszahlen" aria-labelledby="oxidation-title">
+      <header class="station__head">
+        <h2 id="oxidation-title"><span class="station__num">01</span> Wie erkennt man Redoxreaktionen?</h2>
+        <p class="lead">Oxidationszahlen sind Hilfszahlen. Ändern sie sich, hat ein Elektronenübergang stattgefunden.</p>
+      </header>
+      <div class="protocol">
+        <div class="protocol__main">
+          <figure class="tool" data-tool="oxidation" data-tool-data="oxidation">
+            <div class="tool__head">
+              <p class="tool__title">Oxidationszahlen-Rechner</p>
+              <p class="tool__hint">Wähle ein Teilchen. Die Tabelle zeigt die Oxidationszahl jedes Atoms und die Summe.</p>
+            </div>
+            <div class="tool__controls" data-tool-controls></div>
+            <div class="tool__stage" data-tool-stage><p class="tool__fallback">Der Rechner lädt mit JavaScript. Die Regeln stehen im Text.</p></div>
+            <div class="tool__readout" data-tool-readout></div>
+            <figcaption class="tool__caption">Die Summe der Oxidationszahlen entspricht der Ladung des Teilchens.</figcaption>
+          </figure>
+          <p>Oxidationszahlen geben an, wie viele Elektronen ein Atom formal aufgenommen oder abgegeben hat. Elemente haben die Oxidationszahl 0. Sauerstoff hat meist -II, Wasserstoff meist +I. Ausnahmen sind Peroxide wie H₂O₂ mit -I und Verbindungen wie OF₂, in denen Sauerstoff positiv ist. Die Summe aller Oxidationszahlen ergibt die Ladung des Teilchens.</p>
+          <h3>So bestimmst du Oxidationszahlen</h3>
+          <ol>
+            <li>Reine Elemente haben die Oxidationszahl 0, zum Beispiel O₂, Fe oder Cl₂.</li>
+            <li>Bei einatomigen Ionen ist die Oxidationszahl gleich der Ionenladung, zum Beispiel Na⁺ = +I, Cl⁻ = -I.</li>
+            <li>Sauerstoff ist meist -II. Ausnahmen sind Peroxide wie H₂O₂ mit -I und OF₂, in dem Sauerstoff +II hat.</li>
+            <li>Wasserstoff ist meist +I. In Metallhydriden wie NaH hat es -I.</li>
+            <li>Die Summe aller Oxidationszahlen eines Teilchens ergibt seine Ladung. Bei einem neutralen Molekül ist die Summe 0.</li>
+            <li>In organischen Molekülen setzt du H = +I und O = -II. Die Oxidationszahl des Kohlenstoffs berechnest du aus der Summe.</li>
+          </ol>
+          <p>Beispiel MnO₄⁻: Vier Sauerstoffatome tragen zusammen -8. Die Ladung des Ions ist -1. Daraus folgt für Mangan +VII. Probe: +VII + 4 × (-II) = -1.</p>
+          <details class="deep">
+            <summary>Mehr im Detail: Organische Moleküle</summary>
+            <p>In organischen Molekülen haben die Kohlenstoffatome oft unterschiedliche Oxidationszahlen. Im Ethanol ist das CH₃-Kohlenstoffatom -III, das CH₂OH-Kohlenstoffatom -I. In der Essigsäure ist das CH₃-Kohlenstoffatom -III und das Carboxy-Kohlenstoffatom +III. Die durchschnittliche Oxidationszahl allein verdeckt diese Unterschiede.</p>
+          </details>
+          <section class="checkpoint" aria-labelledby="oxidation-check">
+            <h3 id="oxidation-check">Prüfpunkt</h3>
+            <div class="quiz" data-quiz="oxidation"><noscript><p class="tool__fallback">Die Prüfpunkt-Aufgaben brauchen JavaScript.</p></noscript></div>
+          </section>
+          <script type="application/json" data-quiz-data="oxidation">
+          {
+            "questions": [
+              {
+                "id": "q1",
+                "type": "input",
+                "level": "II",
+                "competency": "K1",
+                "prompt": "Welche Oxidationszahl hat Mangan im Permanganat-Ion MnO₄⁻?",
+                "accept": ["+7", "7", "vii", "+vii"],
+                "model": "+VII",
+                "placeholder": "z. B. +VII",
+                "explain": "Vier Sauerstoffatome tragen zusammen -8. Die Ladung des Ions ist -1. Daraus folgt für Mangan +7."
+              },
+              {
+                "id": "q2",
+                "type": "mc",
+                "level": "II",
+                "competency": "K1",
+                "prompt": "Welche Reaktion ist eine Redoxreaktion?",
+                "options": [
+                  "Zn + 2 HCl → ZnCl₂ + H₂",
+                  "CaCO₃ + 2 HCl → CaCl₂ + CO₂ + H₂O",
+                  "NaCl + Wasser → Salzlösung",
+                  "NH₃ + H₂O ⇌ NH₄⁺ + OH⁻"
+                ],
+                "correct": 0,
+                "explain": "Zink wird von 0 zu +II oxidiert, Wasserstoff von +I zu 0 reduziert. Bei den anderen Reaktionen ändern sich keine Oxidationszahlen."
+              }
+            ]
+          }
+          </script>
+          <div class="station__footer">
+            <span class="status" data-station-status></span>
+            <div class="station__footer-actions">
+              <button class="btn js-only" type="button" data-complete="oxidation">Station abschließen</button>
+              <a class="quiet-link" href="#redox" data-go="redox" aria-label="Weiter zur Station Redoxgleichungen">Weiter</a>
+            </div>
+          </div>
+        </div>
+        <aside class="protocol__margin">
+          <div class="note">
+            <p class="note__title">Merke</p>
+            <p>Oxidation: Oxidationszahl steigt. Reduktion: Oxidationszahl sinkt. Beides läuft gleichzeitig ab.</p>
+          </div>
+          <div class="note">
+            <p class="note__title">Fachsprache</p>
+            <dl>
+              <dt>Oxidationszahl</dt><dd>Formale Ladung eines Atoms unter der Annahme, dass Bindungselektronen dem elektronegativeren Partner gehören.</dd>
+              <dt>Oxidation</dt><dd>Abgabe von Elektronen; die Oxidationszahl steigt.</dd>
+              <dt>Reduktion</dt><dd>Aufnahme von Elektronen; die Oxidationszahl sinkt.</dd>
+            </dl>
+          </div>
+          <div class="note">
+            <p class="note__title">Typischer Fehler</p>
+            <p>Oxidationszahlen sind keine echten Ladungen. Sie sind eine Buchhaltungshilfe für Elektronenübergänge.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="station" id="redox" data-station="redox" data-title="Redoxgleichungen" aria-labelledby="redox-title">
+      <header class="station__head">
+        <h2 id="redox-title"><span class="station__num">02</span> Wie stellt man Redoxgleichungen auf?</h2>
+        <p class="lead">Erst die Teilgleichungen, dann die Elektronenbilanz, zuletzt die Gesamtgleichung.</p>
+      </header>
+      <div class="protocol">
+        <div class="protocol__main">
+          <figure class="tool" data-tool="redox" data-tool-data="redox">
+            <div class="tool__head">
+              <p class="tool__title">Redox-Protokoll</p>
+              <p class="tool__hint">Wähle eine Reaktion und gehe die Schritte durch.</p>
+            </div>
+            <div class="tool__controls" data-tool-controls></div>
+            <div class="tool__stage" data-tool-stage><p class="tool__fallback">Das Redox-Protokoll lädt mit JavaScript. Die Regeln stehen im Text.</p></div>
+            <div class="tool__readout" data-tool-readout></div>
+            <figcaption class="tool__caption">In wässriger Lösung werden Sauerstoff und Wasserstoff mit H⁺, H₂O und Elektronen ausgeglichen.</figcaption>
+          </figure>
+          <p>Eine Redoxgleichung wird in vier Schritten aufgestellt. Zuerst formulierst du die Oxidation und die Reduktion als Teilgleichungen. Dann gleichst du die Elektronen aus, indem du die Teilgleichungen mit geeigneten Faktoren multiplizierst. Anschließend addierst du die Teilgleichungen und streichst die Elektronen. Zum Schluss prüfst du Atome und Ladungen.</p>
+          <details class="deep">
+            <summary>Mehr im Detail: Ladungsbilanz</summary>
+            <p>Die Summe der Ladungen muss auf beiden Seiten gleich sein. Bei sauren Lösungen darfst du H⁺ verwenden; in basischer Lösung neutralisierst du die H⁺ mit OH⁻. Die Elektronen dürfen in der Gesamtgleichung nicht mehr auftreten, weil sie vollständig übertragen werden.</p>
+          </details>
+          <section class="checkpoint" aria-labelledby="redox-check">
+            <h3 id="redox-check">Prüfpunkt</h3>
+            <div class="quiz" data-quiz="redox"><noscript><p class="tool__fallback">Die Prüfpunkt-Aufgaben brauchen JavaScript.</p></noscript></div>
+          </section>
+          <script type="application/json" data-quiz-data="redox">
+          {
+            "questions": [
+              {
+                "id": "q1",
+                "type": "mc",
+                "level": "II",
+                "competency": "K2",
+                "prompt": "Welche Teilgleichung beschreibt die Oxidation von Fe²⁺ zu Fe³⁺?",
+                "options": ["Fe²⁺ → Fe³⁺ + e⁻", "Fe³⁺ + e⁻ → Fe²⁺", "Fe + 2 e⁻ → Fe²⁺", "Fe²⁺ + 2 e⁻ → Fe"],
+                "correct": 0,
+                "explain": "Eisen gibt ein Elektron ab. Die Oxidationszahl steigt von +II auf +III; das Elektron steht auf der Produktseite."
+              },
+              {
+                "id": "q2",
+                "type": "input",
+                "level": "III",
+                "competency": "K2",
+                "prompt": "Wie viele Elektronen werden in der Teilgleichung MnO₄⁻ + 8 H⁺ + ? e⁻ → Mn²⁺ + 4 H₂O übertragen?",
+                "accept": ["5", "fünf", "5 e-", "5e-"],
+                "model": "5",
+                "placeholder": "Zahl eingeben",
+                "explain": "Mangan wird von +VII zu +II reduziert. Die Differenz ist 5; es werden fünf Elektronen aufgenommen."
+              }
+            ]
+          }
+          </script>
+          <div class="station__footer">
+            <span class="status" data-station-status></span>
+            <div class="station__footer-actions">
+              <button class="btn js-only" type="button" data-complete="redox">Station abschließen</button>
+              <a class="quiet-link" href="#acidbase" data-go="acidbase" aria-label="Weiter zur Station Redox oder Säure-Base">Weiter</a>
+            </div>
+          </div>
+        </div>
+        <aside class="protocol__margin">
+          <div class="note">
+            <p class="note__title">Merke</p>
+            <p>Elektronen werden nie erzeugt oder verbraucht. Was der eine Partner abgibt, nimmt der andere auf.</p>
+          </div>
+          <div class="note">
+            <p class="note__title">Fachsprache</p>
+            <dl>
+              <dt>Teilgleichung</dt><dd>Gleichung für Oxidation oder Reduktion allein.</dd>
+              <dt>Elektronenbilanz</dt><dd>Gleich viele abgegebene und aufgenommene Elektronen.</dd>
+              <dt>Reduktionsmittel</dt><dd>Teilchen, das Elektronen abgibt und selbst oxidiert wird.</dd>
+              <dt>Oxidationsmittel</dt><dd>Teilchen, das Elektronen aufnimmt und selbst reduziert wird.</dd>
+            </dl>
+          </div>
+          <div class="note">
+            <p class="note__title">Typischer Fehler</p>
+            <p>Die Elektronen dürfen in der Gesamtgleichung nicht stehen bleiben. Sie werden durch die Multiplikation der Teilgleichungen vollständig ausgeglichen.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="station" id="acidbase" data-station="acidbase" data-title="Redox oder Säure-Base" aria-labelledby="acidbase-title">
+      <header class="station__head">
+        <h2 id="acidbase-title"><span class="station__num">03</span> Redox oder Säure-Base?</h2>
+        <p class="lead">Beide Reaktionen können mit sauren Lösungen ablaufen. Entscheidend ist, ob Elektronen oder Protonen übertragen werden.</p>
+      </header>
+      <div class="protocol">
+        <div class="protocol__main">
+          <p>Zink reagiert mit Salzsäure. Dabei entsteht Wasserstoffgas: Zn + 2 HCl → ZnCl₂ + H₂. Zink gibt Elektronen ab und wird oxidiert; die Wasserstoff-Ionen nehmen Elektronen auf und werden zu H₂ reduziert. Das ist eine Redoxreaktion.</p>
+          <p>Calciumcarbonat reagiert ebenfalls mit Salzsäure: CaCO₃ + 2 HCl → CaCl₂ + CO₂ + H₂O. Hier werden Protonen übertragen, aber keine Oxidationszahlen geändert. Das ist eine Säure-Base-Reaktion mit anschließender Zersetzung der Kohlensäure.</p>
+          <table class="data-table">
+            <caption>Zwei Reaktionen mit saurer Lösung im Vergleich</caption>
+            <thead><tr><th>Reaktion</th><th>Übertragen</th><th>Typ</th></tr></thead>
+            <tbody>
+              <tr><td>Zn + 2 HCl → ZnCl₂ + H₂</td><td>Elektronen</td><td>Redoxreaktion</td></tr>
+              <tr><td>CaCO₃ + 2 HCl → CaCl₂ + CO₂ + H₂O</td><td>Protonen</td><td>Säure-Base-Reaktion</td></tr>
+            </tbody>
+          </table>
+          <p>Die Unterscheidung ist wichtig, weil Redoxreaktionen mit Elektronenbilanz und Oxidationszahlen beschrieben werden, Säure-Base-Reaktionen mit Protonenübergängen und konjugierten Paaren. Viele Alltagsphänomene enthalten beide Anteile, zum Beispiel die Reaktion von Metallen mit Säuren und die gleichzeitige Bildung von Wasserstoff.</p>
+          <section class="checkpoint" aria-labelledby="acidbase-check">
+            <h3 id="acidbase-check">Prüfpunkt</h3>
+            <div class="quiz" data-quiz="acidbase"><noscript><p class="tool__fallback">Die Prüfpunkt-Aufgaben brauchen JavaScript.</p></noscript></div>
+          </section>
+          <script type="application/json" data-quiz-data="acidbase">
+          {
+            "questions": [
+              {
+                "id": "q1",
+                "type": "mc",
+                "level": "II",
+                "competency": "K3",
+                "prompt": "Warum ist CaCO₃ + 2 HCl → CaCl₂ + CO₂ + H₂O keine Redoxreaktion?",
+                "options": [
+                  "Die Oxidationszahlen ändern sich nicht; es werden Protonen übertragen.",
+                  "Weil Calcium ein Metall ist.",
+                  "Weil Kohlendioxid entsteht.",
+                  "Weil Wasser entsteht."
+                ],
+                "correct": 0,
+                "explain": "Calcium bleibt +II, Kohlenstoff +IV, Sauerstoff -II und Wasserstoff +I. Es findet ein Protonenübergang statt, kein Elektronenübergang."
+              },
+              {
+                "id": "q2",
+                "type": "mc",
+                "level": "I",
+                "competency": "K3",
+                "prompt": "Welches Gas entsteht bei der Reaktion von Zink mit Salzsäure?",
+                "options": ["Wasserstoff", "Sauerstoff", "Chlor", "Kohlendioxid"],
+                "correct": 0,
+                "explain": "Die Wasserstoff-Ionen werden zu elementarem Wasserstoff reduziert. Zn + 2 HCl → ZnCl₂ + H₂."
+              }
+            ]
+          }
+          </script>
+          <div class="station__footer">
+            <span class="status" data-station-status></span>
+            <div class="station__footer-actions">
+              <button class="btn js-only" type="button" data-complete="acidbase">Station abschließen</button>
+              <a class="quiet-link" href="#alcohol" data-go="alcohol" aria-label="Weiter zur Station Alkohole">Weiter</a>
+            </div>
+          </div>
+        </div>
+        <aside class="protocol__margin">
+          <div class="note">
+            <p class="note__title">Merke</p>
+            <p>Redox: Elektronen werden übertragen. Säure-Base: Protonen werden übertragen. Prüfe immer die Oxidationszahlen.</p>
+          </div>
+          <div class="note">
+            <p class="note__title">Fachsprache</p>
+            <dl>
+              <dt>unedles Metall</dt><dd>Metall, das leicht Elektronen abgibt und mit sauren Lösungen Wasserstoff bildet.</dd>
+              <dt>Elektronenübergang</dt><dd>Kern einer Redoxreaktion; die Oxidationszahlen ändern sich.</dd>
+              <dt>Protonenübergang</dt><dd>Kern einer Säure-Base-Reaktion; die Oxidationszahlen bleiben gleich.</dd>
+            </dl>
+          </div>
+          <div class="note">
+            <p class="note__title">Typischer Fehler</p>
+            <p>Nicht jede Reaktion mit einer Säure ist eine Säure-Base-Reaktion. Entscheidend ist, was übertragen wird.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="station" id="alcohol" data-station="alcohol" data-title="Alkohole" aria-labelledby="alcohol-title">
+      <header class="station__head">
+        <h2 id="alcohol-title"><span class="station__num">04</span> Was passiert bei der Oxidation von Alkoholen?</h2>
+        <p class="lead">Primäre Alkohole werden zu Aldehyden und Carbonsäuren, sekundäre zu Ketonen, tertiäre reagieren nicht.</p>
+      </header>
+      <div class="protocol">
+        <div class="protocol__main">
+          <figure class="tool" data-tool="alcohol" data-tool-data="alcohol">
+            <div class="tool__head">
+              <p class="tool__title">Alkohol-Oxidation</p>
+              <p class="tool__hint">Wähle einen Alkohol. Die Tabelle zeigt das Produkt und die Nachweisreaktionen.</p>
+            </div>
+            <div class="tool__controls" data-tool-controls></div>
+            <div class="tool__stage" data-tool-stage><p class="tool__fallback">Das Modell lädt mit JavaScript. Die Regeln stehen im Text.</p></div>
+            <div class="tool__readout" data-tool-readout></div>
+            <figcaption class="tool__caption">Die Oxidationsstufe des funktionellen Kohlenstoffatoms entscheidet über das Produkt.</figcaption>
+          </figure>
+          <p>Bei einem primären Alkohol sitzt die OH-Gruppe am Ende der Kette. Bei der Oxidation entsteht zunächst ein Aldehyd, bei weiterer Oxidation eine Carbonsäure. Ein sekundärer Alkohol trägt die OH-Gruppe an einem Kohlenstoffatom mit zwei Kohlenstoffnachbarn; dabei entsteht ein Keton. Ein tertiärer Alkohol hat an diesem Kohlenstoffatom drei Kohlenstoffnachbarn und kein Wasserstoffatom, das für die Oxidation am funktionellen Zentrum benötigt wird.</p>
+          <figure class="diagram-figure">
+            <svg class="diagram" viewBox="0 0 800 360" role="img" aria-label="Baumdiagramm zur Oxidierbarkeit von Alkoholen: primär zu Aldehyd und Carbonsäure, sekundär zum Keton, tertiär keine Oxidation">
+              <rect x="20" y="155" width="125" height="46" class="soft-fill" stroke="var(--color-rule-2)" stroke-width="1.2"/>
+              <text x="82" y="183" text-anchor="middle" class="label-strong" font-size="15">Alkohol</text>
+              <line x1="145" y1="178" x2="200" y2="88" class="rule-strong"/>
+              <line x1="145" y1="178" x2="200" y2="188" class="rule-strong"/>
+              <line x1="145" y1="178" x2="200" y2="288" class="rule-strong"/>
+              <rect x="200" y="68" width="120" height="40" class="paper-fill" stroke="var(--color-rule-2)" stroke-width="1.2"/>
+              <text x="260" y="94" text-anchor="middle" class="label-strong" font-size="15">primär</text>
+              <rect x="200" y="168" width="120" height="40" class="paper-fill" stroke="var(--color-rule-2)" stroke-width="1.2"/>
+              <text x="260" y="194" text-anchor="middle" class="label-strong" font-size="15">sekundär</text>
+              <rect x="200" y="268" width="120" height="40" class="paper-fill" stroke="var(--color-rule-2)" stroke-width="1.2"/>
+              <text x="260" y="294" text-anchor="middle" class="label-strong" font-size="15">tertiär</text>
+              <line x1="320" y1="88" x2="380" y2="88" class="rule-strong"/>
+              <line x1="320" y1="188" x2="380" y2="188" class="rule-strong"/>
+              <line x1="320" y1="288" x2="380" y2="288" class="rule-strong"/>
+              <rect x="380" y="68" width="145" height="40" class="soft-fill" stroke="var(--color-rule-2)" stroke-width="1.2"/>
+              <text x="452" y="94" text-anchor="middle" class="label-strong" font-size="15">Aldehyd</text>
+              <rect x="380" y="168" width="145" height="40" class="soft-fill" stroke="var(--color-rule-2)" stroke-width="1.2"/>
+              <text x="452" y="194" text-anchor="middle" class="label-strong" font-size="15">Keton</text>
+              <rect x="380" y="268" width="145" height="40" class="soft-fill" stroke="var(--color-rule-2)" stroke-width="1.2"/>
+              <text x="452" y="288" text-anchor="middle" class="label-strong" font-size="14">keine Oxidation</text>
+              <line x1="525" y1="88" x2="585" y2="88" class="rule-strong"/>
+              <rect x="585" y="68" width="185" height="40" class="soft-fill" stroke="var(--color-rule-2)" stroke-width="1.2"/>
+              <text x="677" y="94" text-anchor="middle" class="label-strong" font-size="15">Carbonsäure</text>
+              <text x="452" y="126" text-anchor="middle" class="label-muted" font-size="12">Fehling +</text>
+              <text x="452" y="226" text-anchor="middle" class="label-muted" font-size="12">Fehling -</text>
+              <text x="452" y="326" text-anchor="middle" class="label-muted" font-size="12">kein Aldehyd-Nachweis</text>
+            </svg>
+            <figcaption>Primäre Alkohole oxidieren stufenweise zum Aldehyd und weiter zur Carbonsäure. Sekundäre Alkohole ergeben ein Keton; tertiäre Alkohole reagieren unter diesen Bedingungen nicht.</figcaption>
+          </figure>
+          <p>Aldehyde lassen sich mit der Fehling-Probe, der Silberspiegel-Probe oder der Schiffschen Probe nachweisen. Bei der Fehling-Probe entsteht ein roter Niederschlag aus Kupfer(I)-oxid; beim Silberspiegel scheidet sich Silber ab. Ketone reagieren unter diesen Bedingungen nicht positiv.</p>
+          <section class="checkpoint" aria-labelledby="alcohol-check">
+            <h3 id="alcohol-check">Prüfpunkt</h3>
+            <div class="quiz" data-quiz="alcohol"><noscript><p class="tool__fallback">Die Prüfpunkt-Aufgaben brauchen JavaScript.</p></noscript></div>
+          </section>
+          <script type="application/json" data-quiz-data="alcohol">
+          {
+            "questions": [
+              {
+                "id": "q1",
+                "type": "mc",
+                "level": "II",
+                "competency": "K4",
+                "prompt": "Welches Produkt entsteht bei der Oxidation von Propan-1-ol?",
+                "options": ["Propanal, bei weiterer Oxidation Propansäure", "Propan-2-on", "Propan", "Kein Produkt"],
+                "correct": 0,
+                "explain": "Propan-1-ol ist ein primärer Alkohol. Die Oxidation führt über Propanal zur Propansäure."
+              },
+              {
+                "id": "q2",
+                "type": "mc",
+                "level": "II",
+                "competency": "K4",
+                "prompt": "Warum reagiert 2-Methylpropan-2-ol nicht mit Permanganat?",
+                "options": [
+                  "Es ist tertiär; am funktionellen Kohlenstoffatom fehlt ein Wasserstoffatom für die Oxidation.",
+                  "Es ist ein Aldehyd.",
+                  "Es hat keine OH-Gruppe.",
+                  "Es ist ein primärer Alkohol."
+                ],
+                "correct": 0,
+                "explain": "Beim tertiären Alkohol trägt das C-Atom der OH-Gruppe drei Kohlenstoffnachbarn. Es gibt kein H-Atom, das im ersten Schritt abgespalten werden könnte."
+              }
+            ]
+          }
+          </script>
+          <div class="station__footer">
+            <span class="status" data-station-status></span>
+            <div class="station__footer-actions">
+              <button class="btn js-only" type="button" data-complete="alcohol">Station abschließen</button>
+              <a class="quiet-link" href="#ethanol" data-go="ethanol" aria-label="Weiter zur Station Ethanol und Brennstoffzelle">Weiter</a>
+            </div>
+          </div>
+        </div>
+        <aside class="protocol__margin">
+          <div class="note">
+            <p class="note__title">Merke</p>
+            <p>Primär: Aldehyd, dann Carbonsäure. Sekundär: Keton. Tertiär: keine Oxidation unter diesen Bedingungen.</p>
+          </div>
+          <div class="note">
+            <p class="note__title">Fachsprache</p>
+            <dl>
+              <dt>primärer Alkohol</dt><dd>OH-Gruppe am endständigen Kohlenstoffatom.</dd>
+              <dt>sekundärer Alkohol</dt><dd>OH-Gruppe an einem Kohlenstoffatom mit zwei C-Nachbarn.</dd>
+              <dt>tertiärer Alkohol</dt><dd>OH-Gruppe an einem Kohlenstoffatom mit drei C-Nachbarn.</dd>
+              <dt>Fehling-Probe</dt><dd>Nachweis für Aldehyde; roter Niederschlag aus Cu₂O.</dd>
+            </dl>
+          </div>
+          <div class="note">
+            <p class="note__title">Typischer Fehler</p>
+            <p>Die Fehling-Probe ist kein Nachweis für alle Alkohole. Sie unterscheidet Aldehyde von Ketonen.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="station" id="ethanol" data-station="ethanol" data-title="Ethanol und Brennstoffzelle" aria-labelledby="ethanol-title">
+      <header class="station__head">
+        <h2 id="ethanol-title"><span class="station__num">05</span> Ethanol und Brennstoffzellen</h2>
+        <p class="lead">Ethanol ist ein Lösemittel, ein Genussmittel und ein Gefahrstoff. In einer Brennstoffzelle kann seine Oxidation elektrische Energie liefern.</p>
+      </header>
+      <div class="protocol">
+        <div class="protocol__main">
+          <p>Ethanol entsteht durch Gärung aus Zucker oder durch die Hydratisierung von Ethen. Es wirkt auf das zentrale Nervensystem, verändert die Reaktionszeit und kann zu Abhängigkeit führen. Die Leber baut Ethanol über Ethanal ab; dabei entstehen reaktive Zwischenprodukte, die Zellen schädigen. Unter Alkoholeinfluss steigt das Unfallrisiko im Straßenverkehr und am Arbeitsplatz.</p>
+          <figure class="diagram-figure">
+            <svg class="diagram" viewBox="0 0 680 330" role="img" aria-label="Schematische Ethanol-Brennstoffzelle mit Anode, Kathode, Elektrolyt und Elektronenfluss">
+              <rect x="50" y="55" width="170" height="210" class="soft-fill" stroke="var(--color-rule-2)" stroke-width="1.2"/>
+              <rect x="460" y="55" width="170" height="210" class="soft-fill" stroke="var(--color-rule-2)" stroke-width="1.2"/>
+              <rect x="250" y="55" width="180" height="210" class="paper-fill" stroke="var(--color-rule-2)" stroke-width="1.2"/>
+              <text x="135" y="85" text-anchor="middle" class="label-strong">Anode</text>
+              <text x="550" y="85" text-anchor="middle" class="label-strong">Kathode</text>
+              <text x="340" y="85" text-anchor="middle" class="label-strong">Elektrolyt</text>
+              <text x="135" y="125" text-anchor="middle" class="label-muted">C₂H₅OH + 3 H₂O</text>
+              <text x="135" y="150" text-anchor="middle" class="label-muted">→ 2 CO₂ + 12 H⁺ + 12 e⁻</text>
+              <text x="550" y="125" text-anchor="middle" class="label-muted">3 O₂ + 12 H⁺ + 12 e⁻</text>
+              <text x="550" y="150" text-anchor="middle" class="label-muted">→ 6 H₂O</text>
+              <text x="340" y="135" text-anchor="middle" class="label-muted">H⁺-Ionen</text>
+              <line x1="135" y1="55" x2="135" y2="20" class="rule-strong"/>
+              <line x1="550" y1="55" x2="550" y2="20" class="rule-strong"/>
+              <line x1="135" y1="20" x2="550" y2="20" class="rule-strong"/>
+              <text x="340" y="14" text-anchor="middle" class="label-strong">Elektronenfluss im äußeren Stromkreis</text>
+              <line x1="230" y1="160" x2="450" y2="160" class="accent" stroke-dasharray="5 4"/>
+              <text x="340" y="190" text-anchor="middle" class="label-muted">Ionenwanderung</text>
+              <text x="340" y="300" text-anchor="middle" class="label-muted">Gesamtreaktion: C₂H₅OH + 3 O₂ → 2 CO₂ + 3 H₂O</text>
+            </svg>
+            <figcaption>Die Oxidation und die Reduktion sind räumlich getrennt. Die Elektronen fließen über den äußeren Stromkreis.</figcaption>
+          </figure>
+          <p>In einer Brennstoffzelle wird die chemische Energie eines Brennstoffs direkt in elektrische Energie umgewandelt. An der Anode wird der Brennstoff oxidiert, an der Kathode wird Sauerstoff reduziert. Die Elektronen fließen über einen äußeren Stromkreis; die Ionen wandern durch den Elektrolyten. Bei der Ethanol-Brennstoffzelle lautet die Gesamtreaktion C₂H₅OH + 3 O₂ → 2 CO₂ + 3 H₂O.</p>
+          <section class="checkpoint" aria-labelledby="ethanol-check">
+            <h3 id="ethanol-check">Prüfpunkt</h3>
+            <div class="quiz" data-quiz="ethanol"><noscript><p class="tool__fallback">Die Prüfpunkt-Aufgaben brauchen JavaScript.</p></noscript></div>
+          </section>
+          <script type="application/json" data-quiz-data="ethanol">
+          {
+            "questions": [
+              {
+                "id": "q1",
+                "type": "mc",
+                "level": "II",
+                "competency": "K6",
+                "prompt": "Welche Gefahr besteht beim Konsum von Ethanol?",
+                "options": [
+                  "Die Leber bildet Ethanal als Zwischenprodukt; Zellen können geschädigt werden, das Unfallrisiko steigt und Abhängigkeit ist möglich.",
+                  "Ethanol ist ein Vitamin und völlig ungefährlich.",
+                  "Ethanol wirkt nur auf die Muskeln, nicht auf das Gehirn.",
+                  "Ethanol kann nicht über die Leber abgebaut werden."
+                ],
+                "correct": 0,
+                "explain": "Ethanol wird über Ethanal abgebaut. Ethanal ist reaktiv und kann Zellen schädigen. Alkohol beeinträchtigt die Koordination und das Urteilsvermögen."
+              },
+              {
+                "id": "q2",
+                "type": "mc",
+                "level": "II",
+                "competency": "K7",
+                "prompt": "Was passiert an der Anode einer Brennstoffzelle?",
+                "options": [
+                  "Der Brennstoff wird oxidiert und gibt Elektronen ab.",
+                  "Sauerstoff wird oxidiert.",
+                  "Elektronen werden aufgenommen.",
+                  "Es entsteht nur Wasser."
+                ],
+                "correct": 0,
+                "explain": "An der Anode findet die Oxidation statt. Der Brennstoff gibt Elektronen ab; sie fließen über den äußeren Stromkreis zur Kathode."
+              }
+            ]
+          }
+          </script>
+          <div class="station__footer">
+            <span class="status" data-station-status></span>
+            <div class="station__footer-actions">
+              <button class="btn js-only" type="button" data-complete="ethanol">Station abschließen</button>
+              <a class="quiet-link" href="#check" data-go="check" aria-label="Weiter zum Kompetenzcheck">Weiter</a>
+            </div>
+          </div>
+        </div>
+        <aside class="protocol__margin">
+          <div class="note">
+            <p class="note__title">Merke</p>
+            <p>Anode: Oxidation, Elektronenabgabe. Kathode: Reduktion, Elektronenaufnahme. Die Elektronen fließen durch den äußeren Stromkreis.</p>
+          </div>
+          <div class="note">
+            <p class="note__title">Fachsprache</p>
+            <dl>
+              <dt>Brennstoffzelle</dt><dd>Vorrichtung, die chemische Energie eines Brennstoffs direkt in elektrische Energie umwandelt.</dd>
+              <dt>Anode</dt><dd>Elektrode, an der die Oxidation stattfindet.</dd>
+              <dt>Kathode</dt><dd>Elektrode, an der die Reduktion stattfindet.</dd>
+              <dt>Elektrolyt</dt><dd>Ionenleitende Phase zwischen den Elektroden.</dd>
+            </dl>
+          </div>
+          <div class="note">
+            <p class="note__title">Typischer Fehler</p>
+            <p>Die Brennstoffzelle verbrennt den Brennstoff nicht. Oxidation und Reduktion laufen getrennt an den Elektroden ab.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="station" id="check" data-station="check" data-title="Kompetenzcheck" aria-labelledby="check-title">
+      <header class="station__head">
+        <h2 id="check-title"><span class="station__num">06</span> Kompetenzcheck</h2>
+        <p class="lead">Zwölf Aufgaben zu den sieben Kompetenzen. Werte am Ende aus und lies die Rückmeldungen zu den offenen Aufgaben.</p>
+      </header>
+      <div class="check-banner">
+        <div>
+          <p class="check-banner__score" data-check-score>0 / 12</p>
+          <p class="check-banner__text" data-check-text>Beantworte alle Aufgaben und werte dann aus. Jede Aufgabe zählt einen Punkt.</p>
+        </div>
+        <p class="check-banner__text">Der Bestwert bleibt gespeichert. Du kannst die Aufgaben zurücksetzen und erneut bearbeiten.</p>
+      </div>
+      <div class="competency-results" data-check-bars aria-label="Ergebnisse nach Kompetenz"></div>
+      <div class="quiz" data-quiz="check"><noscript><p class="tool__fallback">Der Kompetenzcheck braucht JavaScript. Die Lerninhalte bleiben lesbar.</p></noscript></div>
+      <div class="check-result" data-check-result hidden></div>
+      <script type="application/json" data-quiz-data="check">
+      {
+        "final": true,
+        "competencies": [
+          { "id": "K1", "label": "K1: Oxidationszahlen und Redoxerkennung" },
+          { "id": "K2", "label": "K2: Redoxgleichungen aufstellen" },
+          { "id": "K3", "label": "K3: Redox und Säure-Base unterscheiden" },
+          { "id": "K4", "label": "K4: Oxidation von Alkoholen" },
+          { "id": "K5", "label": "K5: Nachweis von Aldehyden" },
+          { "id": "K6", "label": "K6: Ethanol und Gesundheit" },
+          { "id": "K7", "label": "K7: Brennstoffzellen" }
+        ],
+        "questions": [
+          {
+            "id": "c1",
+            "type": "input",
+            "level": "II",
+            "competency": "K1",
+            "prompt": "Welche Oxidationszahl hat Mangan im Permanganat-Ion MnO₄⁻?",
+            "accept": ["+7", "7", "vii", "+vii"],
+            "model": "+VII",
+            "placeholder": "z. B. +VII",
+            "explain": "Vier Sauerstoffatome tragen -8; die Ladung ist -1. Mangan muss also +7 haben."
+          },
+          {
+            "id": "c2",
+            "type": "mc",
+            "level": "II",
+            "competency": "K1",
+            "prompt": "Welche Reaktion ist eine Redoxreaktion?",
+            "options": [
+              "Zn + 2 HCl → ZnCl₂ + H₂",
+              "CaCO₃ + 2 HCl → CaCl₂ + CO₂ + H₂O",
+              "NH₃ + H₂O ⇌ NH₄⁺ + OH⁻",
+              "NaCl + Wasser → Salzlösung"
+            ],
+            "correct": 0,
+            "explain": "Zink wird oxidiert, Wasserstoff-Ionen werden reduziert. Bei den anderen Reaktionen ändern sich keine Oxidationszahlen."
+          },
+          {
+            "id": "c3",
+            "type": "mc",
+            "level": "II",
+            "competency": "K2",
+            "prompt": "Welche Teilgleichung beschreibt die Oxidation von Fe²⁺ zu Fe³⁺?",
+            "options": ["Fe²⁺ → Fe³⁺ + e⁻", "Fe³⁺ + e⁻ → Fe²⁺", "Fe + 2 e⁻ → Fe²⁺", "Fe²⁺ + 2 e⁻ → Fe"],
+            "correct": 0,
+            "explain": "Die Oxidationszahl steigt von +II auf +III. Ein Elektron wird abgegeben."
+          },
+          {
+            "id": "c4",
+            "type": "input",
+            "level": "III",
+            "competency": "K2",
+            "prompt": "Wie viele Elektronen werden in der Teilgleichung MnO₄⁻ + 8 H⁺ + ? e⁻ → Mn²⁺ + 4 H₂O übertragen?",
+            "accept": ["5", "fünf", "5 e-", "5e-"],
+            "model": "5",
+            "placeholder": "Zahl eingeben",
+            "explain": "Mangan wird von +VII zu +II reduziert. Die Differenz beträgt 5 Elektronen."
+          },
+          {
+            "id": "c5",
+            "type": "mc",
+            "level": "II",
+            "competency": "K3",
+            "prompt": "Warum ist CaCO₃ + 2 HCl → CaCl₂ + CO₂ + H₂O keine Redoxreaktion?",
+            "options": [
+              "Die Oxidationszahlen ändern sich nicht; es werden Protonen übertragen.",
+              "Weil Calcium ein Metall ist.",
+              "Weil Kohlendioxid entsteht.",
+              "Weil Wasser entsteht."
+            ],
+            "correct": 0,
+            "explain": "Es findet ein Protonenübergang statt. Die Oxidationszahlen bleiben unverändert."
+          },
+          {
+            "id": "c6",
+            "type": "mc",
+            "level": "I",
+            "competency": "K3",
+            "prompt": "Welches Gas entsteht bei der Reaktion von Zink mit Salzsäure?",
+            "options": ["Wasserstoff", "Sauerstoff", "Chlor", "Kohlendioxid"],
+            "correct": 0,
+            "explain": "Wasserstoff-Ionen werden zu H₂ reduziert. Die Reaktion ist eine Redoxreaktion."
+          },
+          {
+            "id": "c7",
+            "type": "mc",
+            "level": "II",
+            "competency": "K4",
+            "prompt": "Welches Produkt entsteht bei der Oxidation von Propan-1-ol?",
+            "options": ["Propanal, bei weiterer Oxidation Propansäure", "Propan-2-on", "Propan", "Kein Produkt"],
+            "correct": 0,
+            "explain": "Propan-1-ol ist primär. Die Oxidation führt über Propanal zur Propansäure."
+          },
+          {
+            "id": "c8",
+            "type": "mc",
+            "level": "II",
+            "competency": "K4",
+            "prompt": "Warum reagiert 2-Methylpropan-2-ol nicht mit Permanganat?",
+            "options": [
+              "Es ist tertiär; am funktionellen Kohlenstoffatom fehlt ein Wasserstoffatom für die Oxidation.",
+              "Es ist ein Aldehyd.",
+              "Es hat keine OH-Gruppe.",
+              "Es ist ein primärer Alkohol."
+            ],
+            "correct": 0,
+            "explain": "Beim tertiären Alkohol hat das C-Atom der OH-Gruppe drei C-Nachbarn. Es fehlt das H-Atom, das für die Oxidation nötig wäre."
+          },
+          {
+            "id": "c9",
+            "type": "mc",
+            "level": "I",
+            "competency": "K5",
+            "prompt": "Welche Probe unterscheidet Aldehyde von Ketonen?",
+            "options": ["Fehling-Probe", "Lackmusprobe", "Titration", "Dichtemessung"],
+            "correct": 0,
+            "explain": "Bei der Fehling-Probe entsteht mit Aldehyden ein roter Niederschlag aus Cu₂O. Ketone reagieren nicht positiv."
+          },
+          {
+            "id": "c10",
+            "type": "mc",
+            "level": "II",
+            "competency": "K6",
+            "prompt": "Welche Gefahr besteht beim Konsum von Ethanol?",
+            "options": [
+              "Die Leber bildet Ethanal als Zwischenprodukt; Zellen können geschädigt werden, das Unfallrisiko steigt und Abhängigkeit ist möglich.",
+              "Ethanol ist ein Vitamin und völlig ungefährlich.",
+              "Ethanol wirkt nur auf die Muskeln, nicht auf das Gehirn.",
+              "Ethanol kann nicht über die Leber abgebaut werden."
+            ],
+            "correct": 0,
+            "explain": "Ethanal ist ein reaktives Zwischenprodukt. Alkohol beeinträchtigt die Koordination und das Urteilsvermögen; Abhängigkeit ist möglich."
+          },
+          {
+            "id": "c11",
+            "type": "mc",
+            "level": "II",
+            "competency": "K7",
+            "prompt": "Was passiert an der Anode einer Brennstoffzelle?",
+            "options": [
+              "Der Brennstoff wird oxidiert und gibt Elektronen ab.",
+              "Sauerstoff wird oxidiert.",
+              "Elektronen werden aufgenommen.",
+              "Es entsteht nur Wasser."
+            ],
+            "correct": 0,
+            "explain": "An der Anode findet die Oxidation statt. Die Elektronen fließen über den äußeren Stromkreis zur Kathode."
+          },
+          {
+            "id": "c12",
+            "type": "mc",
+            "level": "II",
+            "competency": "K7",
+            "prompt": "Welche Gesamtreaktion beschreibt eine Ethanol-Brennstoffzelle?",
+            "options": [
+              "C₂H₅OH + 3 O₂ → 2 CO₂ + 3 H₂O",
+              "C₂H₅OH → C₂H₄ + H₂O",
+              "2 H₂ + O₂ → 2 H₂O",
+              "CH₄ + 2 O₂ → CO₂ + 2 H₂O"
+            ],
+            "correct": 0,
+            "explain": "Ethanol wird zu Kohlendioxid oxidiert, Sauerstoff zu Wasser reduziert. Die Gesamtreaktion ist C₂H₅OH + 3 O₂ → 2 CO₂ + 3 H₂O."
+          }
+        ]
+      }
+      </script>
+    </section>
+
+    <section class="station" id="glossar" data-station="glossar" data-title="Glossar" aria-labelledby="glossar-title">
+      <header class="station__head">
+        <h2 id="glossar-title"><span class="station__num">07</span> Glossar</h2>
+        <p class="lead">Die zentralen Begriffe des Lernbereichs in kurzer Form. Suche nach einem Wort oder einem Teil davon.</p>
+      </header>
+      <div class="glossary-search">
+        <label class="visually-hidden" for="glossarySearch">Glossarbegriff suchen</label>
+        <input id="glossarySearch" type="search" placeholder="Begriff suchen, zum Beispiel Oxidation, Fehling, Anode" data-glossary-search autocomplete="off">
+        <span data-glossary-count>0</span>
+      </div>
+      <dl class="glossary" data-glossary>
+        <div class="term"><dt>Oxidation</dt><dd>Abgabe von Elektronen; die Oxidationszahl steigt.</dd></div>
+        <div class="term"><dt>Reduktion</dt><dd>Aufnahme von Elektronen; die Oxidationszahl sinkt.</dd></div>
+        <div class="term"><dt>Oxidationszahl</dt><dd>Formale Ladung eines Atoms unter der Annahme, dass Bindungselektronen dem elektronegativeren Partner gehören.</dd></div>
+        <div class="term"><dt>Reduktionsmittel</dt><dd>Teilchen, das Elektronen abgibt und selbst oxidiert wird.</dd></div>
+        <div class="term"><dt>Oxidationsmittel</dt><dd>Teilchen, das Elektronen aufnimmt und selbst reduziert wird.</dd></div>
+        <div class="term"><dt>Teilgleichung</dt><dd>Gleichung für die Oxidation oder die Reduktion allein.</dd></div>
+        <div class="term"><dt>Elektronenbilanz</dt><dd>Gleich viele abgegebene und aufgenommene Elektronen.</dd></div>
+        <div class="term"><dt>primärer Alkohol</dt><dd>OH-Gruppe am endständigen Kohlenstoffatom; Oxidation zu Aldehyd und Carbonsäure.</dd></div>
+        <div class="term"><dt>sekundärer Alkohol</dt><dd>OH-Gruppe an einem Kohlenstoffatom mit zwei C-Nachbarn; Oxidation zum Keton.</dd></div>
+        <div class="term"><dt>tertiärer Alkohol</dt><dd>OH-Gruppe an einem Kohlenstoffatom mit drei C-Nachbarn; keine Oxidation unter diesen Bedingungen.</dd></div>
+        <div class="term"><dt>Fehling-Probe</dt><dd>Nachweis für Aldehyde; roter Niederschlag aus Kupfer(I)-oxid.</dd></div>
+        <div class="term"><dt>Silberspiegel-Probe</dt><dd>Nachweis für Aldehyde; Silber scheidet sich an der Gefäßwand ab.</dd></div>
+        <div class="term"><dt>Brennstoffzelle</dt><dd>Vorrichtung, die chemische Energie direkt in elektrische Energie umwandelt.</dd></div>
+        <div class="term"><dt>Anode</dt><dd>Elektrode, an der die Oxidation stattfindet.</dd></div>
+        <div class="term"><dt>Kathode</dt><dd>Elektrode, an der die Reduktion stattfindet.</dd></div>
+      </dl>
+      <p class="glossary-empty" data-glossary-empty hidden>Kein Begriff gefunden. Versuche einen anderen Suchbegriff.</p>
+      <div class="station__footer">
+        <span class="status" data-station-status></span>
+        <div class="station__footer-actions">
+          <a class="quiet-link" href="#check" data-go="check">Zum Kompetenzcheck</a>
+          <a class="quiet-link" href="index.html">Alle Lernbereiche</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<footer class="colophon">
+  <div class="colophon__inner">
+    <p><strong>Chemie 10</strong>. Lernwebsite nach LehrplanPLUS. Alle Grafiken sind selbst gezeichnet; es werden keine Schulbuchabbildungen übernommen.</p>
+    <p><a href="https://www.lehrplanplus.bayern.de/fachlehrplan/gymnasium/10/chemie/ch" target="_blank" rel="noopener">LehrplanPLUS Chemie 10</a>. Stand November 2026.</p>
+  </div>
+</footer>
+
+<dialog class="dialog" id="resetDialog" aria-labelledby="reset-title">
+  <h2 id="reset-title">Lernstand zurücksetzen?</h2>
+  <p>Alle lokalen Ergebnisse dieser Seite werden gelöscht. Die Lerninhalte bleiben erhalten.</p>
+  <div class="dialog__actions">
+    <button class="btn btn--quiet" type="button" data-reset-cancel>Abbrechen</button>
+    <button class="btn" type="button" data-reset-confirm>Ja, zurücksetzen</button>
+  </div>
+</dialog>
+
+<script type="application/json" data-tool-data="oxidation">
+{
+  "particles": [
+    { "id": "h2o", "label": "H₂O", "charge": 0, "atoms": [{ "el": "H", "n": 2, "ox": "+I", "value": 1 }, { "el": "O", "n": 1, "ox": "-II", "value": -2 }], "note": "Sauerstoff ist -II, Wasserstoff +I. Die Summe ist 0." },
+    { "id": "co2", "label": "CO₂", "charge": 0, "atoms": [{ "el": "C", "n": 1, "ox": "+IV", "value": 4 }, { "el": "O", "n": 2, "ox": "-II", "value": -2 }], "note": "Kohlenstoff ist +IV. Die Summe ist 4 + 2 × (-2) = 0." },
+    { "id": "ch4", "label": "CH₄", "charge": 0, "atoms": [{ "el": "C", "n": 1, "ox": "-IV", "value": -4 }, { "el": "H", "n": 4, "ox": "+I", "value": 1 }], "note": "Kohlenstoff ist -IV, Wasserstoff +I. Die Summe ist 0." },
+    { "id": "methanol", "label": "CH₃OH", "charge": 0, "atoms": [{ "el": "C", "n": 1, "ox": "-II", "value": -2 }, { "el": "H", "n": 4, "ox": "+I", "value": 1 }, { "el": "O", "n": 1, "ox": "-II", "value": -2 }], "note": "Kohlenstoff ist -II. Die Summe ist -2 + 4 - 2 = 0." },
+    { "id": "acetaldehyde", "label": "CH₃CHO", "charge": 0, "atoms": [{ "el": "C (CH₃)", "n": 1, "ox": "-III", "value": -3 }, { "el": "C (CHO)", "n": 1, "ox": "+I", "value": 1 }, { "el": "H", "n": 4, "ox": "+I", "value": 1 }, { "el": "O", "n": 1, "ox": "-II", "value": -2 }], "note": "Die beiden Kohlenstoffatome haben unterschiedliche Oxidationszahlen: -III und +I." },
+    { "id": "acetic", "label": "CH₃COOH", "charge": 0, "atoms": [{ "el": "C (CH₃)", "n": 1, "ox": "-III", "value": -3 }, { "el": "C (COOH)", "n": 1, "ox": "+III", "value": 3 }, { "el": "H", "n": 4, "ox": "+I", "value": 1 }, { "el": "O", "n": 2, "ox": "-II", "value": -2 }], "note": "Das Carboxy-Kohlenstoffatom ist +III, das Methyl-Kohlenstoffatom -III. Die Summe ist 0." },
+    { "id": "permanganate", "label": "MnO₄⁻", "charge": -1, "atoms": [{ "el": "Mn", "n": 1, "ox": "+VII", "value": 7 }, { "el": "O", "n": 4, "ox": "-II", "value": -2 }], "note": "Mangan ist +VII. Die Summe ist 7 - 8 = -1, also die Ladung des Ions." },
+    { "id": "dichromate", "label": "Cr₂O₇²⁻", "charge": -2, "atoms": [{ "el": "Cr", "n": 2, "ox": "+VI", "value": 6 }, { "el": "O", "n": 7, "ox": "-II", "value": -2 }], "note": "Chrom ist +VI. Die Summe ist 12 - 14 = -2." },
+    { "id": "peroxide", "label": "H₂O₂", "charge": 0, "atoms": [{ "el": "H", "n": 2, "ox": "+I", "value": 1 }, { "el": "O", "n": 2, "ox": "-I", "value": -1 }], "note": "Im Peroxid ist Sauerstoff -I, nicht -II. Die Summe ist 2 - 2 = 0." },
+    { "id": "of2", "label": "OF₂", "charge": 0, "atoms": [{ "el": "O", "n": 1, "ox": "+II", "value": 2 }, { "el": "F", "n": 2, "ox": "-I", "value": -1 }], "note": "Fluor ist elektronegativer als Sauerstoff. Deshalb ist Sauerstoff hier +II." }
+  ]
+}
+</script>
+<script type="application/json" data-tool-data="redox">
+{
+  "reactions": [
+    {
+      "id": "zncu", "label": "Zn + Cu²⁺", "electron": "2 e⁻",
+      "steps": [
+        { "title": "Oxidation", "equation": "Zn → Zn²⁺ + 2 e⁻", "note": "Zink gibt zwei Elektronen ab und wird oxidiert.", "charge": "links 0, rechts +2 - 2 = 0" },
+        { "title": "Reduktion", "equation": "Cu²⁺ + 2 e⁻ → Cu", "note": "Kupfer-Ionen nehmen die Elektronen auf und werden reduziert.", "charge": "links +2 - 2 = 0, rechts 0" },
+        { "title": "Elektronenbilanz", "equation": "2 e⁻ abgegeben, 2 e⁻ aufgenommen", "note": "Die Elektronenbilanz ist bereits ausgeglichen.", "charge": "ausgeglichen" },
+        { "title": "Gesamtgleichung", "equation": "Zn + Cu²⁺ → Zn²⁺ + Cu", "note": "Zink ist das Reduktionsmittel, Kupfer-Ion das Oxidationsmittel.", "charge": "links +2, rechts +2" }
+      ],
+      "note": "Die Elektronen werden von Zink auf Kupfer-Ionen übertragen. Die Gesamtladung bleibt erhalten."
+    },
+    {
+      "id": "mno4fe", "label": "MnO₄⁻ + Fe²⁺", "electron": "5 e⁻",
+      "steps": [
+        { "title": "Oxidation", "equation": "Fe²⁺ → Fe³⁺ + e⁻", "note": "Eisen gibt ein Elektron ab; die Oxidationszahl steigt von +II auf +III.", "charge": "links +2, rechts +3 - 1 = +2" },
+        { "title": "Reduktion", "equation": "MnO₄⁻ + 8 H⁺ + 5 e⁻ → Mn²⁺ + 4 H₂O", "note": "Mangan wird von +VII zu +II reduziert; Sauerstoff wird mit H⁺ und H₂O ausgeglichen.", "charge": "links -1 + 8 - 5 = +2, rechts +2" },
+        { "title": "Elektronenbilanz", "equation": "5 × Fe²⁺ → 5 Fe³⁺ + 5 e⁻; 1 × MnO₄⁻ + 8 H⁺ + 5 e⁻ → Mn²⁺ + 4 H₂O", "note": "Die Oxidation wird mit 5 multipliziert, die Reduktion bleibt einfach.", "charge": "5 e⁻ abgegeben, 5 e⁻ aufgenommen" },
+        { "title": "Gesamtgleichung", "equation": "MnO₄⁻ + 5 Fe²⁺ + 8 H⁺ → Mn²⁺ + 5 Fe³⁺ + 4 H₂O", "note": "Die Elektronen sind vollständig ausgeglichen. Permanganat ist das Oxidationsmittel.", "charge": "links -1 + 10 + 8 = +17, rechts +2 + 15 = +17" }
+      ],
+      "note": "In saurer Lösung wird Permanganat zu Mn²⁺ reduziert. Die Farbe verschwindet, weil Mn²⁺ farblos ist."
+    },
+    {
+      "id": "ethanolmno4", "label": "Ethanol + MnO₄⁻", "electron": "20 e⁻",
+      "steps": [
+        { "title": "Oxidation", "equation": "C₂H₅OH + H₂O → CH₃COOH + 4 H⁺ + 4 e⁻", "note": "Ethanol wird zu Essigsäure oxidiert. Wasser und H⁺ gleichen die Atome aus.", "charge": "links 0, rechts 4 - 4 = 0" },
+        { "title": "Reduktion", "equation": "MnO₄⁻ + 8 H⁺ + 5 e⁻ → Mn²⁺ + 4 H₂O", "note": "Permanganat wird zu Mangan(II) reduziert.", "charge": "links -1 + 8 - 5 = +2, rechts +2" },
+        { "title": "Elektronenbilanz", "equation": "5 × Oxidation und 4 × Reduktion ergeben 20 e⁻", "note": "Das kleinste gemeinsame Vielfache von 4 und 5 ist 20.", "charge": "20 e⁻ abgegeben, 20 e⁻ aufgenommen" },
+        { "title": "Gesamtgleichung", "equation": "5 C₂H₅OH + 4 MnO₄⁻ + 12 H⁺ → 5 CH₃COOH + 4 Mn²⁺ + 11 H₂O", "note": "Die Gesamtgleichung ist atom- und ladungsbilanziert.", "charge": "links -4 + 12 = +8, rechts 4 × 2 = +8" }
+      ],
+      "note": "Ethanol wird in saurer Lösung von Permanganat zur Essigsäure oxidiert. Die violette Farbe des Permanganats verschwindet."
+    }
+  ]
+}
+</script>
+<script type="application/json" data-tool-data="alcohol">
+{
+  "alcohols": [
+    {
+      "id": "ethanol",
+      "label": "Ethanol",
+      "class": "primär",
+      "product": "Ethanal, weiter zu Ethansäure",
+      "fehling": "positiv",
+      "silver": "positiv",
+      "schiff": "positiv",
+      "note": "Ethanol ist ein primärer Alkohol. Die Oxidation führt über Ethanal zur Essigsäure.",
+      "structure": "CH₃-CH₂-OH",
+      "productStructure": "CH₃-CHO → CH₃-COOH"
+    },
+    {
+      "id": "propan1ol",
+      "label": "Propan-1-ol",
+      "class": "primär",
+      "product": "Propanal, weiter zu Propansäure",
+      "fehling": "positiv",
+      "silver": "positiv",
+      "schiff": "positiv",
+      "note": "Propan-1-ol ist primär. Die endständige OH-Gruppe wird zunächst zum Aldehyd oxidiert.",
+      "structure": "CH₃-CH₂-CH₂-OH",
+      "productStructure": "CH₃-CH₂-CHO → CH₃-CH₂-COOH"
+    },
+    {
+      "id": "propan2ol",
+      "label": "Propan-2-ol",
+      "class": "sekundär",
+      "product": "Propan-2-on",
+      "fehling": "negativ",
+      "silver": "negativ",
+      "schiff": "negativ",
+      "note": "Propan-2-ol ist sekundär. Es entsteht ein Keton; Aldehyd-Nachweise bleiben negativ.",
+      "structure": "CH₃-CH(OH)-CH₃",
+      "productStructure": "CH₃-CO-CH₃"
+    },
+    {
+      "id": "tertbutanol",
+      "label": "2-Methylpropan-2-ol",
+      "class": "tertiär",
+      "product": "keine Oxidation unter diesen Bedingungen",
+      "fehling": "negativ",
+      "silver": "negativ",
+      "schiff": "negativ",
+      "note": "Der tertiäre Alkohol hat am funktionellen Kohlenstoffatom kein Wasserstoffatom. Die Oxidation findet nicht statt.",
+      "structure": "(CH₃)₃C-OH",
+      "productStructure": "keine Oxidation"
+    }
+  ]
+}
+</script>
+<script src="assets/tools.js" defer></script>
+<script src="assets/app.js" defer></script>
+</body>
+</html>

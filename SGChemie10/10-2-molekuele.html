@@ -1,0 +1,914 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>Moleküle: Orbital, EPA und Nomenklatur | Chemie 10</title>
+<meta name="description" content="Interaktiver Lernpfad zu Molekülen, Orbitalmodell, Valenzstrichformeln, EPA-Modell, Isomerie und IUPAC-Nomenklatur für Chemie 10 am SG.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@700&family=Spectral:ital,wght@0,400;0,500;1,400&family=Libre+Franklin:wght@500&display=swap" rel="stylesheet">
+<style>
+/* Hallmark · shape: app screen · genre: editorial · theme: Newsprint (deal 3/3, seed interaktive-chemie-lernwebsite-fuer-die-9539·9648ff15·2026-11-02·r0) · job: learn · scope: app
+ * hero: none (app screen) · nav: masthead + station sidebar · footer: colophon · imagery: none, own SVG diagrams · signature: five subject instruments
+ * axes: light/slab-serif/warm · posture: restrained · contrast: pass · fold: pass · v2.0.0 */
+html { overflow-x: clip; }
+body { overflow-x: clip; }
+</style>
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body data-page="lb2">
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<header class="masthead">
+  <div class="masthead__inner">
+    <a class="brand" href="index.html" aria-label="Zur Übersicht Chemie 10"><span>Chemie 10</span><span class="brand__tag">SG</span></a>
+    <p class="issue"><span class="issue__num">02</span> Moleküle, Orbitalmodell, EPA</p>
+    <div class="masthead__actions">
+      <span class="progress-inline" data-progress-inline aria-live="polite">0 von 6</span>
+      <a class="quiet-link" href="index.html">Übersicht</a>
+      <button class="menu-btn btn btn--quiet btn--small" type="button" data-menu aria-expanded="false" aria-controls="sidebar">Stationen</button>
+    </div>
+  </div>
+</header>
+<div class="app">
+  <aside class="sidebar" id="sidebar" aria-label="Stationen">
+    <div class="sidebar__head">
+      <p class="sidebar__kicker">Lernbereich 02</p>
+      <h2 class="sidebar__title">Moleküle</h2>
+      <p class="sidebar__deck">Vom Orbital zum räumlichen Bau.</p>
+      <div class="progress">
+        <div class="progress__line"><span>Dein Lernstand</span><strong data-progress-text>0 / 6</strong></div>
+        <div class="progress__track"><i data-progress-bar style="--p:0"></i></div>
+      </div>
+    </div>
+    <nav class="station-nav">
+      <a href="#start" data-station-link="start"><span class="station-nav__num">00</span><span>Überblick</span><span class="station-nav__check" aria-hidden="true">✓</span></a>
+      <a href="#orbital" data-station-link="orbital"><span class="station-nav__num">01</span><span>Orbital und Bindung</span><span class="station-nav__check" aria-hidden="true">✓</span></a>
+      <a href="#valence" data-station-link="valence"><span class="station-nav__num">02</span><span>Valenzstrich</span><span class="station-nav__check" aria-hidden="true">✓</span></a>
+      <a href="#epa" data-station-link="epa"><span class="station-nav__num">03</span><span>Räumlicher Bau</span><span class="station-nav__check" aria-hidden="true">✓</span></a>
+      <a href="#hydrocarbons" data-station-link="hydrocarbons"><span class="station-nav__num">04</span><span>Isomerie</span><span class="station-nav__check" aria-hidden="true">✓</span></a>
+      <a href="#nomenclature" data-station-link="nomenclature"><span class="station-nav__num">05</span><span>Nomenklatur</span><span class="station-nav__check" aria-hidden="true">✓</span></a>
+      <a href="#check" data-station-link="check"><span class="station-nav__num">06</span><span>Kompetenzcheck</span><span class="station-nav__check" aria-hidden="true">✓</span></a>
+      <a href="#glossar" data-station-link="glossar"><span class="station-nav__num">07</span><span>Glossar</span><span class="station-nav__check" aria-hidden="true">✓</span></a>
+    </nav>
+    <div class="sidebar__foot">
+      <a href="index.html">Alle Lernbereiche</a>
+      <button class="quiet-link" type="button" data-reset-open>Lernstand zurücksetzen</button>
+      <p>LehrplanPLUS<br>Chemie 10, SG</p>
+    </div>
+  </aside>
+
+  <main class="main" id="main">
+    <section class="station is-active" id="start" data-station="start" data-title="Überblick" aria-labelledby="start-title">
+      <header class="station__head">
+        <h1 id="start-title"><span class="station__num">02</span> Moleküle: Vom Orbital zum räumlichen Bau.</h1>
+        <p class="lead">Wie aus Elektronenwolken Bindungen werden, warum Wasser gewinkelt ist und wie man Moleküle eindeutig benennt.</p>
+      </header>
+              <a class="btn start-cta" href="#orbital" data-go="orbital" data-start-cta aria-label="Erste Station öffnen: Orbital und Bindung">Erste Station öffnen</a>
+      <div class="protocol">
+        <div class="protocol__main">
+          <h2>Das nimmst du mit</h2>
+          <ol class="competencies">
+            <li><span class="cnum">01</span><span>Du stellst die Valenzelektronen von Atomen und Ionen im einfachen Orbitalmodell und in der Valenzstrichschreibweise dar.</span></li>
+            <li><span class="cnum">02</span><span>Du erklärst den Zusammenhalt von Atomen in Molekülen durch die Überlagerung von Orbitalen.</span></li>
+            <li><span class="cnum">03</span><span>Du sagst mit der Edelgasregel die Bindigkeit voraus und zeichnest Valenzstrichformeln, auch mit Mesomerie.</span></li>
+            <li><span class="cnum">04</span><span>Du leitest mit dem EPA-Modell den räumlichen Bau ab und schätzt Bindungswinkel ab.</span></li>
+            <li><span class="cnum">05</span><span>Du erstellst aus systematischen Namen von Kohlenwasserstoffen die Strukturformel und umgekehrt.</span></li>
+            <li><span class="cnum">06</span><span>Du wandelst Formeldarstellungen ineinander um und wählst situationsbedingt die passende Darstellung.</span></li>
+          </ol>
+          <p><small>Die Liste folgt den Kompetenzerwartungen von LehrplanPLUS Chemie 10 für das sprachliche Gymnasium.</small></p>
+        </div>
+        <aside class="protocol__margin">
+          <div class="note">
+            <p class="note__title">So arbeitest du</p>
+            <ol>
+              <li>Lies die Station und probiere das Modell aus.</li>
+              <li>Beantworte den Prüfpunkt. Du bekommst sofort Rückmeldung.</li>
+              <li>Schließe die Station ab und arbeite am Ende den Kompetenzcheck.</li>
+            </ol>
+          </div>
+          <div class="note">
+            <p class="note__title">Leitfrage</p>
+            <p>Warum reicht die Summenformel C₄H₁₀ nicht, um einen Stoff eindeutig zu beschreiben?</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="station" id="orbital" data-station="orbital" data-title="Orbital und Bindung" aria-labelledby="orbital-title">
+      <header class="station__head">
+        <h2 id="orbital-title"><span class="station__num">01</span> Warum halten Atome zusammen?</h2>
+        <p class="lead">Zwei Wasserstoffatome bilden eine Bindung, zwei Heliumatome nicht. Das Molekülorbitalschema erklärt den Unterschied.</p>
+      </header>
+      <div class="protocol">
+        <div class="protocol__main">
+          <p>Ein Orbital ist kein Kreis um den Kern, sondern ein Aufenthaltsraum für Elektronen. Treffen zwei Wasserstoffatome aufeinander, überlagern sich ihre 1s-Orbitale. Es entstehen zwei Molekülorbitale: eines mit niedrigerer Energie, das bindende, und eines mit höherer Energie, das antibindende.</p>
+          <figure class="tool" data-tool="mo" data-tool-data="mo">
+            <div class="tool__head">
+              <p class="tool__title">Molekülorbitalschema</p>
+              <p class="tool__hint">Wähle ein System. Die Pfeile zeigen die Elektronenbesetzung.</p>
+            </div>
+            <div class="tool__controls" data-tool-controls></div>
+            <div class="tool__stage" data-tool-stage><p class="tool__fallback">Das interaktive Schema lädt mit JavaScript. Die Erklärung im Text bleibt lesbar.</p></div>
+            <div class="tool__readout" data-tool-readout></div>
+            <figcaption class="tool__caption">Modell: Zwei 1s-Atomorbitale überlagern sich zu einem bindenden σ- und einem antibindenden σ*-Molekülorbital.</figcaption>
+          </figure>
+          <details class="deep">
+            <summary>Mehr im Detail: Warum sinkt die Energie?</summary>
+            <p>Im bindenden Molekülorbital halten sich die Elektronen bevorzugt zwischen den Kernen auf. Die Anziehung zu beiden Kernen ist dann größer als die Abstoßung der Kerne. Im antibindenden Molekülorbital liegt zwischen den Kernen ein Knoten: Dort ist die Elektronendichte null.</p>
+            <p>Die Bindungsordnung berechnet sich aus (bindende Elektronen minus antibindende Elektronen) geteilt durch 2. H₂ hat die Bindungsordnung 1, He₂ hat 0, He₂⁺ hat 0,5.</p>
+          </details>
+          <section class="checkpoint" aria-labelledby="orbital-check">
+            <h3 id="orbital-check">Prüfpunkt</h3>
+            <div class="quiz" data-quiz="orbital"><noscript><p class="tool__fallback">Die Prüfpunkt-Aufgaben brauchen JavaScript.</p></noscript></div>
+          </section>
+          <script type="application/json" data-quiz-data="orbital">
+          {
+            "questions": [
+              {
+                "id": "q1",
+                "type": "mc",
+                "level": "II",
+                "competency": "K2",
+                "prompt": "Warum existiert He₂ nicht als stabiles Molekül?",
+                "options": [
+                  "Die zwei zusätzlichen Elektronen besetzen das antibindende MO und heben die Bindung auf.",
+                  "Helium besitzt keine Elektronen für eine Bindung.",
+                  "Helium kann nur Einfachbindungen ausbilden.",
+                  "Die Atomkerne sind zu weit voneinander entfernt."
+                ],
+                "correct": 0,
+                "explain": "He₂ hätte zwei Elektronen im bindenden und zwei im antibindenden MO. Die Bindungsordnung ist null; das Molekül ist nicht stabil."
+              },
+              {
+                "id": "q2",
+                "type": "input",
+                "level": "II",
+                "competency": "K2",
+                "prompt": "Welche Bindungsordnung hat He₂⁺?",
+                "accept": ["0,5", "0.5", "1/2", "ein halb"],
+                "model": "0,5",
+                "placeholder": "Zahl eingeben",
+                "explain": "He₂⁺ hat zwei bindende und ein antibindendes Elektron. Die Bindungsordnung ist (2 - 1) / 2 = 0,5."
+              }
+            ]
+          }
+          </script>
+          <div class="station__footer">
+            <span class="status" data-station-status></span>
+            <div class="station__footer-actions">
+              <button class="btn js-only" type="button" data-complete="orbital">Station abschließen</button>
+              <a class="quiet-link" href="#valence" data-go="valence" aria-label="Weiter zur Station Valenzstrich">Weiter</a>
+            </div>
+          </div>
+        </div>
+        <aside class="protocol__margin">
+          <div class="note">
+            <p class="note__title">Merke</p>
+            <p>Bindende Elektronen senken die Energie, antibindende heben sie an. Erst die Bilanz entscheidet über die Stabilität.</p>
+          </div>
+          <div class="note">
+            <p class="note__title">Fachsprache</p>
+            <dl>
+              <dt>bindendes MO</dt><dd>Molekülorbital mit niedrigerer Energie; Elektronendichte zwischen den Kernen.</dd>
+              <dt>antibindendes MO</dt><dd>Molekülorbital mit höherer Energie; Knoten zwischen den Kernen.</dd>
+              <dt>Bindungsordnung</dt><dd>(bindende Elektronen - antibindende Elektronen) / 2.</dd>
+            </dl>
+          </div>
+          <div class="note">
+            <p class="note__title">Typischer Fehler</p>
+            <p>Das Orbital ist keine feste Bahn. Elektronen halten sich nur mit einer bestimmten Wahrscheinlichkeit dort auf.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="station" id="valence" data-station="valence" data-title="Valenzstrich" aria-labelledby="valence-title">
+      <header class="station__head">
+        <h2 id="valence-title"><span class="station__num">02</span> Wie zählt man Elektronen?</h2>
+        <p class="lead">Die Valenzstrichformel zeigt bindende und freie Elektronenpaare. Die Edelgasregel sagt, wie viele Bindungen ein Atom eingeht.</p>
+      </header>
+      <div class="protocol">
+        <div class="protocol__main">
+          <p>Die Hauptgruppennummer im Periodensystem gibt die Zahl der Valenzelektronen an. Atome erreichen eine besonders stabile Hülle, wenn sie die Edelgaskonfiguration besitzen: Wasserstoff das Duplett, die Elemente der zweiten Periode das Oktett. Bindende Elektronenpaare werden als Strich gezeichnet, freie Paare als kurze Striche.</p>
+          <figure class="tool" data-tool="valence" data-tool-data="valence">
+            <div class="tool__head">
+              <p class="tool__title">Valenzstrich-Werkstatt</p>
+              <p class="tool__hint">Wähle ein Molekül oder Ion. Bei Carbonat und Ozon kannst du zwischen mesomeren Strukturen wechseln.</p>
+            </div>
+            <div class="tool__controls" data-tool-controls></div>
+            <div class="tool__stage" data-tool-stage><p class="tool__fallback">Die Valenzstrich-Werkstatt lädt mit JavaScript. Die Erklärung im Text bleibt lesbar.</p></div>
+            <div class="tool__readout" data-tool-readout></div>
+            <figcaption class="tool__caption">Bindende Paare als Strich, freie Paare als kurze Striche. Die Formalladung hilft, Elektronen sauber zu verteilen.</figcaption>
+          </figure>
+          <details class="deep">
+            <summary>Mehr im Detail: Formalladung und Mesomerie</summary>
+            <p>Die Formalladung eines Atoms berechnet sich aus Valenzelektronen minus (freie Elektronen plus halbe Bindungen). Sie ist eine Buchhaltungshilfe, keine echte Ladung. Bei Carbonat und Ozon lässt sich die Doppelbindung in verschiedene Positionen zeichnen. Die tatsächliche Struktur ist ein Zwischenzustand, in dem die π-Elektronen über mehrere Atome verteilt sind.</p>
+          </details>
+          <section class="checkpoint" aria-labelledby="valence-check">
+            <h3 id="valence-check">Prüfpunkt</h3>
+            <div class="quiz" data-quiz="valence"><noscript><p class="tool__fallback">Die Prüfpunkt-Aufgaben brauchen JavaScript.</p></noscript></div>
+          </section>
+          <script type="application/json" data-quiz-data="valence">
+          {
+            "questions": [
+              {
+                "id": "q1",
+                "type": "mc",
+                "level": "I",
+                "competency": "K3",
+                "prompt": "Wie viele freie Elektronenpaare hat das Sauerstoffatom im Wasser-Molekül?",
+                "options": ["0", "1", "2", "3"],
+                "correct": 2,
+                "explain": "Sauerstoff hat sechs Valenzelektronen. Zwei davon bilden die beiden Bindungen zu Wasserstoff, die übrigen vier bilden zwei freie Paare."
+              },
+              {
+                "id": "q2",
+                "type": "input",
+                "level": "II",
+                "competency": "K3",
+                "prompt": "Wie lautet die Formalladung des Stickstoffs im Ammonium-Ion NH₄⁺?",
+                "accept": ["+1", "1+", "+I", "1", "eins"],
+                "model": "+1",
+                "placeholder": "z. B. +1",
+                "explain": "Stickstoff hat fünf Valenzelektronen, null freie Elektronen und vier Bindungen. Die Formalladung ist 5 - (0 + 4) = +1."
+              }
+            ]
+          }
+          </script>
+          <div class="station__footer">
+            <span class="status" data-station-status></span>
+            <div class="station__footer-actions">
+              <button class="btn js-only" type="button" data-complete="valence">Station abschließen</button>
+              <a class="quiet-link" href="#epa" data-go="epa" aria-label="Weiter zur Station Räumlicher Bau">Weiter</a>
+            </div>
+          </div>
+        </div>
+        <aside class="protocol__margin">
+          <div class="note">
+            <p class="note__title">Merke</p>
+            <p>Edelgasregel: Wasserstoff braucht zwei Elektronen, Kohlenstoff, Stickstoff, Sauerstoff und Fluor brauchen acht.</p>
+          </div>
+          <div class="note">
+            <p class="note__title">Fachsprache</p>
+            <dl>
+              <dt>bindendes Paar</dt><dd>Elektronenpaar, das zwei Atome verbindet.</dd>
+              <dt>freies Paar</dt><dd>Elektronenpaar, das nicht an einer Bindung beteiligt ist.</dd>
+              <dt>Mesomerie</dt><dd>Delokalisierung von Elektronen über mehrere Atome.</dd>
+            </dl>
+          </div>
+          <div class="note">
+            <p class="note__title">Typischer Fehler</p>
+            <p>Nicht jedes Elektronenpaar ist eine Bindung. Freie Paare beeinflussen die Form und die Reaktivität eines Moleküls.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="station" id="epa" data-station="epa" data-title="Räumlicher Bau" aria-labelledby="epa-title">
+      <header class="station__head">
+        <h2 id="epa-title"><span class="station__num">03</span> Warum ist Wasser gewinkelt?</h2>
+        <p class="lead">Elektronenpaare stoßen sich ab. Ihre Zahl und Anordnung am Zentralatom bestimmen den räumlichen Bau.</p>
+      </header>
+      <div class="protocol">
+        <div class="protocol__main">
+          <figure class="tool" data-tool="epa" data-tool-data="epa">
+            <div class="tool__head">
+              <p class="tool__title">EPA-Labor</p>
+              <p class="tool__hint">Ziehen dreht das Modell.</p>
+            </div>
+            <div class="tool__controls" data-tool-controls></div>
+            <div class="tool__stage" data-tool-stage><p class="tool__fallback">Das 3D-Modell lädt mit JavaScript. Die Geometrien und Winkel stehen in der Tabelle im Text.</p></div>
+            <div class="tool__readout" data-tool-readout></div>
+            <figcaption class="tool__caption">Doppelbindungen zählen als ein Elektronenpaar. Freie Paare werden als Wolken gezeigt.</figcaption>
+          </figure>
+          <p>Das EPA-Modell geht davon aus, dass sich alle Elektronenpaare am Zentralatom möglichst weit voneinander entfernen. Vier Paare bilden einen Tetraeder, drei eine trigonale Ebene, zwei eine Linie. Freie Paare brauchen mehr Raum; dadurch werden die Bindungswinkel kleiner.</p>
+          <details class="deep">
+            <summary>Mehr im Detail: Die wichtigsten Geometrien</summary>
+            <ul>
+              <li>2 Elektronenpaare: linear, 180°, zum Beispiel CO₂.</li>
+              <li>3 Elektronenpaare: trigonal planar, 120°, zum Beispiel BCl₃ und CH₂O.</li>
+              <li>4 Elektronenpaare: tetraedrisch, 109,5°, zum Beispiel CH₄.</li>
+              <li>3 bindende Paare und 1 freies Paar: trigonal pyramidal, 107,3°, zum Beispiel NH₃.</li>
+              <li>2 bindende Paare und 2 freie Paare: gewinkelt, etwa 104,5°, zum Beispiel H₂O.</li>
+            </ul>
+          </details>
+          <section class="checkpoint" aria-labelledby="epa-check">
+            <h3 id="epa-check">Prüfpunkt</h3>
+            <div class="quiz" data-quiz="epa"><noscript><p class="tool__fallback">Die Prüfpunkt-Aufgaben brauchen JavaScript.</p></noscript></div>
+          </section>
+          <script type="application/json" data-quiz-data="epa">
+          {
+            "questions": [
+              {
+                "id": "q1",
+                "type": "mc",
+                "level": "II",
+                "competency": "K4",
+                "prompt": "Welchen räumlichen Bau hat das Ammoniak-Molekül NH₃?",
+                "options": ["tetraedrisch", "trigonal pyramidal", "gewinkelt", "linear"],
+                "correct": 1,
+                "explain": "Am Stickstoff liegen drei bindende Paare und ein freies Paar. Die Atomkerne bilden eine trigonale Pyramide; der Winkel ist mit 107,3° kleiner als im Tetraeder."
+              },
+              {
+                "id": "q2",
+                "type": "input",
+                "level": "II",
+                "competency": "K4",
+                "prompt": "Welcher Bindungswinkel wird für Wasser angegeben?",
+                "accept": ["104,5", "104.5", "104,5°", "104.5°", "105", "105°"],
+                "model": "104,5°",
+                "placeholder": "Winkel mit Grad",
+                "explain": "Zwei freie Paare am Sauerstoff drücken die beiden O-H-Bindungen zusammen. Der Winkel beträgt etwa 104,5°."
+              }
+            ]
+          }
+          </script>
+          <div class="station__footer">
+            <span class="status" data-station-status></span>
+            <div class="station__footer-actions">
+              <button class="btn js-only" type="button" data-complete="epa">Station abschließen</button>
+              <a class="quiet-link" href="#hydrocarbons" data-go="hydrocarbons" aria-label="Weiter zur Station Isomerie">Weiter</a>
+            </div>
+          </div>
+        </div>
+        <aside class="protocol__margin">
+          <div class="note">
+            <p class="note__title">Merke</p>
+            <p>Zähle alle Elektronenpaare am Zentralatom, nicht nur die Bindungen. Freie Paare verkleinern den Winkel.</p>
+          </div>
+          <div class="note">
+            <p class="note__title">Fachsprache</p>
+            <dl>
+              <dt>EPA-Modell</dt><dd>Elektronenpaarabstoßungsmodell zur Vorhersage des räumlichen Baus.</dd>
+              <dt>Bindungswinkel</dt><dd>Winkel zwischen zwei Bindungen am Zentralatom.</dd>
+              <dt>Elektronenpaar</dt><dd>Zwei Elektronen mit entgegengesetztem Spin; bindend oder frei.</dd>
+            </dl>
+          </div>
+          <div class="note">
+            <p class="note__title">Typischer Fehler</p>
+            <p>Eine Doppelbindung zählt für die Geometrie als ein Elektronenpaar, nicht als zwei.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="station" id="hydrocarbons" data-station="hydrocarbons" data-title="Isomerie" aria-labelledby="hydrocarbons-title">
+      <header class="station__head">
+        <h2 id="hydrocarbons-title"><span class="station__num">04</span> Gleiche Formel, andere Moleküle</h2>
+        <p class="lead">C₄H₁₀ beschreibt zwei Stoffe. Isomerie und E/Z-Isomerie erklären, warum die Summenformel nicht reicht.</p>
+      </header>
+      <div class="protocol">
+        <div class="protocol__main">
+          <p>Die Alkane bilden eine homologe Reihe: Jedes Glied unterscheidet sich vom vorigen um eine CH₂-Gruppe. Ihre allgemeine Summenformel ist CₙH₂ₙ₊₂. Alkene haben eine Doppelbindung und die Formel CₙH₂ₙ, Alkine eine Dreifachbindung und CₙH₂ₙ₋₂.</p>
+          <p>Bei gleicher Summenformel können Atome unterschiedlich verknüpft sein. Solche Moleküle heißen Konstitutionsisomere. Bei Alkenen kommt die E/Z-Isomerie hinzu: Die Verknüpfung bleibt gleich, aber die räumliche Anordnung der Substituenten an der Doppelbindung unterscheidet sich.</p>
+          <div class="figure-grid">
+            <figure>
+              <span class="fig-name">n-Butan</span>
+              <svg class="diagram" viewBox="0 0 220 110" role="img" aria-label="Skelettformel von n-Butan mit vier Kohlenstoffatomen in einer Kette">
+                <line x1="25" y1="75" x2="75" y2="40" class="rule-strong"/>
+                <line x1="75" y1="40" x2="125" y2="75" class="rule-strong"/>
+                <line x1="125" y1="75" x2="175" y2="40" class="rule-strong"/>
+                <text x="18" y="92" class="label-muted" font-size="11">CH₃</text>
+                <text x="182" y="56" class="label-muted" font-size="11">CH₃</text>
+              </svg>
+              <figcaption>Unverzweigte Kette mit vier Kohlenstoffatomen.</figcaption>
+            </figure>
+            <figure>
+              <span class="fig-name">2-Methylpropan</span>
+              <svg class="diagram" viewBox="0 0 220 110" role="img" aria-label="Skelettformel von 2-Methylpropan mit verzweigter Kette">
+                <line x1="110" y1="55" x2="60" y2="25" class="rule-strong"/>
+                <line x1="110" y1="55" x2="60" y2="85" class="rule-strong"/>
+                <line x1="110" y1="55" x2="170" y2="55" class="rule-strong"/>
+                <text x="46" y="20" class="label-muted" font-size="11">CH₃</text>
+                <text x="46" y="101" class="label-muted" font-size="11">CH₃</text>
+                <text x="176" y="60" class="label-muted" font-size="11">CH₃</text>
+              </svg>
+              <figcaption>Gleiche Summenformel C₄H₁₀, andere Verknüpfung.</figcaption>
+            </figure>
+            <figure>
+              <span class="fig-name">E-2-Buten</span>
+              <svg class="diagram" viewBox="0 0 220 110" role="img" aria-label="Skelettformel von E-2-Buten mit Methylgruppen auf gegenüberliegenden Seiten">
+                <line x1="75" y1="55" x2="125" y2="55" class="rule-strong"/>
+                <line x1="75" y1="59" x2="125" y2="59" class="rule-strong"/>
+                <line x1="75" y1="55" x2="35" y2="25" class="rule-strong"/>
+                <line x1="125" y1="55" x2="165" y2="85" class="rule-strong"/>
+                <text x="26" y="20" class="label-muted" font-size="11">CH₃</text>
+                <text x="170" y="101" class="label-muted" font-size="11">CH₃</text>
+              </svg>
+              <figcaption>Die Methylgruppen liegen auf gegenüberliegenden Seiten.</figcaption>
+            </figure>
+            <figure>
+              <span class="fig-name">Z-2-Buten</span>
+              <svg class="diagram" viewBox="0 0 220 110" role="img" aria-label="Skelettformel von Z-2-Buten mit Methylgruppen auf derselben Seite">
+                <line x1="75" y1="55" x2="125" y2="55" class="rule-strong"/>
+                <line x1="75" y1="59" x2="125" y2="59" class="rule-strong"/>
+                <line x1="75" y1="55" x2="35" y2="25" class="rule-strong"/>
+                <line x1="125" y1="55" x2="165" y2="25" class="rule-strong"/>
+                <text x="26" y="20" class="label-muted" font-size="11">CH₃</text>
+                <text x="170" y="20" class="label-muted" font-size="11">CH₃</text>
+              </svg>
+              <figcaption>Die Methylgruppen liegen auf derselben Seite.</figcaption>
+            </figure>
+          </div>
+          <h3>Konstitution oder räumliche Anordnung?</h3>
+          <table class="data-table">
+            <caption>Zwei Arten von Isomerie im Vergleich</caption>
+            <thead><tr><th>Merkmal</th><th>Konstitutionsisomerie</th><th>E/Z-Isomerie</th></tr></thead>
+            <tbody>
+              <tr><td>Summenformel</td><td>gleich</td><td>gleich</td></tr>
+              <tr><td>Verknüpfung der Atome</td><td>unterschiedlich</td><td>gleich</td></tr>
+              <tr><td>Räumliche Anordnung</td><td>folgt aus der Verknüpfung</td><td>unterschiedlich an der Doppelbindung</td></tr>
+              <tr><td>Beispiel</td><td>n-Butan und 2-Methylpropan</td><td>E-2-Buten und Z-2-Buten</td></tr>
+              <tr><td>Stoffeigenschaften</td><td>meist deutlich unterschiedlich</td><td>ähnlich, aber nicht identisch</td></tr>
+            </tbody>
+          </table>
+          <p>Konstitutionsisomere sind verschiedene Stoffe mit derselben Summenformel, aber unterschiedlicher Atomverknüpfung. E/Z-Isomere haben dieselbe Verknüpfung; sie unterscheiden sich nur in der räumlichen Anordnung um die Doppelbindung. E/Z ist deshalb eine Form der Stereoisomerie, nicht der Konstitutionsisomerie.</p>
+          <details class="deep">
+            <summary>Mehr im Detail: Wann gilt E und wann Z?</summary>
+            <p>Für jede Seite der Doppelbindung wird die Priorität der beiden Substituenten nach der CIP-Regel bestimmt: höhere Ordnungszahl zuerst. Stehen die höher priorisierten Gruppen auf gegenüberliegenden Seiten, ist es E (entgegen); stehen sie auf derselben Seite, ist es Z (zusammen). Bei 2-Buten sind die Methylgruppen auf beiden Seiten die höher priorisierten Gruppen.</p>
+          </details>
+          <section class="checkpoint" aria-labelledby="hydrocarbons-check">
+            <h3 id="hydrocarbons-check">Prüfpunkt</h3>
+            <div class="quiz" data-quiz="hydrocarbons"><noscript><p class="tool__fallback">Die Prüfpunkt-Aufgaben brauchen JavaScript.</p></noscript></div>
+          </section>
+          <script type="application/json" data-quiz-data="hydrocarbons">
+          {
+            "questions": [
+              {
+                "id": "q1",
+                "type": "mc",
+                "level": "I",
+                "competency": "K5",
+                "prompt": "Welche allgemeine Summenformel gehört zur homologen Reihe der Alkene?",
+                "options": ["CₙH₂ₙ₊₂", "CₙH₂ₙ", "CₙH₂ₙ₋₂", "CₙH₂ₙ₊₁"],
+                "correct": 1,
+                "explain": "Alkene besitzen eine Doppelbindung und zwei Wasserstoffatome weniger als die entsprechenden Alkane: CₙH₂ₙ."
+              },
+              {
+                "id": "q2",
+                "type": "mc",
+                "level": "II",
+                "competency": "K5",
+                "prompt": "Welche beiden Moleküle sind Konstitutionsisomere?",
+                "options": [
+                  "n-Butan und 2-Methylpropan",
+                  "E-2-Buten und Z-2-Buten",
+                  "Ethen und Ethin",
+                  "Propan und Butan"
+                ],
+                "correct": 0,
+                "explain": "n-Butan und 2-Methylpropan haben beide die Summenformel C₄H₁₀, aber eine andere Verknüpfung der Kohlenstoffatome. E- und Z-2-Buten sind Stereoisomere, keine Konstitutionsisomere."
+              }
+            ]
+          }
+          </script>
+          <div class="station__footer">
+            <span class="status" data-station-status></span>
+            <div class="station__footer-actions">
+              <button class="btn js-only" type="button" data-complete="hydrocarbons">Station abschließen</button>
+              <a class="quiet-link" href="#nomenclature" data-go="nomenclature" aria-label="Weiter zur Station Nomenklatur">Weiter</a>
+            </div>
+          </div>
+        </div>
+        <aside class="protocol__margin">
+          <div class="note">
+            <p class="note__title">Merke</p>
+            <p>Gleiche Summenformel, andere Verknüpfung: Konstitutionsisomerie. Gleiche Verknüpfung, andere räumliche Anordnung: Stereoisomerie.</p>
+          </div>
+          <div class="note">
+            <p class="note__title">Fachsprache</p>
+            <dl>
+              <dt>homologe Reihe</dt><dd>Stoffgruppe, deren Glieder sich um eine CH₂-Gruppe unterscheiden.</dd>
+              <dt>Konstitutionsisomer</dt><dd>Molekül mit gleicher Summenformel, aber anderer Atomverknüpfung.</dd>
+              <dt>E/Z</dt><dd>Bezeichnung der räumlichen Anordnung an einer Doppelbindung nach CIP.</dd>
+            </dl>
+          </div>
+          <div class="note">
+            <p class="note__title">Typischer Fehler</p>
+            <p>E/Z ist keine Konstitutionsisomerie. Die Verknüpfung bleibt gleich, nur die räumliche Anordnung ändert sich.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="station" id="nomenclature" data-station="nomenclature" data-title="Nomenklatur" aria-labelledby="nomenclature-title">
+      <header class="station__head">
+        <h2 id="nomenclature-title"><span class="station__num">05</span> Wie heißt das Molekül?</h2>
+        <p class="lead">IUPAC-Namen sind eindeutig. Dieselbe Verbindung lässt sich als Summenformel, Halbstrukturformel, Valenzstrichformel oder Skelettformel schreiben.</p>
+      </header>
+      <div class="protocol">
+        <div class="protocol__main">
+          <p>Für die IUPAC-Benennung suchst du zuerst die längste Kohlenstoffkette. Dann nummerierst du so, dass die funktionelle Gruppe oder die Mehrfachbindung die kleinstmögliche Nummer erhält. Substituenten werden mit ihrer Position und ihrem Namen vor die Stammsilbe gesetzt; mehrere Substituenten werden alphabetisch geordnet.</p>
+          <table class="data-table">
+            <caption>But-2-en in verschiedenen Darstellungen</caption>
+            <thead><tr><th>Darstellung</th><th>Schreibweise</th></tr></thead>
+            <tbody>
+              <tr><td>Summenformel</td><td>C₄H₈</td></tr>
+              <tr><td>Halbstrukturformel</td><td>CH₃-CH=CH-CH₃</td></tr>
+              <tr><td>Valenzstrichformel</td><td>Beispiel Ethen: Bindungen als Striche, freie Paare als kurze Striche</td></tr>
+              <tr><td>Skelettformel</td><td>Zickzacklinie mit einer Doppelbindung</td></tr>
+              <tr><td>IUPAC-Name</td><td>But-2-en</td></tr>
+            </tbody>
+          </table>
+          <details class="deep">
+            <summary>Mehr im Detail: Die Reihenfolge der Schritte</summary>
+            <ol>
+              <li>Längste Kette mit der funktionellen Gruppe oder Mehrfachbindung suchen.</li>
+              <li>Kette so nummerieren, dass die funktionelle Gruppe oder Mehrfachbindung die kleinste Nummer bekommt.</li>
+              <li>Substituenten mit Locant und Namen notieren, alphabetisch sortieren.</li>
+              <li>Stammname, Endung und Substituenten zum vollständigen Namen zusammensetzen.</li>
+            </ol>
+            <p>Die Summenformel allein ist oft mehrdeutig. Erst die Strukturformel oder der systematische Name beschreibt ein Molekül eindeutig.</p>
+          </details>
+          <section class="checkpoint" aria-labelledby="nomenclature-check">
+            <h3 id="nomenclature-check">Prüfpunkt</h3>
+            <div class="quiz" data-quiz="nomenclature"><noscript><p class="tool__fallback">Die Prüfpunkt-Aufgaben brauchen JavaScript.</p></noscript></div>
+          </section>
+          <script type="application/json" data-quiz-data="nomenclature">
+          {
+            "questions": [
+              {
+                "id": "q1",
+                "type": "input",
+                "level": "II",
+                "competency": "K5",
+                "prompt": "Wie lautet der IUPAC-Name von CH₃-CH(CH₃)-CH₂-CH₃?",
+                "accept": ["2-methylbutan", "2 methylbutan", "2-methylbutane"],
+                "model": "2-Methylbutan",
+                "placeholder": "Name eingeben",
+                "explain": "Die längste Kette hat vier Kohlenstoffatome. Die Methylgruppe sitzt an Position 2; der Name ist 2-Methylbutan."
+              },
+              {
+                "id": "q2",
+                "type": "input",
+                "level": "I",
+                "competency": "K6",
+                "prompt": "Wie lautet die Summenformel von But-2-en?",
+                "accept": ["c4h8", "c₄h₈", "c4h8", "C4H8"],
+                "model": "C₄H₈",
+                "placeholder": "Formel eingeben",
+                "explain": "But-2-en ist ein Alken mit vier Kohlenstoffatomen und einer Doppelbindung. Die Summenformel ist C₄H₈."
+              },
+              {
+                "id": "q3",
+                "type": "mc",
+                "level": "I",
+                "competency": "K6",
+                "prompt": "Welche Darstellung zeigt nur die Atomarten und ihre Anzahl, aber keine Verknüpfung?",
+                "options": ["Summenformel", "Halbstrukturformel", "Skelettformel", "Valenzstrichformel"],
+                "correct": 0,
+                "explain": "Die Summenformel nennt nur die Zahl der Atome jeder Sorte. Die Verknüpfung zeigt erst die Strukturformel."
+              }
+            ]
+          }
+          </script>
+          <div class="station__footer">
+            <span class="status" data-station-status></span>
+            <div class="station__footer-actions">
+              <button class="btn js-only" type="button" data-complete="nomenclature">Station abschließen</button>
+              <a class="quiet-link" href="#check" data-go="check" aria-label="Weiter zum Kompetenzcheck">Weiter</a>
+            </div>
+          </div>
+        </div>
+        <aside class="protocol__margin">
+          <div class="note">
+            <p class="note__title">Merke</p>
+            <p>Längste Kette, kleinste Locanten, alphabetische Substituenten. Die Endung richtet sich nach der Stoffklasse.</p>
+          </div>
+          <div class="note">
+            <p class="note__title">Fachsprache</p>
+            <dl>
+              <dt>Locant</dt><dd>Zahl, die die Position eines Substituenten oder einer Mehrfachbindung angibt.</dd>
+              <dt>Stammsystem</dt><dd>Kohlenstoffkette, die dem Namen zugrunde liegt.</dd>
+              <dt>Skelettformel</dt><dd>Darstellung, in der C- und H-Atome an den Knicken und Enden gedacht werden.</dd>
+            </dl>
+          </div>
+          <div class="note">
+            <p class="note__title">Typischer Fehler</p>
+            <p>Die Nummerierung beginnt an dem Ende, das der Doppelbindung oder der funktionellen Gruppe die kleinere Nummer gibt.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="station" id="check" data-station="check" data-title="Kompetenzcheck" aria-labelledby="check-title">
+      <header class="station__head">
+        <h2 id="check-title"><span class="station__num">06</span> Kompetenzcheck</h2>
+        <p class="lead">Zwölf Aufgaben, zwei pro Kompetenz. Werte am Ende aus und lies die Rückmeldungen zu den Aufgaben, die noch offen sind.</p>
+      </header>
+      <div class="check-banner">
+        <div>
+          <p class="check-banner__score" data-check-score>0 / 12</p>
+          <p class="check-banner__text" data-check-text>Beantworte alle Aufgaben und werte dann aus. Jede Aufgabe zählt einen Punkt.</p>
+        </div>
+        <p class="check-banner__text">Der Bestwert bleibt gespeichert. Du kannst die Aufgaben zurücksetzen und erneut bearbeiten.</p>
+      </div>
+      <div class="competency-results" data-check-bars aria-label="Ergebnisse nach Kompetenz"></div>
+      <div class="quiz" data-quiz="check"><noscript><p class="tool__fallback">Der Kompetenzcheck braucht JavaScript. Die Lerninhalte bleiben lesbar.</p></noscript></div>
+      <div class="check-result" data-check-result hidden></div>
+      <script type="application/json" data-quiz-data="check">
+      {
+        "final": true,
+        "competencies": [
+          { "id": "K1", "label": "K1: Orbitalmodell und Valenzelektronen" },
+          { "id": "K2", "label": "K2: Zusammenhalt durch Orbitalüberlappung" },
+          { "id": "K3", "label": "K3: Edelgasregel, Valenzstrich, Mesomerie" },
+          { "id": "K4", "label": "K4: EPA-Modell und Bindungswinkel" },
+          { "id": "K5", "label": "K5: Namen und Strukturen von Kohlenwasserstoffen" },
+          { "id": "K6", "label": "K6: Formeldarstellungen wechseln" }
+        ],
+        "questions": [
+          {
+            "id": "c1",
+            "type": "mc",
+            "level": "I",
+            "competency": "K1",
+            "prompt": "Welche Aussage beschreibt ein Orbital richtig?",
+            "options": [
+              "Es ist ein Aufenthaltsraum für Elektronen mit einer bestimmten Energie.",
+              "Es ist eine feste Kreisbahn um den Atomkern.",
+              "Es ist der Atomkern selbst.",
+              "Es ist die Anziehung zwischen zwei Molekülen."
+            ],
+            "correct": 0,
+            "explain": "Ein Orbital beschreibt einen Raum, in dem sich Elektronen mit hoher Wahrscheinlichkeit aufhalten. Es ist keine feste Bahn."
+          },
+          {
+            "id": "c2",
+            "type": "input",
+            "level": "I",
+            "competency": "K1",
+            "prompt": "Wie viele Valenzelektronen hat ein Sauerstoffatom?",
+            "accept": ["6", "sechs"],
+            "model": "6",
+            "placeholder": "Zahl eingeben",
+            "explain": "Sauerstoff steht in der sechsten Hauptgruppe und besitzt daher sechs Valenzelektronen."
+          },
+          {
+            "id": "c3",
+            "type": "mc",
+            "level": "II",
+            "competency": "K2",
+            "prompt": "Warum ist H₂ stabiler als zwei einzelne Wasserstoffatome?",
+            "options": [
+              "Die Elektronen besetzen ein bindendes Molekülorbital mit niedrigerer Energie.",
+              "Die Atomkerne stoßen sich stärker ab als in einzelnen Atomen.",
+              "Die Elektronen besetzen ein antibindendes Molekülorbital.",
+              "Das Molekül besitzt mehr Protonen als zwei einzelne Atome."
+            ],
+            "correct": 0,
+            "explain": "Die Überlappung der 1s-Orbitale erzeugt ein bindendes MO. Die zwei Elektronen besetzen es und senken die Gesamtenergie."
+          },
+          {
+            "id": "c4",
+            "type": "input",
+            "level": "II",
+            "competency": "K2",
+            "prompt": "Welche Bindungsordnung hat He₂?",
+            "accept": ["0", "null", "0,0"],
+            "model": "0",
+            "placeholder": "Zahl eingeben",
+            "explain": "He₂ hat zwei bindende und zwei antibindende Elektronen. Die Bindungsordnung ist (2 - 2) / 2 = 0."
+          },
+          {
+            "id": "c5",
+            "type": "mc",
+            "level": "I",
+            "competency": "K3",
+            "prompt": "Wie viele Bindungen bildet das Stickstoffatom im Ammoniak-Molekül NH₃?",
+            "options": ["1", "2", "3", "4"],
+            "correct": 2,
+            "explain": "Stickstoff hat fünf Valenzelektronen. Drei bilden die Bindungen zu Wasserstoff, zwei bleiben als freies Paar."
+          },
+          {
+            "id": "c6",
+            "type": "multi",
+            "level": "III",
+            "competency": "K3",
+            "prompt": "Welche Aussagen zur Mesomerie sind richtig?",
+            "options": [
+              "Elektronen sind über mehrere Atome delokalisiert.",
+              "Es gibt nur eine einzige gültige Valenzstrichstruktur.",
+              "Die tatsächliche Struktur liegt zwischen den gezeichneten Grenzstrukturen.",
+              "Mesomerie betrifft nur Ionen, nie neutrale Moleküle."
+            ],
+            "correct": [0, 2],
+            "explain": "Bei der Mesomerie werden mehrere Grenzstrukturen gezeichnet. Die Elektronen sind delokalisiert; die reale Struktur ist ein Zwischenzustand. Ozon ist ein neutrales Beispiel."
+          },
+          {
+            "id": "c7",
+            "type": "mc",
+            "level": "I",
+            "competency": "K4",
+            "prompt": "Welche Geometrie hat das Kohlendioxid-Molekül CO₂?",
+            "options": ["linear", "gewinkelt", "tetraedrisch", "trigonal pyramidal"],
+            "correct": 0,
+            "explain": "Am Kohlenstoff liegen zwei bindende Elektronenpaare. Sie ordnen sich linear mit einem Winkel von 180° an."
+          },
+          {
+            "id": "c8",
+            "type": "input",
+            "level": "I",
+            "competency": "K4",
+            "prompt": "Welcher Bindungswinkel gilt für Methan CH₄?",
+            "accept": ["109,5", "109.5", "109,5°", "109.5°"],
+            "model": "109,5°",
+            "placeholder": "Winkel mit Grad",
+            "explain": "Vier bindende Elektronenpaare bilden einen Tetraeder. Der Bindungswinkel beträgt 109,5°."
+          },
+          {
+            "id": "c9",
+            "type": "input",
+            "level": "I",
+            "competency": "K5",
+            "prompt": "Wie lautet der Name von CH₃-CH₂-CH₃?",
+            "accept": ["propan", "propane"],
+            "model": "Propan",
+            "placeholder": "Name eingeben",
+            "explain": "Drei Kohlenstoffatome in einer Kette ohne Mehrfachbindung ergeben Propan."
+          },
+          {
+            "id": "c10",
+            "type": "mc",
+            "level": "II",
+            "competency": "K5",
+            "prompt": "Welche Summenformel gehört zu But-1-en?",
+            "options": ["C₄H₁₀", "C₄H₈", "C₄H₆", "C₅H₁₂"],
+            "correct": 1,
+            "explain": "But-1-en ist ein Alken mit vier Kohlenstoffatomen. Alkene haben die Formel CₙH₂ₙ, also C₄H₈."
+          },
+          {
+            "id": "c11",
+            "type": "mc",
+            "level": "I",
+            "competency": "K6",
+            "prompt": "Welche Darstellung zeigt die Verknüpfung als Zickzacklinie, ohne C- und H-Symbole zu schreiben?",
+            "options": ["Skelettformel", "Summenformel", "Valenzstrichformel", "Halbstrukturformel"],
+            "correct": 0,
+            "explain": "In der Skelettformel stehen die Kohlenstoffatome an den Knicken und Enden; Wasserstoffatome werden ergänzt."
+          },
+          {
+            "id": "c12",
+            "type": "order",
+            "level": "III",
+            "competency": "K6",
+            "prompt": "Bring die Schritte der IUPAC-Benennung in die richtige Reihenfolge.",
+            "items": [
+              "Längste Kohlenstoffkette suchen",
+              "Kette mit den kleinsten Locanten nummerieren",
+              "Substituenten benennen und alphabetisch ordnen",
+              "Stammname und Endung zum vollständigen Namen zusammensetzen"
+            ],
+            "start": [2, 0, 3, 1],
+            "explain": "Zuerst die längste Kette, dann die Nummerierung, dann die Substituenten, zuletzt der vollständige Name."
+          }
+        ]
+      }
+      </script>
+    </section>
+
+    <section class="station" id="glossar" data-station="glossar" data-title="Glossar" aria-labelledby="glossar-title">
+      <header class="station__head">
+        <h2 id="glossar-title"><span class="station__num">07</span> Glossar</h2>
+        <p class="lead">Die zentralen Begriffe des Lernbereichs in kurzer Form. Suche nach einem Wort oder einem Teil davon.</p>
+      </header>
+      <div class="glossary-search">
+        <label class="visually-hidden" for="glossarySearch">Glossarbegriff suchen</label>
+        <input id="glossarySearch" type="search" placeholder="Begriff suchen, zum Beispiel Orbital, EPA, Mesomerie" data-glossary-search autocomplete="off">
+        <span data-glossary-count>0</span>
+      </div>
+      <dl class="glossary" data-glossary>
+        <div class="term"><dt>Orbital</dt><dd>Aufenthaltsraum für Elektronen mit einer bestimmten Energie; keine feste Bahn.</dd></div>
+        <div class="term"><dt>bindendes Molekülorbital</dt><dd>Molekülorbital mit niedrigerer Energie; die Elektronendichte zwischen den Kernen ist erhöht.</dd></div>
+        <div class="term"><dt>antibindendes Molekülorbital</dt><dd>Molekülorbital mit höherer Energie; zwischen den Kernen liegt ein Knoten.</dd></div>
+        <div class="term"><dt>Bindungsordnung</dt><dd>Halbierte Differenz aus bindenden und antibindenden Elektronen.</dd></div>
+        <div class="term"><dt>Valenzelektron</dt><dd>Elektron in der äußersten Schale; es bestimmt die Bindigkeit.</dd></div>
+        <div class="term"><dt>Valenzstrichformel</dt><dd>Darstellung der bindenden und nicht bindenden Elektronenpaare eines Moleküls.</dd></div>
+        <div class="term"><dt>Edelgasregel</dt><dd>Atome streben eine Edelgaskonfiguration an: Duplett für Wasserstoff, Oktett für die zweite Periode.</dd></div>
+        <div class="term"><dt>Formalladung</dt><dd>Buchhaltungsgröße aus Valenzelektronen minus freien Elektronen minus halben Bindungen.</dd></div>
+        <div class="term"><dt>Mesomerie</dt><dd>Delokalisierung von Elektronen über mehrere Atome; mehrere Grenzstrukturen beschreiben dieselbe Struktur.</dd></div>
+        <div class="term"><dt>EPA-Modell</dt><dd>Elektronenpaarabstoßungsmodell; Elektronenpaare ordnen sich möglichst weit voneinander an.</dd></div>
+        <div class="term"><dt>Bindungswinkel</dt><dd>Winkel zwischen zwei Bindungen am Zentralatom.</dd></div>
+        <div class="term"><dt>Konstitutionsisomerie</dt><dd>Gleiche Summenformel, unterschiedliche Verknüpfung der Atome.</dd></div>
+        <div class="term"><dt>E/Z-Isomerie</dt><dd>Unterschiedliche räumliche Anordnung an einer Doppelbindung nach CIP-Priorität.</dd></div>
+        <div class="term"><dt>IUPAC-Nomenklatur</dt><dd>Internationale Regeln zur eindeutigen Benennung chemischer Verbindungen.</dd></div>
+        <div class="term"><dt>Summenformel</dt><dd>Zahl der Atome jeder Sorte in einem Molekül, ohne Verknüpfung.</dd></div>
+        <div class="term"><dt>Skelettformel</dt><dd>Darstellung, in der Kohlenstoffatome an Knicken und Enden stehen und Wasserstoffatome ergänzt werden.</dd></div>
+      </dl>
+      <p class="glossary-empty" data-glossary-empty hidden>Kein Begriff gefunden. Versuche einen anderen Suchbegriff.</p>
+      <div class="station__footer">
+        <span class="status" data-station-status></span>
+        <div class="station__footer-actions">
+          <a class="quiet-link" href="#check" data-go="check">Zum Kompetenzcheck</a>
+          <a class="quiet-link" href="index.html">Alle Lernbereiche</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<footer class="colophon">
+  <div class="colophon__inner">
+    <p><strong>Chemie 10</strong>. Lernwebsite nach LehrplanPLUS. Alle Grafiken sind selbst gezeichnet; es werden keine Schulbuchabbildungen übernommen.</p>
+    <p><a href="https://www.lehrplanplus.bayern.de/fachlehrplan/gymnasium/10/chemie/ch" target="_blank" rel="noopener">LehrplanPLUS Chemie 10</a>. Stand November 2026.</p>
+  </div>
+</footer>
+
+<dialog class="dialog" id="resetDialog" aria-labelledby="reset-title">
+  <h2 id="reset-title">Lernstand zurücksetzen?</h2>
+  <p>Alle lokalen Ergebnisse dieser Seite werden gelöscht. Die Lerninhalte bleiben erhalten.</p>
+  <div class="dialog__actions">
+    <button class="btn btn--quiet" type="button" data-reset-cancel>Abbrechen</button>
+    <button class="btn" type="button" data-reset-confirm>Ja, zurücksetzen</button>
+  </div>
+</dialog>
+
+<script type="application/json" data-tool-data="mo">
+{
+  "systems": [
+    { "id": "h2", "label": "H₂", "aoLabel": "H", "aoLeft": 1, "aoRight": 1, "bonding": 2, "antibonding": 0, "bondOrder": 1, "note": "Zwei Elektronen besetzen das bindende σ-MO. Die Bindungsordnung ist 1; H₂ ist stabil." },
+    { "id": "he2", "label": "He₂", "aoLabel": "He", "aoLeft": 2, "aoRight": 2, "bonding": 2, "antibonding": 2, "bondOrder": 0, "note": "Die zwei zusätzlichen Elektronen besetzen das antibindende σ*-MO. Die Bindungsordnung ist 0; He₂ existiert nicht als stabiles Molekül." },
+    { "id": "he2plus", "label": "He₂⁺", "aoLabel": "He", "aoLeft": 2, "aoRight": 1, "bonding": 2, "antibonding": 1, "bondOrder": 0.5, "note": "Ein Elektron weniger im antibindenden MO. Die Bindungsordnung ist 0,5; das Ion ist schwach gebunden." }
+  ]
+}
+</script>
+<script type="application/json" data-tool-data="valence">
+{
+  "molecules": [
+    {
+      "id": "h2o", "label": "H₂O", "center": "O", "valence": 8,
+      "terminals": [{ "el": "H", "x": 220, "y": 120, "lp": 0 }, { "el": "H", "x": 420, "y": 120, "lp": 0 }],
+      "bonds": [1, 1], "centerLp": 2, "charges": [],
+      "note": "Sauerstoff hat zwei bindende und zwei freie Elektronenpaare; die Oktettregel ist erfüllt."
+    },
+    {
+      "id": "nh3", "label": "NH₃", "center": "N", "valence": 8,
+      "terminals": [{ "el": "H", "x": 220, "y": 250, "lp": 0 }, { "el": "H", "x": 420, "y": 250, "lp": 0 }, { "el": "H", "x": 320, "y": 300, "lp": 0 }],
+      "bonds": [1, 1, 1], "centerLp": 1, "charges": [],
+      "note": "Stickstoff hat drei bindende Paare und ein freies Paar. Die Oktettregel ist erfüllt."
+    },
+    {
+      "id": "co2", "label": "CO₂", "center": "C", "valence": 16,
+      "terminals": [{ "el": "O", "x": 180, "y": 190, "lp": 2 }, { "el": "O", "x": 460, "y": 190, "lp": 2 }],
+      "bonds": [2, 2], "centerLp": 0, "charges": [],
+      "note": "Kohlenstoff bildet zwei Doppelbindungen. Jedes Sauerstoffatom hat zwei freie Paare."
+    },
+    {
+      "id": "ch4", "label": "CH₄", "center": "C", "valence": 8,
+      "terminals": [{ "el": "H", "x": 320, "y": 85, "lp": 0 }, { "el": "H", "x": 210, "y": 255, "lp": 0 }, { "el": "H", "x": 430, "y": 255, "lp": 0 }, { "el": "H", "x": 320, "y": 315, "lp": 0 }],
+      "bonds": [1, 1, 1, 1], "centerLp": 0, "charges": [],
+      "note": "Kohlenstoff teilt vier Elektronenpaare mit vier Wasserstoffatomen. Es bleiben keine freien Paare am Kohlenstoff."
+    },
+    {
+      "id": "hcn", "label": "HCN", "center": "C", "valence": 10,
+      "terminals": [{ "el": "H", "x": 180, "y": 190, "lp": 0 }, { "el": "N", "x": 460, "y": 190, "lp": 1 }],
+      "bonds": [1, 3], "centerLp": 0, "charges": [],
+      "note": "Zwischen Kohlenstoff und Stickstoff liegt eine Dreifachbindung. Stickstoff hat ein freies Paar."
+    },
+    {
+      "id": "co3", "label": "CO₃²⁻", "center": "C", "valence": 24,
+      "terminals": [{ "el": "O", "x": 320, "y": 85, "lp": 2 }, { "el": "O⁻", "x": 205, "y": 280, "lp": 3 }, { "el": "O⁻", "x": 435, "y": 280, "lp": 3 }],
+      "bonds": [2, 1, 1], "centerLp": 0, "charges": [],
+      "alt": {
+        "terminals": [{ "el": "O⁻", "x": 320, "y": 85, "lp": 3 }, { "el": "O", "x": 205, "y": 280, "lp": 2 }, { "el": "O⁻", "x": 435, "y": 280, "lp": 3 }],
+        "bonds": [1, 2, 1], "charges": [],
+        "note": "Zweite Grenzstruktur: Die Doppelbindung liegt an einem anderen Sauerstoffatom. Die wirkliche Struktur ist ein Mesomerie-Hybrid."
+      },
+      "note": "Carbonat hat drei gleichwertige Sauerstoffatome. Die Doppelbindung ist über das Ion delokalisiert; die Ladung verteilt sich."
+    },
+    {
+      "id": "o3", "label": "O₃", "center": "O⁺", "valence": 18,
+      "terminals": [{ "el": "O", "x": 205, "y": 105, "lp": 2 }, { "el": "O⁻", "x": 435, "y": 105, "lp": 3 }],
+      "bonds": [2, 1], "centerLp": 1, "charges": [],
+      "alt": {
+        "terminals": [{ "el": "O⁻", "x": 205, "y": 105, "lp": 3 }, { "el": "O", "x": 435, "y": 105, "lp": 2 }],
+        "bonds": [1, 2], "charges": [],
+        "note": "Zweite Grenzstruktur von Ozon: Die Doppelbindung liegt am anderen Sauerstoffatom."
+      },
+      "note": "Ozon ist gewinkelt. Die positive Formalladung am zentralen Sauerstoff und die negative am endständigen Sauerstoff zeigen die Delokalisierung."
+    }
+  ]
+}
+</script>
+<script type="application/json" data-tool-data="epa">
+{
+  "molecules": [
+    { "id": "ch4", "label": "CH₄", "center": "C", "ligands": [{ "el": "H", "order": 1 }, { "el": "H", "order": 1 }, { "el": "H", "order": 1 }, { "el": "H", "order": 1 }], "shape": "tetra", "geometry": "tetraedrisch", "angle": "109,5°", "angleValue": 109.5, "pairs": "4 bindende", "loneDirs": [], "note": "Vier bindende Paare bilden einen Tetraeder. Alle Winkel sind gleich groß." },
+    { "id": "nh3", "label": "NH₃", "center": "N", "ligands": [{ "el": "H", "order": 1 }, { "el": "H", "order": 1 }, { "el": "H", "order": 1 }], "shape": "pyramidal", "geometry": "trigonal pyramidal", "angle": "107,3°", "angleValue": 107.3, "pairs": "3 bindende, 1 freies", "loneDirs": [[0, -1, 0]], "note": "Das freie Paar drückt die drei N-H-Bindungen zusammen. Der Winkel ist kleiner als im Tetraeder." },
+    { "id": "h2o", "label": "H₂O", "center": "O", "ligands": [{ "el": "H", "order": 1 }, { "el": "H", "order": 1 }], "shape": "bent", "geometry": "gewinkelt", "angle": "104,5°", "angleValue": 104.5, "pairs": "2 bindende, 2 freie", "loneDirs": [[-0.5, 1, 0], [0.5, 1, 0]], "note": "Zwei freie Paare am Sauerstoff verkleinern den Winkel zwischen den beiden O-H-Bindungen." },
+    { "id": "co2", "label": "CO₂", "center": "C", "ligands": [{ "el": "O", "order": 2 }, { "el": "O", "order": 2 }], "shape": "linear", "geometry": "linear", "angle": "180°", "angleValue": 180, "pairs": "2 bindende", "loneDirs": [], "note": "Zwei bindende Paare liegen sich gegenüber. Das Molekül ist linear." },
+    { "id": "ch2o", "label": "CH₂O", "center": "C", "ligands": [{ "el": "H", "order": 1 }, { "el": "H", "order": 1 }, { "el": "O", "order": 2 }], "shape": "trigonal", "geometry": "trigonal planar", "angle": "120°", "angleValue": 120, "pairs": "3 bindende", "loneDirs": [], "note": "Drei bindende Paare ordnen sich trigonal planar an. Die Doppelbindung zählt als ein Paar." },
+    { "id": "bcl3", "label": "BCl₃", "center": "B", "ligands": [{ "el": "Cl", "order": 1 }, { "el": "Cl", "order": 1 }, { "el": "Cl", "order": 1 }], "shape": "trigonal", "geometry": "trigonal planar", "angle": "120°", "angleValue": 120, "pairs": "3 bindende", "loneDirs": [], "note": "Bor hat nur drei Valenzelektronen. Die Geometrie ist trigonal planar; die Oktettregel ist hier nicht erfüllt." },
+    { "id": "ph3", "label": "PH₃", "center": "P", "ligands": [{ "el": "H", "order": 1 }, { "el": "H", "order": 1 }, { "el": "H", "order": 1 }], "shape": "pyramidal", "geometry": "trigonal pyramidal", "angle": "93,5°", "angleValue": 93.5, "pairs": "3 bindende, 1 freies", "loneDirs": [[0, -1, 0]], "note": "Das freie Paar am Phosphor ist raumgreifend; der Winkel ist deutlich kleiner als bei Ammoniak." },
+    { "id": "h2s", "label": "H₂S", "center": "S", "ligands": [{ "el": "H", "order": 1 }, { "el": "H", "order": 1 }], "shape": "bent", "geometry": "gewinkelt", "angle": "92°", "angleValue": 92, "pairs": "2 bindende, 2 freie", "loneDirs": [[-0.5, 1, 0], [0.5, 1, 0]], "note": "Schwefelwasserstoff ist gewinkelt. Der Winkel ist kleiner als bei Wasser, weil das Schwefelatom größer ist." }
+  ]
+}
+</script>
+<script src="assets/tools.js" defer></script>
+<script src="assets/app.js" defer></script>
+</body>
+</html>

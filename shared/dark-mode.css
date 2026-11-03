@@ -1,0 +1,101 @@
+/* Dark Mode Overrides für alle ChemieLP-Seiten (Chem/Orange Theme) */
+/* Nutzt Tailwind's 'dark' Klasse am <html> Element */
+
+/* ===== BASIS-FARBEN ===== */
+.dark body {
+  background-color: #1a1208 !important;
+  background-image: linear-gradient(135deg, #170f06 0%, #1f140a 50%, #291a0d 100%) !important;
+  color: #ffedd5 !important;
+}
+
+/* ===== KARTEN & CONTAINER ===== */
+.dark .bg-white,
+.dark .bg-white\/90,
+.dark .bg-white\/85,
+.dark .bg-white\/80,
+.dark .bg-white\/70,
+.dark .bg-white\/50 {
+  background-color: rgba(42, 27, 16, 0.9) !important;
+  color: #ffedd5 !important;
+}
+.dark .bg-gray-50,
+.dark .bg-gray-100,
+.dark .bg-slate-50,
+.dark .bg-slate-100,
+.dark .bg-chem-50 {
+  background-color: #26180d !important;
+  color: #ffedd5 !important;
+}
+.dark .bg-chem-100 {
+  background-color: #431407 !important;
+  color: #fdba74 !important;
+}
+
+/* ===== TEXT ===== */
+.dark .text-gray-900,
+.dark .text-gray-800,
+.dark .text-gray-700,
+.dark .text-slate-900,
+.dark .text-slate-800,
+.dark .text-slate-700,
+.dark .text-chem-900,
+.dark .text-chem-800 {
+  color: #ffedd5 !important;
+}
+.dark .text-gray-600,
+.dark .text-gray-500,
+.dark .text-slate-600,
+.dark .text-slate-500,
+.dark .text-slate-400,
+.dark .text-chem-600,
+.dark .text-chem-700 {
+  color: #fdba74 !important;
+}
+
+/* ===== BORDERS ===== */
+.dark .border-slate-100,
+.dark .border-slate-200,
+.dark .border-slate-200\/50,
+.dark .border-chem-100,
+.dark .border-chem-200 {
+  border-color: #7c2d12 !important;
+}
+
+/* ===== INPUTS & BUTTONS ===== */
+.dark input:not([type="range"]),
+.dark select,
+.dark textarea {
+  background-color: #26180d !important;
+  color: #ffedd5 !important;
+  border-color: #9a3412 !important;
+}
+.dark input::placeholder {
+  color: #fb923c !important;
+}
+
+/* ===== TOGGLE BUTTON ===== */
+[data-dark-toggle] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid rgba(249, 115, 22, 0.35);
+  cursor: pointer;
+  font-size: 18px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #c2410c;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: background 0.2s, transform 0.2s, border-color 0.2s;
+  padding: 0;
+}
+[data-dark-toggle]:hover {
+  border-color: #f97316;
+  transform: scale(1.08);
+}
+.dark [data-dark-toggle] {
+  background: rgba(67, 20, 7, 0.9);
+  color: #fdba74;
+  border-color: rgba(253, 186, 116, 0.4);
+}

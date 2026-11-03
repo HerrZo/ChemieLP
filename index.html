@@ -1,0 +1,754 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chemie Lehrplan & Lernpfade | ChemieLP</title>
+    <meta
+      name="description"
+      content="Übersicht über die Themen und Lernpfade im Fach Chemie nach Jahrgangsstufen am Johannes-Scharrer-Gymnasium"
+    />
+    <meta name="theme-color" content="#ea580c" />
+
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Shared Tailwind config & Dark Mode -->
+    <script src="shared/tailwind-config.js"></script>
+    <link rel="stylesheet" href="shared/animations.css" />
+    <link rel="stylesheet" href="shared/dark-mode.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #fff7ed;
+        font-family: "Inter", system-ui, sans-serif;
+      }
+
+      .bg-gradient-chem {
+        background: linear-gradient(
+          135deg,
+          #fff7ed 0%,
+          #ffedd5 45%,
+          #fed7aa 100%
+        );
+        background-attachment: fixed;
+      }
+
+      .card-hover {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .card-hover:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 40px -15px rgba(234, 88, 12, 0.25);
+      }
+
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      button:focus-visible,
+      a:focus-visible,
+      input:focus-visible {
+        outline: 2px solid #f97316;
+        outline-offset: 2px;
+      }
+
+      .chem-pattern {
+        background-image: radial-gradient(rgba(234, 88, 12, 0.08) 1.5px, transparent 1.5px);
+        background-size: 24px 24px;
+      }
+    </style>
+  </head>
+  <body
+    class="text-slate-800 antialiased min-h-screen flex flex-col bg-gradient-chem chem-pattern relative overflow-x-hidden"
+  >
+    <!-- Skip to main content link for accessibility -->
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 z-50 bg-chem-600 text-white px-4 py-2 rounded-lg font-medium shadow-lg"
+    >
+      Zum Hauptinhalt springen
+    </a>
+
+    <!-- Floating Dark Mode Button -->
+    <div class="fixed top-4 right-4 z-50 flex items-center gap-2">
+      <button
+        type="button"
+        data-dark-toggle
+        aria-label="Dunkles Design aktivieren"
+        title="Dunkles Design"
+      >
+        <span class="dark-mode-icon">🌙</span>
+      </button>
+    </div>
+
+    <!-- Decorative Background Illustrations (Strukturformeln, Laborgeräte, Feuer) -->
+    <div class="pointer-events-none select-none fixed inset-0 overflow-hidden z-0 opacity-20 dark:opacity-10" aria-hidden="true">
+      <!-- Top-left: Strukturformel (Benzolring + Ester-Kette) -->
+      <svg class="absolute -top-6 -left-8 w-80 h-80 text-chem-600 animate-float" viewBox="0 0 240 240" fill="none" stroke="currentColor" stroke-width="1.8">
+        <!-- Benzene Hexagon -->
+        <polygon points="80,45 120,68 120,114 80,137 40,114 40,68" fill="currentColor" fill-opacity="0.06"/>
+        <line x1="80" y1="55" x2="111" y2="73"/>
+        <line x1="111" y1="109" x2="80" y2="127"/>
+        <line x1="49" y1="109" x2="49" y2="73"/>
+        <!-- Side chain skeletal formula (-C(=O)-O-CH2-CH3) -->
+        <line x1="120" y1="68" x2="155" y2="48"/>
+        <line x1="152" y1="48" x2="152" y2="18"/>
+        <line x1="158" y1="48" x2="158" y2="18"/>
+        <circle cx="155" cy="11" r="5"/>
+        <line x1="155" y1="48" x2="188" y2="68"/>
+        <circle cx="194" cy="71" r="5"/>
+        <line x1="200" y1="68" x2="225" y2="50"/>
+      </svg>
+
+      <!-- Top-right: Erlenmeyerkolben & Flamme (Feuer + Laborgerät) -->
+      <svg class="absolute top-12 -right-8 w-72 h-72 text-chem-600 animate-float" style="animation-delay: 1.4s" viewBox="0 0 220 220" fill="none" stroke="currentColor" stroke-width="1.8">
+        <!-- Erlenmeyer Flask -->
+        <path d="M88 30 H132 M96 30 V65 L55 145 A12 12 0 0 0 66 162 H154 A12 12 0 0 0 165 145 L124 65 V30" fill="currentColor" fill-opacity="0.06" stroke-linecap="round" stroke-linejoin="round"/>
+        <!-- Liquid wave inside flask -->
+        <path d="M68 125 Q 90 118, 110 125 T 152 125 L 163 147 A8 8 0 0 1 155 158 H65 A8 8 0 0 1 57 147 Z" fill="currentColor" fill-opacity="0.14" stroke="none"/>
+        <!-- Rising bubbles -->
+        <circle cx="102" cy="110" r="4"/>
+        <circle cx="118" cy="95" r="3"/>
+        <circle cx="108" cy="78" r="2.5"/>
+        <!-- Bunsen Flame underneath -->
+        <path d="M110 170 C 110 182, 94 190, 94 202 A 16 16 0 0 0 126 202 C 126 190, 110 182, 110 170 Z" fill="currentColor" fill-opacity="0.18"/>
+      </svg>
+
+      <!-- Bottom-left: Flamme & Molekülorbitale -->
+      <svg class="absolute bottom-10 left-10 w-56 h-56 text-chem-700" viewBox="0 0 180 180" fill="none" stroke="currentColor" stroke-width="1.6">
+        <path d="M90 25 C 90 65, 45 85, 45 125 A 45 45 0 0 0 135 125 C 135 85, 90 65, 90 25 Z" fill="currentColor" fill-opacity="0.07"/>
+        <path d="M90 75 C 90 98, 68 108, 68 130 A 22 22 0 0 0 112 130 C 112 108, 90 98, 90 75 Z" fill="currentColor" fill-opacity="0.12"/>
+      </svg>
+    </div>
+
+    <!-- Header Section -->
+    <header class="w-full pt-12 md:pt-16 pb-6 px-4 md:px-6 text-center relative z-10">
+      <div class="max-w-5xl mx-auto">
+        <div class="inline-flex flex-wrap items-center justify-center gap-2 mb-4">
+          <span
+            class="inline-flex items-center gap-1.5 py-1.5 px-4 rounded-full bg-chem-100 text-chem-900 text-xs font-semibold tracking-wide uppercase shadow-sm border border-chem-200"
+          >
+            <svg class="w-3.5 h-3.5 text-chem-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 3h6m-5 0v5.172a2 2 0 0 1-.586 1.414l-4.828 4.828A4 4 0 0 0 7.414 21h9.172a4 4 0 0 0 2.828-6.586l-4.828-4.828A2 2 0 0 1 14 8.172V3"/>
+            </svg>
+            Johannes-Scharrer-Gymnasium • LehrplanPLUS
+          </span>
+          <a
+            href="https://herrzo.github.io/ChemieApps/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-1.5 py-1.5 px-3.5 rounded-full bg-white/80 hover:bg-chem-50 text-chem-800 text-xs font-medium shadow-sm border border-chem-200/80 transition-colors"
+          >
+            <span>Zu den Chemie Lern-Apps</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+            </svg>
+          </a>
+        </div>
+
+        <h1
+          class="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900 mb-4"
+        >
+          Chemie – Themen &amp; Jahrgangsstufen
+        </h1>
+        <p
+          class="text-base md:text-lg text-slate-600 max-w-2xl mx-auto font-normal leading-relaxed mb-8"
+        >
+          Die zentrale Fachübersicht für Chemie: Von Teilchenmodell, Laborgeräten und chemischen Reaktionen über Strukturformeln, Säuren &amp; Redox bis zur organischen und physikalischen Chemie der Oberstufe.
+        </p>
+
+        <!-- Thematic Pillars Banner (Strukturformeln, Laborgeräte, Feuer/Energetik, Säure-Base/Redox, Organik) -->
+        <div class="grid grid-cols-2 sm:grid-cols-5 gap-2.5 md:gap-3 max-w-4xl mx-auto mb-2 text-left">
+          <div class="bg-white/85 backdrop-blur-sm border border-chem-200/70 rounded-xl p-3 flex items-center gap-3 shadow-sm">
+            <div class="p-2 rounded-lg bg-chem-100 text-chem-700 shrink-0">
+              <!-- Strukturformel / Benzolring -->
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <polygon points="12 2 20 7 20 17 12 22 4 17 4 7"/>
+                <circle cx="12" cy="12" r="4"/>
+              </svg>
+            </div>
+            <div>
+              <div class="text-xs font-bold text-slate-800">Strukturformeln</div>
+              <div class="text-[11px] text-slate-500">Valenzstrich &amp; EPA</div>
+            </div>
+          </div>
+
+          <div class="bg-white/85 backdrop-blur-sm border border-chem-200/70 rounded-xl p-3 flex items-center gap-3 shadow-sm">
+            <div class="p-2 rounded-lg bg-chem-100 text-chem-700 shrink-0">
+              <!-- Laborgeräte / Kolben -->
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 3h6v4.5l4 8.5a2 2 0 0 1-1.8 3H6.8a2 2 0 0 1-1.8-3l4-8.5V3z"/>
+                <line x1="9" y1="3" x2="15" y2="3"/>
+              </svg>
+            </div>
+            <div>
+              <div class="text-xs font-bold text-slate-800">Laborgeräte</div>
+              <div class="text-[11px] text-slate-500">Experiment &amp; Analyse</div>
+            </div>
+          </div>
+
+          <div class="bg-white/85 backdrop-blur-sm border border-chem-200/70 rounded-xl p-3 flex items-center gap-3 shadow-sm">
+            <div class="p-2 rounded-lg bg-chem-100 text-chem-700 shrink-0">
+              <!-- Feuer / Energetik -->
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 2c0 4-4 6-4 10a4 4 0 0 0 8 0c0-4-4-6-4-10z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 12c0 2-1.5 3-1.5 4.5a1.5 1.5 0 0 0 3 0c0-1.5-1.5-2.5-1.5-4.5z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="text-xs font-bold text-slate-800">Feuer &amp; Energie</div>
+              <div class="text-[11px] text-slate-500">Verbrennung &amp; Enthalpie</div>
+            </div>
+          </div>
+
+          <div class="bg-white/85 backdrop-blur-sm border border-chem-200/70 rounded-xl p-3 flex items-center gap-3 shadow-sm">
+            <div class="p-2 rounded-lg bg-chem-100 text-chem-700 shrink-0">
+              <!-- Protonen & Redox -->
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="3"/>
+                <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(30 12 12)"/>
+                <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(-30 12 12)"/>
+              </svg>
+            </div>
+            <div>
+              <div class="text-xs font-bold text-slate-800">Säuren &amp; Redox</div>
+              <div class="text-[11px] text-slate-500">Protonen &amp; Elektronen</div>
+            </div>
+          </div>
+
+          <div class="col-span-2 sm:col-span-1 bg-white/85 backdrop-blur-sm border border-chem-200/70 rounded-xl p-3 flex items-center gap-3 shadow-sm">
+            <div class="p-2 rounded-lg bg-chem-100 text-chem-700 shrink-0">
+              <!-- Molekülketten -->
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <circle cx="5" cy="16" r="2.5"/>
+                <circle cx="12" cy="9" r="2.5"/>
+                <circle cx="19" cy="15" r="2.5"/>
+                <line x1="6.8" y1="14.2" x2="10.2" y2="10.8"/>
+                <line x1="13.9" y1="10.6" x2="17.1" y2="13.4"/>
+              </svg>
+            </div>
+            <div>
+              <div class="text-xs font-bold text-slate-800">Organik &amp; Natur</div>
+              <div class="text-[11px] text-slate-500">Ester, Fette &amp; Zucker</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Search & Filter Navigation (Sticky) -->
+    <div class="sticky top-2 md:top-4 z-40 px-3 md:px-4 mb-6 md:mb-8">
+      <div class="max-w-4xl mx-auto space-y-3">
+        <!-- Search Bar -->
+        <div class="relative">
+          <label for="search-input" class="sr-only">Themen oder Jahrgangsstufen durchsuchen</label>
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Jahrgangsstufe, Lernbereich oder Thema suchen (z. B. SGChemie10, Moleküle, Redox, Ester, Titration)..."
+            aria-label="Themen oder Jahrgangsstufen durchsuchen"
+            class="w-full px-4 py-3 pl-11 bg-white/90 backdrop-blur-md rounded-2xl shadow-lg border border-slate-200/60 outline-none text-slate-700 placeholder-slate-400 text-sm md:text-base transition-all"
+          />
+          <svg
+            class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-chem-600"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+            />
+          </svg>
+        </div>
+
+        <!-- Category / Grade Filter -->
+        <nav
+          aria-label="Jahrgangsstufen-Filter"
+          class="bg-white/90 backdrop-blur-md rounded-2xl shadow-lg border border-slate-200/60 p-1.5 md:p-2 overflow-x-auto no-scrollbar"
+        >
+          <div class="flex space-x-1 min-w-max" id="filter-container">
+            <!-- Filter-Buttons werden per JS eingefügt -->
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Main Content: Grade & Topic Grid -->
+    <main
+      id="main-content"
+      class="flex-grow px-4 md:px-6 pb-16 md:pb-20 relative z-10"
+      aria-live="polite"
+    >
+      <div class="max-w-6xl mx-auto min-h-[300px]" id="app-grid-container">
+        <!-- Karten für die Jahrgangsstufen & Unterseiten werden hier per JS eingefügt -->
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="w-full py-6 md:py-8 border-t border-slate-200 bg-white/60 backdrop-blur-sm mt-auto relative z-10"
+    >
+      <div
+        class="max-w-6xl mx-auto px-4 md:px-6 flex flex-col md:flex-row justify-between items-center gap-4"
+      >
+        <div class="text-xs md:text-sm text-slate-500 text-center md:text-left">
+          <span class="font-medium">Johannes-Scharrer-Gymnasium</span> •
+          <span>Zollfrank</span> • &copy; <span id="year"></span> •
+          <span>Chemie Lehrplan &amp; Lernpfade (ChemieLP)</span>
+        </div>
+        <div class="flex items-center gap-4">
+          <a
+            href="https://www.lehrplanplus.bayern.de/fachprofil/gymnasium/chemie"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-xs md:text-sm text-slate-600 hover:text-chem-700 transition-colors font-medium"
+          >
+            LehrplanPLUS Chemie
+          </a>
+          <a
+            href="https://github.com/HerrZo/ChemieLP"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center gap-2 text-slate-600 hover:text-chem-700 transition-colors text-sm"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <span class="font-medium">GitHub</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIK -->
+    <script src="shared/dark-mode.js"></script>
+    <script>
+      // ============================================================================
+      // 1. KONFIGURATION & DATEN (Jahrgangsstufen & Unterseiten)
+      // ============================================================================
+      // Um eine neue Jahrgangsstufen-Unterseite freizuschalten oder hinzuzufügen:
+      // 1. Unterordner im Repo anlegen (z. B. "SGChemie10/index.html")
+      // 2. Unten bei der entsprechenden Karte `link` und `subpages` eintragen.
+      // ============================================================================
+
+      const categories = [
+        "Alle",
+        "Chemie 8",
+        "Chemie 9",
+        "Chemie 10",
+        "Chemie 11",
+        "Chemie 12",
+        "Chemie 13",
+      ];
+
+      const projects = [
+        {
+          id: "sgchemie10",
+          title: "Chemie 10 (SG) – Fünf Lernbereiche",
+          subtitle: "Sprachliches Gymnasium • 34 Kompetenzerwartungen interaktiv",
+          description:
+            "Vollständiger interaktiver Lernpfad für die 10. Jahrgangsstufe (SG): Molekülbau, Wechselwirkungen, Protonenübergänge, Redoxreaktionen sowie Ester und Zucker – mit Modellen, Aufgaben und Kompetenzchecks.",
+          link: "SGChemie10/index.html",
+          tag: "Chemie 10",
+          iconType: "benzene",
+          folderHint: "SGChemie10",
+          isLive: true,
+          topics: [
+            "LB 10.2 Moleküle: Orbitalmodell, Valenzstrich, EPA, Isomerie & IUPAC",
+            "LB 10.3 Wechselwirkungen: Polarität, ZMWW, Wasserstoffbrücken & Löslichkeit",
+            "LB 10.4 Protonenübergänge: pH-Wert, Brønsted, Neutralisation & Titration",
+            "LB 10.5 Redoxreaktionen: Oxidationszahlen, Alkohole, Nachweise & Brennstoffzelle",
+            "LB 10.6 Ester & Zucker: Monosaccharide, Veresterung, Hydrolyse & Fette",
+          ],
+          subpages: [
+            { title: "Startseite SG 10", link: "SGChemie10/index.html" },
+            { title: "10.2 Moleküle", link: "SGChemie10/10-2-molekuele.html" },
+            { title: "10.3 Wechselwirkungen", link: "SGChemie10/10-3-wechselwirkungen.html" },
+            { title: "10.4 Protonenübergänge", link: "SGChemie10/10-4-protonenuebergaenge.html" },
+            { title: "10.5 Redoxreaktionen", link: "SGChemie10/10-5-redox.html" },
+            { title: "10.6 Ester & Zucker", link: "SGChemie10/10-6-ester.html" },
+          ],
+        },
+        {
+          id: "chemie8-ntg",
+          title: "Chemie 8 (NTG)",
+          subtitle: "Stoffe, Teilchen, Atombau & chemische Reaktionen",
+          description:
+            "Einstieg in die Chemie am naturwissenschaftlich-technologischen Gymnasium: Laborführerschein, Stoffeigenschaften, Trennverfahren, Teilchenmodell, Reaktionsgleichungen, Luft & Verbrennung sowie Metalle und Salze.",
+          link: "Chemie8/index.html",
+          tag: "Chemie 8",
+          iconType: "flame",
+          folderHint: "Chemie8",
+          isLive: false,
+          topics: [
+            "LB 2: Stoffe und ihre Eigenschaften, Reinstoffe, Gemische & Trennverfahren",
+            "LB 3: Chemische Reaktionen, Energieumsatz (exotherm/endotherm) & Katalyse",
+            "LB 4: Kern-Hülle-Modell, Energiestufenmodell & Periodensystem (PSE)",
+            "LB 5: Salze (Ionenbindung, Ionengitter) & Metalle (Elektronengasmodell)",
+          ],
+          subpages: [],
+        },
+        {
+          id: "chemie9",
+          title: "Chemie 9 (NTG & SG)",
+          subtitle: "Quantitative Chemie, Molekülbau & zwischenmolekulare Kräfte",
+          description:
+            "Stoffmenge und molare Größen, Gasgesetze, Elektronenpaarbindung und Lewis-Formeln, räumlicher Molekülbau (EPA-Modell), Dipolmoleküle sowie Grundlagen von Säuren, Basen und Redoxreaktionen.",
+          link: "Chemie9/index.html",
+          tag: "Chemie 9",
+          iconType: "flask",
+          folderHint: "Chemie9",
+          isLive: false,
+          topics: [
+            "LB 2: Quantitative Aspekte – Stoffmenge n, Molare Masse M & Molares Volumen",
+            "LB 3: Elektronenpaarbindung, Valenzstrichformeln & EPA-Modell",
+            "LB 4: Elektronegativität, polare Bindungen & zwischenmolekulare Kräfte",
+            "LB 5: Protonenübergänge (Säure-Base) & Elektronenübergänge (Redox)",
+          ],
+          subpages: [],
+        },
+        {
+          id: "chemie10-ntg",
+          title: "Chemie 10 (NTG)",
+          subtitle: "Organische Sauerstoffverbindungen & Biomoleküle",
+          description:
+            "Vertiefte organische Chemie und Reaktionsmechanismen am NTG: Carbonylverbindungen, Carbonsäuren, Veresterung, Kohlenhydrate, Aminosäuren, Proteine und Kunststoffe.",
+          link: "NTGChemie10/index.html",
+          tag: "Chemie 10",
+          iconType: "molecule",
+          folderHint: "NTGChemie10",
+          isLive: false,
+          topics: [
+            "LB 2: Alkohole, Aldehyde, Ketone & Carbonsäuren (homologe Reihen & Nachweise)",
+            "LB 3: Ester & Fette – Nukleophile Substitution & Verseifung",
+            "LB 4: Kohlenhydrate (Glucose, Fructose, Stärke) & Aminosäuren / Proteine",
+            "LB 5: Makromoleküle & Kunststoffe (Polymerisation, Polykondensation)",
+          ],
+          subpages: [],
+        },
+        {
+          id: "chemie11",
+          title: "Chemie 11",
+          subtitle: "Aromaten, Farbstoffe, Kunststoffe & Fette",
+          description:
+            "Organische Chemie des Alltags und der Technik: Benzol und Mesomerie, elektrophile Substitution, Struktur und Farbigkeit von Farbstoffen sowie Synthese und Recycling von Polymeren.",
+          link: "Chemie11/index.html",
+          tag: "Chemie 11",
+          iconType: "benzene",
+          folderHint: "Chemie11",
+          isLive: false,
+          topics: [
+            "LB 2: Aromatische Kohlenwasserstoffe – Benzol, Mesomerie & Hückel-Regel",
+            "LB 3: Reaktionsmechanismen (Elektrophile Substitution, Radikalische Polymerisation)",
+            "LB 4: Licht & Farbe – Chromophore, Azofarbstoffe, Triphenylmethanfarbstoffe",
+            "LB 5: Werkstoffe & Kunststoffe – Thermoplaste, Duroplaste, Elastomere & Nachhaltigkeit",
+          ],
+          subpages: [],
+        },
+        {
+          id: "chemie12",
+          title: "Chemie 12",
+          subtitle: "Quantenchemie, Chemisches Gleichgewicht, Säure-Base & Elektrochemie",
+          description:
+            "Physikalische und analytische Chemie der Qualifikationsphase: Quantenzahlen und Orbitalmodell, Massenwirkungsgesetz, pH-Berechnungen, Puffersysteme, Titrationen sowie Galvanische Zellen.",
+          link: "Chemie12/index.html",
+          tag: "Chemie 12",
+          iconType: "burette",
+          folderHint: "Chemie12",
+          isLive: false,
+          topics: [
+            "LB 2: Atommodelle, Quantenzahlen (n, l, m, s) & Orbitale",
+            "LB 3: Reaktionsgeschwindigkeit, Enthalpie, Entropie & Chemisches Gleichgewicht (MWG)",
+            "LB 4: Protolysegleichgewichte – pKs/pKb, pH-Wert, Titrationskurven & Puffer",
+            "LB 5: Redoxgleichgewichte – Nernst-Gleichung, Elektrolyse, Batterien & Korrosion",
+          ],
+          subpages: [],
+        },
+        {
+          id: "chemie13",
+          title: "Chemie 13",
+          subtitle: "Naturstoffe, Komplexchemie & Abiturvorbereitung",
+          description:
+            "Biologisch relevante Makromoleküle (Kohlenhydrate, Proteine, Nukleinsäuren), Koordinationsverbindungen und Übergangsmetalle sowie vernetzte Abitur-Aufgaben.",
+          link: "Chemie13/index.html",
+          tag: "Chemie 13",
+          iconType: "atom",
+          folderHint: "Chemie13",
+          isLive: false,
+          topics: [
+            "LB 2: Aminosäuren, Peptidbindung, Proteinstrukturen & Enzymkatalyse",
+            "LB 3: Stereo- und Strukturchemie der Kohlenhydrate (Fischer- & Haworth-Projektion)",
+            "LB 4: Komplexverbindungen – Liganden, Koordinationszahl & Farbigkeit",
+            "LB 5: Vernetzte Abitur-Themen & Aufgabenformate",
+          ],
+          subpages: [],
+        },
+      ];
+
+      // Status der Seite
+      let currentCategory = "Alle";
+      let searchQuery = "";
+
+      // ============================================================================
+      // 2. HILFSFUNKTIONEN (Fachspezifische Chemie-Icons: Strukturformeln, Labor, Feuer)
+      // ============================================================================
+      function getIconSvg(type) {
+        const className = "w-6 h-6";
+        switch (type) {
+          case "benzene":
+            return `<svg class="${className}" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polygon points="12 2 20 7 20 17 12 22 4 17 4 7"/><circle cx="12" cy="12" r="4"/></svg>`;
+          case "flask":
+            return `<svg class="${className}" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M9 3h6v4.5l4 8.5a2 2 0 0 1-1.8 3H6.8a2 2 0 0 1-1.8-3l4-8.5V3z"/><line x1="9" y1="3" x2="15" y2="3"/><path d="M7.5 14h9"/></svg>`;
+          case "burette":
+            return `<svg class="${className}" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M10 2h4v12l-2 3-2-3V2z"/><line x1="8" y1="14" x2="16" y2="14"/><path d="M12 19c-1.5 1.5-1.5 3 0 3s1.5-1.5 0-3z"/><line x1="10" y1="6" x2="12" y2="6"/><line x1="10" y1="10" x2="12" y2="10"/></svg>`;
+          case "flame":
+            return `<svg class="${className}" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 2c0 4-4 6-4 10a4 4 0 0 0 8 0c0-4-4-6-4-10z"/><path d="M12 12c0 2-1.5 3-1.5 4.5a1.5 1.5 0 0 0 3 0c0-1.5-1.5-2.5-1.5-4.5z"/></svg>`;
+          case "molecule":
+            return `<svg class="${className}" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="18" r="3"/><line x1="8.5" y1="7.5" x2="15.5" y2="7.5"/><line x1="8.5" y1="16.5" x2="15.5" y2="16.5"/><line x1="7.5" y1="8.5" x2="7.5" y2="15.5"/><line x1="16.5" y1="8.5" x2="16.5" y2="15.5"/></svg>`;
+          case "atom":
+            return `<svg class="${className}" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.5"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(30 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(-30 12 12)"/></svg>`;
+          default:
+            return `<svg class="${className}" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 3h6v4.5l4 8.5a2 2 0 0 1-1.8 3H6.8a2 2 0 0 1-1.8-3l4-8.5V3z"/></svg>`;
+        }
+      }
+
+      function escapeHTML(str) {
+        if (!str) return "";
+        return String(str)
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;")
+          .replace(/'/g, "&#039;");
+      }
+
+      // ============================================================================
+      // 3. RENDERING LOGIK
+      // ============================================================================
+      function renderFilterBar() {
+        const container = document.getElementById("filter-container");
+        container.innerHTML = "";
+
+        categories.forEach((category) => {
+          const isActive = currentCategory === category;
+          const button = document.createElement("button");
+
+          let classes =
+            "px-3.5 md:px-4 py-1.5 md:py-2 rounded-xl text-xs md:text-sm font-medium transition-all duration-300 ease-out whitespace-nowrap ";
+          if (isActive) {
+            classes += "bg-chem-600 text-white shadow-md transform scale-105";
+          } else {
+            classes +=
+              "text-slate-600 hover:bg-chem-50 hover:text-chem-700";
+          }
+
+          button.className = classes;
+          button.textContent = category;
+          button.setAttribute("aria-pressed", isActive);
+
+          button.onclick = () => {
+            currentCategory = category;
+            renderFilterBar();
+            renderGrid();
+          };
+
+          container.appendChild(button);
+        });
+      }
+
+      function createCardHTML(project) {
+        const topicsHTML = (project.topics || [])
+          .map(
+            (t) => `
+              <li class="flex items-start gap-2 text-xs md:text-sm text-slate-600">
+                <svg class="w-4 h-4 text-chem-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span>${escapeHTML(t)}</span>
+              </li>
+            `
+          )
+          .join("");
+
+        const subpagesHTML =
+          project.subpages && project.subpages.length > 0
+            ? `
+              <div class="mb-5 pt-3 border-t border-chem-100">
+                <div class="text-xs font-bold uppercase tracking-wider text-chem-800 mb-2">
+                  Direkt zu den Lernbereichen &amp; Kapiteln:
+                </div>
+                <div class="flex flex-wrap gap-1.5">
+                  ${project.subpages
+                    .map(
+                      (sp) => `
+                        <a href="${escapeHTML(sp.link)}" class="inline-flex items-center px-2.5 py-1.5 rounded-lg text-xs font-semibold bg-chem-50 text-chem-800 hover:bg-chem-600 hover:text-white border border-chem-200 transition-colors shadow-sm">
+                          ${escapeHTML(sp.title)}
+                        </a>
+                      `
+                    )
+                    .join("")}
+                </div>
+              </div>
+            `
+            : "";
+
+        const statusBadge = project.isLive
+          ? `<span class="inline-flex items-center gap-1 text-xs font-bold text-emerald-800 bg-emerald-100 px-2.5 py-1 rounded-full border border-emerald-200">
+               <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+               Online
+             </span>`
+          : "";
+
+        return `
+          <article class="bg-white/95 rounded-2xl p-5 md:p-6 border ${project.isLive ? "border-chem-300 ring-2 ring-chem-400/30" : "border-chem-100"} card-hover flex flex-col h-full hover:border-chem-300 transition-all duration-300 animate-fadeIn">
+            <div class="flex items-center justify-between mb-4 gap-2 flex-wrap">
+              <div class="p-3 bg-chem-50 rounded-xl text-chem-600 border border-chem-100">
+                ${getIconSvg(project.iconType)}
+              </div>
+              <div class="flex items-center gap-2 flex-wrap">
+                ${statusBadge}
+                <span class="text-xs font-mono text-slate-400 bg-slate-50 px-2 py-1 rounded border border-slate-100" title="Ordnername im Repository">
+                  /${escapeHTML(project.folderHint || project.id)}
+                </span>
+                <span class="text-xs font-bold text-chem-800 bg-chem-100 px-3 py-1 rounded-full border border-chem-200">
+                  ${escapeHTML(project.tag)}
+                </span>
+              </div>
+            </div>
+
+            <h2 class="text-xl font-bold text-slate-900 mb-1">
+              ${escapeHTML(project.title)}
+            </h2>
+            <p class="text-xs md:text-sm font-medium text-chem-700 mb-3">
+              ${escapeHTML(project.subtitle || "")}
+            </p>
+
+            <p class="text-sm text-slate-600 mb-4 leading-relaxed">
+              ${escapeHTML(project.description)}
+            </p>
+
+            <div class="bg-chem-50/60 rounded-xl p-3.5 mb-5 border border-chem-100 flex-grow">
+              <div class="text-xs font-bold uppercase tracking-wider text-chem-800 mb-2">
+                Themenübersicht (LehrplanPLUS)
+              </div>
+              <ul class="space-y-1.5">
+                ${topicsHTML}
+              </ul>
+            </div>
+
+            ${subpagesHTML}
+
+            <a href="${escapeHTML(project.link)}"
+               class="inline-flex items-center justify-center w-full px-4 py-2.5 md:py-3 text-sm font-semibold text-white transition-all bg-gradient-to-r from-chem-600 to-chem-700 rounded-xl hover:from-chem-700 hover:to-chem-800 group shadow-sm hover:shadow-chem-500/30 mt-auto"
+               aria-label="${escapeHTML(project.title)} öffnen">
+              ${project.isLive ? "Lernpfad Chemie 10 (SG) öffnen" : "Jahrgangsstufe öffnen"}
+              <svg class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+              </svg>
+            </a>
+          </article>
+        `;
+      }
+
+      function renderGrid() {
+        const container = document.getElementById("app-grid-container");
+
+        let filteredProjects =
+          currentCategory === "Alle"
+            ? projects
+            : projects.filter((p) => p.tag === currentCategory);
+
+        if (searchQuery.trim() !== "") {
+          const q = searchQuery.toLowerCase();
+          filteredProjects = filteredProjects.filter(
+            (p) =>
+              p.title.toLowerCase().includes(q) ||
+              (p.subtitle && p.subtitle.toLowerCase().includes(q)) ||
+              p.description.toLowerCase().includes(q) ||
+              p.tag.toLowerCase().includes(q) ||
+              (p.folderHint && p.folderHint.toLowerCase().includes(q)) ||
+              (p.topics && p.topics.some((t) => t.toLowerCase().includes(q)))
+          );
+        }
+
+        if (filteredProjects.length === 0) {
+          container.innerHTML = `
+            <div class="col-span-full flex flex-col items-center justify-center text-center py-16 md:py-20 animate-fadeIn bg-white rounded-2xl border border-slate-100 shadow-sm">
+              <div class="bg-chem-50 p-4 rounded-full mb-4 text-chem-600">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold text-slate-700 mb-2">Keine Themen oder Jahrgangsstufen gefunden</h3>
+              <p class="text-slate-500 mb-6 max-w-md">Für deine aktuelle Auswahl sind keine Einträge vorhanden.</p>
+              <button onclick="currentCategory = 'Alle'; searchQuery = ''; document.getElementById('search-input').value = ''; renderFilterBar(); renderGrid();" class="inline-flex items-center px-4 py-2 bg-chem-600 text-white rounded-lg text-sm font-medium hover:bg-chem-700 transition-colors shadow-sm">
+                Alle Jahrgangsstufen anzeigen
+              </button>
+            </div>
+          `;
+          return;
+        }
+
+        let gridHTML =
+          '<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 md:gap-6">';
+        filteredProjects.forEach((project) => {
+          gridHTML += createCardHTML(project);
+        });
+        gridHTML += "</div>";
+
+        container.innerHTML = gridHTML;
+      }
+
+      // 4. INITIALISIERUNG
+      document.addEventListener("DOMContentLoaded", () => {
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        const searchInput = document.getElementById("search-input");
+        searchInput.addEventListener("input", (e) => {
+          searchQuery = e.target.value;
+          renderGrid();
+        });
+
+        renderFilterBar();
+        renderGrid();
+      });
+    </script>
+  </body>
+</html>
