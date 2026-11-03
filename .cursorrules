@@ -5,9 +5,9 @@ You are an AI coding assistant helping with the ChemieLP project (Chemie Lehrpla
 CRITICAL: Before making any modifications to the codebase or generating new code, you MUST read the `AI_README.md` file located at the root of this repository.
 
 Key architectural points to remember instantly:
-1. **Modular Self-Contained Subpages (Jahrgangsstufen):** Each subpage/grade folder (e.g., `SGChemie10/`, `NTGChemie8/`, `Chemie9/`, `Chemie11/`) is an independent subfolder with its own `index.html` (either vanilla HTML/CSS/JS like `SGChemie10/` or pre-bundled standalone HTML via `vite-plugin-singlefile`).
+1. **Modular Self-Contained Subpages (Jahrgangsstufen):** Focus is on **Chemie 9**, **Chemie 10** (`SGChemie10/`), and **Chemie 12 & 13** (combined Oberstufen module with grundlegendem und erweitertem Anforderungsniveau). Each subpage/grade folder is an independent subfolder with its own `index.html`.
 2. **DO NOT Create a Root package.json:** Keep folders modular and independent so new grade-level pages and topic hubs can be easily added without monorepo overhead.
 3. **Standalone Execution:** Every `index.html` must work directly on GitHub Pages and offline via `file://` without requiring a backend server.
-4. **Never Rename Existing Folders:** Preserve exact folder names (such as `SGChemie10`) to keep bookmarks, QR codes, and student links intact.
+4. **Preserve Folder Names:** Preserve folder names (such as `SGChemie10`) to keep bookmarks, QR codes, and student links intact.
 5. **Tailwind & Dark Mode:** Styling uses Tailwind with the custom `chem` (Orange/Flame) theme in `shared/tailwind-config.js` and centralized dark mode via `shared/dark-mode.js` and `shared/dark-mode.css`.
 6. **Hub Registration:** New Jahrgangsstufen-Seiten or Unterseiten must be registered in the `projects` list in `ChemieLP/index.html`.

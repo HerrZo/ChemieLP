@@ -269,7 +269,7 @@
           <input
             type="text"
             id="search-input"
-            placeholder="Jahrgangsstufe, Lernbereich oder Thema suchen (z. B. SGChemie10, Moleküle, Redox, Ester, Titration)..."
+            placeholder="Jahrgangsstufe, Lernbereich oder Thema suchen (z. B. Chemie 10, Moleküle, Redox, Ester, Titration, Gleichgewicht)..."
             aria-label="Themen oder Jahrgangsstufen durchsuchen"
             class="w-full px-4 py-3 pl-11 bg-white/90 backdrop-blur-md rounded-2xl shadow-lg border border-slate-200/60 outline-none text-slate-700 placeholder-slate-400 text-sm md:text-base transition-all"
           />
@@ -370,35 +370,52 @@
 
       const categories = [
         "Alle",
-        "Chemie 8",
         "Chemie 9",
         "Chemie 10",
-        "Chemie 11",
-        "Chemie 12",
-        "Chemie 13",
+        "Chemie 12 & 13",
       ];
 
       const projects = [
         {
-          id: "sgchemie10",
-          title: "Chemie 10 (SG) – Fünf Lernbereiche",
-          subtitle: "Sprachliches Gymnasium • 34 Kompetenzerwartungen interaktiv",
+          id: "chemie9",
+          title: "Chemie 9",
+          subtitle: "Stoffe, Teilchen, Atombau, Quantitative Chemie & Bindungen",
           description:
-            "Vollständiger interaktiver Lernpfad für die 10. Jahrgangsstufe (SG): Molekülbau, Wechselwirkungen, Protonenübergänge, Redoxreaktionen sowie Ester und Zucker – mit Modellen, Aufgaben und Kompetenzchecks.",
+            "Grundlagen der Chemie: Stoffeigenschaften, Gemische und Trennverfahren, Kern-Hülle-Modell, Periodensystem, Salze und Ionenbindung sowie quantitative Größen (Stoffmenge, molare Masse), Elektronenpaarbindung und räumlicher Molekülbau.",
+          link: "Chemie9/index.html",
+          tag: "Chemie 9",
+          iconType: "flask",
+          folderHint: "Chemie9",
+          isLive: false,
+          topics: [
+            "LB 1: Stoffe, Eigenschaften & Gemische – Teilchenmodell, Aggregatzustände & Reaktionen",
+            "LB 2: Atombau & Periodensystem – Kern-Hülle-Modell, Energiestufenmodell & Ionenbildung",
+            "LB 3: Salze & Ionenbindung – Ionengitter, Verhältnisformeln, Eigenschaften & Metalle",
+            "LB 4: Quantitative Aspekte – Stoffmenge n, Molare Masse M, Konzentrationen & Gasgesetze",
+            "LB 5: Moleküle & Atombindung – Lewis-Formeln, EPA-Modell, polare Bindungen & Wechselwirkungen",
+          ],
+          subpages: [],
+        },
+        {
+          id: "chemie10",
+          title: "Chemie 10 – Fünf Lernbereiche",
+          subtitle: "34 Kompetenzerwartungen interaktiv",
+          description:
+            "Vollständiger interaktiver Lernpfad für die 10. Jahrgangsstufe: Molekülbau, Wechselwirkungen, Protonenübergänge, Redoxreaktionen sowie Ester und Zucker – mit Modellen, Aufgaben und Kompetenzchecks.",
           link: "SGChemie10/index.html",
           tag: "Chemie 10",
           iconType: "benzene",
           folderHint: "SGChemie10",
           isLive: true,
           topics: [
-            "LB 10.2 Moleküle: Orbitalmodell, Valenzstrich, EPA, Isomerie & IUPAC",
-            "LB 10.3 Wechselwirkungen: Polarität, ZMWW, Wasserstoffbrücken & Löslichkeit",
-            "LB 10.4 Protonenübergänge: pH-Wert, Brønsted, Neutralisation & Titration",
-            "LB 10.5 Redoxreaktionen: Oxidationszahlen, Alkohole, Nachweise & Brennstoffzelle",
-            "LB 10.6 Ester & Zucker: Monosaccharide, Veresterung, Hydrolyse & Fette",
+            "LB 2 Moleküle: Orbitalmodell, Valenzstrich, EPA, Isomerie & IUPAC",
+            "LB 3 Wechselwirkungen: Polarität, ZMWW, Wasserstoffbrücken & Löslichkeit",
+            "LB 4 Protonenübergänge: pH-Wert, Brønsted, Neutralisation & Titration",
+            "LB 5 Redoxreaktionen: Oxidationszahlen, Alkohole, Nachweise & Brennstoffzelle",
+            "LB 6 Ester & Zucker: Monosaccharide, Veresterung, Hydrolyse & Fette",
           ],
           subpages: [
-            { title: "Startseite SG 10", link: "SGChemie10/index.html" },
+            { title: "Startseite Chemie 10", link: "SGChemie10/index.html" },
             { title: "10.2 Moleküle", link: "SGChemie10/10-2-molekuele.html" },
             { title: "10.3 Wechselwirkungen", link: "SGChemie10/10-3-wechselwirkungen.html" },
             { title: "10.4 Protonenübergänge", link: "SGChemie10/10-4-protonenuebergaenge.html" },
@@ -407,116 +424,23 @@
           ],
         },
         {
-          id: "chemie8-ntg",
-          title: "Chemie 8 (NTG)",
-          subtitle: "Stoffe, Teilchen, Atombau & chemische Reaktionen",
+          id: "chemie12-13",
+          title: "Chemie 12 & 13",
+          subtitle: "Oberstufe • Grundlegendes & erweitertes Anforderungsniveau",
           description:
-            "Einstieg in die Chemie am naturwissenschaftlich-technologischen Gymnasium: Laborführerschein, Stoffeigenschaften, Trennverfahren, Teilchenmodell, Reaktionsgleichungen, Luft & Verbrennung sowie Metalle und Salze.",
-          link: "Chemie8/index.html",
-          tag: "Chemie 8",
-          iconType: "flame",
-          folderHint: "Chemie8",
-          isLive: false,
-          topics: [
-            "LB 2: Stoffe und ihre Eigenschaften, Reinstoffe, Gemische & Trennverfahren",
-            "LB 3: Chemische Reaktionen, Energieumsatz (exotherm/endotherm) & Katalyse",
-            "LB 4: Kern-Hülle-Modell, Energiestufenmodell & Periodensystem (PSE)",
-            "LB 5: Salze (Ionenbindung, Ionengitter) & Metalle (Elektronengasmodell)",
-          ],
-          subpages: [],
-        },
-        {
-          id: "chemie9",
-          title: "Chemie 9 (NTG & SG)",
-          subtitle: "Quantitative Chemie, Molekülbau & zwischenmolekulare Kräfte",
-          description:
-            "Stoffmenge und molare Größen, Gasgesetze, Elektronenpaarbindung und Lewis-Formeln, räumlicher Molekülbau (EPA-Modell), Dipolmoleküle sowie Grundlagen von Säuren, Basen und Redoxreaktionen.",
-          link: "Chemie9/index.html",
-          tag: "Chemie 9",
-          iconType: "flask",
-          folderHint: "Chemie9",
-          isLive: false,
-          topics: [
-            "LB 2: Quantitative Aspekte – Stoffmenge n, Molare Masse M & Molares Volumen",
-            "LB 3: Elektronenpaarbindung, Valenzstrichformeln & EPA-Modell",
-            "LB 4: Elektronegativität, polare Bindungen & zwischenmolekulare Kräfte",
-            "LB 5: Protonenübergänge (Säure-Base) & Elektronenübergänge (Redox)",
-          ],
-          subpages: [],
-        },
-        {
-          id: "chemie10-ntg",
-          title: "Chemie 10 (NTG)",
-          subtitle: "Organische Sauerstoffverbindungen & Biomoleküle",
-          description:
-            "Vertiefte organische Chemie und Reaktionsmechanismen am NTG: Carbonylverbindungen, Carbonsäuren, Veresterung, Kohlenhydrate, Aminosäuren, Proteine und Kunststoffe.",
-          link: "NTGChemie10/index.html",
-          tag: "Chemie 10",
-          iconType: "molecule",
-          folderHint: "NTGChemie10",
-          isLive: false,
-          topics: [
-            "LB 2: Alkohole, Aldehyde, Ketone & Carbonsäuren (homologe Reihen & Nachweise)",
-            "LB 3: Ester & Fette – Nukleophile Substitution & Verseifung",
-            "LB 4: Kohlenhydrate (Glucose, Fructose, Stärke) & Aminosäuren / Proteine",
-            "LB 5: Makromoleküle & Kunststoffe (Polymerisation, Polykondensation)",
-          ],
-          subpages: [],
-        },
-        {
-          id: "chemie11",
-          title: "Chemie 11",
-          subtitle: "Aromaten, Farbstoffe, Kunststoffe & Fette",
-          description:
-            "Organische Chemie des Alltags und der Technik: Benzol und Mesomerie, elektrophile Substitution, Struktur und Farbigkeit von Farbstoffen sowie Synthese und Recycling von Polymeren.",
-          link: "Chemie11/index.html",
-          tag: "Chemie 11",
-          iconType: "benzene",
-          folderHint: "Chemie11",
-          isLive: false,
-          topics: [
-            "LB 2: Aromatische Kohlenwasserstoffe – Benzol, Mesomerie & Hückel-Regel",
-            "LB 3: Reaktionsmechanismen (Elektrophile Substitution, Radikalische Polymerisation)",
-            "LB 4: Licht & Farbe – Chromophore, Azofarbstoffe, Triphenylmethanfarbstoffe",
-            "LB 5: Werkstoffe & Kunststoffe – Thermoplaste, Duroplaste, Elastomere & Nachhaltigkeit",
-          ],
-          subpages: [],
-        },
-        {
-          id: "chemie12",
-          title: "Chemie 12",
-          subtitle: "Quantenchemie, Chemisches Gleichgewicht, Säure-Base & Elektrochemie",
-          description:
-            "Physikalische und analytische Chemie der Qualifikationsphase: Quantenzahlen und Orbitalmodell, Massenwirkungsgesetz, pH-Berechnungen, Puffersysteme, Titrationen sowie Galvanische Zellen.",
-          link: "Chemie12/index.html",
-          tag: "Chemie 12",
-          iconType: "burette",
-          folderHint: "Chemie12",
-          isLive: false,
-          topics: [
-            "LB 2: Atommodelle, Quantenzahlen (n, l, m, s) & Orbitale",
-            "LB 3: Reaktionsgeschwindigkeit, Enthalpie, Entropie & Chemisches Gleichgewicht (MWG)",
-            "LB 4: Protolysegleichgewichte – pKs/pKb, pH-Wert, Titrationskurven & Puffer",
-            "LB 5: Redoxgleichgewichte – Nernst-Gleichung, Elektrolyse, Batterien & Korrosion",
-          ],
-          subpages: [],
-        },
-        {
-          id: "chemie13",
-          title: "Chemie 13",
-          subtitle: "Naturstoffe, Komplexchemie & Abiturvorbereitung",
-          description:
-            "Biologisch relevante Makromoleküle (Kohlenhydrate, Proteine, Nukleinsäuren), Koordinationsverbindungen und Übergangsmetalle sowie vernetzte Abitur-Aufgaben.",
-          link: "Chemie13/index.html",
-          tag: "Chemie 13",
+            "Die Qualifikationsphase der gymnasialen Oberstufe: Quanten- und Atommodelle, chemisches Gleichgewicht, Säure-Base- und Redoxgleichgewichte, Farbstoffe, Kunststoffe sowie Naturstoffe und Biomoleküle.",
+          link: "Chemie12_13/index.html",
+          tag: "Chemie 12 & 13",
           iconType: "atom",
-          folderHint: "Chemie13",
+          folderHint: "Chemie12_13",
           isLive: false,
           topics: [
-            "LB 2: Aminosäuren, Peptidbindung, Proteinstrukturen & Enzymkatalyse",
-            "LB 3: Stereo- und Strukturchemie der Kohlenhydrate (Fischer- & Haworth-Projektion)",
-            "LB 4: Komplexverbindungen – Liganden, Koordinationszahl & Farbigkeit",
-            "LB 5: Vernetzte Abitur-Themen & Aufgabenformate",
+            "Quanten- & Atommodelle: Orbitale, Quantenzahlen (n, l, m, s) & Spektren",
+            "Thermodynamik & Kinetik: Reaktionsgeschwindigkeit, Enthalpie, Entropie & MWG",
+            "Protolysegleichgewichte: pKs/pKb, pH-Berechnungen, Titrationen & Puffersysteme",
+            "Elektrochemie: Redoxgleichgewichte, Nernst-Gleichung, Galvanische Zellen & Elektrolyse",
+            "Aromaten, Farbstoffe & Kunststoffe: Mesomerie, Reaktionsmechanismen & Polymere",
+            "Biomoleküle & Naturstoffe: Kohlenhydrate, Aminosäuren, Proteine, Lipide & Nukleinsäuren",
           ],
           subpages: [],
         },
@@ -678,7 +602,7 @@
             <a href="${escapeHTML(project.link)}"
                class="inline-flex items-center justify-center w-full px-4 py-2.5 md:py-3 text-sm font-semibold text-white transition-all bg-gradient-to-r from-chem-600 to-chem-700 rounded-xl hover:from-chem-700 hover:to-chem-800 group shadow-sm hover:shadow-chem-500/30 mt-auto"
                aria-label="${escapeHTML(project.title)} öffnen">
-              ${project.isLive ? "Lernpfad Chemie 10 (SG) öffnen" : "Jahrgangsstufe öffnen"}
+              ${project.isLive ? "Lernpfad Chemie 10 öffnen" : "Jahrgangsstufe öffnen"}
               <svg class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
               </svg>
