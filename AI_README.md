@@ -13,7 +13,7 @@ Die Architektur entspricht exakt dem bewährten Aufbau von `BioApps` und `Chemie
 ## 2. Directory Structure
 ```
 ChemieLP/
-├── index.html                   # Hauptseite: Fachübersicht (Chemie 9, Chemie 10, Chemie 12 & 13)
+├── index.html                   # Hauptseite: Fachübersicht (Chemie 9, Chemie 10, Chemie 12, Chemie 13)
 ├── shared/                      
 │   ├── dark-mode.css            # Globale CSS-Overrides für Dark Mode (Chem/Orange Theme)
 │   ├── dark-mode.js             # Globales toggleDarkMode() & localStorage-Synchronisation
@@ -28,7 +28,8 @@ ChemieLP/
 │   ├── 10-6-ester.html          # Lernbereich 10.6: Ester und Zucker
 │   └── assets/                  # CSS & JS für SGChemie10
 ├── Chemie9/                     # (Optional) Unterseite / Lernpfad Chemie 9
-├── Chemie12_13/                 # (Optional) Unterseite / Lernpfad Chemie 12 & 13 (Oberstufe gA & eA)
+├── Chemie12/                    # (Optional) Unterseite / Lernpfad Chemie 12 (mit Schalter gA / eA)
+├── Chemie13/                    # (Optional) Unterseite / Lernpfad Chemie 13 (mit Schalter gA / eA)
 ├── build_all.py                 # Optionales Build-Skript für Vite-basierte Unterordner
 └── AI_README.md                 # Diese Datei
 ```
