@@ -144,7 +144,12 @@ body { overflow-x: clip; }
                 "level": "II",
                 "competency": "K1",
                 "prompt": "Welche Oxidationszahl hat Mangan im Permanganat-Ion MnO₄⁻?",
-                "accept": ["+7", "7", "vii", "+vii"],
+                "accept": [
+                  "+7",
+                  "7",
+                  "vii",
+                  "+vii"
+                ],
                 "model": "+VII",
                 "placeholder": "z. B. +VII",
                 "explain": "Vier Sauerstoffatome tragen zusammen -8. Die Ladung des Ions ist -1. Daraus folgt für Mangan +7."
@@ -156,12 +161,12 @@ body { overflow-x: clip; }
                 "competency": "K1",
                 "prompt": "Welche Reaktion ist eine Redoxreaktion?",
                 "options": [
-                  "Zn + 2 HCl → ZnCl₂ + H₂",
                   "CaCO₃ + 2 HCl → CaCl₂ + CO₂ + H₂O",
                   "NaCl + Wasser → Salzlösung",
-                  "NH₃ + H₂O ⇌ NH₄⁺ + OH⁻"
+                  "NH₃ + H₂O ⇌ NH₄⁺ + OH⁻",
+                  "Zn + 2 HCl → ZnCl₂ + H₂"
                 ],
-                "correct": 0,
+                "correct": 3,
                 "explain": "Zink wird von 0 zu +II oxidiert, Wasserstoff von +I zu 0 reduziert. Bei den anderen Reaktionen ändern sich keine Oxidationszahlen."
               }
             ]
@@ -231,7 +236,12 @@ body { overflow-x: clip; }
                 "level": "II",
                 "competency": "K2",
                 "prompt": "Welche Teilgleichung beschreibt die Oxidation von Fe²⁺ zu Fe³⁺?",
-                "options": ["Fe²⁺ → Fe³⁺ + e⁻", "Fe³⁺ + e⁻ → Fe²⁺", "Fe + 2 e⁻ → Fe²⁺", "Fe²⁺ + 2 e⁻ → Fe"],
+                "options": [
+                  "Fe²⁺ → Fe³⁺ + e⁻",
+                  "Fe³⁺ + e⁻ → Fe²⁺",
+                  "Fe + 2 e⁻ → Fe²⁺",
+                  "Fe²⁺ + 2 e⁻ → Fe"
+                ],
                 "correct": 0,
                 "explain": "Eisen gibt ein Elektron ab. Die Oxidationszahl steigt von +II auf +III; das Elektron steht auf der Produktseite."
               },
@@ -241,7 +251,12 @@ body { overflow-x: clip; }
                 "level": "III",
                 "competency": "K2",
                 "prompt": "Wie viele Elektronen werden in der Teilgleichung MnO₄⁻ + 8 H⁺ + ? e⁻ → Mn²⁺ + 4 H₂O übertragen?",
-                "accept": ["5", "fünf", "5 e-", "5e-"],
+                "accept": [
+                  "5",
+                  "fünf",
+                  "5 e-",
+                  "5e-"
+                ],
                 "model": "5",
                 "placeholder": "Zahl eingeben",
                 "explain": "Mangan wird von +VII zu +II reduziert. Die Differenz ist 5; es werden fünf Elektronen aufgenommen."
@@ -311,12 +326,12 @@ body { overflow-x: clip; }
                 "competency": "K3",
                 "prompt": "Warum ist CaCO₃ + 2 HCl → CaCl₂ + CO₂ + H₂O keine Redoxreaktion?",
                 "options": [
-                  "Die Oxidationszahlen ändern sich nicht; es werden Protonen übertragen.",
                   "Weil Calcium ein Metall ist.",
+                  "Die Oxidationszahlen ändern sich nicht; es werden Protonen übertragen.",
                   "Weil Kohlendioxid entsteht.",
                   "Weil Wasser entsteht."
                 ],
-                "correct": 0,
+                "correct": 1,
                 "explain": "Calcium bleibt +II, Kohlenstoff +IV, Sauerstoff -II und Wasserstoff +I. Es findet ein Protonenübergang statt, kein Elektronenübergang."
               },
               {
@@ -325,8 +340,13 @@ body { overflow-x: clip; }
                 "level": "I",
                 "competency": "K3",
                 "prompt": "Welches Gas entsteht bei der Reaktion von Zink mit Salzsäure?",
-                "options": ["Wasserstoff", "Sauerstoff", "Chlor", "Kohlendioxid"],
-                "correct": 0,
+                "options": [
+                  "Sauerstoff",
+                  "Chlor",
+                  "Wasserstoff",
+                  "Kohlendioxid"
+                ],
+                "correct": 2,
                 "explain": "Die Wasserstoff-Ionen werden zu elementarem Wasserstoff reduziert. Zn + 2 HCl → ZnCl₂ + H₂."
               }
             ]
@@ -424,8 +444,13 @@ body { overflow-x: clip; }
                 "level": "II",
                 "competency": "K4",
                 "prompt": "Welches Produkt entsteht bei der Oxidation von Propan-1-ol?",
-                "options": ["Propanal, bei weiterer Oxidation Propansäure", "Propan-2-on", "Propan", "Kein Produkt"],
-                "correct": 0,
+                "options": [
+                  "Propan-2-on",
+                  "Propan",
+                  "Kein Produkt",
+                  "Propanal, bei weiterer Oxidation Propansäure"
+                ],
+                "correct": 3,
                 "explain": "Propan-1-ol ist ein primärer Alkohol. Die Oxidation führt über Propanal zur Propansäure."
               },
               {
@@ -522,12 +547,12 @@ body { overflow-x: clip; }
                 "competency": "K6",
                 "prompt": "Welche Gefahr besteht beim Konsum von Ethanol?",
                 "options": [
-                  "Die Leber bildet Ethanal als Zwischenprodukt; Zellen können geschädigt werden, das Unfallrisiko steigt und Abhängigkeit ist möglich.",
                   "Ethanol ist ein Vitamin und völlig ungefährlich.",
+                  "Die Leber bildet Ethanal als Zwischenprodukt; Zellen können geschädigt werden, das Unfallrisiko steigt und Abhängigkeit ist möglich.",
                   "Ethanol wirkt nur auf die Muskeln, nicht auf das Gehirn.",
                   "Ethanol kann nicht über die Leber abgebaut werden."
                 ],
-                "correct": 0,
+                "correct": 1,
                 "explain": "Ethanol wird über Ethanal abgebaut. Ethanal ist reaktiv und kann Zellen schädigen. Alkohol beeinträchtigt die Koordination und das Urteilsvermögen."
               },
               {
@@ -537,12 +562,12 @@ body { overflow-x: clip; }
                 "competency": "K7",
                 "prompt": "Was passiert an der Anode einer Brennstoffzelle?",
                 "options": [
-                  "Der Brennstoff wird oxidiert und gibt Elektronen ab.",
                   "Sauerstoff wird oxidiert.",
                   "Elektronen werden aufgenommen.",
+                  "Der Brennstoff wird oxidiert und gibt Elektronen ab.",
                   "Es entsteht nur Wasser."
                 ],
-                "correct": 0,
+                "correct": 2,
                 "explain": "An der Anode findet die Oxidation statt. Der Brennstoff gibt Elektronen ab; sie fließen über den äußeren Stromkreis zur Kathode."
               }
             ]
@@ -594,173 +619,224 @@ body { overflow-x: clip; }
       <div class="quiz" data-quiz="check"><noscript><p class="tool__fallback">Der Kompetenzcheck braucht JavaScript. Die Lerninhalte bleiben lesbar.</p></noscript></div>
       <div class="check-result" data-check-result hidden></div>
       <script type="application/json" data-quiz-data="check">
-      {
-        "final": true,
-        "competencies": [
-          { "id": "K1", "label": "K1: Oxidationszahlen und Redoxerkennung" },
-          { "id": "K2", "label": "K2: Redoxgleichungen aufstellen" },
-          { "id": "K3", "label": "K3: Redox und Säure-Base unterscheiden" },
-          { "id": "K4", "label": "K4: Oxidation von Alkoholen" },
-          { "id": "K5", "label": "K5: Nachweis von Aldehyden" },
-          { "id": "K6", "label": "K6: Ethanol und Gesundheit" },
-          { "id": "K7", "label": "K7: Brennstoffzellen" }
-        ],
-        "questions": [
           {
-            "id": "c1",
-            "type": "input",
-            "level": "II",
-            "competency": "K1",
-            "prompt": "Welche Oxidationszahl hat Mangan im Permanganat-Ion MnO₄⁻?",
-            "accept": ["+7", "7", "vii", "+vii"],
-            "model": "+VII",
-            "placeholder": "z. B. +VII",
-            "explain": "Vier Sauerstoffatome tragen -8; die Ladung ist -1. Mangan muss also +7 haben."
-          },
-          {
-            "id": "c2",
-            "type": "mc",
-            "level": "II",
-            "competency": "K1",
-            "prompt": "Welche Reaktion ist eine Redoxreaktion?",
-            "options": [
-              "Zn + 2 HCl → ZnCl₂ + H₂",
-              "CaCO₃ + 2 HCl → CaCl₂ + CO₂ + H₂O",
-              "NH₃ + H₂O ⇌ NH₄⁺ + OH⁻",
-              "NaCl + Wasser → Salzlösung"
+            "final": true,
+            "competencies": [
+              {
+                "id": "K1",
+                "label": "K1: Oxidationszahlen und Redoxerkennung"
+              },
+              {
+                "id": "K2",
+                "label": "K2: Redoxgleichungen aufstellen"
+              },
+              {
+                "id": "K3",
+                "label": "K3: Redox und Säure-Base unterscheiden"
+              },
+              {
+                "id": "K4",
+                "label": "K4: Oxidation von Alkoholen"
+              },
+              {
+                "id": "K5",
+                "label": "K5: Nachweis von Aldehyden"
+              },
+              {
+                "id": "K6",
+                "label": "K6: Ethanol und Gesundheit"
+              },
+              {
+                "id": "K7",
+                "label": "K7: Brennstoffzellen"
+              }
             ],
-            "correct": 0,
-            "explain": "Zink wird oxidiert, Wasserstoff-Ionen werden reduziert. Bei den anderen Reaktionen ändern sich keine Oxidationszahlen."
-          },
-          {
-            "id": "c3",
-            "type": "mc",
-            "level": "II",
-            "competency": "K2",
-            "prompt": "Welche Teilgleichung beschreibt die Oxidation von Fe²⁺ zu Fe³⁺?",
-            "options": ["Fe²⁺ → Fe³⁺ + e⁻", "Fe³⁺ + e⁻ → Fe²⁺", "Fe + 2 e⁻ → Fe²⁺", "Fe²⁺ + 2 e⁻ → Fe"],
-            "correct": 0,
-            "explain": "Die Oxidationszahl steigt von +II auf +III. Ein Elektron wird abgegeben."
-          },
-          {
-            "id": "c4",
-            "type": "input",
-            "level": "III",
-            "competency": "K2",
-            "prompt": "Wie viele Elektronen werden in der Teilgleichung MnO₄⁻ + 8 H⁺ + ? e⁻ → Mn²⁺ + 4 H₂O übertragen?",
-            "accept": ["5", "fünf", "5 e-", "5e-"],
-            "model": "5",
-            "placeholder": "Zahl eingeben",
-            "explain": "Mangan wird von +VII zu +II reduziert. Die Differenz beträgt 5 Elektronen."
-          },
-          {
-            "id": "c5",
-            "type": "mc",
-            "level": "II",
-            "competency": "K3",
-            "prompt": "Warum ist CaCO₃ + 2 HCl → CaCl₂ + CO₂ + H₂O keine Redoxreaktion?",
-            "options": [
-              "Die Oxidationszahlen ändern sich nicht; es werden Protonen übertragen.",
-              "Weil Calcium ein Metall ist.",
-              "Weil Kohlendioxid entsteht.",
-              "Weil Wasser entsteht."
-            ],
-            "correct": 0,
-            "explain": "Es findet ein Protonenübergang statt. Die Oxidationszahlen bleiben unverändert."
-          },
-          {
-            "id": "c6",
-            "type": "mc",
-            "level": "I",
-            "competency": "K3",
-            "prompt": "Welches Gas entsteht bei der Reaktion von Zink mit Salzsäure?",
-            "options": ["Wasserstoff", "Sauerstoff", "Chlor", "Kohlendioxid"],
-            "correct": 0,
-            "explain": "Wasserstoff-Ionen werden zu H₂ reduziert. Die Reaktion ist eine Redoxreaktion."
-          },
-          {
-            "id": "c7",
-            "type": "mc",
-            "level": "II",
-            "competency": "K4",
-            "prompt": "Welches Produkt entsteht bei der Oxidation von Propan-1-ol?",
-            "options": ["Propanal, bei weiterer Oxidation Propansäure", "Propan-2-on", "Propan", "Kein Produkt"],
-            "correct": 0,
-            "explain": "Propan-1-ol ist primär. Die Oxidation führt über Propanal zur Propansäure."
-          },
-          {
-            "id": "c8",
-            "type": "mc",
-            "level": "II",
-            "competency": "K4",
-            "prompt": "Warum reagiert 2-Methylpropan-2-ol nicht mit Permanganat?",
-            "options": [
-              "Es ist tertiär; am funktionellen Kohlenstoffatom fehlt ein Wasserstoffatom für die Oxidation.",
-              "Es ist ein Aldehyd.",
-              "Es hat keine OH-Gruppe.",
-              "Es ist ein primärer Alkohol."
-            ],
-            "correct": 0,
-            "explain": "Beim tertiären Alkohol hat das C-Atom der OH-Gruppe drei C-Nachbarn. Es fehlt das H-Atom, das für die Oxidation nötig wäre."
-          },
-          {
-            "id": "c9",
-            "type": "mc",
-            "level": "I",
-            "competency": "K5",
-            "prompt": "Welche Probe unterscheidet Aldehyde von Ketonen?",
-            "options": ["Fehling-Probe", "Lackmusprobe", "Titration", "Dichtemessung"],
-            "correct": 0,
-            "explain": "Bei der Fehling-Probe entsteht mit Aldehyden ein roter Niederschlag aus Cu₂O. Ketone reagieren nicht positiv."
-          },
-          {
-            "id": "c10",
-            "type": "mc",
-            "level": "II",
-            "competency": "K6",
-            "prompt": "Welche Gefahr besteht beim Konsum von Ethanol?",
-            "options": [
-              "Die Leber bildet Ethanal als Zwischenprodukt; Zellen können geschädigt werden, das Unfallrisiko steigt und Abhängigkeit ist möglich.",
-              "Ethanol ist ein Vitamin und völlig ungefährlich.",
-              "Ethanol wirkt nur auf die Muskeln, nicht auf das Gehirn.",
-              "Ethanol kann nicht über die Leber abgebaut werden."
-            ],
-            "correct": 0,
-            "explain": "Ethanal ist ein reaktives Zwischenprodukt. Alkohol beeinträchtigt die Koordination und das Urteilsvermögen; Abhängigkeit ist möglich."
-          },
-          {
-            "id": "c11",
-            "type": "mc",
-            "level": "II",
-            "competency": "K7",
-            "prompt": "Was passiert an der Anode einer Brennstoffzelle?",
-            "options": [
-              "Der Brennstoff wird oxidiert und gibt Elektronen ab.",
-              "Sauerstoff wird oxidiert.",
-              "Elektronen werden aufgenommen.",
-              "Es entsteht nur Wasser."
-            ],
-            "correct": 0,
-            "explain": "An der Anode findet die Oxidation statt. Die Elektronen fließen über den äußeren Stromkreis zur Kathode."
-          },
-          {
-            "id": "c12",
-            "type": "mc",
-            "level": "II",
-            "competency": "K7",
-            "prompt": "Welche Gesamtreaktion beschreibt eine Ethanol-Brennstoffzelle?",
-            "options": [
-              "C₂H₅OH + 3 O₂ → 2 CO₂ + 3 H₂O",
-              "C₂H₅OH → C₂H₄ + H₂O",
-              "2 H₂ + O₂ → 2 H₂O",
-              "CH₄ + 2 O₂ → CO₂ + 2 H₂O"
-            ],
-            "correct": 0,
-            "explain": "Ethanol wird zu Kohlendioxid oxidiert, Sauerstoff zu Wasser reduziert. Die Gesamtreaktion ist C₂H₅OH + 3 O₂ → 2 CO₂ + 3 H₂O."
+            "questions": [
+              {
+                "id": "c1",
+                "type": "input",
+                "level": "II",
+                "competency": "K1",
+                "prompt": "Welche Oxidationszahl hat Mangan im Permanganat-Ion MnO₄⁻?",
+                "accept": [
+                  "+7",
+                  "7",
+                  "vii",
+                  "+vii"
+                ],
+                "model": "+VII",
+                "placeholder": "z. B. +VII",
+                "explain": "Vier Sauerstoffatome tragen -8; die Ladung ist -1. Mangan muss also +7 haben."
+              },
+              {
+                "id": "c2",
+                "type": "mc",
+                "level": "II",
+                "competency": "K1",
+                "prompt": "Welche Reaktion ist eine Redoxreaktion?",
+                "options": [
+                  "CaCO₃ + 2 HCl → CaCl₂ + CO₂ + H₂O",
+                  "NH₃ + H₂O ⇌ NH₄⁺ + OH⁻",
+                  "NaCl + Wasser → Salzlösung",
+                  "Zn + 2 HCl → ZnCl₂ + H₂"
+                ],
+                "correct": 3,
+                "explain": "Zink wird oxidiert, Wasserstoff-Ionen werden reduziert. Bei den anderen Reaktionen ändern sich keine Oxidationszahlen."
+              },
+              {
+                "id": "c3",
+                "type": "mc",
+                "level": "II",
+                "competency": "K2",
+                "prompt": "Welche Teilgleichung beschreibt die Oxidation von Fe²⁺ zu Fe³⁺?",
+                "options": [
+                  "Fe²⁺ → Fe³⁺ + e⁻",
+                  "Fe³⁺ + e⁻ → Fe²⁺",
+                  "Fe + 2 e⁻ → Fe²⁺",
+                  "Fe²⁺ + 2 e⁻ → Fe"
+                ],
+                "correct": 0,
+                "explain": "Die Oxidationszahl steigt von +II auf +III. Ein Elektron wird abgegeben."
+              },
+              {
+                "id": "c4",
+                "type": "input",
+                "level": "III",
+                "competency": "K2",
+                "prompt": "Wie viele Elektronen werden in der Teilgleichung MnO₄⁻ + 8 H⁺ + ? e⁻ → Mn²⁺ + 4 H₂O übertragen?",
+                "accept": [
+                  "5",
+                  "fünf",
+                  "5 e-",
+                  "5e-"
+                ],
+                "model": "5",
+                "placeholder": "Zahl eingeben",
+                "explain": "Mangan wird von +VII zu +II reduziert. Die Differenz beträgt 5 Elektronen."
+              },
+              {
+                "id": "c5",
+                "type": "mc",
+                "level": "II",
+                "competency": "K3",
+                "prompt": "Warum ist CaCO₃ + 2 HCl → CaCl₂ + CO₂ + H₂O keine Redoxreaktion?",
+                "options": [
+                  "Weil Calcium ein Metall ist.",
+                  "Die Oxidationszahlen ändern sich nicht; es werden Protonen übertragen.",
+                  "Weil Kohlendioxid entsteht.",
+                  "Weil Wasser entsteht."
+                ],
+                "correct": 1,
+                "explain": "Es findet ein Protonenübergang statt. Die Oxidationszahlen bleiben unverändert."
+              },
+              {
+                "id": "c6",
+                "type": "mc",
+                "level": "I",
+                "competency": "K3",
+                "prompt": "Welches Gas entsteht bei der Reaktion von Zink mit Salzsäure?",
+                "options": [
+                  "Sauerstoff",
+                  "Chlor",
+                  "Wasserstoff",
+                  "Kohlendioxid"
+                ],
+                "correct": 2,
+                "explain": "Wasserstoff-Ionen werden zu H₂ reduziert. Die Reaktion ist eine Redoxreaktion."
+              },
+              {
+                "id": "c7",
+                "type": "mc",
+                "level": "II",
+                "competency": "K4",
+                "prompt": "Welches Produkt entsteht bei der Oxidation von Propan-1-ol?",
+                "options": [
+                  "Propan-2-on",
+                  "Propan",
+                  "Kein Produkt",
+                  "Propanal, bei weiterer Oxidation Propansäure"
+                ],
+                "correct": 3,
+                "explain": "Propan-1-ol ist primär. Die Oxidation führt über Propanal zur Propansäure."
+              },
+              {
+                "id": "c8",
+                "type": "mc",
+                "level": "II",
+                "competency": "K4",
+                "prompt": "Warum reagiert 2-Methylpropan-2-ol nicht mit Permanganat?",
+                "options": [
+                  "Es ist tertiär; am funktionellen Kohlenstoffatom fehlt ein Wasserstoffatom für die Oxidation.",
+                  "Es ist ein Aldehyd.",
+                  "Es hat keine OH-Gruppe.",
+                  "Es ist ein primärer Alkohol."
+                ],
+                "correct": 0,
+                "explain": "Beim tertiären Alkohol hat das C-Atom der OH-Gruppe drei C-Nachbarn. Es fehlt das H-Atom, das für die Oxidation nötig wäre."
+              },
+              {
+                "id": "c9",
+                "type": "mc",
+                "level": "I",
+                "competency": "K5",
+                "prompt": "Welche Probe unterscheidet Aldehyde von Ketonen?",
+                "options": [
+                  "Lackmusprobe",
+                  "Fehling-Probe",
+                  "Titration",
+                  "Dichtemessung"
+                ],
+                "correct": 1,
+                "explain": "Bei der Fehling-Probe entsteht mit Aldehyden ein roter Niederschlag aus Cu₂O. Ketone reagieren nicht positiv."
+              },
+              {
+                "id": "c10",
+                "type": "mc",
+                "level": "II",
+                "competency": "K6",
+                "prompt": "Welche Gefahr besteht beim Konsum von Ethanol?",
+                "options": [
+                  "Ethanol ist ein Vitamin und völlig ungefährlich.",
+                  "Ethanol wirkt nur auf die Muskeln, nicht auf das Gehirn.",
+                  "Die Leber bildet Ethanal als Zwischenprodukt; Zellen können geschädigt werden, das Unfallrisiko steigt und Abhängigkeit ist möglich.",
+                  "Ethanol kann nicht über die Leber abgebaut werden."
+                ],
+                "correct": 2,
+                "explain": "Ethanal ist ein reaktives Zwischenprodukt. Alkohol beeinträchtigt die Koordination und das Urteilsvermögen; Abhängigkeit ist möglich."
+              },
+              {
+                "id": "c11",
+                "type": "mc",
+                "level": "II",
+                "competency": "K7",
+                "prompt": "Was passiert an der Anode einer Brennstoffzelle?",
+                "options": [
+                  "Sauerstoff wird oxidiert.",
+                  "Elektronen werden aufgenommen.",
+                  "Es entsteht nur Wasser.",
+                  "Der Brennstoff wird oxidiert und gibt Elektronen ab."
+                ],
+                "correct": 3,
+                "explain": "An der Anode findet die Oxidation statt. Die Elektronen fließen über den äußeren Stromkreis zur Kathode."
+              },
+              {
+                "id": "c12",
+                "type": "mc",
+                "level": "II",
+                "competency": "K7",
+                "prompt": "Welche Gesamtreaktion beschreibt eine Ethanol-Brennstoffzelle?",
+                "options": [
+                  "C₂H₅OH + 3 O₂ → 2 CO₂ + 3 H₂O",
+                  "C₂H₅OH → C₂H₄ + H₂O",
+                  "2 H₂ + O₂ → 2 H₂O",
+                  "CH₄ + 2 O₂ → CO₂ + 2 H₂O"
+                ],
+                "correct": 0,
+                "explain": "Ethanol wird zu Kohlendioxid oxidiert, Sauerstoff zu Wasser reduziert. Die Gesamtreaktion ist C₂H₅OH + 3 O₂ → 2 CO₂ + 3 H₂O."
+              }
+            ]
           }
-        ]
-      }
-      </script>
+          </script>
     </section>
 
     <section class="station" id="glossar" data-station="glossar" data-title="Glossar" aria-labelledby="glossar-title">

@@ -135,12 +135,12 @@ body { overflow-x: clip; }
                 "competency": "K2",
                 "prompt": "Warum existiert He₂ nicht als stabiles Molekül?",
                 "options": [
-                  "Die zwei zusätzlichen Elektronen besetzen das antibindende MO und heben die Bindung auf.",
                   "Helium besitzt keine Elektronen für eine Bindung.",
+                  "Die zwei zusätzlichen Elektronen besetzen das antibindende MO und heben die Bindung auf.",
                   "Helium kann nur Einfachbindungen ausbilden.",
                   "Die Atomkerne sind zu weit voneinander entfernt."
                 ],
-                "correct": 0,
+                "correct": 1,
                 "explain": "He₂ hätte zwei Elektronen im bindenden und zwei im antibindenden MO. Die Bindungsordnung ist null; das Molekül ist nicht stabil."
               },
               {
@@ -149,7 +149,12 @@ body { overflow-x: clip; }
                 "level": "II",
                 "competency": "K2",
                 "prompt": "Welche Bindungsordnung hat He₂⁺?",
-                "accept": ["0,5", "0.5", "1/2", "ein halb"],
+                "accept": [
+                  "0,5",
+                  "0.5",
+                  "1/2",
+                  "ein halb"
+                ],
                 "model": "0,5",
                 "placeholder": "Zahl eingeben",
                 "explain": "He₂⁺ hat zwei bindende und ein antibindendes Elektron. Die Bindungsordnung ist (2 - 1) / 2 = 0,5."
@@ -221,7 +226,12 @@ body { overflow-x: clip; }
                 "level": "I",
                 "competency": "K3",
                 "prompt": "Wie viele freie Elektronenpaare hat das Sauerstoffatom im Wasser-Molekül?",
-                "options": ["0", "1", "2", "3"],
+                "options": [
+                  "0",
+                  "1",
+                  "2",
+                  "3"
+                ],
                 "correct": 2,
                 "explain": "Sauerstoff hat sechs Valenzelektronen. Zwei davon bilden die beiden Bindungen zu Wasserstoff, die übrigen vier bilden zwei freie Paare."
               },
@@ -231,7 +241,13 @@ body { overflow-x: clip; }
                 "level": "II",
                 "competency": "K3",
                 "prompt": "Wie lautet die Formalladung des Stickstoffs im Ammonium-Ion NH₄⁺?",
-                "accept": ["+1", "1+", "+I", "1", "eins"],
+                "accept": [
+                  "+1",
+                  "1+",
+                  "+I",
+                  "1",
+                  "eins"
+                ],
                 "model": "+1",
                 "placeholder": "z. B. +1",
                 "explain": "Stickstoff hat fünf Valenzelektronen, null freie Elektronen und vier Bindungen. Die Formalladung ist 5 - (0 + 4) = +1."
@@ -309,8 +325,13 @@ body { overflow-x: clip; }
                 "level": "II",
                 "competency": "K4",
                 "prompt": "Welchen räumlichen Bau hat das Ammoniak-Molekül NH₃?",
-                "options": ["tetraedrisch", "trigonal pyramidal", "gewinkelt", "linear"],
-                "correct": 1,
+                "options": [
+                  "tetraedrisch",
+                  "gewinkelt",
+                  "linear",
+                  "trigonal pyramidal"
+                ],
+                "correct": 3,
                 "explain": "Am Stickstoff liegen drei bindende Paare und ein freies Paar. Die Atomkerne bilden eine trigonale Pyramide; der Winkel ist mit 107,3° kleiner als im Tetraeder."
               },
               {
@@ -319,7 +340,14 @@ body { overflow-x: clip; }
                 "level": "II",
                 "competency": "K4",
                 "prompt": "Welcher Bindungswinkel wird für Wasser angegeben?",
-                "accept": ["104,5", "104.5", "104,5°", "104.5°", "105", "105°"],
+                "accept": [
+                  "104,5",
+                  "104.5",
+                  "104,5°",
+                  "104.5°",
+                  "105",
+                  "105°"
+                ],
                 "model": "104,5°",
                 "placeholder": "Winkel mit Grad",
                 "explain": "Zwei freie Paare am Sauerstoff drücken die beiden O-H-Bindungen zusammen. Der Winkel beträgt etwa 104,5°."
@@ -444,8 +472,13 @@ body { overflow-x: clip; }
                 "level": "I",
                 "competency": "K5",
                 "prompt": "Welche allgemeine Summenformel gehört zur homologen Reihe der Alkene?",
-                "options": ["CₙH₂ₙ₊₂", "CₙH₂ₙ", "CₙH₂ₙ₋₂", "CₙH₂ₙ₊₁"],
-                "correct": 1,
+                "options": [
+                  "CₙH₂ₙ",
+                  "CₙH₂ₙ₊₂",
+                  "CₙH₂ₙ₋₂",
+                  "CₙH₂ₙ₊₁"
+                ],
+                "correct": 0,
                 "explain": "Alkene besitzen eine Doppelbindung und zwei Wasserstoffatome weniger als die entsprechenden Alkane: CₙH₂ₙ."
               },
               {
@@ -455,12 +488,12 @@ body { overflow-x: clip; }
                 "competency": "K5",
                 "prompt": "Welche beiden Moleküle sind Konstitutionsisomere?",
                 "options": [
-                  "n-Butan und 2-Methylpropan",
                   "E-2-Buten und Z-2-Buten",
+                  "n-Butan und 2-Methylpropan",
                   "Ethen und Ethin",
                   "Propan und Butan"
                 ],
-                "correct": 0,
+                "correct": 1,
                 "explain": "n-Butan und 2-Methylpropan haben beide die Summenformel C₄H₁₀, aber eine andere Verknüpfung der Kohlenstoffatome. E- und Z-2-Buten sind Stereoisomere, keine Konstitutionsisomere."
               }
             ]
@@ -537,7 +570,11 @@ body { overflow-x: clip; }
                 "level": "II",
                 "competency": "K5",
                 "prompt": "Wie lautet der IUPAC-Name von CH₃-CH(CH₃)-CH₂-CH₃?",
-                "accept": ["2-methylbutan", "2 methylbutan", "2-methylbutane"],
+                "accept": [
+                  "2-methylbutan",
+                  "2 methylbutan",
+                  "2-methylbutane"
+                ],
                 "model": "2-Methylbutan",
                 "placeholder": "Name eingeben",
                 "explain": "Die längste Kette hat vier Kohlenstoffatome. Die Methylgruppe sitzt an Position 2; der Name ist 2-Methylbutan."
@@ -548,7 +585,12 @@ body { overflow-x: clip; }
                 "level": "I",
                 "competency": "K6",
                 "prompt": "Wie lautet die Summenformel von But-2-en?",
-                "accept": ["c4h8", "c₄h₈", "c4h8", "C4H8"],
+                "accept": [
+                  "c4h8",
+                  "c₄h₈",
+                  "c4h8",
+                  "C4H8"
+                ],
                 "model": "C₄H₈",
                 "placeholder": "Formel eingeben",
                 "explain": "But-2-en ist ein Alken mit vier Kohlenstoffatomen und einer Doppelbindung. Die Summenformel ist C₄H₈."
@@ -559,8 +601,13 @@ body { overflow-x: clip; }
                 "level": "I",
                 "competency": "K6",
                 "prompt": "Welche Darstellung zeigt nur die Atomarten und ihre Anzahl, aber keine Verknüpfung?",
-                "options": ["Summenformel", "Halbstrukturformel", "Skelettformel", "Valenzstrichformel"],
-                "correct": 0,
+                "options": [
+                  "Halbstrukturformel",
+                  "Skelettformel",
+                  "Summenformel",
+                  "Valenzstrichformel"
+                ],
+                "correct": 2,
                 "explain": "Die Summenformel nennt nur die Zahl der Atome jeder Sorte. Die Verknüpfung zeigt erst die Strukturformel."
               }
             ]
@@ -611,164 +658,225 @@ body { overflow-x: clip; }
       <div class="quiz" data-quiz="check"><noscript><p class="tool__fallback">Der Kompetenzcheck braucht JavaScript. Die Lerninhalte bleiben lesbar.</p></noscript></div>
       <div class="check-result" data-check-result hidden></div>
       <script type="application/json" data-quiz-data="check">
-      {
-        "final": true,
-        "competencies": [
-          { "id": "K1", "label": "K1: Orbitalmodell und Valenzelektronen" },
-          { "id": "K2", "label": "K2: Zusammenhalt durch Orbitalüberlappung" },
-          { "id": "K3", "label": "K3: Edelgasregel, Valenzstrich, Mesomerie" },
-          { "id": "K4", "label": "K4: EPA-Modell und Bindungswinkel" },
-          { "id": "K5", "label": "K5: Namen und Strukturen von Kohlenwasserstoffen" },
-          { "id": "K6", "label": "K6: Formeldarstellungen wechseln" }
-        ],
-        "questions": [
           {
-            "id": "c1",
-            "type": "mc",
-            "level": "I",
-            "competency": "K1",
-            "prompt": "Welche Aussage beschreibt ein Orbital richtig?",
-            "options": [
-              "Es ist ein Aufenthaltsraum für Elektronen mit einer bestimmten Energie.",
-              "Es ist eine feste Kreisbahn um den Atomkern.",
-              "Es ist der Atomkern selbst.",
-              "Es ist die Anziehung zwischen zwei Molekülen."
+            "final": true,
+            "competencies": [
+              {
+                "id": "K1",
+                "label": "K1: Orbitalmodell und Valenzelektronen"
+              },
+              {
+                "id": "K2",
+                "label": "K2: Zusammenhalt durch Orbitalüberlappung"
+              },
+              {
+                "id": "K3",
+                "label": "K3: Edelgasregel, Valenzstrich, Mesomerie"
+              },
+              {
+                "id": "K4",
+                "label": "K4: EPA-Modell und Bindungswinkel"
+              },
+              {
+                "id": "K5",
+                "label": "K5: Namen und Strukturen von Kohlenwasserstoffen"
+              },
+              {
+                "id": "K6",
+                "label": "K6: Formeldarstellungen wechseln"
+              }
             ],
-            "correct": 0,
-            "explain": "Ein Orbital beschreibt einen Raum, in dem sich Elektronen mit hoher Wahrscheinlichkeit aufhalten. Es ist keine feste Bahn."
-          },
-          {
-            "id": "c2",
-            "type": "input",
-            "level": "I",
-            "competency": "K1",
-            "prompt": "Wie viele Valenzelektronen hat ein Sauerstoffatom?",
-            "accept": ["6", "sechs"],
-            "model": "6",
-            "placeholder": "Zahl eingeben",
-            "explain": "Sauerstoff steht in der sechsten Hauptgruppe und besitzt daher sechs Valenzelektronen."
-          },
-          {
-            "id": "c3",
-            "type": "mc",
-            "level": "II",
-            "competency": "K2",
-            "prompt": "Warum ist H₂ stabiler als zwei einzelne Wasserstoffatome?",
-            "options": [
-              "Die Elektronen besetzen ein bindendes Molekülorbital mit niedrigerer Energie.",
-              "Die Atomkerne stoßen sich stärker ab als in einzelnen Atomen.",
-              "Die Elektronen besetzen ein antibindendes Molekülorbital.",
-              "Das Molekül besitzt mehr Protonen als zwei einzelne Atome."
-            ],
-            "correct": 0,
-            "explain": "Die Überlappung der 1s-Orbitale erzeugt ein bindendes MO. Die zwei Elektronen besetzen es und senken die Gesamtenergie."
-          },
-          {
-            "id": "c4",
-            "type": "input",
-            "level": "II",
-            "competency": "K2",
-            "prompt": "Welche Bindungsordnung hat He₂?",
-            "accept": ["0", "null", "0,0"],
-            "model": "0",
-            "placeholder": "Zahl eingeben",
-            "explain": "He₂ hat zwei bindende und zwei antibindende Elektronen. Die Bindungsordnung ist (2 - 2) / 2 = 0."
-          },
-          {
-            "id": "c5",
-            "type": "mc",
-            "level": "I",
-            "competency": "K3",
-            "prompt": "Wie viele Bindungen bildet das Stickstoffatom im Ammoniak-Molekül NH₃?",
-            "options": ["1", "2", "3", "4"],
-            "correct": 2,
-            "explain": "Stickstoff hat fünf Valenzelektronen. Drei bilden die Bindungen zu Wasserstoff, zwei bleiben als freies Paar."
-          },
-          {
-            "id": "c6",
-            "type": "multi",
-            "level": "III",
-            "competency": "K3",
-            "prompt": "Welche Aussagen zur Mesomerie sind richtig?",
-            "options": [
-              "Elektronen sind über mehrere Atome delokalisiert.",
-              "Es gibt nur eine einzige gültige Valenzstrichstruktur.",
-              "Die tatsächliche Struktur liegt zwischen den gezeichneten Grenzstrukturen.",
-              "Mesomerie betrifft nur Ionen, nie neutrale Moleküle."
-            ],
-            "correct": [0, 2],
-            "explain": "Bei der Mesomerie werden mehrere Grenzstrukturen gezeichnet. Die Elektronen sind delokalisiert; die reale Struktur ist ein Zwischenzustand. Ozon ist ein neutrales Beispiel."
-          },
-          {
-            "id": "c7",
-            "type": "mc",
-            "level": "I",
-            "competency": "K4",
-            "prompt": "Welche Geometrie hat das Kohlendioxid-Molekül CO₂?",
-            "options": ["linear", "gewinkelt", "tetraedrisch", "trigonal pyramidal"],
-            "correct": 0,
-            "explain": "Am Kohlenstoff liegen zwei bindende Elektronenpaare. Sie ordnen sich linear mit einem Winkel von 180° an."
-          },
-          {
-            "id": "c8",
-            "type": "input",
-            "level": "I",
-            "competency": "K4",
-            "prompt": "Welcher Bindungswinkel gilt für Methan CH₄?",
-            "accept": ["109,5", "109.5", "109,5°", "109.5°"],
-            "model": "109,5°",
-            "placeholder": "Winkel mit Grad",
-            "explain": "Vier bindende Elektronenpaare bilden einen Tetraeder. Der Bindungswinkel beträgt 109,5°."
-          },
-          {
-            "id": "c9",
-            "type": "input",
-            "level": "I",
-            "competency": "K5",
-            "prompt": "Wie lautet der Name von CH₃-CH₂-CH₃?",
-            "accept": ["propan", "propane"],
-            "model": "Propan",
-            "placeholder": "Name eingeben",
-            "explain": "Drei Kohlenstoffatome in einer Kette ohne Mehrfachbindung ergeben Propan."
-          },
-          {
-            "id": "c10",
-            "type": "mc",
-            "level": "II",
-            "competency": "K5",
-            "prompt": "Welche Summenformel gehört zu But-1-en?",
-            "options": ["C₄H₁₀", "C₄H₈", "C₄H₆", "C₅H₁₂"],
-            "correct": 1,
-            "explain": "But-1-en ist ein Alken mit vier Kohlenstoffatomen. Alkene haben die Formel CₙH₂ₙ, also C₄H₈."
-          },
-          {
-            "id": "c11",
-            "type": "mc",
-            "level": "I",
-            "competency": "K6",
-            "prompt": "Welche Darstellung zeigt die Verknüpfung als Zickzacklinie, ohne C- und H-Symbole zu schreiben?",
-            "options": ["Skelettformel", "Summenformel", "Valenzstrichformel", "Halbstrukturformel"],
-            "correct": 0,
-            "explain": "In der Skelettformel stehen die Kohlenstoffatome an den Knicken und Enden; Wasserstoffatome werden ergänzt."
-          },
-          {
-            "id": "c12",
-            "type": "order",
-            "level": "III",
-            "competency": "K6",
-            "prompt": "Bring die Schritte der IUPAC-Benennung in die richtige Reihenfolge.",
-            "items": [
-              "Längste Kohlenstoffkette suchen",
-              "Kette mit den kleinsten Locanten nummerieren",
-              "Substituenten benennen und alphabetisch ordnen",
-              "Stammname und Endung zum vollständigen Namen zusammensetzen"
-            ],
-            "start": [2, 0, 3, 1],
-            "explain": "Zuerst die längste Kette, dann die Nummerierung, dann die Substituenten, zuletzt der vollständige Name."
+            "questions": [
+              {
+                "id": "c1",
+                "type": "mc",
+                "level": "I",
+                "competency": "K1",
+                "prompt": "Welche Aussage beschreibt ein Orbital richtig?",
+                "options": [
+                  "Es ist eine feste Kreisbahn um den Atomkern.",
+                  "Es ist der Atomkern selbst.",
+                  "Es ist die Anziehung zwischen zwei Molekülen.",
+                  "Es ist ein Aufenthaltsraum für Elektronen mit einer bestimmten Energie."
+                ],
+                "correct": 3,
+                "explain": "Ein Orbital beschreibt einen Raum, in dem sich Elektronen mit hoher Wahrscheinlichkeit aufhalten. Es ist keine feste Bahn."
+              },
+              {
+                "id": "c2",
+                "type": "input",
+                "level": "I",
+                "competency": "K1",
+                "prompt": "Wie viele Valenzelektronen hat ein Sauerstoffatom?",
+                "accept": [
+                  "6",
+                  "sechs"
+                ],
+                "model": "6",
+                "placeholder": "Zahl eingeben",
+                "explain": "Sauerstoff steht in der sechsten Hauptgruppe und besitzt daher sechs Valenzelektronen."
+              },
+              {
+                "id": "c3",
+                "type": "mc",
+                "level": "II",
+                "competency": "K2",
+                "prompt": "Warum ist H₂ stabiler als zwei einzelne Wasserstoffatome?",
+                "options": [
+                  "Die Elektronen besetzen ein bindendes Molekülorbital mit niedrigerer Energie.",
+                  "Die Atomkerne stoßen sich stärker ab als in einzelnen Atomen.",
+                  "Die Elektronen besetzen ein antibindendes Molekülorbital.",
+                  "Das Molekül besitzt mehr Protonen als zwei einzelne Atome."
+                ],
+                "correct": 0,
+                "explain": "Die Überlappung der 1s-Orbitale erzeugt ein bindendes MO. Die zwei Elektronen besetzen es und senken die Gesamtenergie."
+              },
+              {
+                "id": "c4",
+                "type": "input",
+                "level": "II",
+                "competency": "K2",
+                "prompt": "Welche Bindungsordnung hat He₂?",
+                "accept": [
+                  "0",
+                  "null",
+                  "0,0"
+                ],
+                "model": "0",
+                "placeholder": "Zahl eingeben",
+                "explain": "He₂ hat zwei bindende und zwei antibindende Elektronen. Die Bindungsordnung ist (2 - 2) / 2 = 0."
+              },
+              {
+                "id": "c5",
+                "type": "mc",
+                "level": "I",
+                "competency": "K3",
+                "prompt": "Wie viele Bindungen bildet das Stickstoffatom im Ammoniak-Molekül NH₃?",
+                "options": [
+                  "1",
+                  "3",
+                  "2",
+                  "4"
+                ],
+                "correct": 1,
+                "explain": "Stickstoff hat fünf Valenzelektronen. Drei bilden die Bindungen zu Wasserstoff, zwei bleiben als freies Paar."
+              },
+              {
+                "id": "c6",
+                "type": "multi",
+                "level": "III",
+                "competency": "K3",
+                "prompt": "Welche Aussagen zur Mesomerie sind richtig?",
+                "options": [
+                  "Elektronen sind über mehrere Atome delokalisiert.",
+                  "Es gibt nur eine einzige gültige Valenzstrichstruktur.",
+                  "Die tatsächliche Struktur liegt zwischen den gezeichneten Grenzstrukturen.",
+                  "Mesomerie betrifft nur Ionen, nie neutrale Moleküle."
+                ],
+                "correct": [
+                  0,
+                  2
+                ],
+                "explain": "Bei der Mesomerie werden mehrere Grenzstrukturen gezeichnet. Die Elektronen sind delokalisiert; die reale Struktur ist ein Zwischenzustand. Ozon ist ein neutrales Beispiel."
+              },
+              {
+                "id": "c7",
+                "type": "mc",
+                "level": "I",
+                "competency": "K4",
+                "prompt": "Welche Geometrie hat das Kohlendioxid-Molekül CO₂?",
+                "options": [
+                  "gewinkelt",
+                  "tetraedrisch",
+                  "linear",
+                  "trigonal pyramidal"
+                ],
+                "correct": 2,
+                "explain": "Am Kohlenstoff liegen zwei bindende Elektronenpaare. Sie ordnen sich linear mit einem Winkel von 180° an."
+              },
+              {
+                "id": "c8",
+                "type": "input",
+                "level": "I",
+                "competency": "K4",
+                "prompt": "Welcher Bindungswinkel gilt für Methan CH₄?",
+                "accept": [
+                  "109,5",
+                  "109.5",
+                  "109,5°",
+                  "109.5°"
+                ],
+                "model": "109,5°",
+                "placeholder": "Winkel mit Grad",
+                "explain": "Vier bindende Elektronenpaare bilden einen Tetraeder. Der Bindungswinkel beträgt 109,5°."
+              },
+              {
+                "id": "c9",
+                "type": "input",
+                "level": "I",
+                "competency": "K5",
+                "prompt": "Wie lautet der Name von CH₃-CH₂-CH₃?",
+                "accept": [
+                  "propan",
+                  "propane"
+                ],
+                "model": "Propan",
+                "placeholder": "Name eingeben",
+                "explain": "Drei Kohlenstoffatome in einer Kette ohne Mehrfachbindung ergeben Propan."
+              },
+              {
+                "id": "c10",
+                "type": "mc",
+                "level": "II",
+                "competency": "K5",
+                "prompt": "Welche Summenformel gehört zu But-1-en?",
+                "options": [
+                  "C₄H₁₀",
+                  "C₄H₆",
+                  "C₅H₁₂",
+                  "C₄H₈"
+                ],
+                "correct": 3,
+                "explain": "But-1-en ist ein Alken mit vier Kohlenstoffatomen. Alkene haben die Formel CₙH₂ₙ, also C₄H₈."
+              },
+              {
+                "id": "c11",
+                "type": "mc",
+                "level": "I",
+                "competency": "K6",
+                "prompt": "Welche Darstellung zeigt die Verknüpfung als Zickzacklinie, ohne C- und H-Symbole zu schreiben?",
+                "options": [
+                  "Skelettformel",
+                  "Summenformel",
+                  "Valenzstrichformel",
+                  "Halbstrukturformel"
+                ],
+                "correct": 0,
+                "explain": "In der Skelettformel stehen die Kohlenstoffatome an den Knicken und Enden; Wasserstoffatome werden ergänzt."
+              },
+              {
+                "id": "c12",
+                "type": "order",
+                "level": "III",
+                "competency": "K6",
+                "prompt": "Bring die Schritte der IUPAC-Benennung in die richtige Reihenfolge.",
+                "items": [
+                  "Längste Kohlenstoffkette suchen",
+                  "Kette mit den kleinsten Locanten nummerieren",
+                  "Substituenten benennen und alphabetisch ordnen",
+                  "Stammname und Endung zum vollständigen Namen zusammensetzen"
+                ],
+                "start": [
+                  2,
+                  0,
+                  3,
+                  1
+                ],
+                "explain": "Zuerst die längste Kette, dann die Nummerierung, dann die Substituenten, zuletzt der vollständige Name."
+              }
+            ]
           }
-        ]
-      }
-      </script>
+          </script>
     </section>
 
     <section class="station" id="glossar" data-station="glossar" data-title="Glossar" aria-labelledby="glossar-title">

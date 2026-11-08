@@ -146,8 +146,13 @@ body { overflow-x: clip; }
                 "level": "I",
                 "competency": "K1",
                 "prompt": "Welche Farbe hat Phenolphthalein in einer stark basischen Lösung?",
-                "options": ["farblos", "rot", "pink", "blau"],
-                "correct": 2,
+                "options": [
+                  "farblos",
+                  "pink",
+                  "rot",
+                  "blau"
+                ],
+                "correct": 1,
                 "explain": "Phenolphthalein ist in saurer und neutraler Lösung farblos. Ab etwa pH 8,2 schlägt es nach Pink um."
               },
               {
@@ -156,7 +161,11 @@ body { overflow-x: clip; }
                 "level": "II",
                 "competency": "K1",
                 "prompt": "Welchen pH-Wert hat eine Lösung mit c(H₃O⁺) = 0,01 mol/L?",
-                "accept": ["2", "zwei", "2,0"],
+                "accept": [
+                  "2",
+                  "zwei",
+                  "2,0"
+                ],
                 "model": "2",
                 "placeholder": "pH-Wert eingeben",
                 "explain": "pH = -lg(0,01) = 2. Die Konzentration 10⁻² mol/L entspricht pH 2."
@@ -268,8 +277,13 @@ body { overflow-x: clip; }
                 "level": "II",
                 "competency": "K4",
                 "prompt": "Welche Rolle spielt Wasser in der Reaktion HCl + H₂O ⇌ H₃O⁺ + Cl⁻?",
-                "options": ["Es ist die Base und nimmt ein Proton auf.", "Es ist die Säure und gibt ein Proton ab.", "Es ist ein Katalysator und wird nicht verändert.", "Es ist ein Salz."],
-                "correct": 0,
+                "options": [
+                  "Es ist die Säure und gibt ein Proton ab.",
+                  "Es ist ein Katalysator und wird nicht verändert.",
+                  "Es ist die Base und nimmt ein Proton auf.",
+                  "Es ist ein Salz."
+                ],
+                "correct": 2,
                 "explain": "Wasser nimmt das Proton von HCl auf und wird zu H₃O⁺. Wasser ist hier die Base, HCl die Säure."
               },
               {
@@ -278,7 +292,13 @@ body { overflow-x: clip; }
                 "level": "I",
                 "competency": "K3",
                 "prompt": "Wie heißt das Teilchen H₃O⁺?",
-                "accept": ["oxoniumion", "oxonium-ion", "oxonium", "hydroniumion", "hydronium-ion"],
+                "accept": [
+                  "oxoniumion",
+                  "oxonium-ion",
+                  "oxonium",
+                  "hydroniumion",
+                  "hydronium-ion"
+                ],
                 "model": "Oxoniumion",
                 "placeholder": "Name eingeben",
                 "explain": "H₃O⁺ heißt Oxoniumion. Es entsteht, wenn ein Proton auf ein Wasser-Molekül übertragen wird."
@@ -381,12 +401,12 @@ body { overflow-x: clip; }
                 "competency": "K7",
                 "prompt": "Warum ist Ethansäure stärker sauer als Ethanol?",
                 "options": [
-                  "Das Acetat-Ion ist durch Mesomerie über zwei Sauerstoffatome stabilisiert.",
                   "Ethanol besitzt keine OH-Gruppe.",
                   "Ethansäure ist ein stärkeres Lösemittel.",
-                  "Ethanol bildet keine Wasserstoffbrücken."
+                  "Ethanol bildet keine Wasserstoffbrücken.",
+                  "Das Acetat-Ion ist durch Mesomerie über zwei Sauerstoffatome stabilisiert."
                 ],
-                "correct": 0,
+                "correct": 3,
                 "explain": "Die negative Ladung des Acetats ist über zwei Sauerstoffatome delokalisiert. Diese Stabilisierung erleichtert die Abgabe des Protons."
               },
               {
@@ -560,8 +580,13 @@ body { overflow-x: clip; }
                 "level": "II",
                 "competency": "K10",
                 "prompt": "Was gilt am Äquivalenzpunkt einer Titration von HCl mit NaOH?",
-                "options": ["n(HCl) = n(NaOH)", "c(HCl) = c(NaOH)", "pH = 0", "Es ist noch keine Base zugegeben."],
-                "correct": 0,
+                "options": [
+                  "c(HCl) = c(NaOH)",
+                  "n(HCl) = n(NaOH)",
+                  "pH = 0",
+                  "Es ist noch keine Base zugegeben."
+                ],
+                "correct": 1,
                 "explain": "Bei der 1:1-Reaktion von HCl und NaOH sind am Äquivalenzpunkt die Stoffmengen gleich. Die Konzentrationen müssen nicht gleich sein, wenn die Volumina unterschiedlich sind."
               },
               {
@@ -570,7 +595,12 @@ body { overflow-x: clip; }
                 "level": "III",
                 "competency": "K10",
                 "prompt": "20 mL Salzsäure werden mit 15 mL Natronlauge (c = 0,1 mol/L) neutralisiert. Wie groß ist c(HCl)?",
-                "accept": ["0,075", "0.075", "0,075 mol/l", "0.075 mol/l"],
+                "accept": [
+                  "0,075",
+                  "0.075",
+                  "0,075 mol/l",
+                  "0.075 mol/l"
+                ],
                 "model": "0,075 mol/L",
                 "placeholder": "Konzentration in mol/L",
                 "explain": "n(NaOH) = 0,1 mol/L × 0,015 L = 0,0015 mol. Bei 1:1 gilt n(HCl) = 0,0015 mol. c(HCl) = 0,0015 mol / 0,020 L = 0,075 mol/L."
@@ -623,172 +653,237 @@ body { overflow-x: clip; }
       <div class="quiz" data-quiz="check"><noscript><p class="tool__fallback">Der Kompetenzcheck braucht JavaScript. Die Lerninhalte bleiben lesbar.</p></noscript></div>
       <div class="check-result" data-check-result hidden></div>
       <script type="application/json" data-quiz-data="check">
-      {
-        "final": true,
-        "competencies": [
-          { "id": "K1", "label": "K1: Indikatoren und pH-Skala" },
-          { "id": "K2", "label": "K2: Bedeutung in Alltag und Biologie" },
-          { "id": "K3", "label": "K3: Oxonium und Hydroxid" },
-          { "id": "K4", "label": "K4: Brønsted-Konzept" },
-          { "id": "K5", "label": "K5: Protonenübergänge in Gleichungen" },
-          { "id": "K6", "label": "K6: Reversibilität" },
-          { "id": "K7", "label": "K7: Acidität von Alkoholen und Carbonsäuren" },
-          { "id": "K8", "label": "K8: Konzentrationsberechnungen" },
-          { "id": "K9", "label": "K9: Neutralisation" },
-          { "id": "K10", "label": "K10: Titration" }
-        ],
-        "questions": [
           {
-            "id": "c1",
-            "type": "mc",
-            "level": "I",
-            "competency": "K1",
-            "prompt": "Welche Farbe hat Phenolphthalein in einer sauren Lösung?",
-            "options": ["farblos", "rot", "pink", "blau"],
-            "correct": 0,
-            "explain": "Phenolphthalein ist in saurer und neutraler Lösung farblos. Erst im Basischen wird es pink."
-          },
-          {
-            "id": "c2",
-            "type": "input",
-            "level": "I",
-            "competency": "K1",
-            "prompt": "Welchen pH-Wert hat eine Lösung mit c(H₃O⁺) = 0,001 mol/L?",
-            "accept": ["3", "drei", "3,0"],
-            "model": "3",
-            "placeholder": "pH-Wert eingeben",
-            "explain": "pH = -lg(0,001) = 3."
-          },
-          {
-            "id": "c3",
-            "type": "mc",
-            "level": "II",
-            "competency": "K2",
-            "prompt": "Warum ist der pH-Wert des Blutes wichtig?",
-            "options": [
-              "Enzyme und Zellfunktionen brauchen einen engen pH-Bereich.",
-              "Blut muss immer pH 0 haben.",
-              "Der pH-Wert hat keinen Einfluss auf den Körper.",
-              "Blut ist eine starke Base."
+            "final": true,
+            "competencies": [
+              {
+                "id": "K1",
+                "label": "K1: Indikatoren und pH-Skala"
+              },
+              {
+                "id": "K2",
+                "label": "K2: Bedeutung in Alltag und Biologie"
+              },
+              {
+                "id": "K3",
+                "label": "K3: Oxonium und Hydroxid"
+              },
+              {
+                "id": "K4",
+                "label": "K4: Brønsted-Konzept"
+              },
+              {
+                "id": "K5",
+                "label": "K5: Protonenübergänge in Gleichungen"
+              },
+              {
+                "id": "K6",
+                "label": "K6: Reversibilität"
+              },
+              {
+                "id": "K7",
+                "label": "K7: Acidität von Alkoholen und Carbonsäuren"
+              },
+              {
+                "id": "K8",
+                "label": "K8: Konzentrationsberechnungen"
+              },
+              {
+                "id": "K9",
+                "label": "K9: Neutralisation"
+              },
+              {
+                "id": "K10",
+                "label": "K10: Titration"
+              }
             ],
-            "correct": 0,
-            "explain": "Viele Enzyme arbeiten nur in einem schmalen pH-Bereich. Deshalb wird der Blut-pH über Puffersysteme stabil gehalten."
-          },
-          {
-            "id": "c4",
-            "type": "mc",
-            "level": "II",
-            "competency": "K2",
-            "prompt": "Wie wirken Antazida?",
-            "options": [
-              "Sie neutralisieren überschüssige Magensäure.",
-              "Sie erhöhen die Magensäureproduktion.",
-              "Sie sind immer stark basisch und dürfen nicht eingenommen werden.",
-              "Sie ersetzen die Magenschleimhaut."
-            ],
-            "correct": 0,
-            "explain": "Antazida enthalten meist Carbonate oder Hydroxide, die mit der Magensäure reagieren und den pH-Wert anheben."
-          },
-          {
-            "id": "c5",
-            "type": "mc",
-            "level": "I",
-            "competency": "K3",
-            "prompt": "Welche Aussage beschreibt eine saure Lösung auf der Teilchenebene?",
-            "options": ["c(H₃O⁺) > c(OH⁻)", "c(H₃O⁺) = c(OH⁻)", "c(H₃O⁺) < c(OH⁻)", "Es sind keine Ionen enthalten."],
-            "correct": 0,
-            "explain": "In einer sauren Lösung ist die Konzentration der Oxonium-Ionen größer als die der Hydroxid-Ionen."
-          },
-          {
-            "id": "c6",
-            "type": "mc",
-            "level": "I",
-            "competency": "K4",
-            "prompt": "Was ist eine Base nach Brønsted?",
-            "options": ["Ein Protonenakzeptor", "Ein Protonendonator", "Immer ein Hydroxid-Ion", "Immer ein Salz"],
-            "correct": 0,
-            "explain": "Nach Brønsted ist eine Base ein Teilchen, das ein Proton aufnehmen kann. Hydroxid-Ionen sind nur ein Beispiel."
-          },
-          {
-            "id": "c7",
-            "type": "mc",
-            "level": "II",
-            "competency": "K5",
-            "prompt": "Welche Gleichung beschreibt die Reaktion von Ammoniak mit Wasser?",
-            "options": [
-              "NH₃ + H₂O ⇌ NH₄⁺ + OH⁻",
-              "NH₃ + HCl → NH₄Cl",
-              "NH₃ + O₂ → NO + H₂O",
-              "NH₃ + H₂O → NH₂⁻ + H₃O⁺"
-            ],
-            "correct": 0,
-            "explain": "Ammoniak nimmt ein Proton von Wasser auf. Es entstehen Ammonium und Hydroxid; die Lösung ist basisch."
-          },
-          {
-            "id": "c8",
-            "type": "mc",
-            "level": "II",
-            "competency": "K6",
-            "prompt": "Was bedeutet der Gleichgewichtspfeil bei einem Protonenübergang?",
-            "options": [
-              "Hin- und Rückreaktion laufen gleichzeitig ab; es stellt sich ein Gleichgewicht ein.",
-              "Die Reaktion läuft nur in eine Richtung ab.",
-              "Es findet keine Reaktion statt.",
-              "Es entsteht immer ein Salz."
-            ],
-            "correct": 0,
-            "explain": "Der Doppelpfeil zeigt die Reversibilität. Je nach Acidität der Teilchen liegt das Gleichgewicht auf einer Seite."
-          },
-          {
-            "id": "c9",
-            "type": "mc",
-            "level": "II",
-            "competency": "K7",
-            "prompt": "Warum ist Ethansäure stärker sauer als Ethanol?",
-            "options": [
-              "Das Acetat-Ion ist durch Mesomerie stabilisiert.",
-              "Ethanol hat keine OH-Gruppe.",
-              "Ethansäure ist ein stärkeres Lösemittel.",
-              "Ethanol bildet keine Wasserstoffbrücken."
-            ],
-            "correct": 0,
-            "explain": "Die negative Ladung des Acetats ist über zwei Sauerstoffatome delokalisiert. Diese Stabilisierung macht die Säure stärker."
-          },
-          {
-            "id": "c10",
-            "type": "input",
-            "level": "III",
-            "competency": "K8",
-            "prompt": "Wie viel Milliliter einer 0,5 mol/L Lösung brauchst du für 100 mL einer 0,1 mol/L Lösung?",
-            "accept": ["20", "20 ml", "20ml", "0,02 l", "0.02 l"],
-            "model": "20 mL",
-            "placeholder": "Volumen in mL",
-            "explain": "c₁ × V₁ = c₂ × V₂: 0,5 × V₁ = 0,1 × 100. V₁ = 20 mL."
-          },
-          {
-            "id": "c11",
-            "type": "mc",
-            "level": "I",
-            "competency": "K9",
-            "prompt": "Welche Produkte entstehen bei der Neutralisation von HCl mit NaOH?",
-            "options": ["NaCl und H₂O", "NaH und Cl₂", "NaOH und HCl", "H₂ und O₂"],
-            "correct": 0,
-            "explain": "Die Oxonium-Ionen der Säure und die Hydroxid-Ionen der Base bilden Wasser. Die übrigen Ionen bilden das Salz Natriumchlorid."
-          },
-          {
-            "id": "c12",
-            "type": "input",
-            "level": "III",
-            "competency": "K10",
-            "prompt": "25 mL Salzsäure werden mit 20 mL Natronlauge (c = 0,1 mol/L) neutralisiert. Wie groß ist c(HCl)?",
-            "accept": ["0,08", "0.08", "0,08 mol/l", "0.08 mol/l"],
-            "model": "0,08 mol/L",
-            "placeholder": "Konzentration in mol/L",
-            "explain": "n(NaOH) = 0,1 × 0,020 = 0,002 mol. Bei 1:1 ist n(HCl) = 0,002 mol. c(HCl) = 0,002 / 0,025 = 0,08 mol/L."
+            "questions": [
+              {
+                "id": "c1",
+                "type": "mc",
+                "level": "I",
+                "competency": "K1",
+                "prompt": "Welche Farbe hat Phenolphthalein in einer sauren Lösung?",
+                "options": [
+                  "rot",
+                  "pink",
+                  "farblos",
+                  "blau"
+                ],
+                "correct": 2,
+                "explain": "Phenolphthalein ist in saurer und neutraler Lösung farblos. Erst im Basischen wird es pink."
+              },
+              {
+                "id": "c2",
+                "type": "input",
+                "level": "I",
+                "competency": "K1",
+                "prompt": "Welchen pH-Wert hat eine Lösung mit c(H₃O⁺) = 0,001 mol/L?",
+                "accept": [
+                  "3",
+                  "drei",
+                  "3,0"
+                ],
+                "model": "3",
+                "placeholder": "pH-Wert eingeben",
+                "explain": "pH = -lg(0,001) = 3."
+              },
+              {
+                "id": "c3",
+                "type": "mc",
+                "level": "II",
+                "competency": "K2",
+                "prompt": "Warum ist der pH-Wert des Blutes wichtig?",
+                "options": [
+                  "Blut muss immer pH 0 haben.",
+                  "Der pH-Wert hat keinen Einfluss auf den Körper.",
+                  "Blut ist eine starke Base.",
+                  "Enzyme und Zellfunktionen brauchen einen engen pH-Bereich."
+                ],
+                "correct": 3,
+                "explain": "Viele Enzyme arbeiten nur in einem schmalen pH-Bereich. Deshalb wird der Blut-pH über Puffersysteme stabil gehalten."
+              },
+              {
+                "id": "c4",
+                "type": "mc",
+                "level": "II",
+                "competency": "K2",
+                "prompt": "Wie wirken Antazida?",
+                "options": [
+                  "Sie neutralisieren überschüssige Magensäure.",
+                  "Sie erhöhen die Magensäureproduktion.",
+                  "Sie sind immer stark basisch und dürfen nicht eingenommen werden.",
+                  "Sie ersetzen die Magenschleimhaut."
+                ],
+                "correct": 0,
+                "explain": "Antazida enthalten meist Carbonate oder Hydroxide, die mit der Magensäure reagieren und den pH-Wert anheben."
+              },
+              {
+                "id": "c5",
+                "type": "mc",
+                "level": "I",
+                "competency": "K3",
+                "prompt": "Welche Aussage beschreibt eine saure Lösung auf der Teilchenebene?",
+                "options": [
+                  "c(H₃O⁺) = c(OH⁻)",
+                  "c(H₃O⁺) > c(OH⁻)",
+                  "c(H₃O⁺) < c(OH⁻)",
+                  "Es sind keine Ionen enthalten."
+                ],
+                "correct": 1,
+                "explain": "In einer sauren Lösung ist die Konzentration der Oxonium-Ionen größer als die der Hydroxid-Ionen."
+              },
+              {
+                "id": "c6",
+                "type": "mc",
+                "level": "I",
+                "competency": "K4",
+                "prompt": "Was ist eine Base nach Brønsted?",
+                "options": [
+                  "Ein Protonendonator",
+                  "Immer ein Hydroxid-Ion",
+                  "Ein Protonenakzeptor",
+                  "Immer ein Salz"
+                ],
+                "correct": 2,
+                "explain": "Nach Brønsted ist eine Base ein Teilchen, das ein Proton aufnehmen kann. Hydroxid-Ionen sind nur ein Beispiel."
+              },
+              {
+                "id": "c7",
+                "type": "mc",
+                "level": "II",
+                "competency": "K5",
+                "prompt": "Welche Gleichung beschreibt die Reaktion von Ammoniak mit Wasser?",
+                "options": [
+                  "NH₃ + HCl → NH₄Cl",
+                  "NH₃ + O₂ → NO + H₂O",
+                  "NH₃ + H₂O → NH₂⁻ + H₃O⁺",
+                  "NH₃ + H₂O ⇌ NH₄⁺ + OH⁻"
+                ],
+                "correct": 3,
+                "explain": "Ammoniak nimmt ein Proton von Wasser auf. Es entstehen Ammonium und Hydroxid; die Lösung ist basisch."
+              },
+              {
+                "id": "c8",
+                "type": "mc",
+                "level": "II",
+                "competency": "K6",
+                "prompt": "Was bedeutet der Gleichgewichtspfeil bei einem Protonenübergang?",
+                "options": [
+                  "Hin- und Rückreaktion laufen gleichzeitig ab; es stellt sich ein Gleichgewicht ein.",
+                  "Die Reaktion läuft nur in eine Richtung ab.",
+                  "Es findet keine Reaktion statt.",
+                  "Es entsteht immer ein Salz."
+                ],
+                "correct": 0,
+                "explain": "Der Doppelpfeil zeigt die Reversibilität. Je nach Acidität der Teilchen liegt das Gleichgewicht auf einer Seite."
+              },
+              {
+                "id": "c9",
+                "type": "mc",
+                "level": "II",
+                "competency": "K7",
+                "prompt": "Warum ist Ethansäure stärker sauer als Ethanol?",
+                "options": [
+                  "Ethanol hat keine OH-Gruppe.",
+                  "Das Acetat-Ion ist durch Mesomerie stabilisiert.",
+                  "Ethansäure ist ein stärkeres Lösemittel.",
+                  "Ethanol bildet keine Wasserstoffbrücken."
+                ],
+                "correct": 1,
+                "explain": "Die negative Ladung des Acetats ist über zwei Sauerstoffatome delokalisiert. Diese Stabilisierung macht die Säure stärker."
+              },
+              {
+                "id": "c10",
+                "type": "input",
+                "level": "III",
+                "competency": "K8",
+                "prompt": "Wie viel Milliliter einer 0,5 mol/L Lösung brauchst du für 100 mL einer 0,1 mol/L Lösung?",
+                "accept": [
+                  "20",
+                  "20 ml",
+                  "20ml",
+                  "0,02 l",
+                  "0.02 l"
+                ],
+                "model": "20 mL",
+                "placeholder": "Volumen in mL",
+                "explain": "c₁ × V₁ = c₂ × V₂: 0,5 × V₁ = 0,1 × 100. V₁ = 20 mL."
+              },
+              {
+                "id": "c11",
+                "type": "mc",
+                "level": "I",
+                "competency": "K9",
+                "prompt": "Welche Produkte entstehen bei der Neutralisation von HCl mit NaOH?",
+                "options": [
+                  "NaH und Cl₂",
+                  "NaOH und HCl",
+                  "NaCl und H₂O",
+                  "H₂ und O₂"
+                ],
+                "correct": 2,
+                "explain": "Die Oxonium-Ionen der Säure und die Hydroxid-Ionen der Base bilden Wasser. Die übrigen Ionen bilden das Salz Natriumchlorid."
+              },
+              {
+                "id": "c12",
+                "type": "input",
+                "level": "III",
+                "competency": "K10",
+                "prompt": "25 mL Salzsäure werden mit 20 mL Natronlauge (c = 0,1 mol/L) neutralisiert. Wie groß ist c(HCl)?",
+                "accept": [
+                  "0,08",
+                  "0.08",
+                  "0,08 mol/l",
+                  "0.08 mol/l"
+                ],
+                "model": "0,08 mol/L",
+                "placeholder": "Konzentration in mol/L",
+                "explain": "n(NaOH) = 0,1 × 0,020 = 0,002 mol. Bei 1:1 ist n(HCl) = 0,002 mol. c(HCl) = 0,002 / 0,025 = 0,08 mol/L."
+              }
+            ]
           }
-        ]
-      }
-      </script>
+          </script>
     </section>
 
     <section class="station" id="glossar" data-station="glossar" data-title="Glossar" aria-labelledby="glossar-title">

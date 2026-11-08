@@ -389,12 +389,12 @@ html, body { overflow-x: clip; }
                 "competency": "K1",
                 "prompt": "Welche Beobachtung ist ein Beleg für die Wellennatur des Elektrons?",
                 "options": [
-                  "Einzelne Elektronen erzeugen nacheinander ein Interferenzmuster.",
                   "Elektronen besitzen eine Masse.",
+                  "Einzelne Elektronen erzeugen nacheinander ein Interferenzmuster.",
                   "Elektronen werden in einem Magnetfeld abgelenkt.",
                   "Elektronen tragen eine negative Ladung."
                 ],
-                "correct": 0,
+                "correct": 1,
                 "explain": "Das Interferenzmuster entsteht durch die Überlagerung der Wellenanteile beider Spalte. Einzelne Treffer zeigen zugleich die Teilchennatur."
               },
               {
@@ -404,12 +404,12 @@ html, body { overflow-x: clip; }
                 "competency": "K2",
                 "prompt": "Warum zeigen Elektronen am Doppelspalt ein Interferenzmuster, ein geworfener Fußball im Alltag jedoch nicht?",
                 "options": [
-                  "Wegen der winzigen Masse des Elektrons ist seine de-Broglie-Wellenlänge messbar groß, beim Fußball dagegen unmessbar klein.",
                   "Weil Elektronen elektrisch geladen sind und ein Fußball elektrisch neutral ist.",
                   "Weil sich ein Fußball im Alltag zu schnell bewegt, um Welleneigenschaften zu zeigen.",
+                  "Wegen der winzigen Masse des Elektrons ist seine de-Broglie-Wellenlänge messbar groß, beim Fußball dagegen unmessbar klein.",
                   "Weil Interferenz nur im Vakuum auftritt und nicht an der Luft."
                 ],
-                "correct": 0,
+                "correct": 2,
                 "explain": "Nach der de-Broglie-Beziehung λ = h/(m·v) ist die Wellenlänge umgekehrt proportional zur Masse. Wegen der extrem kleinen Masse des Elektrons liegt seine Wellenlänge im Nanometerbereich. Bei der großen Masse des Fußballs ist die Wellenlänge unmessbar winzig."
               }
             ]
@@ -511,12 +511,12 @@ html, body { overflow-x: clip; }
                 "competency": "K3",
                 "prompt": "Was beschreibt das Betragsquadrat |ψ|²?",
                 "options": [
-                  "Die Wahrscheinlichkeitsdichte, ein Teilchen an einem Ort zu finden.",
                   "Die Masse des Teilchens.",
                   "Die Geschwindigkeit des Teilchens.",
-                  "Die Anzahl der Elektronen im Atom."
+                  "Die Anzahl der Elektronen im Atom.",
+                  "Die Wahrscheinlichkeitsdichte, ein Teilchen an einem Ort zu finden."
                 ],
-                "correct": 0,
+                "correct": 3,
                 "explain": "|ψ|² ist die Wahrscheinlichkeitsdichte. Die Wahrscheinlichkeit für ein Volumen ist das Integral von |ψ|² über dieses Volumen."
               },
               {
@@ -610,12 +610,12 @@ html, body { overflow-x: clip; }
                 "competency": "K5",
                 "prompt": "Was besagt die Heisenbergsche Unbestimmtheitsrelation?",
                 "options": [
-                  "Ort und Impuls eines Quantenobjekts können nicht gleichzeitig beliebig genau bestimmt werden.",
                   "Ein Quantenobjekt hat immer eine feste Bahn.",
                   "Die Masse eines Elektrons ist unbestimmt.",
+                  "Ort und Impuls eines Quantenobjekts können nicht gleichzeitig beliebig genau bestimmt werden.",
                   "Elektronen können nur in Kreisbahnen existieren."
                 ],
-                "correct": 0,
+                "correct": 2,
                 "explain": "Δx · Δp ≥ h/(4π). Je genauer der Ort, desto unbestimmter der Impuls. Das ist keine Geräteungenauigkeit, sondern eine Eigenschaft des Quantenzustands."
               },
               {
@@ -1010,110 +1010,136 @@ html, body { overflow-x: clip; }
       <div class="quiz" data-quiz="check"><noscript><p class="tool__fallback">Der Kompetenzcheck braucht JavaScript. Die Lerninhalte bleiben lesbar.</p></noscript></div>
       <div class="check-result" data-check-result hidden></div>
       <script type="application/json" data-quiz-data="check">
-      {
-        "final": true,
-        "competencies": [
-          { "id": "K1", "label": "K1: Welle-Teilchen-Dualismus" },
-          { "id": "K2", "label": "K2: Interferenz und Doppelspalt" },
-          { "id": "K3", "label": "K3: Wellenfunktion und |ψ|²" },
-          { "id": "K4", "label": "K4: Einzelpartikel und Messung" },
-          { "id": "K5", "label": "K5: Heisenbergsche Unbestimmtheit" },
-          { "id": "K6", "label": "K6: Orbitalmodell und Atommodell" }
-        ],
-        "questions": [
           {
-            "id": "c1",
-            "type": "mc",
-            "level": "I",
-            "competency": "K1",
-            "prompt": "Welche Aussage beschreibt den Welle-Teilchen-Dualismus richtig?",
-            "options": [
-              "Quantenobjekte zeigen je nach Experiment Wellen- oder Teilcheneigenschaften.",
-              "Licht ist immer eine Welle, Elektronen sind immer Teilchen.",
-              "Wellen und Teilchen sind zwei verschiedene Stoffe.",
-              "Nur Licht besitzt Welleneigenschaften."
+            "final": true,
+            "competencies": [
+              {
+                "id": "K1",
+                "label": "K1: Welle-Teilchen-Dualismus"
+              },
+              {
+                "id": "K2",
+                "label": "K2: Interferenz und Doppelspalt"
+              },
+              {
+                "id": "K3",
+                "label": "K3: Wellenfunktion und |ψ|²"
+              },
+              {
+                "id": "K4",
+                "label": "K4: Einzelpartikel und Messung"
+              },
+              {
+                "id": "K5",
+                "label": "K5: Heisenbergsche Unbestimmtheit"
+              },
+              {
+                "id": "K6",
+                "label": "K6: Orbitalmodell und Atommodell"
+              }
             ],
-            "correct": 0,
-            "explain": "Der Dualismus bedeutet nicht, dass ein Objekt mal das eine und mal das andere „ist“, sondern dass die Beschreibung vom Experiment abhängt."
-          },
-          {
-            "id": "c2",
-            "type": "mc",
-            "level": "II",
-            "competency": "K2",
-            "prompt": "Der Spaltabstand d wird bei sonst gleichen Bedingungen größer. Was passiert mit dem Abstand der Interferenzstreifen?",
-            "options": [
-              "Er wird kleiner.",
-              "Er wird größer.",
-              "Er bleibt gleich.",
-              "Das Muster verschwindet vollständig."
-            ],
-            "correct": 0,
-            "explain": "Der Streifenabstand ist näherungsweise Δy = λ·L/d. Größeres d bedeutet kleineren Abstand der Streifen."
-          },
-          {
-            "id": "c3",
-            "type": "match",
-            "level": "II",
-            "competency": "K3",
-            "prompt": "Ordne die Begriffe ihren Bedeutungen zu.",
-            "left": ["Wellenfunktion ψ", "Betragsquadrat |ψ|²", "Messung"],
-            "right": [
-              "beschreibt den Quantenzustand",
-              "gibt die Wahrscheinlichkeitsdichte an",
-              "liefert einen einzelnen Treffer"
-            ],
-            "correct": [0, 1, 2],
-            "explain": "ψ beschreibt den Zustand, |ψ|² die Wahrscheinlichkeitsdichte. Die Messung wählt einen Ort aus und liefert einen Treffer."
-          },
-          {
-            "id": "c4",
-            "type": "mc",
-            "level": "II",
-            "competency": "K4",
-            "prompt": "Warum zeigt ein einzelnes Elektron noch kein vollständiges Interferenzmuster?",
-            "options": [
-              "Weil eine Messung nur einen Treffer liefert; das Muster entsteht erst aus vielen Treffern.",
-              "Weil ein einzelnes Elektron keine Wellenfunktion besitzt.",
-              "Weil der Doppelspalt nur bei Licht funktioniert.",
-              "Weil Elektronen zu schwer für Interferenz sind."
-            ],
-            "correct": 0,
-            "explain": "Jedes Elektron trägt eine Wellenfunktion, aber die Messung liefert nur einen Ort. Die Verteilung wird erst durch viele Wiederholungen sichtbar."
-          },
-          {
-            "id": "c5",
-            "type": "mc",
-            "level": "III",
-            "competency": "K5",
-            "prompt": "Was geschieht nach der Heisenbergschen Unbestimmtheitsrelation (Δx · Δp ≥ h/(4π)), wenn der Aufenthaltsort eines Elektrons räumlich immer enger eingegrenzt wird (kleineres Δx)?",
-            "options": [
-              "Die minimale Impuls- und Geschwindigkeitsunbestimmtheit (Δp, Δv) wird zwangsläufig immer größer.",
-              "Die Impulsunbestimmtheit (Δp) nimmt ebenfalls ab und nähert sich null.",
-              "Die Masse des Elektrons nimmt kontinuierlich ab.",
-              "Das Produkt aus Δx und Δp sinkt unter den Wert von h/(4π)."
-            ],
-            "correct": 0,
-            "explain": "Da das Produkt aus Orts- und Impulsunschärfe einen Mindestwert (h/4π) nicht unterschreiten darf, führt eine genauere Ortsfestlegung (kleineres Δx) zwingend zu einer größeren Impuls- und Geschwindigkeitsunschärfe."
-          },
-          {
-            "id": "c6",
-            "type": "mc",
-            "level": "III",
-            "competency": "K6",
-            "prompt": "Warum beschreibt das Orbitalmodell den Aufenthalt eines Elektrons im Atom besser als feste Kreisbahnen?",
-            "options": [
-              "Weil es die Aufenthaltswahrscheinlichkeit und die Unbestimmtheit berücksichtigt.",
-              "Weil es die Elektronen auf exakte Kreisbahnen festlegt.",
-              "Weil es nur für Wasserstoff gilt und alle anderen Atome ignoriert.",
-              "Weil es die Masse des Elektrons vernachlässigt."
-            ],
-            "correct": 0,
-            "explain": "Orbitale sind Wahrscheinlichkeitsräume. Sie passen zur Unbestimmtheit, während feste Bahnen einen gleichzeitig scharfen Ort und Impuls voraussetzen würden."
+            "questions": [
+              {
+                "id": "c1",
+                "type": "mc",
+                "level": "I",
+                "competency": "K1",
+                "prompt": "Welche Aussage beschreibt den Welle-Teilchen-Dualismus richtig?",
+                "options": [
+                  "Licht ist immer eine Welle, Elektronen sind immer Teilchen.",
+                  "Quantenobjekte zeigen je nach Experiment Wellen- oder Teilcheneigenschaften.",
+                  "Wellen und Teilchen sind zwei verschiedene Stoffe.",
+                  "Nur Licht besitzt Welleneigenschaften."
+                ],
+                "correct": 1,
+                "explain": "Der Dualismus bedeutet nicht, dass ein Objekt mal das eine und mal das andere „ist“, sondern dass die Beschreibung vom Experiment abhängt."
+              },
+              {
+                "id": "c2",
+                "type": "mc",
+                "level": "II",
+                "competency": "K2",
+                "prompt": "Der Spaltabstand d wird bei sonst gleichen Bedingungen größer. Was passiert mit dem Abstand der Interferenzstreifen?",
+                "options": [
+                  "Er wird kleiner.",
+                  "Er wird größer.",
+                  "Er bleibt gleich.",
+                  "Das Muster verschwindet vollständig."
+                ],
+                "correct": 0,
+                "explain": "Der Streifenabstand ist näherungsweise Δy = λ·L/d. Größeres d bedeutet kleineren Abstand der Streifen."
+              },
+              {
+                "id": "c3",
+                "type": "match",
+                "level": "II",
+                "competency": "K3",
+                "prompt": "Ordne die Begriffe ihren Bedeutungen zu.",
+                "left": [
+                  "Wellenfunktion ψ",
+                  "Betragsquadrat |ψ|²",
+                  "Messung"
+                ],
+                "right": [
+                  "beschreibt den Quantenzustand",
+                  "gibt die Wahrscheinlichkeitsdichte an",
+                  "liefert einen einzelnen Treffer"
+                ],
+                "correct": [
+                  0,
+                  1,
+                  2
+                ],
+                "explain": "ψ beschreibt den Zustand, |ψ|² die Wahrscheinlichkeitsdichte. Die Messung wählt einen Ort aus und liefert einen Treffer."
+              },
+              {
+                "id": "c4",
+                "type": "mc",
+                "level": "II",
+                "competency": "K4",
+                "prompt": "Warum zeigt ein einzelnes Elektron noch kein vollständiges Interferenzmuster?",
+                "options": [
+                  "Weil ein einzelnes Elektron keine Wellenfunktion besitzt.",
+                  "Weil der Doppelspalt nur bei Licht funktioniert.",
+                  "Weil Elektronen zu schwer für Interferenz sind.",
+                  "Weil eine Messung nur einen Treffer liefert; das Muster entsteht erst aus vielen Treffern."
+                ],
+                "correct": 3,
+                "explain": "Jedes Elektron trägt eine Wellenfunktion, aber die Messung liefert nur einen Ort. Die Verteilung wird erst durch viele Wiederholungen sichtbar."
+              },
+              {
+                "id": "c5",
+                "type": "mc",
+                "level": "III",
+                "competency": "K5",
+                "prompt": "Was geschieht nach der Heisenbergschen Unbestimmtheitsrelation (Δx · Δp ≥ h/(4π)), wenn der Aufenthaltsort eines Elektrons räumlich immer enger eingegrenzt wird (kleineres Δx)?",
+                "options": [
+                  "Die Impulsunbestimmtheit (Δp) nimmt ebenfalls ab und nähert sich null.",
+                  "Die Masse des Elektrons nimmt kontinuierlich ab.",
+                  "Die minimale Impuls- und Geschwindigkeitsunbestimmtheit (Δp, Δv) wird zwangsläufig immer größer.",
+                  "Das Produkt aus Δx und Δp sinkt unter den Wert von h/(4π)."
+                ],
+                "correct": 2,
+                "explain": "Da das Produkt aus Orts- und Impulsunschärfe einen Mindestwert (h/4π) nicht unterschreiten darf, führt eine genauere Ortsfestlegung (kleineres Δx) zwingend zu einer größeren Impuls- und Geschwindigkeitsunschärfe."
+              },
+              {
+                "id": "c6",
+                "type": "mc",
+                "level": "III",
+                "competency": "K6",
+                "prompt": "Warum beschreibt das Orbitalmodell den Aufenthalt eines Elektrons im Atom besser als feste Kreisbahnen?",
+                "options": [
+                  "Weil es die Elektronen auf exakte Kreisbahnen festlegt.",
+                  "Weil es die Aufenthaltswahrscheinlichkeit und die Unbestimmtheit berücksichtigt.",
+                  "Weil es nur für Wasserstoff gilt und alle anderen Atome ignoriert.",
+                  "Weil es die Masse des Elektrons vernachlässigt."
+                ],
+                "correct": 1,
+                "explain": "Orbitale sind Wahrscheinlichkeitsräume. Sie passen zur Unbestimmtheit, während feste Bahnen einen gleichzeitig scharfen Ort und Impuls voraussetzen würden."
+              }
+            ]
           }
-        ]
-      }
-      </script>
+          </script>
     </section>
 
     <section class="station" id="glossar" data-station="glossar" data-title="Glossar" aria-labelledby="glossar-title">

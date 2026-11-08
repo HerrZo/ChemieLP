@@ -185,7 +185,12 @@ body { overflow-x: clip; }
                 "level": "I",
                 "competency": "K2",
                 "prompt": "Welcher Zucker besitzt eine Ketogruppe?",
-                "options": ["Glucose", "Fructose", "Saccharose", "Stärke"],
+                "options": [
+                  "Glucose",
+                  "Fructose",
+                  "Saccharose",
+                  "Stärke"
+                ],
                 "correct": 1,
                 "explain": "Fructose ist ein Ketohexose. Glucose ist ein Aldohexose; Saccharose und Stärke sind aus mehreren Bausteinen aufgebaut."
               },
@@ -195,8 +200,13 @@ body { overflow-x: clip; }
                 "level": "I",
                 "competency": "K2",
                 "prompt": "Aus welchen Monosacchariden besteht Saccharose?",
-                "options": ["Glucose und Glucose", "Glucose und Fructose", "Fructose und Fructose", "Glucose und Galactose"],
-                "correct": 1,
+                "options": [
+                  "Glucose und Glucose",
+                  "Fructose und Fructose",
+                  "Glucose und Fructose",
+                  "Glucose und Galactose"
+                ],
+                "correct": 2,
                 "explain": "Saccharose ist ein Disaccharid aus einem Glucose- und einem Fructosebaustein, verbunden über eine glycosidische Bindung."
               }
             ]
@@ -267,8 +277,13 @@ body { overflow-x: clip; }
                 "level": "I",
                 "competency": "K3",
                 "prompt": "Welche Produkte entstehen bei der Veresterung von Carbonsäure und Alkohol?",
-                "options": ["Ester und Wasser", "Salz und Wasser", "Aldehyd und Wasserstoff", "Keton und Sauerstoff"],
-                "correct": 0,
+                "options": [
+                  "Salz und Wasser",
+                  "Aldehyd und Wasserstoff",
+                  "Keton und Sauerstoff",
+                  "Ester und Wasser"
+                ],
+                "correct": 3,
                 "explain": "Die Carboxygruppe und die Hydroxygruppe reagieren unter Abspaltung von Wasser. Es entsteht ein Ester."
               },
               {
@@ -277,7 +292,13 @@ body { overflow-x: clip; }
                 "level": "II",
                 "competency": "K3",
                 "prompt": "Wie heißt der Ester aus Ethansäure und Ethanol?",
-                "accept": ["ethansäureethylester", "ethansaeureethylester", "ethylacetat", "ethyl ethanoat", "essigsäureethylester"],
+                "accept": [
+                  "ethansäureethylester",
+                  "ethansaeureethylester",
+                  "ethylacetat",
+                  "ethyl ethanoat",
+                  "essigsäureethylester"
+                ],
                 "model": "Ethansäureethylester",
                 "placeholder": "Estername eingeben",
                 "explain": "Ethanol liefert die Ethylgruppe, Ethansäure den Acetatrest. Der Name ist Ethansäureethylester, kurz Ethylacetat."
@@ -370,8 +391,13 @@ body { overflow-x: clip; }
                 "level": "I",
                 "competency": "K5",
                 "prompt": "Als was sind Fette chemisch einzuordnen?",
-                "options": ["Als Triester aus Glycerin und Fettsäuren", "Als Salze aus Fettsäuren und Wasser", "Als Monosaccharide", "Als Amine"],
-                "correct": 0,
+                "options": [
+                  "Als Salze aus Fettsäuren und Wasser",
+                  "Als Triester aus Glycerin und Fettsäuren",
+                  "Als Monosaccharide",
+                  "Als Amine"
+                ],
+                "correct": 1,
                 "explain": "Fette sind Triglyceride: Glycerin ist mit drei Fettsäuren über Estergruppen verbunden."
               }
             ]
@@ -474,12 +500,12 @@ body { overflow-x: clip; }
                 "competency": "K3",
                 "prompt": "Welche Rolle spielt das Oxonium-Ion bei der säurekatalysierten Veresterung?",
                 "options": [
-                  "Es protoniert den Carbonyl-Sauerstoff und erhöht die Elektrophilie des Carbonyl-Kohlenstoffs.",
                   "Es ist das Nukleophil, das den Alkohol angreift.",
                   "Es wird als Produkt verbraucht.",
+                  "Es protoniert den Carbonyl-Sauerstoff und erhöht die Elektrophilie des Carbonyl-Kohlenstoffs.",
                   "Es spaltet den Ester direkt."
                 ],
-                "correct": 0,
+                "correct": 2,
                 "explain": "Die Protonierung macht den Carbonyl-Kohlenstoff elektrophiler. Das Oxonium-Ion wird am Ende regeneriert."
               },
               {
@@ -488,8 +514,13 @@ body { overflow-x: clip; }
                 "level": "II",
                 "competency": "K5",
                 "prompt": "Was entsteht bei der Kondensation zweier Aminosäuren?",
-                "options": ["Ein Peptid und Wasser", "Ein Zucker und Wasser", "Ein Fett und Wasser", "Ein Salz und Wasserstoff"],
-                "correct": 0,
+                "options": [
+                  "Ein Zucker und Wasser",
+                  "Ein Fett und Wasser",
+                  "Ein Salz und Wasserstoff",
+                  "Ein Peptid und Wasser"
+                ],
+                "correct": 3,
                 "explain": "Die Aminogruppe der einen Aminosäure reagiert mit der Carboxygruppe der anderen. Unter Wasserabspaltung entsteht eine Peptidbindung."
               }
             ]
@@ -560,7 +591,12 @@ body { overflow-x: clip; }
                 "level": "I",
                 "competency": "K5",
                 "prompt": "Welcher Alltagsstoff ist ein Ester?",
-                "options": ["Acetylsalicylsäure", "Kochsalz", "Ethanol", "Glucose"],
+                "options": [
+                  "Acetylsalicylsäure",
+                  "Kochsalz",
+                  "Ethanol",
+                  "Glucose"
+                ],
                 "correct": 0,
                 "explain": "Acetylsalicylsäure, der Wirkstoff von Aspirin, ist ein Ester aus Salicylsäure und Essigsäure."
               },
@@ -570,8 +606,13 @@ body { overflow-x: clip; }
                 "level": "II",
                 "competency": "K5",
                 "prompt": "Was ist Biodiesel chemisch?",
-                "options": ["Fettsäuremethylester", "Reiner Ethanol", "Ein Monosaccharid", "Natriumchlorid"],
-                "correct": 0,
+                "options": [
+                  "Reiner Ethanol",
+                  "Fettsäuremethylester",
+                  "Ein Monosaccharid",
+                  "Natriumchlorid"
+                ],
+                "correct": 1,
                 "explain": "Biodiesel entsteht durch Umesterung von Pflanzenölen mit Methanol. Die Produkte sind Fettsäuremethylester."
               }
             ]
@@ -622,144 +663,184 @@ body { overflow-x: clip; }
       <div class="quiz" data-quiz="check"><noscript><p class="tool__fallback">Der Kompetenzcheck braucht JavaScript. Die Lerninhalte bleiben lesbar.</p></noscript></div>
       <div class="check-result" data-check-result hidden></div>
       <script type="application/json" data-quiz-data="check">
-      {
-        "final": true,
-        "competencies": [
-          { "id": "K1", "label": "K1: Zucker in Alltag und Ernährung" },
-          { "id": "K2", "label": "K2: Bau und Reaktionsverhalten der Zucker" },
-          { "id": "K3", "label": "K3: Esterbildung und Eigenschaften" },
-          { "id": "K4", "label": "K4: Reversibilität und Hydrolyse" },
-          { "id": "K5", "label": "K5: Ester in Produkten und Fetten" }
-        ],
-        "questions": [
           {
-            "id": "c1",
-            "type": "mc",
-            "level": "I",
-            "competency": "K1",
-            "prompt": "Welche Rolle spielen Zucker in der Ernährung?",
-            "options": [
-              "Sie liefern Energie; ein hoher Anteil freier Zucker sollte vermieden werden.",
-              "Sie sind immer gesünder als Fette.",
-              "Sie enthalten keine Energie.",
-              "Sie sind für den Körper vollständig unnötig."
+            "final": true,
+            "competencies": [
+              {
+                "id": "K1",
+                "label": "K1: Zucker in Alltag und Ernährung"
+              },
+              {
+                "id": "K2",
+                "label": "K2: Bau und Reaktionsverhalten der Zucker"
+              },
+              {
+                "id": "K3",
+                "label": "K3: Esterbildung und Eigenschaften"
+              },
+              {
+                "id": "K4",
+                "label": "K4: Reversibilität und Hydrolyse"
+              },
+              {
+                "id": "K5",
+                "label": "K5: Ester in Produkten und Fetten"
+              }
             ],
-            "correct": 0,
-            "explain": "Zucker liefern Energie. Die WHO empfiehlt, den Anteil freier Zucker zu begrenzen. Das bedeutet nicht, dass Zucker giftig ist."
-          },
-          {
-            "id": "c2",
-            "type": "mc",
-            "level": "II",
-            "competency": "K1",
-            "prompt": "Warum ist Saccharose kein reduzierender Zucker?",
-            "options": [
-              "Die anomeren Kohlenstoffatome sind in der glycosidischen Bindung gebunden; ein freies Halbacetal fehlt.",
-              "Saccharose enthält keine OH-Gruppen.",
-              "Saccharose ist ein Monosaccharid.",
-              "Saccharose ist ein Protein."
-            ],
-            "correct": 0,
-            "explain": "In der Saccharose sind die reaktiven anomeren Zentren blockiert. Deshalb kann sie nicht mit Fehling-Lösung reagieren."
-          },
-          {
-            "id": "c3",
-            "type": "mc",
-            "level": "I",
-            "competency": "K2",
-            "prompt": "Welcher Zucker besitzt eine Ketogruppe?",
-            "options": ["Glucose", "Fructose", "Saccharose", "Stärke"],
-            "correct": 1,
-            "explain": "Fructose ist ein Ketohexose. Glucose ist ein Aldohexose."
-          },
-          {
-            "id": "c4",
-            "type": "mc",
-            "level": "II",
-            "competency": "K2",
-            "prompt": "Aus welchen Bausteinen besteht Saccharose?",
-            "options": ["Glucose und Fructose", "Glucose und Glucose", "Fructose und Fructose", "Glycerin und Fettsäure"],
-            "correct": 0,
-            "explain": "Saccharose ist ein Disaccharid aus Glucose und Fructose."
-          },
-          {
-            "id": "c5",
-            "type": "mc",
-            "level": "I",
-            "competency": "K3",
-            "prompt": "Welche Produkte entstehen bei der Veresterung?",
-            "options": ["Ester und Wasser", "Salz und Wasser", "Aldehyd und Wasserstoff", "Keton und Sauerstoff"],
-            "correct": 0,
-            "explain": "Carbonsäure und Alkohol reagieren unter Wasserabspaltung zu einem Ester."
-          },
-          {
-            "id": "c6",
-            "type": "mc",
-            "level": "II",
-            "competency": "K3",
-            "prompt": "Warum sieden Ester niedriger als vergleichbare Carbonsäuren?",
-            "options": [
-              "Ester besitzen keine O-H-Gruppe und bilden keine Wasserstoffbrücken untereinander.",
-              "Ester sind immer Ionen.",
-              "Ester haben keine zwischenmolekularen Wechselwirkungen.",
-              "Ester sind schwerer als Wasser."
-            ],
-            "correct": 0,
-            "explain": "Ohne O-H-Gruppe fehlen starke Wasserstoffbrücken. Es bleiben schwächere Dipol-Dipol- und London-Wechselwirkungen."
-          },
-          {
-            "id": "c7",
-            "type": "mc",
-            "level": "II",
-            "competency": "K4",
-            "prompt": "Warum ist die baseninduzierte Esterhydrolyse praktisch irreversibel?",
-            "options": [
-              "Das Carboxylat ist durch Mesomerie stabilisiert.",
-              "Wasser ist in basischer Lösung nicht vorhanden.",
-              "Der Ester ist ein Salz.",
-              "Die Reaktion braucht keinen Katalysator."
-            ],
-            "correct": 0,
-            "explain": "Die negative Ladung des Carboxylats ist über zwei Sauerstoffatome delokalisiert. Die Rückreaktion ist dadurch ungünstig."
-          },
-          {
-            "id": "c8",
-            "type": "mc",
-            "level": "II",
-            "competency": "K4",
-            "prompt": "Was passiert bei der Hydrolyse eines Esters?",
-            "options": [
-              "Er wird in Carbonsäure und Alkohol gespalten.",
-              "Er wird zu einem Aldehyd reduziert.",
-              "Er wird zu einem Salz oxidiert.",
-              "Er bleibt unverändert."
-            ],
-            "correct": 0,
-            "explain": "Wasser spaltet die Estergruppe. Es entstehen die Carbonsäure und der Alkohol."
-          },
-          {
-            "id": "c9",
-            "type": "mc",
-            "level": "I",
-            "competency": "K5",
-            "prompt": "Als was sind Fette chemisch einzuordnen?",
-            "options": ["Als Triester aus Glycerin und Fettsäuren", "Als Monosaccharide", "Als Amine", "Als Salze aus Fettsäuren und Wasser"],
-            "correct": 0,
-            "explain": "Fette sind Triglyceride: Glycerin ist mit drei Fettsäuren über Estergruppen verbunden."
-          },
-          {
-            "id": "c10",
-            "type": "mc",
-            "level": "II",
-            "competency": "K5",
-            "prompt": "Welcher Alltagsstoff ist ein Ester?",
-            "options": ["Acetylsalicylsäure", "Kochsalz", "Ethanol", "Glucose"],
-            "correct": 0,
-            "explain": "Acetylsalicylsäure ist ein Ester aus Salicylsäure und Essigsäure."
+            "questions": [
+              {
+                "id": "c1",
+                "type": "mc",
+                "level": "I",
+                "competency": "K1",
+                "prompt": "Welche Rolle spielen Zucker in der Ernährung?",
+                "options": [
+                  "Sie sind immer gesünder als Fette.",
+                  "Sie enthalten keine Energie.",
+                  "Sie liefern Energie; ein hoher Anteil freier Zucker sollte vermieden werden.",
+                  "Sie sind für den Körper vollständig unnötig."
+                ],
+                "correct": 2,
+                "explain": "Zucker liefern Energie. Die WHO empfiehlt, den Anteil freier Zucker zu begrenzen. Das bedeutet nicht, dass Zucker giftig ist."
+              },
+              {
+                "id": "c2",
+                "type": "mc",
+                "level": "II",
+                "competency": "K1",
+                "prompt": "Warum ist Saccharose kein reduzierender Zucker?",
+                "options": [
+                  "Saccharose enthält keine OH-Gruppen.",
+                  "Saccharose ist ein Monosaccharid.",
+                  "Saccharose ist ein Protein.",
+                  "Die anomeren Kohlenstoffatome sind in der glycosidischen Bindung gebunden; ein freies Halbacetal fehlt."
+                ],
+                "correct": 3,
+                "explain": "In der Saccharose sind die reaktiven anomeren Zentren blockiert. Deshalb kann sie nicht mit Fehling-Lösung reagieren."
+              },
+              {
+                "id": "c3",
+                "type": "mc",
+                "level": "I",
+                "competency": "K2",
+                "prompt": "Welcher Zucker besitzt eine Ketogruppe?",
+                "options": [
+                  "Fructose",
+                  "Glucose",
+                  "Saccharose",
+                  "Stärke"
+                ],
+                "correct": 0,
+                "explain": "Fructose ist ein Ketohexose. Glucose ist ein Aldohexose."
+              },
+              {
+                "id": "c4",
+                "type": "mc",
+                "level": "II",
+                "competency": "K2",
+                "prompt": "Aus welchen Bausteinen besteht Saccharose?",
+                "options": [
+                  "Glucose und Glucose",
+                  "Glucose und Fructose",
+                  "Fructose und Fructose",
+                  "Glycerin und Fettsäure"
+                ],
+                "correct": 1,
+                "explain": "Saccharose ist ein Disaccharid aus Glucose und Fructose."
+              },
+              {
+                "id": "c5",
+                "type": "mc",
+                "level": "I",
+                "competency": "K3",
+                "prompt": "Welche Produkte entstehen bei der Veresterung?",
+                "options": [
+                  "Salz und Wasser",
+                  "Aldehyd und Wasserstoff",
+                  "Ester und Wasser",
+                  "Keton und Sauerstoff"
+                ],
+                "correct": 2,
+                "explain": "Carbonsäure und Alkohol reagieren unter Wasserabspaltung zu einem Ester."
+              },
+              {
+                "id": "c6",
+                "type": "mc",
+                "level": "II",
+                "competency": "K3",
+                "prompt": "Warum sieden Ester niedriger als vergleichbare Carbonsäuren?",
+                "options": [
+                  "Ester sind immer Ionen.",
+                  "Ester haben keine zwischenmolekularen Wechselwirkungen.",
+                  "Ester sind schwerer als Wasser.",
+                  "Ester besitzen keine O-H-Gruppe und bilden keine Wasserstoffbrücken untereinander."
+                ],
+                "correct": 3,
+                "explain": "Ohne O-H-Gruppe fehlen starke Wasserstoffbrücken. Es bleiben schwächere Dipol-Dipol- und London-Wechselwirkungen."
+              },
+              {
+                "id": "c7",
+                "type": "mc",
+                "level": "II",
+                "competency": "K4",
+                "prompt": "Warum ist die baseninduzierte Esterhydrolyse praktisch irreversibel?",
+                "options": [
+                  "Das Carboxylat ist durch Mesomerie stabilisiert.",
+                  "Wasser ist in basischer Lösung nicht vorhanden.",
+                  "Der Ester ist ein Salz.",
+                  "Die Reaktion braucht keinen Katalysator."
+                ],
+                "correct": 0,
+                "explain": "Die negative Ladung des Carboxylats ist über zwei Sauerstoffatome delokalisiert. Die Rückreaktion ist dadurch ungünstig."
+              },
+              {
+                "id": "c8",
+                "type": "mc",
+                "level": "II",
+                "competency": "K4",
+                "prompt": "Was passiert bei der Hydrolyse eines Esters?",
+                "options": [
+                  "Er wird zu einem Aldehyd reduziert.",
+                  "Er wird in Carbonsäure und Alkohol gespalten.",
+                  "Er wird zu einem Salz oxidiert.",
+                  "Er bleibt unverändert."
+                ],
+                "correct": 1,
+                "explain": "Wasser spaltet die Estergruppe. Es entstehen die Carbonsäure und der Alkohol."
+              },
+              {
+                "id": "c9",
+                "type": "mc",
+                "level": "I",
+                "competency": "K5",
+                "prompt": "Als was sind Fette chemisch einzuordnen?",
+                "options": [
+                  "Als Monosaccharide",
+                  "Als Amine",
+                  "Als Triester aus Glycerin und Fettsäuren",
+                  "Als Salze aus Fettsäuren und Wasser"
+                ],
+                "correct": 2,
+                "explain": "Fette sind Triglyceride: Glycerin ist mit drei Fettsäuren über Estergruppen verbunden."
+              },
+              {
+                "id": "c10",
+                "type": "mc",
+                "level": "II",
+                "competency": "K5",
+                "prompt": "Welcher Alltagsstoff ist ein Ester?",
+                "options": [
+                  "Kochsalz",
+                  "Ethanol",
+                  "Glucose",
+                  "Acetylsalicylsäure"
+                ],
+                "correct": 3,
+                "explain": "Acetylsalicylsäure ist ein Ester aus Salicylsäure und Essigsäure."
+              }
+            ]
           }
-        ]
-      }
-      </script>
+          </script>
     </section>
 
     <section class="station" id="glossar" data-station="glossar" data-title="Glossar" aria-labelledby="glossar-title">

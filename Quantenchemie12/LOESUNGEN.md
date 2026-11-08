@@ -17,10 +17,10 @@ ca. 45–55 Minuten. Die Simulation lässt sich in einer Folgestunde vertiefen.
 
 ## Station 1: Welle oder Teilchen?
 
-**Prüfpunkt q1:** „Einzelne Elektronen erzeugen nacheinander ein Interferenzmuster.“
+**Prüfpunkt q1:** B: „Einzelne Elektronen erzeugen nacheinander ein Interferenzmuster.“
 Das Muster ist ein Wellenphänomen; die einzelnen Punkte sind Teilchenereignisse.
 
-**Prüfpunkt q2:** A: Wegen der winzigen Masse des Elektrons ist seine de-Broglie-Wellenlänge messbar groß, beim Fußball dagegen unmessbar klein.
+**Prüfpunkt q2:** C: Wegen der winzigen Masse des Elektrons ist seine de-Broglie-Wellenlänge messbar groß, beim Fußball dagegen unmessbar klein.
 Nach λ = h/(m·v) ist die Wellenlänge umgekehrt proportional zur Masse. Bei der winzigen Elektronenmasse liegt λ im Nanometerbereich (Größenordnung von Kristallgitterabständen), bei makroskopischen Körpern ist sie unmessbar klein.
 
 **Erwartete Beobachtungen am Doppelspalt-Labor:**
@@ -45,7 +45,7 @@ sondern eine Aussage über die Unmessbarkeit der Interferenz im makroskopischen 
 
 ## Station 2: Wellenfunktion und Wahrscheinlichkeit
 
-**Prüfpunkt q1:** Die Wahrscheinlichkeitsdichte, ein Teilchen an einem Ort zu finden.
+**Prüfpunkt q1:** D: Die Wahrscheinlichkeitsdichte, ein Teilchen an einem Ort zu finden.
 
 **Prüfpunkt q2:** Falsch. Ein einzelnes Elektron erzeugt genau einen Treffer. Das Muster entsteht erst
 statistisch aus vielen Messungen.
@@ -66,7 +66,7 @@ statistisch aus vielen Messungen.
 
 ## Station 3: Unbestimmtheit und Atommodell
 
-**Prüfpunkt q1:** Ort und Impuls können nicht gleichzeitig beliebig genau bestimmt werden.
+**Prüfpunkt q1:** C: Ort und Impuls können nicht gleichzeitig beliebig genau bestimmt werden.
 
 **Prüfpunkt q2:** A: Feste Kreisbahnen sind unmöglich, da Ort und Impuls des Elektrons nicht gleichzeitig exakt festgelegt sein können.
 Eine klassische Bahn verlangt gleichzeitig genau bekannten Ort und Impuls zu jedem Zeitpunkt. Die Unbestimmtheitsrelation schließt das aus – das moderne Atommodell muss daher Aufenthaltswahrscheinlichkeiten (Orbitale) nutzen.
@@ -110,12 +110,12 @@ Mindestanforderungen; die vollständigen Musterantworten stehen in der Lernseite
 
 | Aufgabe | Kompetenz | Lösung |
 | --- | --- | --- |
-| c1 | K1 | A: Quantenobjekte zeigen je nach Experiment Wellen- oder Teilcheneigenschaften. |
+| c1 | K1 | B: Quantenobjekte zeigen je nach Experiment Wellen- oder Teilcheneigenschaften. |
 | c2 | K2 | A: Der Streifenabstand wird kleiner. |
 | c3 | K3 | ψ → Quantenzustand; \|ψ\|² → Wahrscheinlichkeitsdichte; Messung → einzelner Treffer. |
-| c4 | K4 | A: Eine Messung liefert nur einen Treffer; das Muster entsteht aus vielen Treffern. |
-| c5 | K5 | A: Die minimale Impuls- und Geschwindigkeitsunbestimmtheit (Δp, Δv) wird zwangsläufig immer größer. |
-| c6 | K6 | A: Orbitale berücksichtigen Aufenthaltswahrscheinlichkeit und Unbestimmtheit. |
+| c4 | K4 | D: Eine Messung liefert nur einen Treffer; das Muster entsteht aus vielen Treffern. |
+| c5 | K5 | C: Die minimale Impuls- und Geschwindigkeitsunbestimmtheit (Δp, Δv) wird zwangsläufig immer größer. |
+| c6 | K6 | B: Orbitale berücksichtigen Aufenthaltswahrscheinlichkeit und Unbestimmtheit. |
 
 ## Typische Fehlvorstellungen und Gesprächsanlässe
 

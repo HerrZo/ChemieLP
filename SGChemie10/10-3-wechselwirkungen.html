@@ -134,8 +134,13 @@ body { overflow-x: clip; }
                 "level": "II",
                 "competency": "K1",
                 "prompt": "Welche der folgenden Bindungen ist am stärksten polar?",
-                "options": ["H-H", "C-H", "H-Cl", "C-C"],
-                "correct": 2,
+                "options": [
+                  "H-H",
+                  "H-Cl",
+                  "C-H",
+                  "C-C"
+                ],
+                "correct": 1,
                 "explain": "Die EN-Differenz ist bei H-Cl am größten: 3,16 - 2,20 = 0,96. C-H liegt bei 0,35, H-H und C-C bei 0."
               },
               {
@@ -144,7 +149,12 @@ body { overflow-x: clip; }
                 "level": "II",
                 "competency": "K1",
                 "prompt": "Wie groß ist die Elektronegativitätsdifferenz ΔEN in HCl? (EN: H 2,20; Cl 3,16)",
-                "accept": ["0,96", "0.96", "0,96", "96/100"],
+                "accept": [
+                  "0,96",
+                  "0.96",
+                  "0,96",
+                  "96/100"
+                ],
                 "model": "0,96",
                 "placeholder": "Zahl eingeben",
                 "explain": "ΔEN = 3,16 - 2,20 = 0,96. Die Bindung ist polar."
@@ -217,12 +227,12 @@ body { overflow-x: clip; }
                 "competency": "K1",
                 "prompt": "Warum ist CO₂ trotz polarer C=O-Bindungen unpolar?",
                 "options": [
-                  "Die beiden Bindungsdipole sind gleich groß und heben sich wegen der linearen Geometrie auf.",
                   "Kohlenstoff und Sauerstoff haben die gleiche Elektronegativität.",
                   "CO₂ besitzt keine bindenden Elektronenpaare.",
+                  "Die beiden Bindungsdipole sind gleich groß und heben sich wegen der linearen Geometrie auf.",
                   "Sauerstoff kann keine Partialladung tragen."
                 ],
-                "correct": 0,
+                "correct": 2,
                 "explain": "Die C=O-Dipole zeigen in entgegengesetzte Richtungen. Bei 180° ist die Vektorsumme null; das Molekül hat kein Dipolmoment."
               },
               {
@@ -231,8 +241,13 @@ body { overflow-x: clip; }
                 "level": "I",
                 "competency": "K1",
                 "prompt": "Welches dieser Moleküle ist ein Dipol?",
-                "options": ["CO₂", "CCl₄", "H₂O", "CH₄"],
-                "correct": 2,
+                "options": [
+                  "CO₂",
+                  "CCl₄",
+                  "CH₄",
+                  "H₂O"
+                ],
+                "correct": 3,
                 "explain": "Wasser ist gewinkelt. Die beiden O-H-Dipole heben sich nicht auf; es bleibt ein Gesamtdipol."
               }
             ]
@@ -303,8 +318,13 @@ body { overflow-x: clip; }
                 "level": "II",
                 "competency": "K4",
                 "prompt": "Welche Wechselwirkung erklärt den hohen Siedepunkt von Wasser?",
-                "options": ["London-Dispersions-Wechselwirkungen", "Dipol-Dipol-Wechselwirkungen", "Wasserstoffbrücken", "Ionenbindungen"],
-                "correct": 2,
+                "options": [
+                  "Wasserstoffbrücken",
+                  "London-Dispersions-Wechselwirkungen",
+                  "Dipol-Dipol-Wechselwirkungen",
+                  "Ionenbindungen"
+                ],
+                "correct": 0,
                 "explain": "Wasser bildet über die O-H-Gruppen und die freien Elektronenpaare am Sauerstoff ein Netz aus Wasserstoffbrücken. Zum Sieden müssen diese starken Anziehungen überwunden werden."
               },
               {
@@ -313,7 +333,14 @@ body { overflow-x: clip; }
                 "level": "I",
                 "competency": "K4",
                 "prompt": "Wie heißt die schwächste zwischenmolekulare Wechselwirkung, die zwischen allen Molekülen wirkt?",
-                "accept": ["london-dispersions-wechselwirkung", "london-dispersion", "london dispersions wechselwirkung", "ldww", "van-der-waals", "van der waals"],
+                "accept": [
+                  "london-dispersions-wechselwirkung",
+                  "london-dispersion",
+                  "london dispersions wechselwirkung",
+                  "ldww",
+                  "van-der-waals",
+                  "van der waals"
+                ],
                 "model": "London-Dispersions-Wechselwirkung",
                 "placeholder": "Name eingeben",
                 "explain": "London-Dispersions-Wechselwirkungen entstehen durch spontane und induzierte Dipole. Sie wirken zwischen allen Molekülen, auch zwischen unpolaren."
@@ -387,8 +414,13 @@ body { overflow-x: clip; }
                 "level": "I",
                 "competency": "K2",
                 "prompt": "Welche funktionelle Gruppe kennzeichnet eine Carbonsäure?",
-                "options": ["-OH", "-CHO", "-COOH", ">C=O"],
-                "correct": 2,
+                "options": [
+                  "-OH",
+                  "-COOH",
+                  "-CHO",
+                  ">C=O"
+                ],
+                "correct": 1,
                 "explain": "Die Carboxygruppe -COOH besteht aus einer Carbonylgruppe und einer Hydroxygruppe am selben Kohlenstoffatom."
               },
               {
@@ -397,9 +429,24 @@ body { overflow-x: clip; }
                 "level": "II",
                 "competency": "K2",
                 "prompt": "Ordne die Alltagsvertreter ihrer Stoffklasse zu.",
-                "left": ["Ethanol", "Ethansäure", "Propan-2-on", "Ethanal"],
-                "right": ["Alkohol", "Carbonsäure", "Keton", "Aldehyd"],
-                "correct": [0, 1, 2, 3],
+                "left": [
+                  "Ethanol",
+                  "Ethansäure",
+                  "Propan-2-on",
+                  "Ethanal"
+                ],
+                "right": [
+                  "Alkohol",
+                  "Carbonsäure",
+                  "Keton",
+                  "Aldehyd"
+                ],
+                "correct": [
+                  0,
+                  1,
+                  2,
+                  3
+                ],
                 "explain": "Ethanol ist ein Alkohol, Ethansäure eine Carbonsäure, Propan-2-on ein Keton und Ethanal ein Aldehyd."
               }
             ]
@@ -477,12 +524,12 @@ body { overflow-x: clip; }
                 "competency": "K4",
                 "prompt": "Warum löst sich Kochsalz gut in Wasser, aber nicht in Hexan?",
                 "options": [
-                  "Wasser bildet mit den Ionen Ion-Dipol-Wechselwirkungen; Hexan ist unpolar.",
                   "Hexan ist zu kalt, um Ionen zu lösen.",
                   "Kochsalz ist unpolar und löst sich nur in polaren Stoffen.",
+                  "Wasser bildet mit den Ionen Ion-Dipol-Wechselwirkungen; Hexan ist unpolar.",
                   "Wasser hat eine geringere Dichte als Hexan."
                 ],
-                "correct": 0,
+                "correct": 2,
                 "explain": "Die polaren Wassermoleküle umlagern die Ionen und bilden eine Hydrathülle. Hexan kann diese Ion-Dipol-Wechselwirkungen nicht ausbilden."
               },
               {
@@ -492,12 +539,12 @@ body { overflow-x: clip; }
                 "competency": "K6",
                 "prompt": "Welche Aussage zur Dichteanomalie des Wassers ist richtig?",
                 "options": [
-                  "Wasser hat bei 4 °C seine höchste Dichte; Eis ist weniger dicht als flüssiges Wasser.",
                   "Eis ist dichter als flüssiges Wasser und sinkt deshalb im See.",
                   "Wasser hat bei 0 °C seine höchste Dichte.",
-                  "Die Dichteanomalie hat nichts mit Wasserstoffbrücken zu tun."
+                  "Die Dichteanomalie hat nichts mit Wasserstoffbrücken zu tun.",
+                  "Wasser hat bei 4 °C seine höchste Dichte; Eis ist weniger dicht als flüssiges Wasser."
                 ],
-                "correct": 0,
+                "correct": 3,
                 "explain": "Beim Gefrieren bildet Wasser ein offenes Gitter aus Wasserstoffbrücken. Dadurch nimmt das Volumen zu und die Dichte ab; Eis schwimmt."
               }
             ]
@@ -549,168 +596,230 @@ body { overflow-x: clip; }
       <div class="quiz" data-quiz="check"><noscript><p class="tool__fallback">Der Kompetenzcheck braucht JavaScript. Die Lerninhalte bleiben lesbar.</p></noscript></div>
       <div class="check-result" data-check-result hidden></div>
       <script type="application/json" data-quiz-data="check">
-      {
-        "final": true,
-        "competencies": [
-          { "id": "K1", "label": "K1: Elektronegativität und Molekülpolarität" },
-          { "id": "K2", "label": "K2: Stoffklassen und funktionelle Gruppen" },
-          { "id": "K3", "label": "K3: IUPAC-Nomenklatur" },
-          { "id": "K4", "label": "K4: Eigenschaften und Wechselwirkungen" },
-          { "id": "K5", "label": "K5: Erdölprodukte und Umwelt" },
-          { "id": "K6", "label": "K6: Wasser und seine Besonderheiten" }
-        ],
-        "questions": [
           {
-            "id": "c1",
-            "type": "mc",
-            "level": "I",
-            "competency": "K1",
-            "prompt": "Welche Bindung ist unpolar?",
-            "options": ["H-Cl", "H-H", "O-H", "C-O"],
-            "correct": 1,
-            "explain": "Bei H-H sind beide Atome gleich elektronegativ. Die EN-Differenz ist null; die Bindung ist unpolar."
-          },
-          {
-            "id": "c2",
-            "type": "mc",
-            "level": "II",
-            "competency": "K1",
-            "prompt": "Warum ist CCl₄ unpolar, obwohl vier polare C-Cl-Bindungen vorliegen?",
-            "options": [
-              "Die Bindungsdipole sind symmetrisch angeordnet und heben sich auf.",
-              "Chlor und Kohlenstoff haben die gleiche Elektronegativität.",
-              "CCl₄ ist ein Ionengitter.",
-              "Die C-Cl-Bindungen sind unpolar."
+            "final": true,
+            "competencies": [
+              {
+                "id": "K1",
+                "label": "K1: Elektronegativität und Molekülpolarität"
+              },
+              {
+                "id": "K2",
+                "label": "K2: Stoffklassen und funktionelle Gruppen"
+              },
+              {
+                "id": "K3",
+                "label": "K3: IUPAC-Nomenklatur"
+              },
+              {
+                "id": "K4",
+                "label": "K4: Eigenschaften und Wechselwirkungen"
+              },
+              {
+                "id": "K5",
+                "label": "K5: Erdölprodukte und Umwelt"
+              },
+              {
+                "id": "K6",
+                "label": "K6: Wasser und seine Besonderheiten"
+              }
             ],
-            "correct": 0,
-            "explain": "CCl₄ ist tetraedrisch. Die vier gleich großen C-Cl-Dipole zeigen in verschiedene Raumrichtungen und addieren sich zu null."
-          },
-          {
-            "id": "c3",
-            "type": "mc",
-            "level": "I",
-            "competency": "K2",
-            "prompt": "Welche Stoffklasse hat die funktionelle Gruppe -CHO?",
-            "options": ["Alkohol", "Aldehyd", "Keton", "Carbonsäure"],
-            "correct": 1,
-            "explain": "Die Endung -al und die Gruppe -CHO kennzeichnen einen Aldehyd, zum Beispiel Ethanal."
-          },
-          {
-            "id": "c4",
-            "type": "match",
-            "level": "II",
-            "competency": "K2",
-            "prompt": "Ordne die Stoffe ihrer Stoffklasse zu.",
-            "left": ["Ethanol", "Ethansäure", "Propan-2-on", "Ethanal"],
-            "right": ["Alkohol", "Carbonsäure", "Keton", "Aldehyd"],
-            "correct": [0, 1, 2, 3],
-            "explain": "Ethanol ist ein Alkohol, Ethansäure eine Carbonsäure, Propan-2-on ein Keton und Ethanal ein Aldehyd."
-          },
-          {
-            "id": "c5",
-            "type": "input",
-            "level": "I",
-            "competency": "K3",
-            "prompt": "Wie lautet der IUPAC-Name von CH₃-CH₂-OH?",
-            "accept": ["ethanol", "ethan-1-ol", "ethylalkohol"],
-            "model": "Ethanol",
-            "placeholder": "Name eingeben",
-            "explain": "Die längste Kette hat zwei Kohlenstoffatome; die Hydroxygruppe sitzt an Position 1. Der Name ist Ethanol."
-          },
-          {
-            "id": "c6",
-            "type": "input",
-            "level": "II",
-            "competency": "K3",
-            "prompt": "Wie lautet der IUPAC-Name von CH₃-CO-CH₃?",
-            "accept": ["propan-2-on", "propanon", "aceton", "2-propanon"],
-            "model": "Propan-2-on",
-            "placeholder": "Name eingeben",
-            "explain": "Drei Kohlenstoffatome und eine Carbonylgruppe in der Mitte ergeben Propan-2-on, umgangssprachlich Aceton."
-          },
-          {
-            "id": "c7",
-            "type": "mc",
-            "level": "II",
-            "competency": "K4",
-            "prompt": "Warum hat Ethanol einen höheren Siedepunkt als Dimethylether?",
-            "options": [
-              "Ethanol bildet über die OH-Gruppe Wasserstoffbrücken; Dimethylether nicht.",
-              "Ethanol ist ein Ion.",
-              "Dimethylether hat eine größere molare Masse.",
-              "Ethanol hat keine zwischenmolekularen Wechselwirkungen."
-            ],
-            "correct": 0,
-            "explain": "Beide haben die Summenformel C₂H₆O. Nur Ethanol besitzt eine O-H-Gruppe und kann Wasserstoffbrücken ausbilden; deshalb siedet es höher."
-          },
-          {
-            "id": "c8",
-            "type": "mc",
-            "level": "I",
-            "competency": "K4",
-            "prompt": "Welches Lösemittel eignet sich am besten für einen unpolaren Stoff wie Öl?",
-            "options": ["Wasser", "Ethanol", "Hexan", "Salzsäure"],
-            "correct": 2,
-            "explain": "Hexan ist unpolar. Unpolare Stoffe lösen sich gut in unpolaren Lösemitteln; Wasser und Ethanol sind polar."
-          },
-          {
-            "id": "c9",
-            "type": "mc",
-            "level": "II",
-            "competency": "K5",
-            "prompt": "Welche Umweltfolge hat die Verbrennung von Erdölprodukten vor allem?",
-            "options": [
-              "Es entsteht Kohlendioxid, das zum Treibhauseffekt beiträgt.",
-              "Es entsteht ausschließlich Sauerstoff.",
-              "Die Verbrennung kühlt die Atmosphäre.",
-              "Es entstehen keine gasförmigen Produkte."
-            ],
-            "correct": 0,
-            "explain": "Bei der vollständigen Verbrennung von Kohlenwasserstoffen entstehen Kohlendioxid und Wasser. Kohlendioxid ist ein Treibhausgas."
-          },
-          {
-            "id": "c10",
-            "type": "mc",
-            "level": "I",
-            "competency": "K5",
-            "prompt": "Wofür werden kurzkettige Kohlenwasserstoffe aus Erdöl unter anderem verwendet?",
-            "options": ["Als Lösemittel und Brennstoffe", "Als Kochsalz", "Als Wasserstoffbrücken", "Als Ionen"],
-            "correct": 0,
-            "explain": "Kurzkettige Kohlenwasserstoffe sind flüchtig und lösen viele unpolare Stoffe. Sie dienen als Lösemittel und Brennstoffe."
-          },
-          {
-            "id": "c11",
-            "type": "mc",
-            "level": "II",
-            "competency": "K6",
-            "prompt": "Warum hat Wasser eine hohe Oberflächenspannung?",
-            "options": [
-              "Wassermoleküle an der Oberfläche werden durch Wasserstoffbrücken ins Innere gezogen.",
-              "Wasser ist ein unpolares Molekül.",
-              "Wasser hat keine zwischenmolekularen Wechselwirkungen.",
-              "Wasser besteht aus Ionen."
-            ],
-            "correct": 0,
-            "explain": "An der Oberfläche fehlen Partner für Wasserstoffbrücken. Die Moleküle werden ins Innere gezogen; dadurch entsteht eine Spannungshaut."
-          },
-          {
-            "id": "c12",
-            "type": "mc",
-            "level": "II",
-            "competency": "K6",
-            "prompt": "Warum ist Eis weniger dicht als flüssiges Wasser?",
-            "options": [
-              "Die Wasserstoffbrücken bilden im Eis ein offenes Gitter mit größerem Volumen.",
-              "Eis enthält weniger Wassermoleküle als flüssiges Wasser.",
-              "Eis hat eine höhere Temperatur als flüssiges Wasser.",
-              "Im Eis gibt es keine Wasserstoffbrücken."
-            ],
-            "correct": 0,
-            "explain": "Im Eiskristall sind die Moleküle über Wasserstoffbrücken in einem offenen Gitter angeordnet. Der leere Raum macht Eis weniger dicht; deshalb schwimmt es."
+            "questions": [
+              {
+                "id": "c1",
+                "type": "mc",
+                "level": "I",
+                "competency": "K1",
+                "prompt": "Welche Bindung ist unpolar?",
+                "options": [
+                  "H-H",
+                  "H-Cl",
+                  "O-H",
+                  "C-O"
+                ],
+                "correct": 0,
+                "explain": "Bei H-H sind beide Atome gleich elektronegativ. Die EN-Differenz ist null; die Bindung ist unpolar."
+              },
+              {
+                "id": "c2",
+                "type": "mc",
+                "level": "II",
+                "competency": "K1",
+                "prompt": "Warum ist CCl₄ unpolar, obwohl vier polare C-Cl-Bindungen vorliegen?",
+                "options": [
+                  "Chlor und Kohlenstoff haben die gleiche Elektronegativität.",
+                  "Die Bindungsdipole sind symmetrisch angeordnet und heben sich auf.",
+                  "CCl₄ ist ein Ionengitter.",
+                  "Die C-Cl-Bindungen sind unpolar."
+                ],
+                "correct": 1,
+                "explain": "CCl₄ ist tetraedrisch. Die vier gleich großen C-Cl-Dipole zeigen in verschiedene Raumrichtungen und addieren sich zu null."
+              },
+              {
+                "id": "c3",
+                "type": "mc",
+                "level": "I",
+                "competency": "K2",
+                "prompt": "Welche Stoffklasse hat die funktionelle Gruppe -CHO?",
+                "options": [
+                  "Alkohol",
+                  "Keton",
+                  "Aldehyd",
+                  "Carbonsäure"
+                ],
+                "correct": 2,
+                "explain": "Die Endung -al und die Gruppe -CHO kennzeichnen einen Aldehyd, zum Beispiel Ethanal."
+              },
+              {
+                "id": "c4",
+                "type": "match",
+                "level": "II",
+                "competency": "K2",
+                "prompt": "Ordne die Stoffe ihrer Stoffklasse zu.",
+                "left": [
+                  "Ethanol",
+                  "Ethansäure",
+                  "Propan-2-on",
+                  "Ethanal"
+                ],
+                "right": [
+                  "Alkohol",
+                  "Carbonsäure",
+                  "Keton",
+                  "Aldehyd"
+                ],
+                "correct": [
+                  0,
+                  1,
+                  2,
+                  3
+                ],
+                "explain": "Ethanol ist ein Alkohol, Ethansäure eine Carbonsäure, Propan-2-on ein Keton und Ethanal ein Aldehyd."
+              },
+              {
+                "id": "c5",
+                "type": "input",
+                "level": "I",
+                "competency": "K3",
+                "prompt": "Wie lautet der IUPAC-Name von CH₃-CH₂-OH?",
+                "accept": [
+                  "ethanol",
+                  "ethan-1-ol",
+                  "ethylalkohol"
+                ],
+                "model": "Ethanol",
+                "placeholder": "Name eingeben",
+                "explain": "Die längste Kette hat zwei Kohlenstoffatome; die Hydroxygruppe sitzt an Position 1. Der Name ist Ethanol."
+              },
+              {
+                "id": "c6",
+                "type": "input",
+                "level": "II",
+                "competency": "K3",
+                "prompt": "Wie lautet der IUPAC-Name von CH₃-CO-CH₃?",
+                "accept": [
+                  "propan-2-on",
+                  "propanon",
+                  "aceton",
+                  "2-propanon"
+                ],
+                "model": "Propan-2-on",
+                "placeholder": "Name eingeben",
+                "explain": "Drei Kohlenstoffatome und eine Carbonylgruppe in der Mitte ergeben Propan-2-on, umgangssprachlich Aceton."
+              },
+              {
+                "id": "c7",
+                "type": "mc",
+                "level": "II",
+                "competency": "K4",
+                "prompt": "Warum hat Ethanol einen höheren Siedepunkt als Dimethylether?",
+                "options": [
+                  "Ethanol ist ein Ion.",
+                  "Dimethylether hat eine größere molare Masse.",
+                  "Ethanol hat keine zwischenmolekularen Wechselwirkungen.",
+                  "Ethanol bildet über die OH-Gruppe Wasserstoffbrücken; Dimethylether nicht."
+                ],
+                "correct": 3,
+                "explain": "Beide haben die Summenformel C₂H₆O. Nur Ethanol besitzt eine O-H-Gruppe und kann Wasserstoffbrücken ausbilden; deshalb siedet es höher."
+              },
+              {
+                "id": "c8",
+                "type": "mc",
+                "level": "I",
+                "competency": "K4",
+                "prompt": "Welches Lösemittel eignet sich am besten für einen unpolaren Stoff wie Öl?",
+                "options": [
+                  "Hexan",
+                  "Wasser",
+                  "Ethanol",
+                  "Salzsäure"
+                ],
+                "correct": 0,
+                "explain": "Hexan ist unpolar. Unpolare Stoffe lösen sich gut in unpolaren Lösemitteln; Wasser und Ethanol sind polar."
+              },
+              {
+                "id": "c9",
+                "type": "mc",
+                "level": "II",
+                "competency": "K5",
+                "prompt": "Welche Umweltfolge hat die Verbrennung von Erdölprodukten vor allem?",
+                "options": [
+                  "Es entsteht ausschließlich Sauerstoff.",
+                  "Es entsteht Kohlendioxid, das zum Treibhauseffekt beiträgt.",
+                  "Die Verbrennung kühlt die Atmosphäre.",
+                  "Es entstehen keine gasförmigen Produkte."
+                ],
+                "correct": 1,
+                "explain": "Bei der vollständigen Verbrennung von Kohlenwasserstoffen entstehen Kohlendioxid und Wasser. Kohlendioxid ist ein Treibhausgas."
+              },
+              {
+                "id": "c10",
+                "type": "mc",
+                "level": "I",
+                "competency": "K5",
+                "prompt": "Wofür werden kurzkettige Kohlenwasserstoffe aus Erdöl unter anderem verwendet?",
+                "options": [
+                  "Als Kochsalz",
+                  "Als Wasserstoffbrücken",
+                  "Als Lösemittel und Brennstoffe",
+                  "Als Ionen"
+                ],
+                "correct": 2,
+                "explain": "Kurzkettige Kohlenwasserstoffe sind flüchtig und lösen viele unpolare Stoffe. Sie dienen als Lösemittel und Brennstoffe."
+              },
+              {
+                "id": "c11",
+                "type": "mc",
+                "level": "II",
+                "competency": "K6",
+                "prompt": "Warum hat Wasser eine hohe Oberflächenspannung?",
+                "options": [
+                  "Wasser ist ein unpolares Molekül.",
+                  "Wasser hat keine zwischenmolekularen Wechselwirkungen.",
+                  "Wasser besteht aus Ionen.",
+                  "Wassermoleküle an der Oberfläche werden durch Wasserstoffbrücken ins Innere gezogen."
+                ],
+                "correct": 3,
+                "explain": "An der Oberfläche fehlen Partner für Wasserstoffbrücken. Die Moleküle werden ins Innere gezogen; dadurch entsteht eine Spannungshaut."
+              },
+              {
+                "id": "c12",
+                "type": "mc",
+                "level": "II",
+                "competency": "K6",
+                "prompt": "Warum ist Eis weniger dicht als flüssiges Wasser?",
+                "options": [
+                  "Die Wasserstoffbrücken bilden im Eis ein offenes Gitter mit größerem Volumen.",
+                  "Eis enthält weniger Wassermoleküle als flüssiges Wasser.",
+                  "Eis hat eine höhere Temperatur als flüssiges Wasser.",
+                  "Im Eis gibt es keine Wasserstoffbrücken."
+                ],
+                "correct": 0,
+                "explain": "Im Eiskristall sind die Moleküle über Wasserstoffbrücken in einem offenen Gitter angeordnet. Der leere Raum macht Eis weniger dicht; deshalb schwimmt es."
+              }
+            ]
           }
-        ]
-      }
-      </script>
+          </script>
     </section>
 
     <section class="station" id="glossar" data-station="glossar" data-title="Glossar" aria-labelledby="glossar-title">
