@@ -20,13 +20,8 @@ ca. 45–55 Minuten. Die Simulation lässt sich in einer Folgestunde vertiefen.
 **Prüfpunkt q1:** „Einzelne Elektronen erzeugen nacheinander ein Interferenzmuster.“
 Das Muster ist ein Wellenphänomen; die einzelnen Punkte sind Teilchenereignisse.
 
-**Prüfpunkt q2:** λ = h/(m·v)
-
-```text
-λ = 6,626·10⁻³⁴ J·s / (9,109·10⁻³¹ kg · 6·10⁵ m/s)
-  ≈ 1,21·10⁻⁹ m
-  = 1,21 nm
-```
+**Prüfpunkt q2:** A: Wegen der winzigen Masse des Elektrons ist seine de-Broglie-Wellenlänge messbar groß, beim Fußball dagegen unmessbar klein.
+Nach λ = h/(m·v) ist die Wellenlänge umgekehrt proportional zur Masse. Bei der winzigen Elektronenmasse liegt λ im Nanometerbereich (Größenordnung von Kristallgitterabständen), bei makroskopischen Körpern ist sie unmessbar klein.
 
 **Erwartete Beobachtungen am Doppelspalt-Labor:**
 
@@ -73,20 +68,8 @@ statistisch aus vielen Messungen.
 
 **Prüfpunkt q1:** Ort und Impuls können nicht gleichzeitig beliebig genau bestimmt werden.
 
-**Prüfpunkt q2:** Δx = 100 pm = 1,0·10⁻¹⁰ m
-
-```text
-Δp ≥ h/(4πΔx)
-   = 6,626·10⁻³⁴ / (4π · 1,0·10⁻¹⁰)
-   ≈ 5,27·10⁻²⁵ kg·m/s
-
-Δv = Δp/mₑ
-   ≈ 5,27·10⁻²⁵ / 9,11·10⁻³¹
-   ≈ 5,8·10⁵ m/s
-```
-
-Das ist in der Größenordnung der Elektronengeschwindigkeit im Atom. Eine noch stärkere Lokalisierung
-(z. B. auf 1 fm) erhöht Δv auf ca. 5,8·10⁷ m/s; ein Elektron wäre so nicht dauerhaft im Kern gebunden.
+**Prüfpunkt q2:** A: Feste Kreisbahnen sind unmöglich, da Ort und Impuls des Elektrons nicht gleichzeitig exakt festgelegt sein können.
+Eine klassische Bahn verlangt gleichzeitig genau bekannten Ort und Impuls zu jedem Zeitpunkt. Die Unbestimmtheitsrelation schließt das aus – das moderne Atommodell muss daher Aufenthaltswahrscheinlichkeiten (Orbitale) nutzen.
 
 **Orbital-Schnitt:**
 
@@ -131,7 +114,7 @@ Mindestanforderungen; die vollständigen Musterantworten stehen in der Lernseite
 | c2 | K2 | A: Der Streifenabstand wird kleiner. |
 | c3 | K3 | ψ → Quantenzustand; \|ψ\|² → Wahrscheinlichkeitsdichte; Messung → einzelner Treffer. |
 | c4 | K4 | A: Eine Messung liefert nur einen Treffer; das Muster entsteht aus vielen Treffern. |
-| c5 | K5 | 5,3·10⁻²⁵ kg·m/s (Rechnung wie oben). |
+| c5 | K5 | A: Die minimale Impuls- und Geschwindigkeitsunbestimmtheit (Δp, Δv) wird zwangsläufig immer größer. |
 | c6 | K6 | A: Orbitale berücksichtigen Aufenthaltswahrscheinlichkeit und Unbestimmtheit. |
 
 ## Typische Fehlvorstellungen und Gesprächsanlässe
@@ -189,7 +172,7 @@ Mindestanforderungen; die vollständigen Musterantworten stehen in der Lernseite
 | Wellenfunktion und Betragsquadrat | Station 2, Einzelteilchen-Sammelbild |
 | Die Unbestimmtheitsrelation nach Heisenberg | Station 3, Rechner und Orbital-Schnitt |
 | Aufgabe A1 (Fußball) | Station 1, Fußball-Rechnung |
-| Aufgabe A2 (Atommodell) | Station 3, Denk- und Rechenauftrag |
+| Aufgabe A2 (Atommodell) | Station 3, Unbestimmtheit und Atommodell |
 | Alle Abschnitte | Hefteintrag, Schritte 1–6, als Synthese |
 
 ## Quellen

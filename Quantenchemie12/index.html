@@ -295,7 +295,7 @@ html, body { overflow-x: clip; }
             <li><span class="cnum">02</span><span>Du deutest Interferenzmuster mit Wellenlänge, Spaltabstand und Schirmabstand.</span></li>
             <li><span class="cnum">03</span><span>Du erläuterst die Wellenfunktion und das Betragsquadrat |ψ|² als Wahrscheinlichkeitsdichte.</span></li>
             <li><span class="cnum">04</span><span>Du erklärst, warum viele Einzeltreffer ein Muster ergeben, ein einzelner Treffer aber nicht.</span></li>
-            <li><span class="cnum">05</span><span>Du berechnest mit der Heisenbergschen Unbestimmtheitsrelation und deutest das Ergebnis.</span></li>
+            <li><span class="cnum">05</span><span>Du erläuterst die Heisenbergsche Unbestimmtheitsrelation und deutest ihre Bedeutung für das Atommodell.</span></li>
             <li><span class="cnum">06</span><span>Du begründest, warum das Orbitalmodell das Bohrsche Atommodell ersetzt.</span></li>
           </ol>
           <p><small>Der Pfad folgt der Buchseite 3.2.2 „Von Wellen und Teilchen“ und verbindet sie mit dem Orbitalmodell der Chemie. Am Ende baust du daraus deinen eigenen Hefteintrag und vergleichst ihn mit dem Muster.</small></p>
@@ -399,14 +399,18 @@ html, body { overflow-x: clip; }
               },
               {
                 "id": "q2",
-                "type": "input",
+                "type": "mc",
                 "level": "II",
                 "competency": "K2",
-                "prompt": "Berechne die de-Broglie-Wellenlänge eines Elektrons mit v = 6·10⁵ m/s. Gib das Ergebnis in Nanometern an.",
-                "accept": ["1,21", "1.21", "1,2", "1.2", "1,21 nm", "1.21 nm", "1,2 nm", "1.2 nm"],
-                "model": "1,21 nm",
-                "placeholder": "z. B. 1,21",
-                "explain": "λ = h/(m·v) = 6,626·10⁻³⁴ / (9,109·10⁻³¹ · 6·10⁵) ≈ 1,21·10⁻⁹ m = 1,21 nm."
+                "prompt": "Warum zeigen Elektronen am Doppelspalt ein Interferenzmuster, ein geworfener Fußball im Alltag jedoch nicht?",
+                "options": [
+                  "Wegen der winzigen Masse des Elektrons ist seine de-Broglie-Wellenlänge messbar groß, beim Fußball dagegen unmessbar klein.",
+                  "Weil Elektronen elektrisch geladen sind und ein Fußball elektrisch neutral ist.",
+                  "Weil sich ein Fußball im Alltag zu schnell bewegt, um Welleneigenschaften zu zeigen.",
+                  "Weil Interferenz nur im Vakuum auftritt und nicht an der Luft."
+                ],
+                "correct": 0,
+                "explain": "Nach der de-Broglie-Beziehung λ = h/(m·v) ist die Wellenlänge umgekehrt proportional zur Masse. Wegen der extrem kleinen Masse des Elektrons liegt seine Wellenlänge im Nanometerbereich. Bei der großen Masse des Fußballs ist die Wellenlänge unmessbar winzig."
               }
             ]
           }
@@ -577,7 +581,7 @@ html, body { overflow-x: clip; }
           <figure class="tool" id="tool-unbestimmtheit" data-tool="unbestimmtheit">
             <div class="tool__head">
               <p class="tool__title">Unbestimmtheit und Orbital</p>
-              <p class="tool__hint">Berechne die minimale Impuls- und Geschwindigkeitsunbestimmtheit. Wechsle dann zum Orbital-Schnitt.</p>
+              <p class="tool__hint">Erkunde den Zusammenhang von Orts- und Impulsunschärfe mit dem Schieberegler. Wechsle dann zum Orbital-Schnitt.</p>
             </div>
             <div class="tool-tabs" role="group" aria-label="Ansicht wählen">
               <button type="button" data-tab="rechner" aria-pressed="true">Unbestimmtheits-Rechner</button>
@@ -592,15 +596,6 @@ html, body { overflow-x: clip; }
             <p class="tool-status" data-tool-status aria-live="polite"></p>
             <figcaption class="tool__caption">Eigenes Modell. Der Orbital-Schnitt ist eine schematische Darstellung von |ψ|², keine maßstabsgetreue Lösung der Schrödinger-Gleichung.</figcaption>
           </figure>
-          <div class="task">
-            <p class="task__label">Denk- und Rechenauftrag</p>
-            <p>Ein Elektron wird auf einen Bereich von Δx = 100 pm eingegrenzt.</p>
-            <ol>
-              <li>Berechne mit Δp ≥ h/(4πΔx) die minimale Impulsunbestimmtheit.</li>
-              <li>Berechne daraus Δv = Δp/m<sub>e</sub>. Vergleiche mit der Geschwindigkeit eines Elektrons im Atom (ca. 10⁶ m/s).</li>
-              <li>Wiederhole die Rechnung für Δx = 1 fm (Atomkern). Erkläre, warum ein Elektron nicht dauerhaft im Kern gebunden sein kann.</li>
-            </ol>
-          </div>
           <section class="checkpoint" aria-labelledby="unbestimmtheit-check">
             <h3 id="unbestimmtheit-check">Prüfpunkt</h3>
             <div class="quiz" data-quiz="unbestimmtheit"><noscript><p class="tool__fallback">Die Prüfpunkt-Aufgaben brauchen JavaScript.</p></noscript></div>
@@ -625,14 +620,18 @@ html, body { overflow-x: clip; }
               },
               {
                 "id": "q2",
-                "type": "input",
+                "type": "mc",
                 "level": "III",
                 "competency": "K6",
-                "prompt": "Ein Elektron ist auf Δx = 100 pm lokalisiert. Wie groß ist mindestens seine Geschwindigkeitsunbestimmtheit? (mₑ = 9,11·10⁻³¹ kg)",
-                "accept": ["5,8e5", "5.8e5", "5,8*10^5", "5.8*10^5", "580000", "5,79e5", "5.79e5", "5,8·10^5", "5,8·10⁵"],
-                "model": "5,8·10⁵ m/s",
-                "placeholder": "z. B. 5,8e5",
-                "explain": "Δp ≥ h/(4πΔx) = 6,626·10⁻³⁴ / (4π · 1,0·10⁻¹⁰) ≈ 5,27·10⁻²⁵ kg·m/s. Δv = Δp/mₑ ≈ 5,8·10⁵ m/s."
+                "prompt": "Welche Konsequenz hat die Heisenbergsche Unbestimmtheitsrelation für das Bohrsche Atommodell mit festen Kreisbahnen?",
+                "options": [
+                  "Feste Kreisbahnen sind unmöglich, da Ort und Impuls des Elektrons nicht gleichzeitig exakt festgelegt sein können.",
+                  "Das Bohrsche Modell wird exakt bestätigt, da der Bahnradius der Unbestimmtheit entspricht.",
+                  "Elektronen müssen wegen der Unbestimmtheit sofort in den Atomkern stürzen.",
+                  "Die Unbestimmtheitsrelation gilt nur für freie Elektronen, nicht für Elektronen im Atom."
+                ],
+                "correct": 0,
+                "explain": "Eine feste Kreisbahn verlangt einen zu jedem Zeitpunkt genau bekannten Ort und Impuls. Die Unbestimmtheitsrelation Δx · Δp ≥ h/(4π) schließt das aus. Daher beschreibt das Orbitalmodell Aufenthaltswahrscheinlichkeiten statt fester Bahnen."
               }
             ]
           }
@@ -1084,14 +1083,18 @@ html, body { overflow-x: clip; }
           },
           {
             "id": "c5",
-            "type": "input",
+            "type": "mc",
             "level": "III",
             "competency": "K5",
-            "prompt": "Berechne die minimale Impulsunbestimmtheit für Δx = 1,0·10⁻¹⁰ m. Gib in kg·m/s an.",
-            "accept": ["5,3e-25", "5.3e-25", "5,27e-25", "5.27e-25", "5,3*10^-25", "5.3*10^-25", "5,3·10^-25"],
-            "model": "5,3·10⁻²⁵ kg·m/s",
-            "placeholder": "z. B. 5,3e-25",
-            "explain": "Δp ≥ h/(4πΔx) = 6,626·10⁻³⁴ / (4π · 1,0·10⁻¹⁰) ≈ 5,3·10⁻²⁵ kg·m/s."
+            "prompt": "Was geschieht nach der Heisenbergschen Unbestimmtheitsrelation (Δx · Δp ≥ h/(4π)), wenn der Aufenthaltsort eines Elektrons räumlich immer enger eingegrenzt wird (kleineres Δx)?",
+            "options": [
+              "Die minimale Impuls- und Geschwindigkeitsunbestimmtheit (Δp, Δv) wird zwangsläufig immer größer.",
+              "Die Impulsunbestimmtheit (Δp) nimmt ebenfalls ab und nähert sich null.",
+              "Die Masse des Elektrons nimmt kontinuierlich ab.",
+              "Das Produkt aus Δx und Δp sinkt unter den Wert von h/(4π)."
+            ],
+            "correct": 0,
+            "explain": "Da das Produkt aus Orts- und Impulsunschärfe einen Mindestwert (h/4π) nicht unterschreiten darf, führt eine genauere Ortsfestlegung (kleineres Δx) zwingend zu einer größeren Impuls- und Geschwindigkeitsunschärfe."
           },
           {
             "id": "c6",
