@@ -427,22 +427,31 @@
         {
           id: "chemie12",
           title: "Chemie 12",
-          subtitle: "Qualifikationsphase • gA & eA (Grundlegendes & erweitertes Niveau)",
+          subtitle: "Qualifikationsphase • Aktuell verfügbar: 3.2.2 Von Wellen und Teilchen (Quantenchemie)",
           description:
-            "Themen der 12. Jahrgangsstufe: Quantenchemie & Atommodelle, Chemisches Gleichgewicht (Massenwirkungsgesetz, Thermodynamik, Kinetik), Protolysegleichgewichte (Säure-Base, pH-Wert, Puffer) sowie Redoxgleichgewichte und Elektrochemie.",
-          link: "Chemie12/index.html",
+            "Themen der 12. Jahrgangsstufe: Quantenchemie & Atommodelle (Welle-Teilchen-Dualismus, Wellenfunktion, Unbestimmtheit & Orbitalmodell bereits interaktiv verfügbar), Chemisches Gleichgewicht, Protolysegleichgewichte sowie Redoxgleichgewichte und Elektrochemie.",
+          link: "Quantenchemie12/index.html",
           tag: "Chemie 12",
-          iconType: "burette",
-          folderHint: "Chemie12",
-          isLive: false,
+          iconType: "atom",
+          folderHint: "Quantenchemie12",
+          isLive: true,
+          buttonLabel: "Quantenchemie 12 öffnen",
           topics: [
-            "LB 1: Atommodelle & Quantenzahlen (n, l, m, s), Orbitale & Spektren",
+            "LB 1 Quantenchemie (Online): 3.2.2 Von Wellen & Teilchen – Doppelspalt, |ψ|², Heisenberg & Orbitalmodell",
             "LB 2: Reaktionsgeschwindigkeit, Enthalpie, Entropie & Chemisches Gleichgewicht (MWG)",
             "LB 3: Protolysegleichgewichte – pKs/pKb, pH-Berechnungen, Titrationen & Puffersysteme",
             "LB 4: Redoxgleichgewichte – Nernst-Gleichung, Galvanische Elemente, Elektrolyse & Batterien",
-            "Anforderungsniveau: Differenzierung zwischen grundlegendem (gA) und erweitertem (eA) Niveau",
+            "Inklusive interaktiver Hefteintrag-Werkstatt, PhET-Labor & Kompetenzcheck (K1–K6)",
           ],
-          subpages: [],
+          subpages: [
+            { title: "00 Überblick (3.2.2)", link: "Quantenchemie12/index.html#start" },
+            { title: "01 Welle oder Teilchen?", link: "Quantenchemie12/index.html#welle" },
+            { title: "02 Wellenfunktion & |ψ|²", link: "Quantenchemie12/index.html#wahrscheinlichkeit" },
+            { title: "03 Unbestimmtheit & Orbital", link: "Quantenchemie12/index.html#unbestimmtheit" },
+            { title: "04 Hefteintrag", link: "Quantenchemie12/index.html#hefteintrag" },
+            { title: "05 Kompetenzcheck", link: "Quantenchemie12/index.html#check" },
+            { title: "06 Glossar", link: "Quantenchemie12/index.html#glossar" },
+          ],
         },
         {
           id: "chemie13",
@@ -623,7 +632,7 @@
             <a href="${escapeHTML(project.link)}"
                class="inline-flex items-center justify-center w-full px-4 py-2.5 md:py-3 text-sm font-semibold text-white transition-all bg-gradient-to-r from-chem-600 to-chem-700 rounded-xl hover:from-chem-700 hover:to-chem-800 group shadow-sm hover:shadow-chem-500/30 mt-auto"
                aria-label="${escapeHTML(project.title)} öffnen">
-              ${project.isLive ? "Lernpfad Chemie 10 öffnen" : "Jahrgangsstufe öffnen"}
+              ${escapeHTML(project.buttonLabel || (project.isLive ? `Lernpfad ${project.tag} öffnen` : "Jahrgangsstufe öffnen"))}
               <svg class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
               </svg>
@@ -649,7 +658,8 @@
               p.description.toLowerCase().includes(q) ||
               p.tag.toLowerCase().includes(q) ||
               (p.folderHint && p.folderHint.toLowerCase().includes(q)) ||
-              (p.topics && p.topics.some((t) => t.toLowerCase().includes(q)))
+              (p.topics && p.topics.some((t) => t.toLowerCase().includes(q))) ||
+              (p.subpages && p.subpages.some((s) => s.title.toLowerCase().includes(q)))
           );
         }
 

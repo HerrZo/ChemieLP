@@ -1,0 +1,1188 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>Von Wellen und Teilchen | Quantenchemie 12</title>
+<meta name="description" content="Interaktiver Selbstlernpfad zu Welle-Teilchen-Dualismus, Wellenfunktion, Wahrscheinlichkeit und Unbestimmtheit für Chemie 12.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@700&family=Spectral:ital,wght@0,400;0,500;1,400&family=Libre+Franklin:wght@500&display=swap" rel="stylesheet">
+<style>
+/* Hallmark · shape: app screen · genre: editorial · theme: Newsprint · job: learn · scope: app
+ * Eigenständige Ergänzung zu Chemie 10; nutzt dieselben Tokens und Bausteine. */
+html, body { overflow-x: clip; }
+#start-title { font-size: var(--text-display-s); max-width: 22ch; }
+.bookref {
+  border-left: 3px solid var(--color-accent);
+  padding: var(--space-xs) 0 var(--space-xs) var(--space-md);
+  margin-block: var(--space-md);
+  font-size: var(--text-sm);
+  line-height: 1.55;
+  color: var(--color-ink-2);
+}
+.bookref b { color: var(--color-ink); }
+.formula {
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  line-height: 1.5;
+  border-block: var(--rule-hair) solid var(--color-rule);
+  padding-block: var(--space-sm);
+  margin-block: var(--space-md);
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+}
+.tool canvas {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: var(--color-paper);
+}
+.tool__stage--flush { padding: 0; }
+.tool-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-md);
+}
+.tool-tabs button {
+  min-height: 38px;
+  padding: 0 var(--space-sm);
+  border: 1px solid var(--color-rule-2);
+  background: var(--color-paper);
+  color: var(--color-ink-2);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  cursor: pointer;
+}
+.tool-tabs button[aria-pressed="true"] {
+  background: var(--color-paper-3);
+  color: var(--color-ink);
+  box-shadow: inset 0 -2px 0 var(--color-ink);
+  font-weight: 500;
+}
+.tool-tabs button:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
+.tool-sliders {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: var(--space-md);
+  width: 100%;
+}
+.tool-sliders .slider-row label { font-size: var(--text-xs); white-space: nowrap; }
+.tool-sliders .slider-row output { font-size: var(--text-md); }
+.tool-controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+.tool-controls .slider-row { margin-top: 0; }
+.tool-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-md);
+}
+.tool-actions .btn { min-height: 38px; }
+.tool-check {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: var(--text-sm);
+  color: var(--color-ink-2);
+  min-height: 38px;
+}
+.tool-check input { accent-color: var(--color-accent); width: 18px; height: 18px; }
+.tool-status {
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  margin-top: var(--space-xs);
+  min-height: 1.5lh;
+}
+.phet {
+  border-block: var(--rule-hair) solid var(--color-rule-2);
+  background: var(--color-paper-2);
+  padding: var(--space-lg);
+}
+.phet__head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--space-sm); align-items: baseline; margin-bottom: var(--space-md); }
+.phet__title { font-family: var(--font-display); font-weight: 700; font-size: var(--text-lg); }
+.phet__hint { max-width: 52ch; font-size: var(--text-sm); color: var(--color-muted); }
+.phet__stage {
+  position: relative;
+  border: var(--rule-hair) solid var(--color-rule);
+  background: #111;
+  min-height: 380px;
+}
+.phet__stage iframe { display: block; width: 100%; height: 560px; border: 0; }
+.phet__facade {
+  display: grid;
+  place-items: center;
+  gap: var(--space-sm);
+  min-height: 380px;
+  padding: var(--space-lg);
+  text-align: center;
+  color: var(--color-ink-2);
+  background:
+    radial-gradient(circle at 20% 20%, rgba(178, 58, 42, .10), transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(47, 111, 159, .10), transparent 45%),
+    var(--color-paper);
+}
+.phet__facade p { max-width: 52ch; font-size: var(--text-sm); }
+.phet__actions { display: flex; flex-wrap: wrap; gap: var(--space-sm); justify-content: center; }
+.phet__caption { margin-top: var(--space-sm); font-size: var(--text-sm); color: var(--color-muted); }
+.orbital-legend { display: flex; flex-wrap: wrap; gap: var(--space-md); font-size: var(--text-xs); color: var(--color-muted); margin-top: var(--space-xs); }
+.orbital-legend span { display: inline-flex; align-items: center; gap: var(--space-2xs); }
+.orbital-legend i { width: 14px; height: 14px; display: inline-block; border: 1px solid var(--color-rule); }
+.task {
+  border: 1px solid var(--color-rule);
+  background: var(--color-paper);
+  padding: var(--space-md);
+  margin-block: var(--space-md);
+}
+.task__label { font-family: var(--font-outlier); font-size: var(--text-xs); letter-spacing: .04em; text-transform: uppercase; color: var(--color-accent); }
+.task p { margin-top: var(--space-2xs); font-size: var(--text-sm); }
+.task ol { margin-top: var(--space-xs); padding-left: 1.25em; font-size: var(--text-sm); }
+.task li + li { margin-top: var(--space-2xs); }
+
+/* Hefteintrag */
+.heft-progress { margin-block: var(--space-md) var(--space-sm); }
+.heft-save { font-size: var(--text-xs); color: var(--color-muted); margin-bottom: var(--space-lg); }
+.heft-steps { display: grid; gap: var(--space-xl); }
+.heft-step { border-top: var(--rule-hair) solid var(--color-rule-2); padding-top: var(--space-lg); }
+.heft-step__head { display: flex; align-items: baseline; gap: var(--space-sm); margin-bottom: var(--space-sm); }
+.heft-step__num { font-family: var(--font-outlier); font-size: var(--text-sm); color: var(--color-accent); }
+.heft-step h3 { font-family: var(--font-display); font-size: var(--text-xl); line-height: 1.2; }
+.heft-step__check { margin-left: auto; color: var(--color-accent); font-size: var(--text-lg); opacity: 0; transition: opacity var(--dur-short) var(--ease-out); }
+.heft-step.is-filled .heft-step__check { opacity: 1; }
+.heft-task { margin-block: 0 var(--space-sm); }
+.heft-terms-label { margin-top: var(--space-sm); font-size: var(--text-xs); color: var(--color-muted); }
+.heft-terms { display: flex; flex-wrap: wrap; gap: var(--space-2xs); margin-top: var(--space-2xs); padding: 0; list-style: none; }
+.heft-terms li { border: 1px solid var(--color-rule); background: var(--color-paper-2); padding: 2px 6px; font-size: var(--text-xs); color: var(--color-ink-2); }
+.heft-input {
+  width: 100%;
+  min-height: 132px;
+  padding: var(--space-sm);
+  border: 1px solid var(--color-rule-2);
+  border-radius: 0;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: var(--text-md);
+  line-height: 1.55;
+  resize: vertical;
+  outline: 2px solid transparent;
+  outline-offset: -3px;
+}
+.heft-input:focus-visible { outline-color: var(--color-focus); }
+.heft-tools { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-sm); margin-top: var(--space-xs); }
+.heft-count { font-family: var(--font-outlier); font-size: var(--text-xs); color: var(--color-muted); }
+.heft-tools .quiet-link { margin-left: auto; }
+.heft-sample { border-left: 3px solid var(--color-accent); background: var(--color-accent-soft); padding: var(--space-md); margin-top: var(--space-sm); }
+.heft-sample__label { font-family: var(--font-outlier); font-size: var(--text-xs); letter-spacing: .04em; text-transform: uppercase; color: var(--color-accent); margin-bottom: var(--space-2xs); }
+.heft-sample p:last-child { font-size: var(--text-sm); line-height: 1.6; }
+.heft-actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-sm); margin-block: var(--space-xl); }
+.heft-model { border: var(--rule-hair) solid var(--color-rule-2); background: var(--color-paper); padding: var(--space-xl); margin-block: var(--space-lg); }
+.heft-model__head { border-bottom: var(--rule-hair) solid var(--color-rule); padding-bottom: var(--space-sm); margin-bottom: var(--space-lg); }
+.heft-model__kicker { font-family: var(--font-outlier); font-size: var(--text-xs); letter-spacing: .04em; text-transform: uppercase; color: var(--color-accent); }
+.heft-model h3 { font-family: var(--font-display); font-size: var(--text-2xl); line-height: 1.15; margin-top: var(--space-2xs); }
+.heft-model__meta { font-size: var(--text-sm); color: var(--color-muted); margin-top: var(--space-2xs); }
+.heft-model__body h4 { font-family: var(--font-display); font-size: var(--text-lg); line-height: 1.25; margin-top: var(--space-lg); margin-bottom: var(--space-xs); max-width: var(--measure); }
+.heft-model__body .formula { max-width: var(--measure); }
+.heft-model__body p,
+.heft-model__body li { font-size: var(--text-sm); line-height: 1.65; }
+.heft-model__body ul { padding-left: 1.2em; }
+.heft-model__body .formula { margin-block: var(--space-sm); font-size: var(--text-md); }
+.heft-sketch { margin-block: var(--space-lg); }
+.heft-sketch svg { display: block; width: 100%; height: auto; border: var(--rule-hair) solid var(--color-rule); background: var(--color-paper-2); }
+.heft-sketch figcaption { margin-top: var(--space-2xs); font-size: var(--text-xs); line-height: 1.45; color: var(--color-muted); }
+.heft-print { display: none; }
+
+@media print {
+  html, body { background: #fff !important; }
+  body.is-printing-heft > :not(.heft-print) { display: none !important; }
+  body.is-printing-heft .heft-print { display: block !important; }
+  .heft-print { color: #000; background: #fff; font-family: var(--font-body); font-size: 11pt; line-height: 1.5; }
+  .heft-print h1,
+  .heft-print h2,
+  .heft-print h3,
+  .heft-print h4,
+  .heft-print p:not([class]),
+  .heft-print .heft-model__body p { max-width: none; }
+  .heft-print__head { border-bottom: 1px solid #000; padding-bottom: 8px; margin-bottom: 16px; }
+  .heft-print__kicker { font-family: var(--font-outlier); font-size: 9pt; letter-spacing: .05em; text-transform: uppercase; }
+  .heft-print h1 { font-family: var(--font-display); font-size: 20pt; line-height: 1.15; margin: 4px 0; }
+  .heft-print__meta { font-size: 10pt; }
+  .heft-print__step { break-inside: avoid; margin-top: 14px; }
+  .heft-print__step h2 { font-family: var(--font-display); font-size: 13pt; margin: 0 0 4px; }
+  .heft-print__answer { white-space: pre-wrap; font-size: 11pt; }
+  .heft-print__answer.is-empty { color: #666; font-style: italic; }
+  .heft-print .heft-model__body h4 { font-size: 12pt; margin-top: 12px; }
+  .heft-print .heft-model__body p,
+  .heft-print .heft-model__body li { font-size: 11pt; }
+  .heft-print .heft-model__body .formula { border: 0; text-align: left; font-size: 11pt; }
+  .heft-print .heft-sketch svg { width: 100%; height: auto; background: #fff; }
+  .heft-print .heft-sketch figcaption { font-size: 9pt; }
+}
+
+@media (max-width: 760px) {
+  .phet__stage iframe { height: 420px; }
+  .tool-controls { grid-template-columns: 1fr; }
+  .tool-sliders { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; }
+}
+</style>
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body data-page="q12">
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<header class="masthead">
+  <div class="masthead__inner">
+    <a class="brand" href="#start" aria-label="Zum Überblick"><span>Quantenchemie 12</span><span class="brand__tag">Q12</span></a>
+    <p class="issue"><span class="issue__num">3.2.2</span> Von Wellen und Teilchen</p>
+    <div class="masthead__actions">
+      <span class="progress-inline" data-progress-inline aria-live="polite">0 von 6</span>
+      <a class="quiet-link" href="../index.html">← ChemieLP</a>
+      <a class="quiet-link" href="#start">Überblick</a>
+      <button class="menu-btn btn btn--quiet btn--small" type="button" data-menu aria-expanded="false" aria-controls="sidebar">Stationen</button>
+    </div>
+  </div>
+</header>
+<div class="app">
+  <aside class="sidebar" id="sidebar" aria-label="Stationen">
+    <div class="sidebar__head">
+      <p class="sidebar__kicker">Quantenchemie 12</p>
+      <h2 class="sidebar__title">Von Wellen und Teilchen</h2>
+      <p class="sidebar__deck">Vom Doppelspalt zum Orbitalmodell.</p>
+      <div class="progress">
+        <div class="progress__line"><span>Dein Lernstand</span><strong data-progress-text>0 / 6</strong></div>
+        <div class="progress__track"><i data-progress-bar style="--p:0"></i></div>
+      </div>
+    </div>
+    <nav class="station-nav">
+      <a href="#start" data-station-link="start"><span class="station-nav__num">00</span><span>Überblick</span><span class="station-nav__check" aria-hidden="true">✓</span></a>
+      <a href="#welle" data-station-link="welle"><span class="station-nav__num">01</span><span>Welle oder Teilchen?</span><span class="station-nav__check" aria-hidden="true">✓</span></a>
+      <a href="#wahrscheinlichkeit" data-station-link="wahrscheinlichkeit"><span class="station-nav__num">02</span><span>Wellenfunktion und Wahrscheinlichkeit</span><span class="station-nav__check" aria-hidden="true">✓</span></a>
+      <a href="#unbestimmtheit" data-station-link="unbestimmtheit"><span class="station-nav__num">03</span><span>Unbestimmtheit und Atommodell</span><span class="station-nav__check" aria-hidden="true">✓</span></a>
+      <a href="#hefteintrag" data-station-link="hefteintrag"><span class="station-nav__num">04</span><span>Hefteintrag</span><span class="station-nav__check" aria-hidden="true">✓</span></a>
+      <a href="#check" data-station-link="check"><span class="station-nav__num">05</span><span>Kompetenzcheck</span><span class="station-nav__check" aria-hidden="true">✓</span></a>
+      <a href="#glossar" data-station-link="glossar"><span class="station-nav__num">06</span><span>Glossar</span><span class="station-nav__check" aria-hidden="true">✓</span></a>
+    </nav>
+    <div class="sidebar__foot">
+      <a href="../index.html">← Hauptseite ChemieLP</a>
+      <a href="#start">Buchseite 3.2.2</a>
+      <button class="quiet-link" type="button" data-reset-open>Lernstand zurücksetzen</button>
+      <p>Oberstufe Chemie<br>Quantenchemie</p>
+    </div>
+  </aside>
+
+  <main class="main" id="main">
+    <section class="station is-active" id="start" data-station="start" data-title="Überblick" aria-labelledby="start-title">
+      <header class="station__head">
+        <h1 id="start-title"><span class="station__num">3.2.2</span> Warum Elektronen keine festen Bahnen haben.</h1>
+        <p class="lead">Die Buchseite „Von Wellen und Teilchen“ zeigt, wie Licht und Elektronen am Doppelspalt Wellen- und Teilcheneigenschaften verbinden. Hier probierst du das aus und ziehst den Bogen zum Orbitalmodell der Chemie.</p>
+      </header>
+      <a class="btn start-cta" href="#welle" data-go="welle" data-start-cta aria-label="Erste Station öffnen: Welle oder Teilchen?">Erste Station öffnen</a>
+      <div class="protocol">
+        <div class="protocol__main">
+          <h2>Das nimmst du mit</h2>
+          <ol class="competencies">
+            <li><span class="cnum">01</span><span>Du erklärst den Welle-Teilchen-Dualismus am Beispiel von Licht und Elektronen.</span></li>
+            <li><span class="cnum">02</span><span>Du deutest Interferenzmuster mit Wellenlänge, Spaltabstand und Schirmabstand.</span></li>
+            <li><span class="cnum">03</span><span>Du erläuterst die Wellenfunktion und das Betragsquadrat |ψ|² als Wahrscheinlichkeitsdichte.</span></li>
+            <li><span class="cnum">04</span><span>Du erklärst, warum viele Einzeltreffer ein Muster ergeben, ein einzelner Treffer aber nicht.</span></li>
+            <li><span class="cnum">05</span><span>Du berechnest mit der Heisenbergschen Unbestimmtheitsrelation und deutest das Ergebnis.</span></li>
+            <li><span class="cnum">06</span><span>Du begründest, warum das Orbitalmodell das Bohrsche Atommodell ersetzt.</span></li>
+          </ol>
+          <p><small>Der Pfad folgt der Buchseite 3.2.2 „Von Wellen und Teilchen“ und verbindet sie mit dem Orbitalmodell der Chemie. Am Ende baust du daraus deinen eigenen Hefteintrag und vergleichst ihn mit dem Muster.</small></p>
+        </div>
+        <aside class="protocol__margin">
+          <div class="note">
+            <p class="note__title">So arbeitest du</p>
+            <ol>
+              <li>Lies die Station und probiere das Modell aus.</li>
+              <li>Bearbeite den Prüfpunkt. Du bekommst sofort Rückmeldung.</li>
+              <li>Schließe die Station ab.</li>
+              <li>Baue am Ende deinen eigenen Hefteintrag und vergleiche ihn mit dem Muster.</li>
+            </ol>
+          </div>
+          <div class="note">
+            <p class="note__title">Leitfrage</p>
+            <p>Warum reicht das Bild einer festen Elektronenbahn nicht aus, um den Aufenthalt eines Elektrons im Atom zu beschreiben?</p>
+          </div>
+          <div class="note">
+            <p class="note__title">Buchseite</p>
+            <p>3.2.2 „Von Wellen und Teilchen“, Abb. B1–B3, Aufgaben A1 und A2. Die Abbildungen im Buch bleiben im Buch; hier arbeiten wir mit eigenen Darstellungen.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="station" id="welle" data-station="welle" data-title="Welle oder Teilchen?" aria-labelledby="welle-title">
+      <header class="station__head">
+        <h2 id="welle-title"><span class="station__num">01</span> Warum zeigt ein Elektron am Doppelspalt ein Muster?</h2>
+        <p class="lead">Licht und Elektronen treffen auf zwei Spalte. Was auf dem Schirm entsteht, verrät, ob sie sich wie Wellen oder wie Teilchen verhalten – oder wie beides.</p>
+      </header>
+      <div class="protocol">
+        <div class="protocol__main">
+          <p>Im Jahr 1802 ließ Thomas Young Licht durch zwei enge Spalte fallen. Auf dem Schirm dahinter entstanden nicht zwei helle Streifen, sondern viele helle und dunkle Streifen. Dieses Muster lässt sich nur erklären, wenn sich die Lichtwellen hinter den Spalten überlagern: Wo Wellenberg auf Wellenberg trifft, wird es hell; wo Wellenberg auf Wellental trifft, bleibt es dunkel. Man nennt das <strong>Interferenz</strong>.</p>
+          <p>Schon der Photoeffekt hatte gezeigt, dass Licht Energie in einzelnen Paketen abgibt: Die Energie eines Photons hängt von der Frequenz ab, nicht von der Intensität. Licht ist also nicht nur eine Welle; es wird als Photon absorbiert oder nachgewiesen. Am Doppelspalt zeigt sich die Wellenseite, am Detektor die Teilchenseite.</p>
+          <p>1961 wiederholte Claus Jönsson den Versuch mit Elektronen. Einzelne Elektronen trafen nacheinander auf den Doppelspalt. Jedes Elektron wurde auf dem Schirm als einzelner Punkt nachgewiesen. Mit der Zeit entstand trotzdem das gleiche Streifenmuster wie beim Licht. Das ist der Kern des <strong>Welle-Teilchen-Dualismus</strong>: Der Quantenzustand breitet sich wie eine Welle aus, die Messung zeigt aber einen einzelnen Treffer.</p>
+          <div class="bookref"><b>Buchseite 3.2.2:</b> „Von der Welle zum Teilchen“ und „Der Welle-Teilchen-Dualismus“; Abb. B1 und B3. Die Elektronen treffen einzeln auf, bilden aber gemeinsam ein Interferenzmuster.</div>
+          <p>Warum sieht man dieses Muster nicht bei einem Fußball? Die de-Broglie-Wellenlänge eines Körpers ist λ = h/(m·v). Für einen Fußball mit m = 0,43 kg und v = 20 m/s ergibt sich λ ≈ 7,7·10⁻³⁵ m. Das ist so viel kleiner als jede Toröffnung, dass keine messbare Interferenz entsteht – die Grundidee von Aufgabe A1 der Buchseite. Bei Elektronen ist die Masse rund 10³⁰-mal kleiner; deshalb wird ihre Wellenlänge messbar.</p>
+          <div class="formula">λ = h / (m · v)</div>
+          <figure class="tool" id="tool-doppelspalt" data-tool="doppelspalt">
+            <div class="tool__head">
+              <p class="tool__title">Doppelspalt-Labor</p>
+              <p class="tool__hint">Ändere Wellenlänge, Spaltabstand und Schirmabstand. Beobachte das Wellenbild und sammle einzelne Treffer.</p>
+            </div>
+            <div class="tool__controls" data-tool-controls></div>
+            <div class="tool__stage tool__stage--flush" data-tool-stage>
+              <canvas width="720" height="360" aria-label="Doppelspalt mit Wellenfronten und Treffern auf dem Schirm"></canvas>
+              <p class="tool__fallback">Das interaktive Doppelspalt-Labor lädt mit JavaScript. Die Erklärung im Text bleibt lesbar.</p>
+            </div>
+            <div class="tool__readout" data-tool-readout></div>
+            <figcaption class="tool__caption">Eigenes Modell nach dem Doppelspaltprinzip. Die Wellenfronten sind schematisch; die Treffer werden aus der berechneten Intensitätsverteilung gezogen.</figcaption>
+          </figure>
+          <div class="phet" data-phet="experiment">
+            <div class="phet__head">
+              <p class="phet__title">PhET-Labor: Experiment</p>
+              <p class="phet__hint">Öffne die Simulation erst bei Bedarf. Sie wird direkt von PhET geladen; dabei werden keine Daten an die Lernseite übertragen.</p>
+            </div>
+            <div class="phet__stage" data-phet-stage>
+              <div class="phet__facade">
+                <p><strong>Interferenz von Quantenwellen</strong><br>Experiment: Quelle, Doppelspalt und Detektorschirm in der Draufsicht.</p>
+                <p>Stelle Photonen ein, vergleiche „Intensität“ und „Treffer“ und wechsle dann zu Elektronen.</p>
+                <div class="phet__actions">
+                  <button class="btn" type="button" data-phet-load>Simulation laden</button>
+                  <a class="quiet-link" href="https://phet.colorado.edu/sims/html/quantum-wave-interference/latest/quantum-wave-interference_all.html?locale=de" target="_blank" rel="noopener">In neuem Tab öffnen</a>
+                </div>
+              </div>
+            </div>
+            <p class="phet__caption">Simulation by PhET Interactive Simulations, University of Colorado Boulder, licensed under CC BY-NC 4.0. Unverändert eingebettet; keine kommerzielle Nutzung.</p>
+          </div>
+          <div class="task">
+            <p class="task__label">Simulationsauftrag</p>
+            <p>Arbeite mit dem PhET-Labor „Experiment“:</p>
+            <ol>
+              <li>Wähle <strong>Photonen</strong>, beide Spalte offen und den Modus <strong>Intensität</strong>. Beschreibe das Muster.</li>
+              <li>Wechsle zu <strong>Treffer</strong>. Beobachte, wie aus einzelnen Punkten langsam ein Muster wird.</li>
+              <li>Ändere die Wellenlänge von 650 nm auf 400 nm. Vergleiche den Streifenabstand.</li>
+              <li>Wechsle die Quelle zu <strong>Elektronen</strong>. Warum ist das Muster trotz einzelner Treffer ein Beleg für die Wellennatur?</li>
+            </ol>
+          </div>
+          <section class="checkpoint" aria-labelledby="welle-check">
+            <h3 id="welle-check">Prüfpunkt</h3>
+            <div class="quiz" data-quiz="welle"><noscript><p class="tool__fallback">Die Prüfpunkt-Aufgaben brauchen JavaScript.</p></noscript></div>
+          </section>
+          <script type="application/json" data-quiz-data="welle">
+          {
+            "questions": [
+              {
+                "id": "q1",
+                "type": "mc",
+                "level": "II",
+                "competency": "K1",
+                "prompt": "Welche Beobachtung ist ein Beleg für die Wellennatur des Elektrons?",
+                "options": [
+                  "Einzelne Elektronen erzeugen nacheinander ein Interferenzmuster.",
+                  "Elektronen besitzen eine Masse.",
+                  "Elektronen werden in einem Magnetfeld abgelenkt.",
+                  "Elektronen tragen eine negative Ladung."
+                ],
+                "correct": 0,
+                "explain": "Das Interferenzmuster entsteht durch die Überlagerung der Wellenanteile beider Spalte. Einzelne Treffer zeigen zugleich die Teilchennatur."
+              },
+              {
+                "id": "q2",
+                "type": "input",
+                "level": "II",
+                "competency": "K2",
+                "prompt": "Berechne die de-Broglie-Wellenlänge eines Elektrons mit v = 6·10⁵ m/s. Gib das Ergebnis in Nanometern an.",
+                "accept": ["1,21", "1.21", "1,2", "1.2", "1,21 nm", "1.21 nm", "1,2 nm", "1.2 nm"],
+                "model": "1,21 nm",
+                "placeholder": "z. B. 1,21",
+                "explain": "λ = h/(m·v) = 6,626·10⁻³⁴ / (9,109·10⁻³¹ · 6·10⁵) ≈ 1,21·10⁻⁹ m = 1,21 nm."
+              }
+            ]
+          }
+          </script>
+          <div class="station__footer">
+            <span class="status" data-station-status></span>
+            <div class="station__footer-actions">
+              <button class="btn js-only" type="button" data-complete="welle">Station abschließen</button>
+              <a class="quiet-link" href="#wahrscheinlichkeit" data-go="wahrscheinlichkeit" aria-label="Weiter zur Station Wellenfunktion und Wahrscheinlichkeit">Weiter</a>
+            </div>
+          </div>
+        </div>
+        <aside class="protocol__margin">
+          <div class="note">
+            <p class="note__title">Merke</p>
+            <p>Welle und Teilchen sind keine zwei Sorten von Materie, sondern zwei Beschreibungen desselben Quantenzustands. Welche Seite sichtbar wird, hängt vom Experiment ab.</p>
+          </div>
+          <div class="note">
+            <p class="note__title">Fachsprache</p>
+            <dl>
+              <dt>Interferenz</dt><dd>Überlagerung von Wellen; gleiche Phase verstärkt, entgegengesetzte Phase schwächt.</dd>
+              <dt>kohärent</dt><dd>Feste Phasenbeziehung zwischen den Wellenanteilen.</dd>
+              <dt>Welle-Teilchen-Dualismus</dt><dd>Quantenobjekte zeigen je nach Experiment Wellen- oder Teilcheneigenschaften.</dd>
+              <dt>de-Broglie-Wellenlänge</dt><dd>λ = h/(m·v); jedem Teilchen mit Impuls ist eine Wellenlänge zugeordnet.</dd>
+            </dl>
+          </div>
+          <div class="note">
+            <p class="note__title">Typischer Fehler</p>
+            <p>„Ein Elektron ist entweder Welle oder Teilchen.“ Beide Beschreibungen gehören zusammen; sie schließen sich nicht aus, sondern ergänzen sich je nach Messung.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="station" id="wahrscheinlichkeit" data-station="wahrscheinlichkeit" data-title="Wellenfunktion und Wahrscheinlichkeit" aria-labelledby="wahrscheinlichkeit-title">
+      <header class="station__head">
+        <h2 id="wahrscheinlichkeit-title"><span class="station__num">02</span> Warum trifft ein einzelnes Elektron nur einen Punkt?</h2>
+        <p class="lead">Die Wellenfunktion breitet sich über den Schirm aus. Gemessen wird aber immer nur ein Treffer. Das Betragsquadrat |ψ|² macht daraus eine Wahrscheinlichkeit.</p>
+      </header>
+      <div class="protocol">
+        <div class="protocol__main">
+          <p>Die <strong>Wellenfunktion</strong> ψ beschreibt den Zustand eines Quantenobjekts. Sie ist selbst nicht direkt messbar. Was man messen kann, ist die Wahrscheinlichkeit, das Teilchen an einem bestimmten Ort zu finden. Nach der <strong>Born-Regel</strong> ist diese Wahrscheinlichkeitsdichte proportional zum Betragsquadrat |ψ|².</p>
+          <p>Beim Doppelspalt bedeutet das: Die Wellenfunktion hinter den Spalten verteilt sich über den ganzen Schirm. |ψ|² hat Maxima dort, wo später viele Treffer zu erwarten sind, und Minima dort, wo keine Treffer auftreten. Ein einzelnes Elektron landet an genau einem Ort; welcher das ist, lässt sich nur probabilistisch vorhersagen. Viele Elektronen bauen das Muster auf.</p>
+          <div class="bookref"><b>Buchseite 3.2.2:</b> „Wellenfunktion und Betragsquadrat“; Abb. B3. Born deutet |ψ|² als Wahrscheinlichkeitsdichte – nicht als materielle Auslenkung.</div>
+          <p>Wichtig: Die Wellenfunktion ist keine klassische Materiewelle wie eine Wasserwelle. Sie beschreibt keine Auslenkung von Materie, sondern eine Wahrscheinlichkeitsamplitude. Man darf sie nicht als „verschmierte Materie“ lesen. Der Doppelspalt zeigt, dass der Quantenzustand über beide Wege kohärent ist; der Treffer zeigt, dass die Messung einen Ort auswählt.</p>
+          <div class="formula">P(Area) = ∫<sub>Area</sub> |ψ|² dV</div>
+          <figure class="tool" id="tool-einzelteilchen" data-tool="einzelteilchen">
+            <div class="tool__head">
+              <p class="tool__title">Einzelteilchen-Sammelbild</p>
+              <p class="tool__hint">Sende ein Teilchen nach dem anderen. Beobachte, wie aus einzelnen Treffern langsam das Wahrscheinlichkeitsmuster wird.</p>
+            </div>
+            <div class="tool__controls" data-tool-controls></div>
+            <div class="tool__stage tool__stage--flush" data-tool-stage>
+              <canvas width="720" height="360" aria-label="Einzelne Treffer bauen ein Interferenzmuster auf"></canvas>
+              <p class="tool__fallback">Das interaktive Einzelteilchen-Modell lädt mit JavaScript. Die Erklärung im Text bleibt lesbar.</p>
+            </div>
+            <div class="tool__readout" data-tool-readout></div>
+            <p class="tool-status" data-tool-status aria-live="polite"></p>
+            <figcaption class="tool__caption">Eigenes Modell: Die gestrichelte Kurve zeigt |ψ|², die Balken zeigen die tatsächlich gesammelten Treffer. Die Verteilung ist schematisch.</figcaption>
+          </figure>
+          <div class="phet" data-phet="single">
+            <div class="phet__head">
+              <p class="phet__title">PhET-Labor: Einzelpartikel</p>
+              <p class="phet__hint">Hier siehst du ein Wellenpaket pro Teilchen und einen Treffer pro Messung.</p>
+            </div>
+            <div class="phet__stage" data-phet-stage>
+              <div class="phet__facade">
+                <p><strong>Interferenz von Quantenwellen</strong><br>Einzelpartikel: ein Wellenpaket, ein Treffer, viele Wiederholungen.</p>
+                <p>Starte mit Photonen oder Elektronen und schalte den Automatikmodus ein.</p>
+                <div class="phet__actions">
+                  <button class="btn" type="button" data-phet-load>Simulation laden</button>
+                  <a class="quiet-link" href="https://phet.colorado.edu/sims/html/quantum-wave-interference/latest/quantum-wave-interference_all.html?locale=de" target="_blank" rel="noopener">In neuem Tab öffnen</a>
+                </div>
+              </div>
+            </div>
+            <p class="phet__caption">Simulation by PhET Interactive Simulations, University of Colorado Boulder, licensed under CC BY-NC 4.0. Unverändert eingebettet; keine kommerzielle Nutzung.</p>
+          </div>
+          <div class="task">
+            <p class="task__label">Simulationsauftrag</p>
+            <p>Arbeite mit dem PhET-Labor „Einzelpartikel“:</p>
+            <ol>
+              <li>Wähle eine Quelle und starte den <strong>Automatikmodus</strong>. Beschreibe den Unterschied zwischen wenigen und vielen Treffern.</li>
+              <li>Schalte die <strong>Detektoren an beiden Spalten</strong> ein. Was passiert mit dem Interferenzmuster?</li>
+              <li>Erkläre den Unterschied mit dem Begriff „Welcher-Weg-Information“.</li>
+            </ol>
+          </div>
+          <section class="checkpoint" aria-labelledby="wahrscheinlichkeit-check">
+            <h3 id="wahrscheinlichkeit-check">Prüfpunkt</h3>
+            <div class="quiz" data-quiz="wahrscheinlichkeit"><noscript><p class="tool__fallback">Die Prüfpunkt-Aufgaben brauchen JavaScript.</p></noscript></div>
+          </section>
+          <script type="application/json" data-quiz-data="wahrscheinlichkeit">
+          {
+            "questions": [
+              {
+                "id": "q1",
+                "type": "mc",
+                "level": "I",
+                "competency": "K3",
+                "prompt": "Was beschreibt das Betragsquadrat |ψ|²?",
+                "options": [
+                  "Die Wahrscheinlichkeitsdichte, ein Teilchen an einem Ort zu finden.",
+                  "Die Masse des Teilchens.",
+                  "Die Geschwindigkeit des Teilchens.",
+                  "Die Anzahl der Elektronen im Atom."
+                ],
+                "correct": 0,
+                "explain": "|ψ|² ist die Wahrscheinlichkeitsdichte. Die Wahrscheinlichkeit für ein Volumen ist das Integral von |ψ|² über dieses Volumen."
+              },
+              {
+                "id": "q2",
+                "type": "tf",
+                "level": "II",
+                "competency": "K4",
+                "prompt": "Ein einzelnes Elektron erzeugt auf dem Schirm bereits das vollständige Interferenzmuster.",
+                "correct": false,
+                "explain": "Ein einzelnes Elektron erzeugt genau einen Treffer. Das Muster entsteht erst statistisch aus vielen Treffern – jede Messung liefert nur einen Ort."
+              }
+            ]
+          }
+          </script>
+          <div class="station__footer">
+            <span class="status" data-station-status></span>
+            <div class="station__footer-actions">
+              <button class="btn js-only" type="button" data-complete="wahrscheinlichkeit">Station abschließen</button>
+              <a class="quiet-link" href="#unbestimmtheit" data-go="unbestimmtheit" aria-label="Weiter zur Station Unbestimmtheit und Atommodell">Weiter</a>
+            </div>
+          </div>
+        </div>
+        <aside class="protocol__margin">
+          <div class="note">
+            <p class="note__title">Merke</p>
+            <p>Die Wellenfunktion beschreibt Möglichkeiten, die Messung erzeugt Wirklichkeit. |ψ|² sagt, wo ein Treffer wahrscheinlich ist – nicht, wo er sicher sein wird.</p>
+          </div>
+          <div class="note">
+            <p class="note__title">Schreibweise</p>
+            <p>Die Buchseite verwendet Ψ (Psi); hier steht ψ für dieselbe Wellenfunktion. Entscheidend ist das Betragsquadrat |ψ|².</p>
+          </div>
+          <div class="note">
+            <p class="note__title">Fachsprache</p>
+            <dl>
+              <dt>Wellenfunktion ψ</dt><dd>Beschreibt den Quantenzustand; selbst nicht direkt messbar.</dd>
+              <dt>Betragsquadrat |ψ|²</dt><dd>Wahrscheinlichkeitsdichte für den Aufenthaltsort.</dd>
+              <dt>Born-Regel</dt><dd>Die Wahrscheinlichkeit ist das Integral von |ψ|² über den betrachteten Bereich.</dd>
+              <dt>Messung</dt><dd>Sie wählt einen Ort aus und liefert einen einzelnen Treffer.</dd>
+            </dl>
+          </div>
+          <div class="note">
+            <p class="note__title">Typischer Fehler</p>
+            <p>Die Wellenfunktion ist keine „verschmierte Materie“. Sie ist eine Wahrscheinlichkeitsamplitude; erst |ψ|² macht daraus eine messbare Wahrscheinlichkeitsdichte.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="station" id="unbestimmtheit" data-station="unbestimmtheit" data-title="Unbestimmtheit und Atommodell" aria-labelledby="unbestimmtheit-title">
+      <header class="station__head">
+        <h2 id="unbestimmtheit-title"><span class="station__num">03</span> Warum gibt es keine festen Elektronenbahnen?</h2>
+        <p class="lead">Ort und Impuls lassen sich nicht gleichzeitig beliebig genau bestimmen. Genau das macht die festen Kreisbahnen des Bohr-Modells unmöglich – und führt zu Orbitalen als Wahrscheinlichkeitsräumen.</p>
+      </header>
+      <div class="protocol">
+        <div class="protocol__main">
+          <p>Die Heisenbergsche Unbestimmtheitsrelation lautet Δx · Δp ≥ h/(4π). Sie sagt nicht, dass ein Messgerät ungenau ist, sondern dass Ort und Impuls eines Quantenobjekts nicht gleichzeitig beliebig genau bestimmt werden können. Je genauer der Ort festgelegt ist, desto unbestimmter ist der Impuls – und umgekehrt.</p>
+          <div class="formula">Δx · Δp ≥ h / (4π)</div>
+          <p>Für ein Elektron im Atom hat das eine große Konsequenz: Das Bohrsche Modell setzt eine Bahn mit definiertem Radius und definiertem Impuls voraus. Die Unbestimmtheit verbietet genau diese gleichzeitige Festlegung. Stattdessen beschreibt man den Aufenthaltsort durch eine Wahrscheinlichkeitsverteilung – das <strong>Orbital</strong>. Ein Orbital ist kein Weg, sondern ein Raum, in dem sich das Elektron mit hoher Wahrscheinlichkeit aufhält.</p>
+          <div class="bookref"><b>Buchseite 3.2.2:</b> „Die Unbestimmtheitsrelation nach Heisenberg“ und Aufgabe A2. Die Buchseite fragt ausdrücklich nach den Folgen für das moderne Atommodell.</div>
+          <p>Die Buchseite zeigt das am Doppelspalt: Ist der Impuls des Elektrons vor dem Spalt bekannt, so ist sein Ort am Spalt nur auf die Spaltbreite Δx festgelegt. Daraus folgt eine Impulsunschärfe Δp. Umgekehrt: Wenn man den Ort am Spalt sehr genau misst, wird der Impuls unbestimmt, und das Interferenzmuster verschwindet. Das ist die physikalische Wurzel der Komplementarität.</p>
+          <p>Für die Chemie folgt daraus: Die Bohrschen Kreisbahnen sind ein überholtes Bild. Orbitalmodelle, Elektronenkonfigurationen und die Formen von s-, p- und d-Orbitalen beschreiben Wahrscheinlichkeitsräume. Die Quantenzahlen legen diese Räume fest. Die Unbestimmtheit ist also kein Nebenaspekt, sondern der Grund, warum die Chemie mit Orbitalen arbeitet.</p>
+          <figure class="tool" id="tool-unbestimmtheit" data-tool="unbestimmtheit">
+            <div class="tool__head">
+              <p class="tool__title">Unbestimmtheit und Orbital</p>
+              <p class="tool__hint">Berechne die minimale Impuls- und Geschwindigkeitsunbestimmtheit. Wechsle dann zum Orbital-Schnitt.</p>
+            </div>
+            <div class="tool-tabs" role="group" aria-label="Ansicht wählen">
+              <button type="button" data-tab="rechner" aria-pressed="true">Unbestimmtheits-Rechner</button>
+              <button type="button" data-tab="orbital" aria-pressed="false">Orbital-Schnitt</button>
+            </div>
+            <div class="tool__controls" data-tool-controls></div>
+            <div class="tool__stage tool__stage--flush" data-tool-stage>
+              <canvas width="720" height="360" aria-label="Diagramm zur Unbestimmtheit und Orbital-Schnitt"></canvas>
+              <p class="tool__fallback">Das interaktive Modell lädt mit JavaScript. Die Erklärung im Text bleibt lesbar.</p>
+            </div>
+            <div class="tool__readout" data-tool-readout></div>
+            <p class="tool-status" data-tool-status aria-live="polite"></p>
+            <figcaption class="tool__caption">Eigenes Modell. Der Orbital-Schnitt ist eine schematische Darstellung von |ψ|², keine maßstabsgetreue Lösung der Schrödinger-Gleichung.</figcaption>
+          </figure>
+          <div class="task">
+            <p class="task__label">Denk- und Rechenauftrag</p>
+            <p>Ein Elektron wird auf einen Bereich von Δx = 100 pm eingegrenzt.</p>
+            <ol>
+              <li>Berechne mit Δp ≥ h/(4πΔx) die minimale Impulsunbestimmtheit.</li>
+              <li>Berechne daraus Δv = Δp/m<sub>e</sub>. Vergleiche mit der Geschwindigkeit eines Elektrons im Atom (ca. 10⁶ m/s).</li>
+              <li>Wiederhole die Rechnung für Δx = 1 fm (Atomkern). Erkläre, warum ein Elektron nicht dauerhaft im Kern gebunden sein kann.</li>
+            </ol>
+          </div>
+          <section class="checkpoint" aria-labelledby="unbestimmtheit-check">
+            <h3 id="unbestimmtheit-check">Prüfpunkt</h3>
+            <div class="quiz" data-quiz="unbestimmtheit"><noscript><p class="tool__fallback">Die Prüfpunkt-Aufgaben brauchen JavaScript.</p></noscript></div>
+          </section>
+          <script type="application/json" data-quiz-data="unbestimmtheit">
+          {
+            "questions": [
+              {
+                "id": "q1",
+                "type": "mc",
+                "level": "I",
+                "competency": "K5",
+                "prompt": "Was besagt die Heisenbergsche Unbestimmtheitsrelation?",
+                "options": [
+                  "Ort und Impuls eines Quantenobjekts können nicht gleichzeitig beliebig genau bestimmt werden.",
+                  "Ein Quantenobjekt hat immer eine feste Bahn.",
+                  "Die Masse eines Elektrons ist unbestimmt.",
+                  "Elektronen können nur in Kreisbahnen existieren."
+                ],
+                "correct": 0,
+                "explain": "Δx · Δp ≥ h/(4π). Je genauer der Ort, desto unbestimmter der Impuls. Das ist keine Geräteungenauigkeit, sondern eine Eigenschaft des Quantenzustands."
+              },
+              {
+                "id": "q2",
+                "type": "input",
+                "level": "III",
+                "competency": "K6",
+                "prompt": "Ein Elektron ist auf Δx = 100 pm lokalisiert. Wie groß ist mindestens seine Geschwindigkeitsunbestimmtheit? (mₑ = 9,11·10⁻³¹ kg)",
+                "accept": ["5,8e5", "5.8e5", "5,8*10^5", "5.8*10^5", "580000", "5,79e5", "5.79e5", "5,8·10^5", "5,8·10⁵"],
+                "model": "5,8·10⁵ m/s",
+                "placeholder": "z. B. 5,8e5",
+                "explain": "Δp ≥ h/(4πΔx) = 6,626·10⁻³⁴ / (4π · 1,0·10⁻¹⁰) ≈ 5,27·10⁻²⁵ kg·m/s. Δv = Δp/mₑ ≈ 5,8·10⁵ m/s."
+              }
+            ]
+          }
+          </script>
+          <div class="station__footer">
+            <span class="status" data-station-status></span>
+            <div class="station__footer-actions">
+              <button class="btn js-only" type="button" data-complete="unbestimmtheit">Station abschließen</button>
+              <a class="quiet-link" href="#hefteintrag" data-go="hefteintrag" aria-label="Weiter zum Hefteintrag">Weiter</a>
+            </div>
+          </div>
+        </div>
+        <aside class="protocol__margin">
+          <div class="note">
+            <p class="note__title">Merke</p>
+            <p>Die Unbestimmtheit ist keine Unwissenheit, sondern eine strukturelle Grenze. Sie macht feste Bahnen unmöglich und führt zu Orbitalen als Wahrscheinlichkeitsräumen.</p>
+          </div>
+          <div class="note">
+            <p class="note__title">Fachsprache</p>
+            <dl>
+              <dt>Unbestimmtheit</dt><dd>Grenze der gleichzeitigen Bestimmbarkeit von Ort und Impuls.</dd>
+              <dt>Orbital</dt><dd>Aufenthaltsraum eines Elektrons; beschreibt eine Wahrscheinlichkeitsverteilung.</dd>
+              <dt>Knoten</dt><dd>Fläche, auf der die Wellenfunktion null ist; dort ist die Aufenthaltswahrscheinlichkeit null.</dd>
+              <dt>Bohrsches Atommodell</dt><dd>Modell mit festen Kreisbahnen; erklärt Spektren teilweise, widerspricht aber der Unbestimmtheit.</dd>
+            </dl>
+          </div>
+          <div class="note">
+            <p class="note__title">Typischer Fehler</p>
+            <p>„Das Elektron ist irgendwo, wir wissen es nur nicht genau.“ Die Unbestimmtheit ist keine fehlende Information über einen versteckten Ort; der Quantenzustand selbst legt keinen scharfen Ort und Impuls zugleich fest.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="station" id="hefteintrag" data-station="hefteintrag" data-title="Hefteintrag" aria-labelledby="hefteintrag-title">
+      <header class="station__head">
+        <h2 id="hefteintrag-title"><span class="station__num">04</span> Dein Hefteintrag: Von Wellen und Teilchen</h2>
+        <p class="lead">Baue deinen eigenen Hefteintrag Schritt für Schritt auf. Schreibe zuerst in eigenen Worten, vergleiche dann mit der Musterantwort und überarbeite deinen Text.</p>
+      </header>
+      <div class="protocol">
+        <div class="protocol__main">
+          <p>Die drei Stationen haben dir die Bausteine geliefert. Jetzt formulierst du daraus deinen Hefteintrag – so, wie du ihn in deinem Heft stehen haben möchtest. Zu jedem Schritt gibt es eine Musterantwort und am Ende einen vollständigen Musterhefteintrag.</p>
+          <div class="progress heft-progress">
+            <div class="progress__line"><span>Dein Hefteintrag</span><strong data-heft-progress-text>0 / 6 Schritte</strong></div>
+            <div class="progress__track"><i data-heft-progress-bar style="--p:0"></i></div>
+          </div>
+          <p class="heft-save" data-heft-save>Die Texte werden automatisch im Browser gespeichert.</p>
+          <noscript><p class="tool__fallback">Das automatische Speichern und die Musterlösungen brauchen JavaScript. Die Aufgaben bleiben lesbar.</p></noscript>
+
+          <div class="heft-steps">
+            <article class="heft-step" data-heft-step="1" aria-labelledby="heft-step-1-title">
+              <div class="heft-step__head">
+                <span class="heft-step__num">01</span>
+                <h3 id="heft-step-1-title">Welle-Teilchen-Dualismus</h3>
+                <span class="heft-step__check" data-heft-check="1" aria-hidden="true">✓</span>
+              </div>
+              <div class="task heft-task">
+                <p class="task__label">Aufgabe</p>
+                <p>Erkläre in zwei bis drei Sätzen, warum Licht und Elektronen je nach Experiment Wellen- oder Teilcheneigenschaften zeigen. Nenne für beide Seiten je ein Beispiel.</p>
+                <p class="heft-terms-label">Diese Begriffe sollten vorkommen:</p>
+                <ul class="heft-terms">
+                  <li>Welle-Teilchen-Dualismus</li>
+                  <li>Interferenz</li>
+                  <li>Photon / Detektor</li>
+                  <li>de-Broglie-Wellenlänge</li>
+                </ul>
+              </div>
+              <label class="visually-hidden" for="heft-input-1">Dein Hefteintrag zu Schritt 1</label>
+              <textarea class="heft-input" id="heft-input-1" data-heft-input="1" rows="6" placeholder="Schreibe hier deinen Hefteintrag ..."></textarea>
+              <div class="heft-tools">
+                <span class="heft-count" data-heft-count="1">0 Wörter</span>
+                <button class="quiet-link" type="button" data-heft-sample-toggle="1" aria-expanded="false" aria-controls="heft-sample-1">Musterantwort zeigen</button>
+              </div>
+              <div class="heft-sample" id="heft-sample-1" data-heft-sample="1" hidden>
+                <p class="heft-sample__label">Musterantwort</p>
+                <p>Licht und Elektronen zeigen je nach Experiment Wellen- oder Teilcheneigenschaften. Beim Doppelspalt entsteht ein Interferenzmuster; das ist ein Wellenphänomen. Auf dem Detektor wird jedes Elektron oder Photon aber als einzelner Punkt nachgewiesen; das ist ein Teilchenphänomen. Die de-Broglie-Wellenlänge λ = h/(m·v) ordnet auch Teilchen eine Wellenlänge zu.</p>
+              </div>
+            </article>
+
+            <article class="heft-step" data-heft-step="2" aria-labelledby="heft-step-2-title">
+              <div class="heft-step__head">
+                <span class="heft-step__num">02</span>
+                <h3 id="heft-step-2-title">Doppelspalt und Interferenz</h3>
+                <span class="heft-step__check" data-heft-check="2" aria-hidden="true">✓</span>
+              </div>
+              <div class="task heft-task">
+                <p class="task__label">Aufgabe</p>
+                <p>Beschreibe die Beobachtung am Doppelspalt und erkläre sie mit Interferenz. Ergänze die Formel für den Streifenabstand und erläutere, wie er sich ändert, wenn der Spaltabstand d größer wird.</p>
+                <p class="heft-terms-label">Diese Begriffe sollten vorkommen:</p>
+                <ul class="heft-terms">
+                  <li>Interferenz</li>
+                  <li>Maximum / Minimum</li>
+                  <li>Streifenabstand Δy</li>
+                  <li>Δy ≈ λ · L / d</li>
+                </ul>
+              </div>
+              <label class="visually-hidden" for="heft-input-2">Dein Hefteintrag zu Schritt 2</label>
+              <textarea class="heft-input" id="heft-input-2" data-heft-input="2" rows="6" placeholder="Schreibe hier deinen Hefteintrag ..."></textarea>
+              <div class="heft-tools">
+                <span class="heft-count" data-heft-count="2">0 Wörter</span>
+                <button class="quiet-link" type="button" data-heft-sample-toggle="2" aria-expanded="false" aria-controls="heft-sample-2">Musterantwort zeigen</button>
+              </div>
+              <div class="heft-sample" id="heft-sample-2" data-heft-sample="2" hidden>
+                <p class="heft-sample__label">Musterantwort</p>
+                <p>Am Doppelspalt überlagern sich die Wellen aus beiden Spalten. Wo Wellenberg auf Wellenberg trifft, entsteht ein Maximum (hell); wo Wellenberg auf Wellental trifft, ein Minimum (dunkel). Der Streifenabstand ist näherungsweise Δy = λ·L/d. Wird der Spaltabstand d größer, werden die Streifen enger.</p>
+              </div>
+            </article>
+
+            <article class="heft-step" data-heft-step="3" aria-labelledby="heft-step-3-title">
+              <div class="heft-step__head">
+                <span class="heft-step__num">03</span>
+                <h3 id="heft-step-3-title">Wellenfunktion und Wahrscheinlichkeit</h3>
+                <span class="heft-step__check" data-heft-check="3" aria-hidden="true">✓</span>
+              </div>
+              <div class="task heft-task">
+                <p class="task__label">Aufgabe</p>
+                <p>Erkläre die Begriffe Wellenfunktion ψ, Betragsquadrat |ψ|² und Messung. Warum zeigt ein einzelnes Elektron noch kein vollständiges Interferenzmuster?</p>
+                <p class="heft-terms-label">Diese Begriffe sollten vorkommen:</p>
+                <ul class="heft-terms">
+                  <li>Wellenfunktion ψ</li>
+                  <li>|ψ|²</li>
+                  <li>Wahrscheinlichkeitsdichte</li>
+                  <li>Born-Regel</li>
+                </ul>
+              </div>
+              <label class="visually-hidden" for="heft-input-3">Dein Hefteintrag zu Schritt 3</label>
+              <textarea class="heft-input" id="heft-input-3" data-heft-input="3" rows="6" placeholder="Schreibe hier deinen Hefteintrag ..."></textarea>
+              <div class="heft-tools">
+                <span class="heft-count" data-heft-count="3">0 Wörter</span>
+                <button class="quiet-link" type="button" data-heft-sample-toggle="3" aria-expanded="false" aria-controls="heft-sample-3">Musterantwort zeigen</button>
+              </div>
+              <div class="heft-sample" id="heft-sample-3" data-heft-sample="3" hidden>
+                <p class="heft-sample__label">Musterantwort</p>
+                <p>Die Wellenfunktion ψ beschreibt den Quantenzustand. Sie ist nicht direkt messbar; ihr Betragsquadrat |ψ|² gibt die Wahrscheinlichkeitsdichte an, ein Teilchen an einem Ort zu finden (Born-Regel). Ein einzelnes Elektron erzeugt bei der Messung nur einen Treffer. Das Interferenzmuster entsteht erst aus vielen Treffern, also aus vielen gleichen Messungen.</p>
+              </div>
+            </article>
+
+            <article class="heft-step" data-heft-step="4" aria-labelledby="heft-step-4-title">
+              <div class="heft-step__head">
+                <span class="heft-step__num">04</span>
+                <h3 id="heft-step-4-title">Unbestimmtheit und Atommodell</h3>
+                <span class="heft-step__check" data-heft-check="4" aria-hidden="true">✓</span>
+              </div>
+              <div class="task heft-task">
+                <p class="task__label">Aufgabe</p>
+                <p>Formuliere die Heisenbergsche Unbestimmtheitsrelation. Erkläre, warum sie feste Kreisbahnen im Atom unmöglich macht.</p>
+                <p class="heft-terms-label">Diese Begriffe sollten vorkommen:</p>
+                <ul class="heft-terms">
+                  <li>Δx · Δp ≥ h/(4π)</li>
+                  <li>Ort und Impuls</li>
+                  <li>Bohrsches Atommodell</li>
+                  <li>Orbital</li>
+                </ul>
+              </div>
+              <label class="visually-hidden" for="heft-input-4">Dein Hefteintrag zu Schritt 4</label>
+              <textarea class="heft-input" id="heft-input-4" data-heft-input="4" rows="6" placeholder="Schreibe hier deinen Hefteintrag ..."></textarea>
+              <div class="heft-tools">
+                <span class="heft-count" data-heft-count="4">0 Wörter</span>
+                <button class="quiet-link" type="button" data-heft-sample-toggle="4" aria-expanded="false" aria-controls="heft-sample-4">Musterantwort zeigen</button>
+              </div>
+              <div class="heft-sample" id="heft-sample-4" data-heft-sample="4" hidden>
+                <p class="heft-sample__label">Musterantwort</p>
+                <p>Die Heisenbergsche Unbestimmtheitsrelation lautet Δx · Δp ≥ h/(4π). Ort und Impuls können also nicht gleichzeitig beliebig genau bestimmt werden. Das Bohrsche Modell setzt eine Bahn mit definiertem Radius und Impuls voraus. Genau das ist mit der Unbestimmtheit nicht vereinbar; deshalb beschreibt man Elektronen durch Orbitale.</p>
+              </div>
+            </article>
+
+            <article class="heft-step" data-heft-step="5" aria-labelledby="heft-step-5-title">
+              <div class="heft-step__head">
+                <span class="heft-step__num">05</span>
+                <h3 id="heft-step-5-title">Vom Orbital zum Atommodell</h3>
+                <span class="heft-step__check" data-heft-check="5" aria-hidden="true">✓</span>
+              </div>
+              <div class="task heft-task">
+                <p class="task__label">Aufgabe</p>
+                <p>Definiere den Begriff Orbital und beschreibe die Formen von 1s-, 2s- und 2p-Orbitalen in eigenen Worten. Warum passt das Orbitalmodell besser zur Unbestimmtheit als feste Bahnen?</p>
+                <p class="heft-terms-label">Diese Begriffe sollten vorkommen:</p>
+                <ul class="heft-terms">
+                  <li>Orbital</li>
+                  <li>Aufenthaltswahrscheinlichkeit</li>
+                  <li>Knoten</li>
+                  <li>1s / 2s / 2p</li>
+                </ul>
+              </div>
+              <label class="visually-hidden" for="heft-input-5">Dein Hefteintrag zu Schritt 5</label>
+              <textarea class="heft-input" id="heft-input-5" data-heft-input="5" rows="6" placeholder="Schreibe hier deinen Hefteintrag ..."></textarea>
+              <div class="heft-tools">
+                <span class="heft-count" data-heft-count="5">0 Wörter</span>
+                <button class="quiet-link" type="button" data-heft-sample-toggle="5" aria-expanded="false" aria-controls="heft-sample-5">Musterantwort zeigen</button>
+              </div>
+              <div class="heft-sample" id="heft-sample-5" data-heft-sample="5" hidden>
+                <p class="heft-sample__label">Musterantwort</p>
+                <p>Ein Orbital ist ein Aufenthaltsraum für ein Elektron. Es beschreibt eine Wahrscheinlichkeitsverteilung, keine feste Bahn. Das 1s-Orbital ist kugelförmig und hat keinen Knoten; die Aufenthaltswahrscheinlichkeit ist am Kern am größten. Das 2s-Orbital ist ebenfalls kugelförmig, hat aber einen radialen Knoten. Das 2p-Orbital hat zwei Keulen und eine Knotenebene; am Kern ist die Wahrscheinlichkeit null. Orbitale passen zur Unbestimmtheit, weil sie keinen scharfen Ort und Impuls zugleich festlegen.</p>
+              </div>
+            </article>
+
+            <article class="heft-step" data-heft-step="6" aria-labelledby="heft-step-6-title">
+              <div class="heft-step__head">
+                <span class="heft-step__num">06</span>
+                <h3 id="heft-step-6-title">Fazit</h3>
+                <span class="heft-step__check" data-heft-check="6" aria-hidden="true">✓</span>
+              </div>
+              <div class="task heft-task">
+                <p class="task__label">Aufgabe</p>
+                <p>Fasse in maximal drei Sätzen zusammen, was das Doppelspaltexperiment für das Bild vom Atom bedeutet.</p>
+                <p class="heft-terms-label">Diese Begriffe sollten vorkommen:</p>
+                <ul class="heft-terms">
+                  <li>Welle-Teilchen-Dualismus</li>
+                  <li>Wahrscheinlichkeit</li>
+                  <li>Orbitalmodell</li>
+                  <li>keine festen Bahnen</li>
+                </ul>
+              </div>
+              <label class="visually-hidden" for="heft-input-6">Dein Hefteintrag zu Schritt 6</label>
+              <textarea class="heft-input" id="heft-input-6" data-heft-input="6" rows="5" placeholder="Schreibe hier dein Fazit ..."></textarea>
+              <div class="heft-tools">
+                <span class="heft-count" data-heft-count="6">0 Wörter</span>
+                <button class="quiet-link" type="button" data-heft-sample-toggle="6" aria-expanded="false" aria-controls="heft-sample-6">Musterantwort zeigen</button>
+              </div>
+              <div class="heft-sample" id="heft-sample-6" data-heft-sample="6" hidden>
+                <p class="heft-sample__label">Musterantwort</p>
+                <p>Das Doppelspaltexperiment zeigt, dass Elektronen Welleneigenschaften haben und trotzdem als einzelne Teilchen nachgewiesen werden. Deshalb können wir im Atom keine festen Bahnen angeben. Das Orbitalmodell beschreibt stattdessen, wo sich ein Elektron mit welcher Wahrscheinlichkeit aufhält.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="heft-actions">
+            <button class="btn" type="button" data-heft-model-toggle aria-expanded="false" aria-controls="heft-model">Musterhefteintrag anzeigen</button>
+            <button class="btn btn--quiet" type="button" data-heft-print="student">Meinen Hefteintrag drucken</button>
+            <button class="btn btn--quiet" type="button" data-heft-print="model">Musterhefteintrag drucken</button>
+            <button class="quiet-link" type="button" data-heft-reset-open>Eintrag zurücksetzen</button>
+          </div>
+
+          <section class="heft-model" id="heft-model" data-heft-model hidden aria-labelledby="heft-model-title">
+            <div class="heft-model__head">
+              <p class="heft-model__kicker">Musterhefteintrag</p>
+              <h3 id="heft-model-title">Von Wellen und Teilchen</h3>
+              <p class="heft-model__meta">Buchseite 3.2.2 · Quantenchemie 12</p>
+            </div>
+            <div class="heft-model__body">
+              <h4>1. Welle-Teilchen-Dualismus</h4>
+              <p>Licht und Elektronen zeigen je nach Experiment Wellen- oder Teilcheneigenschaften. Beim Doppelspalt entsteht ein Interferenzmuster; auf dem Detektor wird jedes Elektron aber als einzelner Punkt nachgewiesen. Die de-Broglie-Wellenlänge ordnet jedem Teilchen mit Impuls eine Wellenlänge zu:</p>
+              <p class="formula">λ = h / (m · v)</p>
+              <p>Für einen Fußball ist λ so klein, dass keine messbare Interferenz auftritt.</p>
+
+              <h4>2. Doppelspalt und Interferenz</h4>
+              <p>Die Wellen aus beiden Spalten überlagern sich. Gleiche Phase verstärkt (Maximum), entgegengesetzte Phase schwächt (Minimum). Der Streifenabstand ist näherungsweise:</p>
+              <p class="formula">Δy ≈ λ · L / d</p>
+              <p>Größeres λ oder L vergrößert Δy; größeres d verkleinert Δy.</p>
+
+              <h4>3. Wellenfunktion und Wahrscheinlichkeit</h4>
+              <p>Die Wellenfunktion ψ beschreibt den Quantenzustand. Ihr Betragsquadrat |ψ|² ist die Wahrscheinlichkeitsdichte, ein Teilchen an einem Ort zu finden (Born-Regel). Ein einzelnes Elektron erzeugt nur einen Treffer; das Muster entsteht aus vielen Messungen.</p>
+              <p class="formula">P(Bereich) = ∫ |ψ|² dV</p>
+
+              <h4>4. Unbestimmtheit</h4>
+              <p>Ort und Impuls können nicht gleichzeitig beliebig genau bestimmt werden:</p>
+              <p class="formula">Δx · Δp ≥ h / (4π)</p>
+              <p>Das Bohrsche Modell mit festen Kreisbahnen setzt einen definierten Radius und Impuls voraus. Das ist mit der Unbestimmtheit nicht vereinbar.</p>
+
+              <h4>5. Orbital</h4>
+              <p>Ein Orbital ist ein Aufenthaltsraum für ein Elektron; es beschreibt eine Wahrscheinlichkeitsverteilung, keine feste Bahn.</p>
+              <ul>
+                <li><strong>1s:</strong> kugelförmig, kein Knoten, Dichte am Kern maximal.</li>
+                <li><strong>2s:</strong> kugelförmig, ein radialer Knoten.</li>
+                <li><strong>2p:</strong> zwei Keulen, eine Knotenebene, Dichte am Kern null.</li>
+              </ul>
+
+              <figure class="heft-sketch">
+                <svg viewBox="0 0 720 230" role="img" aria-label="Skizze: Doppelspalt mit Interferenzmuster und Orbitalformen">
+                  <text x="20" y="18" font-family="Libre Franklin, sans-serif" font-size="12" fill="#6d675f">Doppelspalt</text>
+                  <circle cx="42" cy="118" r="9" fill="#a63d2f"/>
+                  <text x="24" y="146" font-family="Libre Franklin, sans-serif" font-size="11" fill="#6d675f">Quelle</text>
+                  <g stroke="#211f1c" stroke-width="6" stroke-linecap="butt">
+                    <line x1="150" y1="38" x2="150" y2="94"/>
+                    <line x1="150" y1="104" x2="150" y2="142"/>
+                    <line x1="150" y1="152" x2="150" y2="208"/>
+                  </g>
+                  <text x="122" y="224" font-family="Libre Franklin, sans-serif" font-size="11" fill="#6d675f">Hindernis</text>
+                  <g fill="none" stroke="#a63d2f" stroke-opacity=".35" stroke-width="1.4">
+                    <circle cx="150" cy="99" r="26"/>
+                    <circle cx="150" cy="99" r="48"/>
+                    <circle cx="150" cy="99" r="70"/>
+                    <circle cx="150" cy="99" r="92"/>
+                  </g>
+                  <g fill="none" stroke="#2f6f9f" stroke-opacity=".35" stroke-width="1.4">
+                    <circle cx="150" cy="147" r="26"/>
+                    <circle cx="150" cy="147" r="48"/>
+                    <circle cx="150" cy="147" r="70"/>
+                    <circle cx="150" cy="147" r="92"/>
+                  </g>
+                  <line x1="330" y1="38" x2="330" y2="208" stroke="#211f1c" stroke-width="3"/>
+                  <g fill="#a63d2f" opacity=".75">
+                    <rect x="333" y="56" width="8" height="9"/>
+                    <rect x="333" y="82" width="8" height="17"/>
+                    <rect x="333" y="112" width="8" height="26"/>
+                    <rect x="333" y="149" width="8" height="17"/>
+                    <rect x="333" y="175" width="8" height="9"/>
+                  </g>
+                  <text x="308" y="224" font-family="Libre Franklin, sans-serif" font-size="11" fill="#6d675f">Schirm</text>
+
+                  <text x="390" y="18" font-family="Libre Franklin, sans-serif" font-size="12" fill="#6d675f">Orbitale</text>
+                  <circle cx="440" cy="118" r="32" fill="#a63d2f" fill-opacity=".18" stroke="#a63d2f"/>
+                  <circle cx="440" cy="118" r="3" fill="#211f1c"/>
+                  <text x="426" y="172" font-family="Libre Franklin, sans-serif" font-size="11" fill="#6d675f">1s</text>
+
+                  <circle cx="560" cy="118" r="38" fill="#a63d2f" fill-opacity=".10" stroke="#a63d2f"/>
+                  <circle cx="560" cy="118" r="20" fill="none" stroke="#2f6f9f" stroke-dasharray="4 4"/>
+                  <circle cx="560" cy="118" r="3" fill="#211f1c"/>
+                  <text x="546" y="172" font-family="Libre Franklin, sans-serif" font-size="11" fill="#6d675f">2s</text>
+
+                  <ellipse cx="680" cy="84" rx="22" ry="34" fill="#a63d2f" fill-opacity=".18" stroke="#a63d2f"/>
+                  <ellipse cx="680" cy="152" rx="22" ry="34" fill="#a63d2f" fill-opacity=".18" stroke="#a63d2f"/>
+                  <line x1="646" y1="118" x2="714" y2="118" stroke="#2f6f9f" stroke-dasharray="4 4"/>
+                  <circle cx="680" cy="118" r="3" fill="#211f1c"/>
+                  <text x="666" y="202" font-family="Libre Franklin, sans-serif" font-size="11" fill="#6d675f">2p</text>
+                </svg>
+                <figcaption>Eigene Skizze: links das Doppelspaltprinzip mit hellem Zentrum und Seitenstreifen, rechts die schematischen Formen von 1s-, 2s- und 2p-Orbitalen.</figcaption>
+              </figure>
+
+              <h4>6. Fazit</h4>
+              <p>Das Doppelspaltexperiment zeigt die Wellennatur der Elektronen, die Messung zeigt einzelne Teilchen. Deshalb gibt es im Atom keine festen Bahnen. Das Orbitalmodell beschreibt, wo sich ein Elektron mit welcher Wahrscheinlichkeit aufhält.</p>
+            </div>
+          </section>
+
+          <div class="station__footer">
+            <span class="status" data-station-status></span>
+            <div class="station__footer-actions">
+              <button class="btn js-only" type="button" data-complete="hefteintrag">Station abschließen</button>
+              <a class="quiet-link" href="#check" data-go="check" aria-label="Weiter zum Kompetenzcheck">Weiter</a>
+            </div>
+          </div>
+        </div>
+        <aside class="protocol__margin">
+          <div class="note">
+            <p class="note__title">So arbeitest du</p>
+            <ol>
+              <li>Schreibe zuerst ohne Musterantwort.</li>
+              <li>Vergleiche dann mit der Musterantwort.</li>
+              <li>Überarbeite deinen Text in eigenen Worten.</li>
+              <li>Lies am Ende den vollständigen Musterhefteintrag.</li>
+            </ol>
+          </div>
+          <div class="note">
+            <p class="note__title">Merke</p>
+            <p>Ein guter Hefteintrag enthält Definitionen, Beobachtungen, Erklärungen, Formeln und ein Fazit – in eigenen Worten.</p>
+          </div>
+          <div class="note">
+            <p class="note__title">Fachsprache</p>
+            <dl>
+              <dt>Wellenfunktion ψ</dt><dd>Beschreibt den Quantenzustand; selbst nicht direkt messbar.</dd>
+              <dt>Betragsquadrat |ψ|²</dt><dd>Wahrscheinlichkeitsdichte für den Aufenthaltsort.</dd>
+              <dt>Orbital</dt><dd>Aufenthaltsraum eines Elektrons; keine feste Bahn.</dd>
+              <dt>Unbestimmtheit</dt><dd>Grenze der gleichzeitigen Bestimmbarkeit von Ort und Impuls.</dd>
+            </dl>
+          </div>
+          <div class="note">
+            <p class="note__title">Typischer Fehler</p>
+            <p>Die Musterantwort nur abschreiben. Erst der eigene Formulierungsversuch macht aus dem Lesen ein Verstehen.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="station" id="check" data-station="check" data-title="Kompetenzcheck" aria-labelledby="check-title">
+      <header class="station__head">
+        <h2 id="check-title"><span class="station__num">05</span> Kompetenzcheck</h2>
+        <p class="lead">Sechs Aufgaben, eine pro Kompetenz. Werte am Ende aus und lies die Rückmeldungen zu den Aufgaben, die noch offen sind.</p>
+      </header>
+      <div class="check-banner">
+        <div>
+          <p class="check-banner__score" data-check-score>0 / 6</p>
+          <p class="check-banner__text" data-check-text>Beantworte alle Aufgaben und werte dann aus. Jede Aufgabe zählt einen Punkt.</p>
+        </div>
+        <p class="check-banner__text">Der Bestwert bleibt gespeichert. Du kannst die Aufgaben zurücksetzen und erneut bearbeiten.</p>
+      </div>
+      <div class="competency-results" data-check-bars aria-label="Ergebnisse nach Kompetenz"></div>
+      <div class="quiz" data-quiz="check"><noscript><p class="tool__fallback">Der Kompetenzcheck braucht JavaScript. Die Lerninhalte bleiben lesbar.</p></noscript></div>
+      <div class="check-result" data-check-result hidden></div>
+      <script type="application/json" data-quiz-data="check">
+      {
+        "final": true,
+        "competencies": [
+          { "id": "K1", "label": "K1: Welle-Teilchen-Dualismus" },
+          { "id": "K2", "label": "K2: Interferenz und Doppelspalt" },
+          { "id": "K3", "label": "K3: Wellenfunktion und |ψ|²" },
+          { "id": "K4", "label": "K4: Einzelpartikel und Messung" },
+          { "id": "K5", "label": "K5: Heisenbergsche Unbestimmtheit" },
+          { "id": "K6", "label": "K6: Orbitalmodell und Atommodell" }
+        ],
+        "questions": [
+          {
+            "id": "c1",
+            "type": "mc",
+            "level": "I",
+            "competency": "K1",
+            "prompt": "Welche Aussage beschreibt den Welle-Teilchen-Dualismus richtig?",
+            "options": [
+              "Quantenobjekte zeigen je nach Experiment Wellen- oder Teilcheneigenschaften.",
+              "Licht ist immer eine Welle, Elektronen sind immer Teilchen.",
+              "Wellen und Teilchen sind zwei verschiedene Stoffe.",
+              "Nur Licht besitzt Welleneigenschaften."
+            ],
+            "correct": 0,
+            "explain": "Der Dualismus bedeutet nicht, dass ein Objekt mal das eine und mal das andere „ist“, sondern dass die Beschreibung vom Experiment abhängt."
+          },
+          {
+            "id": "c2",
+            "type": "mc",
+            "level": "II",
+            "competency": "K2",
+            "prompt": "Der Spaltabstand d wird bei sonst gleichen Bedingungen größer. Was passiert mit dem Abstand der Interferenzstreifen?",
+            "options": [
+              "Er wird kleiner.",
+              "Er wird größer.",
+              "Er bleibt gleich.",
+              "Das Muster verschwindet vollständig."
+            ],
+            "correct": 0,
+            "explain": "Der Streifenabstand ist näherungsweise Δy = λ·L/d. Größeres d bedeutet kleineren Abstand der Streifen."
+          },
+          {
+            "id": "c3",
+            "type": "match",
+            "level": "II",
+            "competency": "K3",
+            "prompt": "Ordne die Begriffe ihren Bedeutungen zu.",
+            "left": ["Wellenfunktion ψ", "Betragsquadrat |ψ|²", "Messung"],
+            "right": [
+              "beschreibt den Quantenzustand",
+              "gibt die Wahrscheinlichkeitsdichte an",
+              "liefert einen einzelnen Treffer"
+            ],
+            "correct": [0, 1, 2],
+            "explain": "ψ beschreibt den Zustand, |ψ|² die Wahrscheinlichkeitsdichte. Die Messung wählt einen Ort aus und liefert einen Treffer."
+          },
+          {
+            "id": "c4",
+            "type": "mc",
+            "level": "II",
+            "competency": "K4",
+            "prompt": "Warum zeigt ein einzelnes Elektron noch kein vollständiges Interferenzmuster?",
+            "options": [
+              "Weil eine Messung nur einen Treffer liefert; das Muster entsteht erst aus vielen Treffern.",
+              "Weil ein einzelnes Elektron keine Wellenfunktion besitzt.",
+              "Weil der Doppelspalt nur bei Licht funktioniert.",
+              "Weil Elektronen zu schwer für Interferenz sind."
+            ],
+            "correct": 0,
+            "explain": "Jedes Elektron trägt eine Wellenfunktion, aber die Messung liefert nur einen Ort. Die Verteilung wird erst durch viele Wiederholungen sichtbar."
+          },
+          {
+            "id": "c5",
+            "type": "input",
+            "level": "III",
+            "competency": "K5",
+            "prompt": "Berechne die minimale Impulsunbestimmtheit für Δx = 1,0·10⁻¹⁰ m. Gib in kg·m/s an.",
+            "accept": ["5,3e-25", "5.3e-25", "5,27e-25", "5.27e-25", "5,3*10^-25", "5.3*10^-25", "5,3·10^-25"],
+            "model": "5,3·10⁻²⁵ kg·m/s",
+            "placeholder": "z. B. 5,3e-25",
+            "explain": "Δp ≥ h/(4πΔx) = 6,626·10⁻³⁴ / (4π · 1,0·10⁻¹⁰) ≈ 5,3·10⁻²⁵ kg·m/s."
+          },
+          {
+            "id": "c6",
+            "type": "mc",
+            "level": "III",
+            "competency": "K6",
+            "prompt": "Warum beschreibt das Orbitalmodell den Aufenthalt eines Elektrons im Atom besser als feste Kreisbahnen?",
+            "options": [
+              "Weil es die Aufenthaltswahrscheinlichkeit und die Unbestimmtheit berücksichtigt.",
+              "Weil es die Elektronen auf exakte Kreisbahnen festlegt.",
+              "Weil es nur für Wasserstoff gilt und alle anderen Atome ignoriert.",
+              "Weil es die Masse des Elektrons vernachlässigt."
+            ],
+            "correct": 0,
+            "explain": "Orbitale sind Wahrscheinlichkeitsräume. Sie passen zur Unbestimmtheit, während feste Bahnen einen gleichzeitig scharfen Ort und Impuls voraussetzen würden."
+          }
+        ]
+      }
+      </script>
+    </section>
+
+    <section class="station" id="glossar" data-station="glossar" data-title="Glossar" aria-labelledby="glossar-title">
+      <header class="station__head">
+        <h2 id="glossar-title"><span class="station__num">06</span> Glossar</h2>
+        <p class="lead">Die zentralen Begriffe des Lernpfads in kurzer Form. Suche nach einem Wort oder einem Teil davon.</p>
+      </header>
+      <div class="glossary-search">
+        <label class="visually-hidden" for="glossarySearch">Glossarbegriff suchen</label>
+        <input id="glossarySearch" type="search" placeholder="Begriff suchen, zum Beispiel Wellenfunktion, Orbital, Unbestimmtheit" data-glossary-search autocomplete="off">
+        <span data-glossary-count>0</span>
+      </div>
+      <dl class="glossary" data-glossary>
+        <div class="term"><dt>Welle-Teilchen-Dualismus</dt><dd>Quantenobjekte zeigen je nach Experiment Wellen- oder Teilcheneigenschaften.</dd></div>
+        <div class="term"><dt>Interferenz</dt><dd>Überlagerung von Wellen; gleiche Phase verstärkt, entgegengesetzte Phase schwächt.</dd></div>
+        <div class="term"><dt>Kohärenz</dt><dd>Feste Phasenbeziehung zwischen Wellen; Voraussetzung für stabile Interferenz.</dd></div>
+        <div class="term"><dt>Doppelspaltexperiment</dt><dd>Zwei schmale Spalte erzeugen ein Interferenzmuster; mit Einzelteilchen baut es sich Treffer für Treffer auf.</dd></div>
+        <div class="term"><dt>Wellenfunktion ψ</dt><dd>Beschreibt den Quantenzustand; selbst nicht direkt messbar.</dd></div>
+        <div class="term"><dt>Betragsquadrat |ψ|²</dt><dd>Wahrscheinlichkeitsdichte dafür, ein Teilchen an einem Ort zu finden.</dd></div>
+        <div class="term"><dt>Wahrscheinlichkeitsdichte</dt><dd>Wahrscheinlichkeit pro Volumen; anschaulich die „Dichte“ der Elektronenwolke.</dd></div>
+        <div class="term"><dt>Born-Regel</dt><dd>Die Wahrscheinlichkeit, ein Teilchen in einem Bereich zu finden, ist das Integral von |ψ|² über diesen Bereich.</dd></div>
+        <div class="term"><dt>Heisenbergsche Unbestimmtheitsrelation</dt><dd>Δx · Δp ≥ h/(4π); Ort und Impuls lassen sich nicht gleichzeitig beliebig genau festlegen.</dd></div>
+        <div class="term"><dt>de-Broglie-Wellenlänge</dt><dd>λ = h/(m·v); jedem Teilchen mit Impuls ist eine Wellenlänge zugeordnet.</dd></div>
+        <div class="term"><dt>Orbital</dt><dd>Aufenthaltsraum eines Elektrons im Atom; beschreibt eine Wahrscheinlichkeitsverteilung, keine feste Bahn.</dd></div>
+        <div class="term"><dt>Atomorbital</dt><dd>Lösung der Schrödinger-Gleichung für ein Elektron im Atom; durch Quantenzahlen charakterisiert.</dd></div>
+        <div class="term"><dt>Knoten</dt><dd>Fläche oder Linie, auf der die Wellenfunktion null ist; dort ist die Aufenthaltswahrscheinlichkeit null.</dd></div>
+        <div class="term"><dt>Bohrsches Atommodell</dt><dd>Modell mit festen Kreisbahnen; erklärt Spektren teilweise, widerspricht aber der Unbestimmtheit.</dd></div>
+        <div class="term"><dt>Quantenzahl</dt><dd>Zahl, die einen Quantenzustand charakterisiert, z. B. Haupt-, Neben-, Magnet- und Spinquantenzahl.</dd></div>
+        <div class="term"><dt>Komplementarität</dt><dd>Interferenz und Wegkenntnis schließen sich in einem Experiment gegenseitig aus.</dd></div>
+        <div class="term"><dt>Welcher-Weg-Information</dt><dd>Kenntnis darüber, welchen Spalt ein Teilchen genommen hat; sie zerstört die Interferenz.</dd></div>
+      </dl>
+      <p class="glossary-empty" data-glossary-empty hidden>Kein Begriff gefunden. Versuche einen anderen Suchbegriff.</p>
+      <div class="station__footer">
+        <span class="status" data-station-status></span>
+        <div class="station__footer-actions">
+          <a class="quiet-link" href="#check" data-go="check">Zum Kompetenzcheck</a>
+          <a class="quiet-link" href="#start" data-go="start">Zum Überblick</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<footer class="colophon">
+  <div class="colophon__inner">
+    <p><strong>Quantenchemie 12</strong>. Selbstlernpfad zur Buchseite 3.2.2 „Von Wellen und Teilchen“. Alle Grafiken und interaktiven Modelle sind eigene Darstellungen; es werden keine Schulbuchabbildungen übernommen.</p>
+    <p><a href="https://phet.colorado.edu/sims/html/quantum-wave-interference/latest/quantum-wave-interference_all.html?locale=de" target="_blank" rel="noopener">PhET-Simulation „Interferenz von Quantenwellen“</a>, CC BY-NC 4.0. Stand November 2026.</p>
+  </div>
+</footer>
+
+<dialog class="dialog" id="resetDialog" aria-labelledby="reset-title">
+  <h2 id="reset-title">Lernstand zurücksetzen?</h2>
+  <p>Alle lokalen Ergebnisse dieser Seite werden gelöscht. Die Lerninhalte bleiben erhalten.</p>
+  <div class="dialog__actions">
+    <button class="btn btn--quiet" type="button" data-reset-cancel>Abbrechen</button>
+    <button class="btn" type="button" data-reset-confirm>Ja, zurücksetzen</button>
+  </div>
+</dialog>
+
+<dialog class="dialog" id="heftResetDialog" aria-labelledby="heft-reset-title">
+  <h2 id="heft-reset-title">Hefteintrag zurücksetzen?</h2>
+  <p>Deine selbst formulierten Texte in diesem Hefteintrag werden gelöscht. Die Musterantworten bleiben erhalten.</p>
+  <div class="dialog__actions">
+    <button class="btn btn--quiet" type="button" data-heft-reset-cancel>Abbrechen</button>
+    <button class="btn" type="button" data-heft-reset-confirm>Ja, Eintrag löschen</button>
+  </div>
+</dialog>
+
+<section id="heft-print" class="heft-print" aria-hidden="true"></section>
+
+<script src="assets/app.js"></script>
+<script src="assets/quanten-tools.js"></script>
+<script src="assets/hefteintrag.js"></script>
+</body>
+</html>
